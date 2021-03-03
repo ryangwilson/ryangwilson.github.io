@@ -1,0 +1,102 @@
+// borders.scss
+// Styles for Borders
+// @import "../variables.scss";
+
+// border location mixin
+@mixin border-location-mixin($border-top-left, $border-top-right, $border-bottom-right, $border-bottom-left) {
+    border-radius: $border-top-left $border-top-right $border-bottom-right $border-bottom-left;
+}
+
+// fake border mixin
+@mixin fake-border-mixin($border-size, $color) {
+    box-shadow: 0 0 0 $border-size $color;
+}
+
+// elevation - use with box-shadow
+$elevation-high: 0 10px 10px 0 rgba(0,0,0,0.22), 0 14px 28px 0 rgba(0,0,0,0.25);
+$elevation-medium: 0 5px 5px 0 rgba(0,0,0,0.16), 0 7px 14px 0 rgba(0,0,0,0.23);
+$elevation-near: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.24);
+
+// border demos
+.border-radius-hard {
+    border-radius: $radius-hard;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.border-radius-medium {
+    border-radius: $radius-medium;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.border-radius-soft {
+    border-radius: $radius-soft;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.border-location-top-left {
+    @include border-location-mixin($radius-soft, 0, 0, 0);
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.border-location-top-right {
+    @include border-location-mixin(0, $radius-soft, 0, 0);
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.border-location-bottom-right {
+    @include border-location-mixin(0, 0, $radius-soft, 0);
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.border-location-bottom-left {
+    @include border-location-mixin(0, 0, 0, $radius-soft);
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.border-weight-wide {
+    border-radius: 0;
+    border-width: $border-width-wide;
+    border-color: black;
+    border-style: solid;
+}
+.border-weight-medium {
+    border-radius: 0;
+    border-width: $border-width-medium;
+    border-color: black;
+    border-style: solid;
+}
+.border-weight-thin {
+    border-radius: 0;
+    border-width: $border-width-thin;
+    border-color: black;
+    border-style: solid;
+}
+
+.fake-border-wide {
+    @include fake-border-mixin($border-width-wide, black);
+}
+.fake-border-medium {
+    @include fake-border-mixin($border-width-medium, black);
+}
+.fake-border-thin {
+    @include fake-border-mixin($border-width-thin, black);
+}
+
+.elevation-high {
+    box-shadow: $elevation-high;
+}
+.elevation-medium {
+    box-shadow: $elevation-medium;
+}
+.elevation-near {
+    box-shadow: $elevation-near;
+}

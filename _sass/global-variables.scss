@@ -1,0 +1,335 @@
+// master-variables.scss
+// Details about what this is...
+
+// ** PRIMARY COLORS ---------------------------------------------------
+$primary-00: hsla(47, 100%, 52%, 1);
+$secondary-00: hsla(177, 68%, 49%, 1);
+$tertiary-00: hsla(50, 100%, 70%, 1); // not used in this design
+
+// primary color - mix
+$primary-10: mix($primary-00,white, 10%);
+$primary-25: mix($primary-00,white, 25%);
+$primary-50: mix($primary-00,white, 50%);
+$primary-75: mix($primary-00,white, 75%);
+$primary-90: mix($primary-00,white, 90%);
+
+$secondary-10: mix($secondary-00,white, 10%);
+$secondary-25: mix($secondary-00,white, 25%);
+$secondary-50: mix($secondary-00,white, 50%);
+$secondary-75: mix($secondary-00,white, 75%);
+$secondary-90: mix($secondary-00,white, 90%);
+
+$tertiary-10: mix($tertiary-00,white, 10%);
+$tertiary-25: mix($tertiary-00,white, 25%);
+$tertiary-50: mix($tertiary-00,white, 50%);
+$tertiary-75: mix($tertiary-00,white, 75%);
+$tertiary-90: mix($tertiary-00,white, 90%);
+
+// ** ACCENT COLORS ---------------------------------------------------
+$quaternary-00: #F89C11; // not used in this design
+$quinary-00: #F23B07; // not used in this design
+
+// accent color - mix
+$quaternary-10: mix($quaternary-00,white, 10%);
+$quaternary-25: mix($quaternary-00,white, 25%);
+$quaternary-50: mix($quaternary-00,white, 50%);
+$quaternary-75: mix($quaternary-00,white, 75%);
+$quaternary-90: mix($quaternary-00,white, 90%);
+
+$quinary-10: mix($quinary-00,white, 10%);
+$quinary-25: mix($quinary-00,white, 25%);
+$quinary-50: mix($quinary-00,white, 50%);
+$quinary-75: mix($quinary-00,white, 75%);
+$quinary-90: mix($quinary-00,white, 90%);
+
+// ** SEMANTIC COLORS ---------------------------------------------------
+$warning-00: #FFD707;
+$success-00: #7DD421;
+$error-00: #FF3266;
+$info-00: #4A90E2;
+
+// ** NEUTRAL COLORS ---------------------------------------------------
+$black-00: #232323;
+$dk-gray-00: #4F4F4F;
+$md-gray-00: #A0A0A0;
+$lt-gray-00: #DADADA;
+$white-00: #FFFFFF;
+
+// ** SPACING ---------------------------------------------------
+$scale-number-base: 5px;
+
+// spacing - math
+$scale-1: $scale-number-base;
+$scale-2: $scale-number-base * 2;
+$scale-3: $scale-number-base * 3;
+$scale-4: $scale-number-base * 4;
+$scale-5: $scale-number-base * 5;
+$scale-6: $scale-number-base * 6;
+$scale-7: $scale-number-base * 7;
+$scale-8: $scale-number-base * 8;
+$scale-9: $scale-number-base * 9;
+$scale-10: $scale-number-base * 10;
+$scale-11: $scale-number-base * 11;
+$scale-12: $scale-number-base * 12;
+$scale-13: $scale-number-base * 13;
+$scale-14: $scale-number-base * 14;
+$scale-15: $scale-number-base * 15;
+$scale-16: $scale-number-base * 16;
+$scale-17: $scale-number-base * 17;
+$scale-18: $scale-number-base * 18;
+$scale-19: $scale-number-base * 19;
+$scale-20: $scale-number-base * 20;
+$scale-21: $scale-number-base * 21;
+$scale-22: $scale-number-base * 22;
+$scale-23: $scale-number-base * 23;
+$scale-24: $scale-number-base * 24;
+$scale-25: $scale-number-base * 25;
+$scale-26: $scale-number-base * 26;
+$scale-27: $scale-number-base * 27;
+$scale-28: $scale-number-base * 28;
+$scale-29: $scale-number-base * 29;
+$scale-30: $scale-number-base * 30;
+
+
+// ** BORDER RADIUS ---------------------------------------------------
+$border-radius-base: 5px;
+
+// border radius - math
+$radius-hard: 0;
+$radius-slight: $border-radius-base;
+$radius-medium: $border-radius-base * 2;
+$radius-soft: $border-radius-base * 4;
+
+// ** BORDER WIDTH ---------------------------------------------------
+$border-width-base: 5px;
+
+// border width - math
+$border-width-wide: $border-width-base;
+$border-width-medium: $border-width-base / 2;
+$border-width-thin: $border-width-base / $border-width-base;
+
+// fake borders - to be used with box-shadow, needs color declaration
+$fake-wide: 0 0 0 ($border-width-base);
+$fake-medium: 0 0 0 ($border-width-base / 2);
+$fake-thin: 0 0 0 ($border-width-base / $border-width-base);
+
+// ** ELEVATION - to be used with box-shadow ---------------------------------------------------
+$elevation-high: 0 10px 10px 0 rgba(0,0,0,0.22), 0 14px 28px 0 rgba(0,0,0,0.25);
+$elevation-medium: 0 5px 5px 0 rgba(0,0,0,0.16), 0 7px 14px 0 rgba(0,0,0,0.23);
+$elevation-near: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.24);
+
+// ** TYPE DEFINITIONS ---------------------------------------------------
+
+// ** IMPORT TYPOGRAPHY ---------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+// ** DEFINE DISPLAY TEXT ---------------------------------------------------
+$type-display-main: 'Roboto', sans-serif;
+$type-main-light: 300;
+$type-main-regular: 400;
+$type-main-bold: 500;
+$type-main-black: 900;
+
+$type-display-secondary: 'Roboto Condensed', sans-serif;
+$type-display-light: 300;
+$type-display-regular: 400; // not used in this design
+$type-display-medium: 700; // not used in this design
+
+// ** DEFINE BODY TEXT ---------------------------------------------------
+$type-body: 'Roboto', sans-serif;
+$type-body-light: 300;
+$type-body-regular: 400;
+$type-body-medium: 500;
+$type-body-bold: 700;
+$line-height-body: 1.4;
+
+// ** DEFINE CODE TEXT ---------------------------------------------------
+$type-code: 'PT Mono', monospace;
+
+// ** ALL TYPE SIZING ---------------------------------------------------
+$h1-font-size: 30px;
+$h2-font-size: 60px;
+$h3-font-size: 48px;
+$h4-font-size: 36px;
+$h5-font-size: 24px;
+$h6-font-size: 18px;
+$body-font-size: 16px;
+$small-font-size: 12px;
+
+// Type Mixin
+@mixin type-mixin($font-face, $font-size, $font-weight: normal, $font-style: normal, $text-transform: none) {
+    font-family: $font-face;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    text-transform: $text-transform;
+}
+
+// *** style headers  ---------------------------------------------------
+h1 {
+    @include type-mixin($type-display-main, $h1-font-size, $type-main-black);
+    color: $primary-00;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -1px;
+    span {
+        display: block;
+        color: $white-00;
+        font-size: $body-font-size;
+        font-weight: $type-main-bold;
+        letter-spacing: 0;
+        i {
+            color: $primary-00;
+        }
+    }
+}
+h2 {
+    @include type-mixin($type-display-main, $h2-font-size, $type-main-black);
+    color: $white-00;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: $scale-2;
+}
+section {
+    h2 {
+        text-transform: none;
+        color: $black-00;
+    }
+}
+h3 {
+    @include type-mixin($type-display-main, $h3-font-size, $type-main-light);
+    color: $black-00;
+    letter-spacing: -1px;
+    line-height: 1;
+    width: fit-content;
+    padding-right: $scale-5;
+    margin-bottom: $scale-5;
+    box-shadow: 0px 5px 0px 0px $primary-00;
+}
+h4 {
+    @include type-mixin($type-display-secondary, $h4-font-size, $type-main-bold, normal, uppercase);
+    color: $black-00;
+}
+h5 {
+    @include type-mixin($type-display-main, $h5-font-size, $type-main-regular, italic);
+    color: $black-00;
+}
+h6 {
+    @include type-mixin($type-display-secondary, $h6-font-size, $type-main-regular, normal, uppercase);
+    color: $black-00;
+}
+
+// *** style body ---------------------------------------------------
+body, p {
+    @include type-mixin($type-body, $body-font-size, $type-body-regular);
+    line-height: $line-height-body;
+    color: $black-00;
+    margin-bottom: 1em;
+}
+p:last-of-type {
+    margin-bottom: 0;
+}
+// Specialized spacing
+p + h3 {
+    margin-top: $scale-10;
+}
+
+// Inline Type Elements
+
+// *** style code ---------------------------------------------------
+kbd, code, samp, pre {
+    @include type-mixin($type-code, $body-font-size);
+    color: $black-00;
+}
+// *** style anchor tags ---------------------------------------------------
+a {
+    @include type-mixin($type-body, $body-font-size, $type-body-medium);
+    color: $secondary-00;
+    text-decoration: none;
+    box-shadow: 0 1px 0 0 $secondary-00;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: $black-00;
+        box-shadow: 0 $scale-1 0 0 $black-00;
+    }
+}
+// *** style bold-ness ---------------------------------------------------
+b, strong {
+    @include type-mixin($type-body, $body-font-size, $type-body-bold);
+}
+// *** style italic-ness ---------------------------------------------------
+i, em {
+    @include type-mixin($type-body, $body-font-size, $type-body-regular, italic);
+    color: $black-00;
+}
+// *** style underline ---------------------------------------------------
+u, ins {
+    @include type-mixin($type-body, $body-font-size);
+    text-decoration: underline;
+}
+// *** style delete and strike-through ---------------------------------------------------
+del, s {
+    text-decoration: line-through;
+}
+// *** style quotations ---------------------------------------------------
+q, blockquote p {
+    @include type-mixin($type-body, $body-font-size, $type-body-light, italic);
+    color: $black-00;
+}
+// *** style citation ---------------------------------------------------
+cite {
+    @include type-mixin($type-body, $body-font-size, $type-body-medium);
+    color: $black-00;
+    a {
+        @include type-mixin($type-body, $body-font-size, $type-body-light);
+        text-decoration: underline;
+    }
+}
+blockquote cite {
+    display: block;
+    text-align: right;
+}
+// *** style highlight ---------------------------------------------------
+mark {
+    background-color: $quaternary-25;
+    padding: calc(#{$scale-1} / 2) $scale-1;
+}
+// *** style variable tag ---------------------------------------------------
+var {
+    @include type-mixin($type-body, $body-font-size, $type-body-bold);
+    color: $black-00;
+}
+// *** style small ---------------------------------------------------
+small {
+    @include type-mixin($type-body, $small-font-size);
+}
+// *** style superscript and subscript ---------------------------------------------------
+sup {
+    @include type-mixin($type-body, $small-font-size);
+    position: relative;
+    top: -0.4em;
+}
+sub {
+    @include type-mixin($type-body, $small-font-size);
+    position: relative;
+    top: 0.4em;
+}
+// *** style time ---------------------------------------------------
+time {
+    @include type-mixin($type-body, $body-font-size, $type-body-bold);
+}
+// *** style definition & abbreviation ---------------------------------------------------
+dfn, abbr {
+    @include type-mixin($type-body, $body-font-size, $type-body-regular, italic);
+    text-decoration: dotted underline;
+    color: $black-00;
+}
+// Hard Rule styling
+hr {
+    border: 0;
+    height: $scale-5;
+    background: $black-00;
+    // background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}

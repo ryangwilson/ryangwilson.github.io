@@ -1,0 +1,125 @@
+// header-footer.scss
+// Styles for the structure components
+
+// sets up sticky footer
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+// styles the navigation - this is before header and footer to accommodate for overrides
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    margin-left: $scale-10;
+    color: $white-00;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: $type-body-medium;
+    font-size: $body-font-size;
+    padding: $scale-2 0;
+    box-shadow: 0 0 0 0 $white-00, 0 0 0 0 $white-00;
+    transition: all 0.3s ease;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:hover {
+      color: $white-00;
+      box-shadow: 0 $scale-1 0 0 $white-00, 0 (-$scale-1) 0 0 $white-00;
+    }
+    &.active {
+      color: $secondary-00;
+      cursor: default;
+      &:hover {
+        box-shadow: 0 0 0 0 $white-00, 0 0 0 0 $white-00;
+      }
+    }
+  }
+}
+// header and footer styles
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black-00;
+  padding: $scale-2 $scale-5;
+  border-bottom: $scale-1 solid $white-00;
+  box-shadow: $elevation-high;
+  z-index: 99;
+  position: sticky;
+  top: 0;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black-00;
+  padding: $scale-3 $scale-5;
+  margin-top: $scale-10;
+  border-top: $scale-1 solid $white-00;
+  line-height: 2;
+  p {
+    font-size: $small-font-size;
+    color: $md-gray-00;
+  }
+  nav {
+    a {
+      margin-left: $scale-5;
+      font-size: $small-font-size;
+      &:last-of-type {
+        margin-right: $scale-10;
+      }
+    }
+    .subnav {
+        a {
+          text-transform: unset;
+          font-weight: $type-main-regular;
+          color: $primary-00;
+        }
+    }
+  }
+}
+section {
+  margin: $scale-20 $scale-10;
+  .flex-two-col {
+    display: flex;
+    .col-left {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 66.66%;
+      margin-right: $scale-10;
+    }
+    .col-right {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 33.33%;
+    }
+  }
+  .flex-three-col {
+    display: flex;
+    .col-left {
+      display: flex;
+      flex-direction: column;
+      padding: 0 $scale-5 0 0;
+      flex-basis: 33.33%;
+    }
+    .col-center {
+      display: flex;
+      flex-direction: column;
+      padding: 0 $scale-5;
+      flex-basis: 33.33%;
+    }
+    .col-right {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 $scale-5;
+      flex-basis: 33.33%;
+    }
+  }
+}

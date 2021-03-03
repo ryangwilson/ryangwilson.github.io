@@ -1,0 +1,52 @@
+// buttons.scss
+// Styles for Buttons
+.btn {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: $black-00;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: $scale-2 $scale-6;
+    margin: $scale-5;
+    border-radius: $scale-10;
+    box-shadow: 0 0 0 $scale-1 $black-00;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: .25s ease-in-out;
+    &.primary {
+        &:hover {
+            color: $secondary-00;
+            box-shadow: 0 0 0 $scale-1 $secondary-00;
+        }
+    }
+
+    &.secondary {
+        background-color: $primary-00;
+        box-shadow: 0 0 0 $scale-1 $primary-00;
+        &:hover {
+            color: $secondary-00;
+                    background-color: $dk-gray-00;
+            box-shadow: 0 0 0 $scale-1 $dk-gray-00;
+        }
+    }
+    &.tertiary {
+        background-color: $dk-gray-00;
+        color: $primary-00;
+        box-shadow: 0 0 0 $scale-1 $dk-gray-00;
+                &:hover {
+                    background-color: transparent;
+                    color: $black-00;
+            box-shadow: 0 0 0 $scale-1 $black-00;
+        }
+    }
+    &.text {
+        padding: $scale-1 $scale-2;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: 0 $scale-2 0 (-$scale-1) $black-00;
+        &:hover {
+            box-shadow: 0 $scale-2 0 (-$scale-1) $secondary-00;
+        }
+    }
+}

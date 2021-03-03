@@ -1,0 +1,40 @@
+// for-style-guide-only.scss
+// These styles are only for display of the style guide
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+.style-guide-header-main {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+.style-guide-header-sub {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+.demo-container-small {
+    height: 60px;
+    width: 120px;
+}
+.demo-container-medium {
+    height: 60px;
+    width: 180px;
+}
+.demo-container-large {
+    height: 60px;
+    width: 240px;
+}
+$demo-width-color: #FFC1F6;
+$demo-height-color: #CDD3FF;
+article div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+}

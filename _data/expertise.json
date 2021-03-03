@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Leadership",
+        "details": "Team management, Direction, Recruiting, Excellent verbal and written communication"
+    },
+    {
+        "title": "User-Centered Design",
+        "details": "User research, User observation, User testing, Personas"
+    },
+    {
+        "title": "Documentation",
+        "details": "User flows, Information architecture, Product requirements, Stakeholder presentation"
+    },
+    {
+        "title": "Product Conceptualization",
+        "details": "Workshops, UI design, Mockups, Prototypes"
+    },
+    {
+        "title": "Interaction Design",
+        "details": "UI design, 2D animation, 3D animation, Video production"
+    },
+    {
+        "title": "Graphic Design",
+        "details": "Branding, Logo design, Poster design, Screen printing"
+    },
+    {
+        "title": "Implementation",
+        "details": "HTML (Mustache, Stache), CSS (SCSS, LESS), basic vanilla JavaScript"
+    }
+]

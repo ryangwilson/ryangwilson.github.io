@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include navigation.html %}
+    {% include card-dark.html %}
+    <section>
+      <div class="flex-three-col">
+        <div class="col-left">
+            <h3>{{ page.sidebar-title01 }}</h3>
+            {% for education in site.data.education %}
+            <p><b>{{ education.degree }}</b></br>
+            {{ education.location }} {{ education.date }}</p>
+            {% endfor %}
+            <h3>{{ page.sidebar-title02 }}</h3>
+            {% for examples in site.data.examples %}
+            <p><a href="{{ examples.link }}">{{ examples.title }}</a></p>
+            {% endfor %}
+        </div>
+        <div class="col-center">
+          <h3>{{ page.sidebar-title03 }}</h3>
+          {% for experience in site.data.experience %}
+            <p><b>{{ experience.title }}</b></br>
+            {{ experience.company }}</br>
+            {{ experience.dates }}</p>
+          {% endfor %}
+        </div>
+        <div class="col-right">
+          <h3>{{ page.sidebar-title04 }}</h3>
+          {% for expertise in site.data.expertise %}
+            <p><b>{{ expertise.title }}</b></br>
+            {{ expertise.details }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <h2>{{ page.main-title-02 }}</h2>
+      <p>{{ content }}</p>
+      {% include references.html %}
+    </section>
+    {% include footer.html %}
+  </body>
+</html>

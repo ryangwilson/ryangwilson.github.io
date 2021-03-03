@@ -1,0 +1,137 @@
+// demo-scale-spacing.scss
+// Styles for demonstrating Scale and Spacing
+// @import "../variables.scss";
+// @import "../style-guide-structure.scss";
+
+// is this right? does this need a mixin?
+@mixin scale-demo-mixin($height, $width, $name) {
+    height: $height;
+    width: $width;
+    &::before{
+        content: "#{$name}";
+
+    }
+}
+
+.demo-scale-width-1 {
+    @include scale-demo-mixin($scale-1, $scale-1, $scale-1);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-2 {
+    @include scale-demo-mixin($scale-1, $scale-2, $scale-2);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-3 {
+    @include scale-demo-mixin($scale-1, $scale-3, $scale-3);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-4 {
+    @include scale-demo-mixin($scale-1, $scale-4, $scale-4);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-5 {
+    @include scale-demo-mixin($scale-1, $scale-5, $scale-5);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-6 {
+    @include scale-demo-mixin($scale-1, $scale-6, $scale-6);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-7 {
+    @include scale-demo-mixin($scale-1, $scale-7, $scale-7);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-8 {
+    @include scale-demo-mixin($scale-1, $scale-8, $scale-8);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-9 {
+    @include scale-demo-mixin($scale-1, $scale-9, $scale-9);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-10 {
+    @include scale-demo-mixin($scale-1, $scale-10, $scale-10);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-11 {
+    @include scale-demo-mixin($scale-1, $scale-11, $scale-11);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-12 {
+    @include scale-demo-mixin($scale-1, $scale-12, $scale-12);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-13 {
+    @include scale-demo-mixin($scale-1, $scale-13, $scale-13);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-14 {
+    @include scale-demo-mixin($scale-1, $scale-14, $scale-14);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-15 {
+    @include scale-demo-mixin($scale-1, $scale-15, $scale-15);
+    background-color: $demo-width-color;
+}
+
+
+.demo-scale-height-1 {
+    @include scale-demo-mixin($scale-1, $scale-1, $scale-1);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-2 {
+    @include scale-demo-mixin($scale-2, $scale-1, $scale-2);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-3 {
+    @include scale-demo-mixin($scale-3, $scale-1, $scale-3);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-4 {
+    @include scale-demo-mixin($scale-4, $scale-1, $scale-4);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-5 {
+    @include scale-demo-mixin($scale-5, $scale-1, $scale-5);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-6 {
+    @include scale-demo-mixin($scale-6, $scale-1, $scale-6);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-7 {
+    @include scale-demo-mixin($scale-7, $scale-1, $scale-7);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-8 {
+    @include scale-demo-mixin($scale-8, $scale-1, $scale-8);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-9 {
+    @include scale-demo-mixin($scale-9, $scale-1, $scale-9);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-10 {
+    @include scale-demo-mixin($scale-10, $scale-1, $scale-10);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-11 {
+    @include scale-demo-mixin($scale-11, $scale-1, $scale-11);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-12 {
+    @include scale-demo-mixin($scale-12, $scale-1, $scale-12);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-13 {
+    @include scale-demo-mixin($scale-13, $scale-1, $scale-13);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-14 {
+    @include scale-demo-mixin($scale-14, $scale-1, $scale-14);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-15 {
+    @include scale-demo-mixin($scale-15, $scale-1, $scale-15);
+    background-color: $demo-height-color;
+}

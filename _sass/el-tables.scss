@@ -1,0 +1,17 @@
+// tables.scss
+// Styles for Tables
+table {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    td {
+        padding: 10px 20px;
+    }
+    th {
+        padding: 10px 20px;
+        background-color: rgba(1,1,1,.2);
+        text-align: left;
+    }
+    tr:nth-child(even) {
+        background-color: rgba(1,1,1,.05);
+    }
+}

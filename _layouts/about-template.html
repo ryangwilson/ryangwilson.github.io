@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include navigation.html %}
+    <section>
+      {% include carousel.html %}
+    </section>
+    {% include card-dark.html %}
+    <section>
+      <h2>{{ page.main-title-01 }}</h2>
+      {% include portfolio.html %}
+    </section>
+    <hr>
+    <h2>{{ page.main-title-02 }}</h2>
+
+    {% include footer.html %}
+  </body>
+</html>

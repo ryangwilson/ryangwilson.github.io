@@ -1,0 +1,61 @@
+I"Ý<p>The idea around having phased engagements is to define requirements and understand what needs to be built for the product. Products should never be built based on gut-feelings or assumptions of user and user needs. After each phase, you will have a document package that you can take with you and use it to shop around for additional refinement or development. We  would of course like to tackle your project from start to finish; Discovery, Refinement, Development, and Product Review.</p>
+
+<p>The product process helps:
+<ul>
+  <li>Clearly articulate high-level requirements</li>
+  <li>Refine requirements, documentation, and concepts</li>
+  <li>Speed up development through understanding</li>
+  <li>Validate a product through testing with real users, analyzing results, and applying user feedback</li>
+  <li>Weed out potential issues sooner, saving time fixing or concepting design, flow, and interaction problems later</li>
+</ul>
+</p>
+
+<p>Our budget-conscious clients trend towards shorter engagements. We understand, however we do want to communicate that with less time in the refinement phase we will have less time to more finely define requirements, find and close gaps, and create and refine aesthetic, and document concepts. This may leave you with more uncertainty as you move on to the development phase.</p>
+
+<p>We only bill for the hours we actually work â€“ that means that if we propose something will take four weeks and it takes two weeks, we only bill for two weeks worth of work.</p>
+
+<p>We offer a ten percent discounted rate for clients who sign a contract for more than one phase upfront. However, because the purpose of understanding requirements helps us estimate later phases of work, we will have to come to an agreement at the time of signing the contract for contingencies for adding more time once we have more certainty around requirements.</p>
+
+<div class="process-container">
+<div class="sidebar">
+<p>Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor.</p>
+</div>
+<div class="main">
+<div class="phase-container">
+    <div class="top"><h3>Phase Name</h3>
+    <span class="duration-cost">Duration - $Cost to $Cost</span>
+    </div>
+    <div class="middle">
+        <div class="purpose">
+        <b>Purpose:</b>
+        <ul>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+        </ul>
+    </div>
+        <div class="deliverables">
+            <b>Deliverables:</b>
+            <ul>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            </ul>
+        </div>
+        </div>
+        <a class="toggle btn" href="#example">Details </a>
+        <div class="toggle-content" id="example">
+            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        </div>
+    </div>
+</div>
+</div>
+:ET

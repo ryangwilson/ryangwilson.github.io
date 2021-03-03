@@ -1,0 +1,24 @@
+// text-definitions.scss
+// Styles for Text Definitions
+// @import "../variables.scss";
+
+// definition list
+dl {
+    dd {
+        padding-left: $scale-3;
+    }
+}
+// ordered list - padding
+ol {
+    padding-left: $scale-5;
+    li {
+        text-indent: $scale-1;
+    }
+}
+// unordered list - padding
+ul {
+    padding-left: $scale-5;
+    li {
+        text-indent: $scale-1;
+    }
+}
