@@ -1,14 +1,12 @@
 // tables.scss
 // Styles for Tables
 table {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     td {
-        padding: 10px 20px;
+        padding: $scale-2 $scale-4;
     }
     th {
-        padding: 10px 20px;
-        background-color: rgba(1,1,1,.2);
+        padding: $scale-2 $scale-4;
+        background-color: $lt-gray-00;
         text-align: left;
     }
     tr:nth-child(even) {

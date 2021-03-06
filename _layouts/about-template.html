@@ -12,7 +12,18 @@
       {% include portfolio.html %}
     </section>
     <hr>
-    <h2>{{ page.main-title-02 }}</h2>
+    <section>
+      <h2>{{ page.main-title-02 }}</h2>
+      <p>{{ page.content-02 }}</p>
+      {% include references.html %}
+    </section>
+    <hr>
+    <section class="blog-container">
+      <div class="content">
+        <h2>{{ page.main-title-03 }}</h2>
+      </div>
+      {% include articles.html %}
+    </section>
 
     {% include footer.html %}
   </body>

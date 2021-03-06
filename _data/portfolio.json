@@ -1,6 +1,9 @@
 [
     {
         "id": "001",
+        "pagename": "haulhound",
+        "active": "yes",
+        "type": "product",
         "project": "HaulHound",
         "role": "Product Designer",
         "client": "HaulHound",
@@ -31,6 +34,9 @@
     },
     {
         "id": "002",
+        "pagename": "nrelabs",
+        "active": "yes",
+        "type": "product",
         "project": "NRE Labs",
         "role": "Product Designer",
         "client": "Juniper Networks",
@@ -57,6 +63,9 @@
     },
     {
         "id": "003",
+        "pagename": "yumadmin",
+        "active": "yes",
+        "type": "product",
         "project": "Yum Admin",
         "role": "Product Designer",
         "client": "Yum.dev",
@@ -83,6 +92,9 @@
     },
     {
         "id": "004",
+        "pagename": "caloric-budget",
+        "active": "yes",
+        "type": "product",
         "project": "Caloric Budget",
         "role": "Product Designer",
         "client": "Caloric Budget",
@@ -109,6 +121,9 @@
     },
     {
         "id": "005",
+        "pagename": "mobicog",
+        "active": "yes",
+        "type": "product",
         "project": "MobiCog App",
         "role": "Product Designer",
         "client": "MobiCog App",
@@ -135,6 +150,9 @@
     },
     {
         "id": "006",
+        "pagename": "starbucks",
+        "active": "yes",
+        "type": "product",
         "project": "Starbucks Service Review & Recommendations",
         "role": "Product Designer",
         "client": "Starbucks",
@@ -161,6 +179,9 @@
     },
     {
         "id": "007",
+        "pagename": "activities4us",
+        "active": "yes",
+        "type": "product",
         "project": "Activities4Us",
         "role": "Product Designer",
         "client": "Activities4Us",
@@ -187,6 +208,9 @@
     },
     {
         "id": "008",
+        "pagename": "hotelrate",
+        "active": "yes",
+        "type": "product",
         "project": "HotelRate: IA & Prototype",
         "role": "Product Designer",
         "client": "HotelRate",
@@ -213,6 +237,9 @@
     },
     {
         "id": "009",
+        "pagename": "projectchild",
+        "active": "yes",
+        "type": "graphic",
         "project": "ProjectCHILD",
         "role": "",
         "client": "",
@@ -239,6 +266,9 @@
     },
     {
         "id": "010",
+        "pagename": "lvs",
+        "active": "yes",
+        "type": "graphic web",
         "project": "Legal Visual Services",
         "role": "",
         "client": "",
@@ -265,6 +295,9 @@
     },
     {
         "id": "011",
+        "pagename": "amytrager",
+        "active": "yes",
+        "type": "web",
         "project": "AmyTrager.com",
         "role": "",
         "client": "",
@@ -291,6 +324,9 @@
     },
     {
         "id": "012",
+        "pagename": "katesiber",
+        "active": "yes",
+        "type": "web",
         "project": "KateSiber.com",
         "role": "",
         "client": "",
@@ -317,6 +353,9 @@
     },
     {
         "id": "013",
+        "pagename": "gongola",
+        "active": "yes",
+        "type": "graphic",
         "project": "Gongola Wealth Management Logo",
         "role": "",
         "client": "Gongola Wealth Management",
@@ -343,6 +382,9 @@
     },
     {
         "id": "014",
+        "pagename": "pbskids",
+        "active": "yes",
+        "type": "graphic",
         "project": "PBS Kids Presentation",
         "role": "",
         "client": "PBS Kids",
@@ -369,6 +411,9 @@
     },
     {
         "id": "015",
+        "pagename": "a-story-told",
+        "active": "yes",
+        "type": "graphic",
         "project": "A Story Told - Keep Watch Album Art",
         "role": "",
         "client": "A Story Told Album Art",
@@ -395,6 +440,9 @@
     },
     {
         "id": "016",
+        "pagename": "charles-schwab",
+        "active": "yes",
+        "type": "graphic",
         "project": "Charles Schwab Infographic",
         "role": "",
         "client": "Infographic World",
@@ -421,6 +469,9 @@
     },
     {
         "id": "017",
+        "pagename": "lt-causes",
+        "active": "yes",
+        "type": "graphic",
         "project": "Light &#38; Transient Causes Book Cover",
         "role": "",
         "client": "Mel Hawkins",
@@ -447,6 +498,9 @@
     },
     {
         "id": "018",
+        "pagename": "reinventing-education",
+        "active": "yes",
+        "type": "graphic",
         "project": "Reinventing Education Cover",
         "role": "",
         "client": "Mel Hawkins",
@@ -473,6 +527,9 @@
     },
     {
         "id": "019",
+        "pagename": "isu-cd",
+        "active": "yes",
+        "type": "graphic",
         "project": "Student Workshop Poster",
         "role": "",
         "client": "Iowa State University College of Design",
@@ -499,6 +556,9 @@
     },
     {
         "id": "020",
+        "pagename": "pepper-jelly",
+        "active": "yes",
+        "type": "graphic",
         "project": "Pepper Jelly Poster",
         "role": "",
         "client": "Student Project",
@@ -525,6 +585,9 @@
     },
     {
         "id": "021",
+        "pagename": "mu-soad",
+        "active": "yes",
+        "type": "motion",
         "project": "Holiday Greeting Animation",
         "role": "",
         "client": "Marshall University, School of Art & Design",
@@ -551,6 +614,9 @@
     },
     {
         "id": "022",
+        "pagename": "two-button-games",
+        "active": "yes",
+        "type": "motion",
         "project": "Two Button Games Intro",
         "role": "",
         "client": "Student Project",
@@ -577,6 +643,9 @@
     },
     {
         "id": "023",
+        "pagename": "shiny",
+        "active": "yes",
+        "type": "motion",
         "project": "Shiny Music Video",
         "role": "",
         "client": "Student Project",
@@ -603,6 +672,9 @@
     },
     {
         "id": "024",
+        "pagename": "two-stroke-engine",
+        "active": "yes",
+        "type": "motion",
         "project": "How a 2-Stroke Engine Works Video",
         "role": "",
         "client": "Student Project",
@@ -629,6 +701,9 @@
     },
     {
         "id": "025",
+        "pagename": "jon-drake",
+        "active": "yes",
+        "type": "motion",
         "project": "Elizabeth Johnson Music Video",
         "role": "",
         "client": "Jon Drake & The Shakes",
@@ -655,6 +730,9 @@
     },
     {
         "id": "026",
+        "pagename": "twister-reality",
+        "active": "yes",
+        "type": "motion",
         "project": "Twisted Reality Game & Packaging Design",
         "role": "",
         "client": "Student Project",
@@ -678,6 +756,6 @@
         "processdoc": "",
         "externalprompt": "",
         "externalurl": ""
-    },
+    }
 
 ]

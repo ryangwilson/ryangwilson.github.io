@@ -53,3 +53,7 @@ github_username:  ryangwilson
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+collections:
+  portfolio:
+    output: true
+    permalink: /examples/:path/

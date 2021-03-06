@@ -5,7 +5,7 @@
         <p>{{ testimonials.quote }}</p>
         <span class="btn text">Read More</span>
         <div class="image-title">
-            <img src="{{ testimonials.image }}" />
+            <img src="../assets/images/testimonial-images/{{ testimonials.image }}" />
             <h3><b>{{ testimonials.name }}</b> <i>{{ testimonials.title }}</i> {{ testimonials.company }}</h3>
         </div>
     </a>
@@ -13,13 +13,13 @@
 </div>
 {% endif %}
 {% if page.url == '/' %}
-<div class="card-container all">
+<div class="card-container">
     {% for testimonials in site.data.testimonials | limit: 3 %}
     <a class="reference-card third" href="experience/#{{ testimonials.lastname }}">
         <p>{{ testimonials.quote }}</p>
         <span class="btn text">Read More</span>
         <div class="image-title">
-            <img src="{{ testimonials.image }}" />
+            <img src="../assets/images/testimonial-images/{{ testimonials.image }}" />
             <h3><b>{{ testimonials.name }}</b> <i>{{ testimonials.title }}</i> {{ testimonials.company }}</h3>
         </div>
     </a>
@@ -32,7 +32,7 @@
     <div class="reference-card half" id="{{ testimonials.lastname }}">
         <p>{{ testimonials.quote }}</p>
         <div class="image-title">
-            <img src="{{ testimonials.image }}" />
+            <img src="../assets/images/testimonial-images/{{ testimonials.image }}" />
             <h3><b>{{ testimonials.name }}</b> <i>{{ testimonials.title }}</i> {{ testimonials.company }}</h3>
         </div>
     </div>

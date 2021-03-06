@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include navigation.html %}
+    <a href="/examples/">Work Examples</a> / {{ page.project }}
+    <div class="card-dark">
+      <h2>{{ page.project }}</h2>
+      <p class="subtitle">Role: {{ page.role }}</p>
+    </div>
+    <section>
+      <div class="">
+        <p><b>Client</b><br/>
+        {{ page.client }}, {{ page.year }}</p>
+        {% if page.phases %}
+        <p><b>Project Phases</b><br/>
+        {{ page.phases }}</p>
+        {% endif %}
+        <p><b>Tools</b><br/>
+        {{ page.tools }}</p>
+        <p><b>Overview</b><br/>
+        {{ page.overview }}</p>
+        {% if page.problemstatement %}
+        <p><b>Problem Statement</b><br/>
+        {{ page.problemstatement }}</p>
+        {% endif %}
+        {% if page.users %}
+        <p><b>Users</b><br/>
+        {{ page.users }}</p>
+        {% endif %}
+        {% if page.persona %}
+        <img src="../../assets/images/portfolio-images/{{ page.persona }}" class="" alt="Persona examples for {{ page.project }}" />
+        {% endif %}
+        {% if page.constraints %}
+        <p><b>Constraints</b><br/>
+        {{ page.constraints }}</p>
+        {% endif %}
+        {% if page.process %}
+        <p><b>Process</b><br/>
+        {{ page.process }}</p>
+        {% endif %}
+        <p><b>Outcome</b><br/>
+        {{ page.outcome }}</p>
+        {% if page.processdoc %}
+          <p><b>Process Document</b><br/>
+          <a href="{{ page.processdoc }}">{{ page.processdocprompt }}</a></p>
+        {% endif %}
+        {% if page.externalurl %}
+          <p><b>External Files</b><br/>
+          <a href="{{ page.externalurl }}">{{ page.externalprompt }}</a></p>
+        {% endif %}
+      </div>
+      <div class="">
+        <div class="">
+          <img src="../../assets/images/portfolio-images/{{ page.collection-image }}" class="" alt="Project example image for {{ page.project }}" />
+        </div>
+        <div class="">
+        {% if page.image01 %}
+          <img src="../../assets/images/portfolio-images/{{ page.image01 }}" class="" alt="Project example image for {{ page.project }}" />
+        {% endif %}
+        </div>
+        <div class="">
+          {% if page.image02 %}
+          <img src="../../assets/images/portfolio-images/{{ page.image02 }}" class="" alt="Project example image for {{ page.project }}" />
+          {% endif %}
+          {% if page.image03 %}
+          <img src="../../assets/images/portfolio-images/{{ page.image03 }}" class="" alt="Project example image for {{ page.project }}" />
+          {% endif %}
+        </div>
+        <div class="">
+          {% if page.image04 %}
+          <img src="../../assets/images/portfolio-images/{{ page.image04 }}" class="" alt="Project example image for {{ page.project }}" />
+          {% endif %}
+          {% if page.image05 %}
+          <img src="../../assets/images/portfolio-images/{{ page.image05 }}" class="" alt="Project example image for {{ page.project }}" />
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %}
+  </body>
+</html>

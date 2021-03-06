@@ -4,70 +4,57 @@
 .carousel-cell {
   display: flex;
   width: 100%;
+
   @media (max-width: 599px) {
-      flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .carousel-content {
-      display: flex;
-      flex-direction: column;
-      margin-right: $scale-10;
-      p {
-          @media (max-width: 599px) {
-              font-size: 0;
-          }
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    margin-right: $scale-10;
+    p {
+      @media (max-width: 599px) {
+        font-size: 0;
       }
-      .cta-container {
-          margin-top: auto;
-      }
+    }
+    .cta-container {
+      margin-top: auto;
+    }
   }
   .carousel-img {
-      flex: 1;
+    flex: 1;
   }
   img {
-      height: calc(297px * 0.75);
-      width: calc(496px * 0.75);
-      @media (max-width: 599px) {
-          width: 100%;
-          padding-bottom: $scale-5;
-      }
-      object-fit: cover;
-  }
-}
-
-a.example_d {
-  color: $black-00;
-  text-decoration: none;
-  padding: $scale-2 $scale-3;
-  border: $scale-2 solid $black-00;
-  border-radius: 50px;
-  display: inline-flex;
-  transition: all 0.3s ease 0s;
-  &:hover {
-      color: $secondary-00;
-      border-color: $secondary-00;
-      transition: all 0.3s ease 0s;
+    height: calc(297px * 0.75);
+    width: calc(496px * 0.75);
+    @media (max-width: 599px) {
+      width: 100%;
+      padding-bottom: $scale-5;
+    }
+    object-fit: cover;
   }
 }
 .flickity-button {
   &.previous {
-      left: (-$scale-10);
+    left: (-$scale-10);
   }
   &.next {
-      right: (-$scale-10);
+    right: (-$scale-10);
   }
   .flickity-button-icon {
-      fill: rgba(1, 1, 1, 0.8);
+    fill: rgba(1, 1, 1, 0.8);
   }
 }
 .flickity-page-dots {
   bottom: (-$scale-10);
   .dot {
-      width: $scale-8;
-      height: $scale-2;
-      border-radius: 0;
-      background-color: rgba(0, 0, 0, 0.25);
-      &.is-selected {
-          background-color: $secondary-00;
-      }
+    width: $scale-8;
+    height: $scale-2;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    &.is-selected {
+      background-color: $secondary-00;
+    }
   }
 }

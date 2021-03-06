@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "../assets/images/testimonial-images/1571068147236.jpeg",
+    "image": "1571068147236.jpeg",
     "name": "Mark Brehaut",
     "firstname": "Mark",
     "lastname": "Brehaut",
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "image": "../assets/images/testimonial-images/1588593915975.jpeg",
+    "image": "1588593915975.jpeg",
     "name": "Matthew McDole",
     "firstname": "Matthew",
     "lastname": "McDole",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "image": "../assets/images/testimonial-images/1516900632096.jpeg",
+    "image": "1516900632096.jpeg",
     "name": "Eileen Cannon",
     "firstname": "Eileen",
     "lastname": "Cannon",
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "image": "../assets/images/testimonial-images/1548978272523.jpeg",
+    "image": "1548978272523.jpeg",
     "name": "Erica Price",
     "firstname": "Erica",
     "lastname": "Price",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "image": "../assets/images/testimonial-images/1517373588949.jpeg",
+    "image": "1517373588949.jpeg",
     "name": "Kathleen Dominiak",
     "firstname": "Kathleen",
     "lastname": "Dominiak",
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "image": "../assets/images/testimonial-images/1517729833667.jpeg",
+    "image": "1517729833667.jpeg",
     "name": "Debra Satterfield",
     "firstname": "Debra",
     "lastname": "Satterfield",
@@ -61,7 +61,7 @@
   },
   {
     "id": 7,
-    "image": "../assets/images/testimonial-images/1544823383290.jpeg",
+    "image": "1544823383290.jpeg",
     "name": "Jeremy Lueck",
     "firstname": "Jeremy",
     "lastname": "Lueck",
@@ -71,7 +71,7 @@
   },
   {
     "id": 8,
-    "image": "../assets/images/testimonial-images/1612974065391.jpeg",
+    "image": "1612974065391.jpeg",
     "name": "Ryan Williams",
     "firstname": "Ryan",
     "lastname": "Williams",
@@ -81,7 +81,7 @@
   },
   {
     "id": 9,
-    "image": "../assets/images/testimonial-images/1516272554707.jpeg",
+    "image": "1516272554707.jpeg",
     "name": "Amy Trager",
     "firstname": "Amy",
     "lastname": "Trager",
@@ -91,7 +91,7 @@
   },
   {
     "id": 10,
-    "image": "../assets/images/testimonial-images/1565503433700.jpeg",
+    "image": "1565503433700.jpeg",
     "name": "Austin Smith",
     "firstname": "Austin",
     "lastname": "Smith",
@@ -101,7 +101,7 @@
   },
   {
     "id": 11,
-    "image": "../assets/images/testimonial-images/1517753434231.jpeg",
+    "image": "1517753434231.jpeg",
     "name": "Cyndi Wiley",
     "firstname": "Cyndi",
     "lastname": "Wiley",
@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "image": "../assets/images/testimonial-images/1554491330124.jpeg",
+    "image": "1554491330124.jpeg",
     "name": "Rachel Yeomans",
     "firstname": "Rachel",
     "lastname": "Yeomans",
@@ -121,7 +121,7 @@
   },
   {
     "id": 13,
-    "image": "../assets/images/testimonial-images/1516345032626.jpeg",
+    "image": "1516345032626.jpeg",
     "name": "Douglas England",
     "firstname": "Douglas",
     "lastname": "England",
@@ -131,7 +131,7 @@
   },
     {
     "id": 14,
-    "image": "../assets/images/testimonial-images/1516306851503.jpeg",
+    "image": "1516306851503.jpeg",
     "name": "Jennifer Lizak",
     "firstname": "Jennifer",
     "lastname": "Lizak",

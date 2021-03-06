@@ -82,28 +82,28 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 100px 50px;
+  margin: $scale-20 $scale-10;
   @media (max-width: 799px) {
       flex-direction: column;
   }
-  figure {
+  a {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: calc(50% - 25px);
+    width: calc(50% - #{$scale-5});
     &:nth-of-type(odd) {
-        margin-right: 25px;
+        margin-right: $scale-5;
     }
     &:nth-of-type(even) {
-        margin-left: 25px;
+        margin-left: $scale-5;
     }
     &:nth-of-type(1),
     &:nth-of-type(2) {
-        margin-bottom: 50px;
+        margin-bottom: $scale-10;
     }
     @media (max-width: 799px) {
         margin-left: 0 !important;
-        margin-bottom: 40px !important;
+        margin-bottom: $scale-8 !important;
         width: 100%;
     }
 
@@ -117,14 +117,21 @@
         z-index: 1;
         bottom: 0;
         left: 0;
-        line-height: 1.5;
+        line-height: 1.4;
         background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur($scale-1);
         font-family: Arial, sans-serif;
         color: black;
-        padding: 10px 50px 10px 20px;
-        margin-bottom: 10px;
+        padding: $scale-2 $scale-10 $scale-2 $scale-4;
+        margin-bottom: $scale-2;
         max-width: 90%;
+        h3 {
+          font-family: $type-display-secondary;
+          font-weight: $type-display-light;
+          font-size: $h5-font-size;
+          box-shadow: none;
+          margin: 0;
+        }
         p {
             @media (max-width: 599px) {
                 font-size: 0;
