@@ -1,8 +1,36 @@
-<header>
+<header id="masterhead">
   <a href="/"><h1><span>Ryan G<i>.</i> Wilson</span> Product Designer</h1></a>
-  <nav>
-    {% for navigation in site.data.navigation %}
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  {% for navigation in site.data.navigation %}
     <a href="{{ navigation.url }}" {% if page.url == navigation.url %}class="active"{% endif %}>{{ navigation.title }}</a>
   {% endfor %}
   </nav>
 </header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>

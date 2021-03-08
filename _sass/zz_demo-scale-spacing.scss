@@ -73,6 +73,66 @@
     @include scale-demo-mixin($scale-1, $scale-15, $scale-15);
     background-color: $demo-width-color;
 }
+.demo-scale-width-16 {
+    @include scale-demo-mixin($scale-1, $scale-16, $scale-16);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-17 {
+    @include scale-demo-mixin($scale-1, $scale-17, $scale-17);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-18 {
+    @include scale-demo-mixin($scale-1, $scale-18, $scale-18);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-19 {
+    @include scale-demo-mixin($scale-1, $scale-19, $scale-19);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-20 {
+    @include scale-demo-mixin($scale-1, $scale-20, $scale-20);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-21 {
+    @include scale-demo-mixin($scale-1, $scale-21, $scale-21);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-22 {
+    @include scale-demo-mixin($scale-1, $scale-22, $scale-22);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-23 {
+    @include scale-demo-mixin($scale-1, $scale-23, $scale-23);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-24 {
+    @include scale-demo-mixin($scale-1, $scale-24, $scale-24);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-25 {
+    @include scale-demo-mixin($scale-1, $scale-25, $scale-25);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-26 {
+    @include scale-demo-mixin($scale-1, $scale-26, $scale-26);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-27 {
+    @include scale-demo-mixin($scale-1, $scale-27, $scale-27);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-28 {
+    @include scale-demo-mixin($scale-1, $scale-28, $scale-28);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-29 {
+    @include scale-demo-mixin($scale-1, $scale-29, $scale-29);
+    background-color: $demo-width-color;
+}
+.demo-scale-width-30 {
+    @include scale-demo-mixin($scale-1, $scale-30, $scale-30);
+    background-color: $demo-width-color;
+}
 
 
 .demo-scale-height-1 {
@@ -133,5 +193,65 @@
 }
 .demo-scale-height-15 {
     @include scale-demo-mixin($scale-15, $scale-1, $scale-15);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-16 {
+    @include scale-demo-mixin($scale-16, $scale-1, $scale-16);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-17 {
+    @include scale-demo-mixin($scale-17, $scale-1, $scale-17);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-18 {
+    @include scale-demo-mixin($scale-18, $scale-1, $scale-18);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-19 {
+    @include scale-demo-mixin($scale-19, $scale-1, $scale-19);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-20 {
+    @include scale-demo-mixin($scale-20, $scale-1, $scale-20);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-21 {
+    @include scale-demo-mixin($scale-21, $scale-1, $scale-21);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-22 {
+    @include scale-demo-mixin($scale-22, $scale-1, $scale-22);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-23 {
+    @include scale-demo-mixin($scale-23, $scale-1, $scale-23);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-24 {
+    @include scale-demo-mixin($scale-24, $scale-1, $scale-24);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-25 {
+    @include scale-demo-mixin($scale-25, $scale-1, $scale-25);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-26 {
+    @include scale-demo-mixin($scale-26, $scale-1, $scale-26);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-27 {
+    @include scale-demo-mixin($scale-27, $scale-1, $scale-27);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-28 {
+    @include scale-demo-mixin($scale-28, $scale-1, $scale-28);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-29 {
+    @include scale-demo-mixin($scale-29, $scale-1, $scale-29);
+    background-color: $demo-height-color;
+}
+.demo-scale-height-30 {
+    @include scale-demo-mixin($scale-30, $scale-1, $scale-30);
     background-color: $demo-height-color;
 }

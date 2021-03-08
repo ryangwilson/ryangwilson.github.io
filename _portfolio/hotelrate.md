@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: product
-project: HotelRate IA & Prototype
+project: HotelRate
 role: Product Designer
 client: HotelRate
 year: 2016

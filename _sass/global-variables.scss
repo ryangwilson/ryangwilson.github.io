@@ -106,12 +106,12 @@ $border-width-base: 5px;
 // border width - math
 $border-width-wide: $border-width-base;
 $border-width-medium: $border-width-base / 2;
-$border-width-thin: $border-width-base / $border-width-base;
+$border-width-thin: 1px;
 
 // fake borders - to be used with box-shadow, needs color declaration
 $fake-wide: 0 0 0 ($border-width-base);
 $fake-medium: 0 0 0 ($border-width-base / 2);
-$fake-thin: 0 0 0 ($border-width-base / $border-width-base);
+$fake-thin: 0 0 0 1px;
 
 // ** ELEVATION - to be used with box-shadow ---------------------------------------------------
 $elevation-high: 0 10px 10px 0 rgba(0,0,0,0.22), 0 14px 28px 0 rgba(0,0,0,0.25);
@@ -279,14 +279,21 @@ del, s {
 q, blockquote p {
     @include type-mixin($type-body, $body-font-size, $type-body-light, italic);
     color: $black-00;
+    line-height: 1.8;
+    &:before {
+        content:'';
+    }
+    &:after {
+        content:'';
+    }
 }
+
 // *** style citation ---------------------------------------------------
 cite {
     @include type-mixin($type-body, $body-font-size, $type-body-medium);
     color: $black-00;
     a {
         @include type-mixin($type-body, $body-font-size, $type-body-light);
-        text-decoration: underline;
     }
 }
 blockquote cite {

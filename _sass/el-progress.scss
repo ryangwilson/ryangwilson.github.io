@@ -1,2 +1,62 @@
 // progress-bars.scss
 // Styles for Progress Bars
+///// STYLE PROGRESS BAR - https://css-tricks.com/html5-progress-element/
+progress[value] {
+    appearance: none;
+    border: none;
+    width: 100%;
+    height: $scale-3;
+    /* Style for Firefox bar. */
+    background-color: whiteSmoke;
+    border-radius: $radius-medium;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+    /* Fallback information */
+    color: $info-00;
+    position: relative;
+    margin: 0 0 1.5em;
+}
+/* Webkit browsers provide two pseudo classes to style */
+progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border-radius: $radius-medium;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+}
+progress[value]::-webkit-progress-value {
+    background-color: $info-00;
+    position: relative;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: $radius-medium;
+}
+progress[value]::-moz-progress-bar {
+    background-color: $info-00;
+    border-radius: $radius-medium;
+}
+/* Fallback technique styles */
+.progress-bar {
+    background-color: whiteSmoke;
+    border-radius: $radius-medium;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
+    /* Dimensions should be similar to the parent progress element. */
+    width: 100%;
+    height: $scale-3;
+    span {
+        background-color: $info-00;
+        border-radius: $radius-medium;
+        display: block;
+        text-indent: -9999px;
+    }
+}
+p[data-value] {
+    position: relative;
+    &:after {
+        content: attr(data-value) "%";
+        position: absolute;
+        right: -($scale-3);
+    }
+}
+
+///// METER
+meter {
+    display: inline-block;
+    width: 50%;
+}

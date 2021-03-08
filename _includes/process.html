@@ -30,9 +30,46 @@
 
 <div class="process-container">
   <div class="sidebar">
-    <p>Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-      lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur
-      blandit tempus porttitor.</p>
+    <h3>Budget Calculator</h3>
+    <p>This calculator will help to give you an idea of the type of budget needed to give your project the best chance of success. <b>Let's discuss your project to get a more accurate proposal.</b></p>
+    <p><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Discovery Phase</label></p>
+    <div>
+      <label for="discovery-radio1"><input id="discovery-radio1" name="discovery-radio" type="radio" class="radio" checked="checked"> Existing Product, small (4 weeks)</label>
+      <label for="discovery-radio2"><input id="discovery-radio2" name="discovery-radio" type="radio" class="radio"> Existing Product, large (8 weeks)</label>
+      <label for="discovery-radio3"><input id="discovery-radio3" name="discovery-radio" type="radio" class="radio"> New Product/Feature (8 weeks)</label>
+    </div>
+    <p><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox" checked="checked"> Product Refinement Phase</label></p>
+    <div>
+      <label for="refinement-radio1"><input id="refinement-radio1" name="radio" type="radio" class="radio" checked="checked"> Small (6 weeks)</label>
+      <label for="refinement-radio2"><input id="refinement-radio2" name="radio" type="radio" class="radio"> Medium (12 weeks)</label>
+      <label for="refinement-radio3"><input id="refinement-radio3" name="radio" type="radio" class="radio"> Large (18 weeks)</label>
+    </div>
+    <p><label for="checkbox3"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Product Support Contract</label></p>
+    <div>
+      <label for="select">Development Time</label>
+      <select id="select" class="select-css">
+        <optgroup label="Development Time">
+          <option>6 weeks</option>
+          <option>8 weeks</option>
+          <option>10 weeks</option>
+          <option>12 weeks</option>
+          <option>14 weeks</option>
+          <option>16 weeks</option>
+        </optgroup>
+      </select>
+    </div>
+    <p><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox" checked="checked"> Product Review Contract</label></p>
+    <div>
+      <label for="review-radio1"><input id="review-radio1" name="radio" type="radio" class="radio" checked="checked"> Small (1 week)</label>
+      <label for="review-radio2"><input id="review-radio2" name="radio" type="radio" class="radio"> Large (2 weeks)</label>
+    </div>
+    <div class="estimate-overview">
+      <i>Bundle Discount Applied</i><br>
+      <b>XX weeks – $XXX,000</b>
+    </div>
+    <label for="input__emailaddress">Email Address</label>
+    <input id="input__emailaddress" type="email" placeholder="name@email.com">
+    <a href="#" class="btn secondary">Start Conversation <i data-feather="message-square"></i></a>
   </div>
   <div class="main">
     <div class="phase-container" id="discovery">
@@ -65,7 +102,7 @@
           </ul>
         </div>
       </div>
-      <a class="toggle btn primary" href="#discovery-details">Details </a>
+      <a class="toggle btn primary" href="#discovery-details">Details <i data-feather="chevron-down"></i></a>
       <div class="toggle-content" id="discovery-details">
         <p>The best way to a successful project is to start with a clear vision of what needs to be built. The
           purpose of a product discovery phase is to understand and clearly articulate high-level requirements
@@ -120,7 +157,7 @@
           </ul>
         </div>
       </div>
-      <a class="toggle btn primary" href="#product-refinement-details">Details </a>
+      <a class="toggle btn primary" href="#product-refinement-details">Details <i data-feather="chevron-down"></i></a>
       <div class="toggle-content" id="product-refinement-details">
         <p>In the product refinement phase, our goal is to drill-down into the understanding gained in the
           discovery phase to finely define project requirements within the allotted time frame. The more time
@@ -270,7 +307,7 @@
           </ul>
         </div>
       </div>
-      <a class="toggle btn primary" href="#product-support-details">Details </a>
+      <a class="toggle btn primary" href="#product-support-details">Details <i data-feather="chevron-down"></i></a>
       <div class="toggle-content" id="product-support-details">
         <p>From our experience, even from the most complete refinement phases and complete style guides, and
           complete documentation, there will always be a certain level of uncertainty and product

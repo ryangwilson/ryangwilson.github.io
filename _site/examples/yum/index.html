@@ -3,16 +3,24 @@
   <head>
   <meta charset="utf-8">
   <title>Yum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
   <body>
-    <header>
+    <header id="masterhead">
   <a href="/"><h1><span>Ryan G<i>.</i> Wilson</span> Product Designer</h1></a>
-  <nav>
-    
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
     <a href="/" >About</a>
   
     <a href="/experience/" >Experience</a>
@@ -25,6 +33,27 @@
   
   </nav>
 </header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
 
     <a href="/examples/">Work Examples</a> / Yum Admin
     <div class="card-dark">

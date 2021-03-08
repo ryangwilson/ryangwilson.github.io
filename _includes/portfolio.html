@@ -1,6 +1,7 @@
+{% assign example = site.portfolio | sort: 'year' | reverse %}
 {% if page.url == '/' %}
 <div class="card-portfolio">
-    {% for example in site.portfolio limit:4 %}
+    {% for example in example | limit:4 %}
     <a href="{{ example.url }}">
         <figure class="{{ example.type }}">
             <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
@@ -14,7 +15,7 @@
 </div>
 {% else %}
 <div class="card-portfolio">
-    {% for example in site.portfolio %}
+    {% for example in example %}
     <a href="{{ example.url }}">
         <figure class="{{ example.type }}">
             <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">

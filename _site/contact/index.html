@@ -3,16 +3,24 @@
   <head>
   <meta charset="utf-8">
   <title>Contact Ryan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
   <body>
-    <header>
+    <header id="masterhead">
   <a href="/"><h1><span>Ryan G<i>.</i> Wilson</span> Product Designer</h1></a>
-  <nav>
-    
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
     <a href="/" >About</a>
   
     <a href="/experience/" >Experience</a>
@@ -25,6 +33,27 @@
   
   </nav>
 </header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
 
     <div class="card-dark">
   <h2>Contact Ryan</h2>
@@ -40,7 +69,24 @@
 
 <p>Until then, please take a minute to review Ryan’s experience, what people have said about working with Ryan, and examples of Ryan’s product design work.</p>
 </p>
-            <p>contact form needs to be built</p>
+            <form class="nl-form">
+    <p>Hello! My name is
+    <input id="input__text" type="text" placeholder="Text Input">. I work in the
+    <input id="input__text" type="text" placeholder="Text Input">. I'm looking for help with
+            <select id="select" class="select-css">
+                <optgroup label="Option Group">
+                    <option>Option One</option>
+                    <option>Option Two</option>
+                    <option>Option Three</option>
+                </optgroup>
+        </select>.</p>
+    <p>You can reach me by email
+    <input id="input__text" type="email" placeholder="Text Input"> and by phone
+        <input id="input__text" type="tel" placeholder="Text Input">.</p>
+    <p><i>(Optional)</i> The budget for my project is
+    <input id="input__text" type="email" placeholder="Text Input">.</p>
+    <button class="btn secondary pull-right" type="submit">Send Message <i data-feather="chevron-right"></i></button>
+</form>
 
         </div>
         <div class="col-right">
@@ -58,12 +104,8 @@
           
 <div class="card-container">
     
-    <a class="reference-card single" href="experience/#Brehaut">
-        <p>Value-driven is a term that often gets thrown around undeservingly. Ryan is the exception because he wears his values on his sleeve (in the most positive way). His values guide how he works, builds a team, mentors employees, and excels at his craft. 
-
-He knows more about design than anybody I've worked with and is passionate about continuously putting out the best product possible. He is a deliberate and thoughtful designer who constantly seeks feedback from users to stress-test assumptions and ensure the right product gets put to market. 
-
-He also understands and cares about people. Whether they are teammates, employees, users, or clients, Ryan listens and communicates with an open mind. Ryan is one of the finest people I've worked with. If you are looking to hire him or work with him as well, you will not be disappointed.</p>
+    <a class="reference-card single" href="../experience/#Brehaut">
+        <q>Value-driven is a term that often gets thrown around undeservingly. Ryan is the exception because he wears his values on his sleeve (in the most positive way). His values guide how he works, builds a team, mentors employees, and excels at his craft. <br><br>He knows more about design than anybody I've worked with and is passionate about continuously putting out the best product possible. He is a deliberate and thoughtful designer who constantly seeks feedback from users to stress-test assumptions and ensure the right product gets put to market. <br><br>He also understands and cares about people. Whether they are teammates, employees, users, or clients, Ryan listens and communicates with an open mind. Ryan is one of the finest people I've worked with. If you are looking to hire him or work with him as well, you will not be disappointed.</q>
         <span class="btn text">Read More</span>
         <div class="image-title">
             <img src="../assets/images/testimonial-images/1571068147236.jpeg" />

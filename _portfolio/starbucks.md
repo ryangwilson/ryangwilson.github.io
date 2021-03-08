@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: product
-project: Starbucks Service Review & Recommendations
+project: Starbucks
 role: Product Designer
 client: Student Project
 year: 2011

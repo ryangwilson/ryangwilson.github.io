@@ -1,2 +1,321 @@
 // form-elements.scss
 // Styles for Form Elements
+button,label,input,select,progress,textarea {
+  display: block;
+  font-family: inherit;
+  font-size: $body-font-size;
+}
+
+input:not([type]),input[type="text"],input[type="password"],input[type="email"],input[type="tel"],input[type="number"],input[type="url"],input[type="search"],textarea,input[type="date"],input[type="month"],input[type="week"],input[type="datetime"],input[type="datetime-local"],select {
+  padding: $scale-1;
+  border: none;
+  box-shadow: $fake-thin $lt-gray-00;
+  width: 100%;
+  &:focus {
+    box-shadow: $fake-medium $primary-00;
+    outline: 0;
+  }
+}
+
+label {
+  margin-bottom: $scale-1;
+  width: fit-content;
+}
+
+////// SELECT STYLES FROM https://www.filamentgroup.com/lab/select-css.html
+/* class applies to select element itself, not a wrapper element */
+.select-css {
+  display: block;
+  color: $dk-gray-00;
+  padding: $scale-1 $scale-2;
+  width: 100%;
+  max-width: 100%;
+  /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid $lt-gray-00;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+  border-radius: 3px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient.
+		for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, $white-00 0%, $white-00 90%, $lt-gray-00 100%);
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right .7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: .65em auto, 100%;
+  transition: border .2s ease-in-out;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+  display: none;
+}
+/* Hover style */
+.select-css:hover {
+  border-color: $md-gray-00;
+}
+/* Focus style */
+.select-css:focus {
+  border-color: $md-gray-00;
+  /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+  box-shadow: 0 0 1px 3px $primary-00;
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: $black-00;
+  outline: none;
+}
+/* Set options to normal weight */
+.select-css option {
+  font-weight: normal;
+}
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css,
+:root:lang(ar) .select-css,
+:root:lang(iw) .select-css {
+  background-position: left .7em top 50%, 0 0;
+  padding: .6em .8em .5em 1.4em;
+}
+/* Disabled styles */
+.select-css:disabled,
+.select-css[aria-disabled=true] {
+  color: graytext;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+.select-css:disabled:hover,
+.select-css[aria-disabled=true] {
+  border-color: #aaa;
+}
+
+///// CHECKBOX, RADIO, TOGGLE STYLES - https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #{$secondary-00};
+    --active-inner: #{$white-00};
+    --focus: 2px #{$primary-00};
+    --border: #{$dk-gray-00};
+    --border-hover: #{$secondary-00};
+    --background: #{$white-00};
+    --disabled: #{$lt-gray-00};
+    --disabled-inner: #{$lt-gray-00};
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s;
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      &+label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 3px $primary-00;
+    }
+    &:not(.switch) {
+      width: 21px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    &+label {
+      font-size: 14px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+  input[type='checkbox'] {
+    &:not(.switch) {
+      border-radius: 7px;
+      &:after {
+        width: 5px;
+        height: 10px;
+        border: 3px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 6px;
+        top: 2px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 38px;
+      border-radius: 11px;
+      &:after {
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 17px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: .6;
+          }
+        }
+      }
+    }
+  }
+  input[type='radio'] {
+    border-radius: 50%;
+    &:after {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, .7));
+    }
+    &:checked {
+      --s: .5;
+    }
+  }
+}
+
+///// RANGE SLIDER STYLES - https://www.cssportal.com/style-input-range/
+input[type=range] {
+  height: $scale-5;
+  -webkit-appearance: none;
+  margin: $scale-2 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $scale-1;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0 0 0 0 $black-00;
+  background: $secondary-50;
+  border-radius: 1px;
+  border: 0 solid $black-00;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: $elevation-near;
+  border: 1px solid $secondary-00;
+  height: $scale-4;
+  width: $scale-4;
+  border-radius: $scale-5;
+  background: $secondary-00;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -($scale-1 + 2);
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  box-shadow: 0 0 0 3px $primary-00;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: $scale-1;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0 0 0 3px $black-00;
+  background: $secondary-00;
+  border-radius: 1px;
+  border: 0 solid $black-00;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: $elevation-near;
+  border: 1px solid $secondary-00;
+  height: $scale-4;
+  width: $scale-4;
+  border-radius: $scale-5;
+  background: $secondary-50;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: $scale-1;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: $secondary-00;
+  border: 0 solid $black-00;
+  border-radius: 2px;
+  box-shadow: 0 0 0 0 $black-00;
+}
+input[type=range]::-ms-fill-upper {
+  background: $secondary-00;
+  border: 0 solid $black-00;
+  border-radius: 2px;
+  box-shadow: 0 0 0 0 $black-00;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: $elevation-near;
+  border: 1px solid $secondary-00;
+  height: $scale-4;
+  width: $scale-4;
+  border-radius: $scale-5;
+  background: $secondary-50;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: $primary-00;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: $primary-00;
+}

@@ -1,5 +1,22 @@
 // buttons.scss
 // Styles for Buttons
+///// TRUE HTML BUTTON RESET - https://css-tricks.com/overriding-default-button-styles/
+button, input[type=submit], input[type=button], input[type=reset] {
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:focus {
+        outline: $border-width-wide solid $primary-00;
+        outline-offset: -($scale-1);
+    }
+}
+
+
+///// ANCHORS AS BUTTONS STYLING
 .btn {
     display: flex;
     align-items: center;
@@ -8,36 +25,36 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: $scale-2 $scale-6;
-    margin: $scale-5;
+    margin: $scale-5 0;
     border-radius: $scale-10;
-    box-shadow: 0 0 0 $scale-1 $black-00;
+    box-shadow: $fake-medium $black-00;
     width: -moz-fit-content;
     width: fit-content;
     transition: .25s ease-in-out;
     &.primary {
         &:hover {
             color: $secondary-00;
-            box-shadow: 0 0 0 $scale-1 $secondary-00;
+            box-shadow: $fake-medium $secondary-00;
         }
     }
 
     &.secondary {
         background-color: $primary-00;
-        box-shadow: 0 0 0 $scale-1 $primary-00;
+        box-shadow: $fake-medium $primary-00;
         &:hover {
             color: $secondary-00;
                     background-color: $dk-gray-00;
-            box-shadow: 0 0 0 $scale-1 $dk-gray-00;
+            box-shadow: $fake-medium $dk-gray-00;
         }
     }
     &.tertiary {
         background-color: $dk-gray-00;
         color: $primary-00;
-        box-shadow: 0 0 0 $scale-1 $dk-gray-00;
+        box-shadow: $fake-medium $dk-gray-00;
                 &:hover {
                     background-color: transparent;
                     color: $black-00;
-            box-shadow: 0 0 0 $scale-1 $black-00;
+            box-shadow: $fake-medium $black-00;
         }
     }
     &.text {
@@ -48,5 +65,21 @@
         &:hover {
             box-shadow: 0 $scale-2 0 (-$scale-1) $secondary-00;
         }
+    }
+    &:disabled {
+        box-shadow: $fake-medium $lt-gray-00;
+        color: $lt-gray-00;
+        cursor: default;
+        &:hover {
+            box-shadow: $fake-medium $lt-gray-00;
+            color: $lt-gray-00;
+        }
+    }
+    svg {
+        margin-left: $scale-2;
+        margin-right: -($scale-2);
+    }
+    &.pull-right {
+        margin-left: auto;
     }
 }

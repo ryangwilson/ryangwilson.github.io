@@ -4,9 +4,6 @@
 @import "global-reset";
 // import variables
 @import "global-variables";
-// import items for style guide only
-@import "zz_style-guide-only";
-@import "zz_demo-scale-spacing";
 // import core
 @import "core-colors";
 @import "core-borders";
@@ -24,3 +21,7 @@
 @import "pon-structure";
 @import "pon-cards";
 @import "pon-carousel";
+
+// import overrides
+@import "override-contact-form";
+@import "override-hamburger-menu";

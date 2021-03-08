@@ -1,8 +1,8 @@
 {% if page.url == '/contact/' %}
 <div class="card-container">
     {% for testimonials in site.data.testimonials | limit: 1 %}
-    <a class="reference-card single" href="experience/#{{ testimonials.lastname }}">
-        <p>{{ testimonials.quote }}</p>
+    <a class="reference-card single" href="../experience/#{{ testimonials.lastname }}">
+        <q>{{ testimonials.quote }}</q>
         <span class="btn text">Read More</span>
         <div class="image-title">
             <img src="../assets/images/testimonial-images/{{ testimonials.image }}" />
@@ -15,8 +15,8 @@
 {% if page.url == '/' %}
 <div class="card-container">
     {% for testimonials in site.data.testimonials | limit: 3 %}
-    <a class="reference-card third" href="experience/#{{ testimonials.lastname }}">
-        <p>{{ testimonials.quote }}</p>
+    <a class="reference-card third" href="../experience/#{{ testimonials.lastname }}">
+        <q>{{ testimonials.quote }}</q>
         <span class="btn text">Read More</span>
         <div class="image-title">
             <img src="../assets/images/testimonial-images/{{ testimonials.image }}" />
@@ -30,7 +30,7 @@
 <div class="card-container all">
     {% for testimonials in site.data.testimonials %}
     <div class="reference-card half" id="{{ testimonials.lastname }}">
-        <p>{{ testimonials.quote }}</p>
+        <q>{{ testimonials.quote }}</q>
         <div class="image-title">
             <img src="../assets/images/testimonial-images/{{ testimonials.image }}" />
             <h3><b>{{ testimonials.name }}</b> <i>{{ testimonials.title }}</i> {{ testimonials.company }}</h3>

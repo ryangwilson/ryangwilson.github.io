@@ -1,0 +1,120 @@
+// hamburger-menu.scss
+// Hamburger Menu
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+/* Default styles + Offscreen menu style */
+.mobile-menu #masternav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  left: -100vw;
+  top: 0;
+  height: 100vh;
+	transition: left .5s ease-in-out;
+	z-index: 999;
+  overflow: hidden;
+  background-color: $black-00;
+  transition: all .2s ease-in;
+}
+
+/* On small devices, allow it to toggle - :target for non-JavaScript
+ aria-expanded="true/false" will be for JavaScript */
+.mobile-menu #masternav.open {
+  left: 0;
+  background-color: rgba(0,0,0,1);
+  z-index: 1000;
+  transition: all .5s ease-out;
+  a {
+    margin: 0;
+    font-size: $h5-font-size;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MENU TOGGLE */
+.menu-toggle {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: auto;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 1001;
+  outline: none;
+}
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: $white-00;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+.menu-toggle span:nth-child(1) {
+  top: 0;
+}
+.menu-toggle span:nth-child(2),.menu-toggle span:nth-child(3) {
+  top: 14px;
+}
+.menu-toggle span:nth-child(4) {
+  top: 28px;
+}
+.menu-toggle.open span:nth-child(1) {
+  top: 14px;
+  width: 0;
+  left: 50%;
+  background: $white-00;
+}
+.menu-toggle.open span:nth-child(2) {
+  transform: rotate(45deg);
+  background: $white-00;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  background: $white-00;
+}
+.menu-toggle.open span:nth-child(4) {
+  top: 14px;
+  width: 0;
+  left: 50%;
+  background: $white-00;
+}
+@keyframes fold {
+  0% {
+    opacity: 0;
+    transform: translateX(-25vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Larger screen styling Horizontal menu */
+@media (min-width: 699px) {
+  .menu-toggle {
+    display: none;
+  }
+}

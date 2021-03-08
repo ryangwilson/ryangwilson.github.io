@@ -1,0 +1,21 @@
+// content-form.scss
+// Form for Contact page
+
+.nl-form {
+  padding: $scale-10 $scale-10 0;
+  margin: $scale-5 0;
+  box-shadow: 0 0 0 3px #232323;
+  border-radius: 5px;
+  width: fit-content;
+  input[type="text"], input[type="email"], input[type="tel"], select {
+    display: inline-flex;
+    width: fit-content;
+    margin: 0 $scale-1;
+  }
+  p {
+    line-height: 3;
+  }
+  span {
+    width: fit-content;
+  }
+}

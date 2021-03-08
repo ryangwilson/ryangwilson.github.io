@@ -1,6 +1,6 @@
 ---
 layout: about-template
-title: About Ryan G<span>.</span> Wilson
+title: About Ryan
 permalink: /
 subtitle: Product Designer, Graphic Designer, Leader
 card-content: Ryan is a Product Designer working for Bitovi. For over twenty years Ryan has been creating products with the user in mind. His passions are in the User Experience Process - research, understanding the user, developing product requirements, creating mockups and building prototypes, and iterating through documentation. He aims to understand and empathize with the needs, wants, and limitations of end-users to help create a better experience for that end-user.
