@@ -13,15 +13,15 @@ users:
 persona:
 constraints:
 process:
-processdoc: starbucks_design[rfs].pdf
+processdoc: starbucks-process.pdf
 processdocprompt: Process Document
 outcome:
 externalurl:
 externalprompt:
-collection-image: starbucks01.jpg
-image01: starbucks02.jpg
-image02: starbucks_app.jpg
-image03:
+collection-image: starbucks-flow01.jpg
+image01: starbucks01.jpg
+image02: starbucks02.jpg
+image03: starbucks_app.jpg
 image04:
 image05:
 ---

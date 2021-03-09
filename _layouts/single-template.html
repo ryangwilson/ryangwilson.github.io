@@ -8,8 +8,8 @@
       <h2>{{ page.project }}</h2>
       <p class="subtitle">Role: {{ page.role }}</p>
     </div>
-    <section>
-      <div class="">
+    <section class="examples-container">
+      <div class="content-column">
         <p><b>Client</b><br/>
         {{ page.client }}, {{ page.year }}</p>
         {% if page.phases %}
@@ -29,7 +29,7 @@
         {{ page.users }}</p>
         {% endif %}
         {% if page.persona %}
-        <img src="../../assets/images/portfolio-images/{{ page.persona }}" class="" alt="Persona examples for {{ page.project }}" />
+        <img src="../../assets/images/{{ page.persona }}" class="" alt="Persona examples for {{ page.project }}" />
         {% endif %}
         {% if page.constraints %}
         <p><b>Constraints</b><br/>
@@ -43,23 +43,23 @@
         {{ page.outcome }}</p>
         {% if page.processdoc %}
           <p><b>Process Document</b><br/>
-          <a href="{{ page.processdoc }}">{{ page.processdocprompt }}</a></p>
+          <a href="../../assets/images/process-docs/{{ page.processdoc }}" target="_blank">{{ page.processdocprompt }}</a></p>
         {% endif %}
         {% if page.externalurl %}
           <p><b>External Files</b><br/>
-          <a href="{{ page.externalurl }}">{{ page.externalprompt }}</a></p>
+          <a href="{{ page.externalurl }}" target="_blank">{{ page.externalprompt }}</a></p>
         {% endif %}
       </div>
-      <div class="">
-        <div class="">
+      <div class="image-column">
+        <div class="single">
           <img src="../../assets/images/portfolio-images/{{ page.collection-image }}" class="" alt="Project example image for {{ page.project }}" />
         </div>
-        <div class="">
+        <div class="single">
         {% if page.image01 %}
           <img src="../../assets/images/portfolio-images/{{ page.image01 }}" class="" alt="Project example image for {{ page.project }}" />
         {% endif %}
         </div>
-        <div class="">
+        <div class="double">
           {% if page.image02 %}
           <img src="../../assets/images/portfolio-images/{{ page.image02 }}" class="" alt="Project example image for {{ page.project }}" />
           {% endif %}
@@ -67,7 +67,7 @@
           <img src="../../assets/images/portfolio-images/{{ page.image03 }}" class="" alt="Project example image for {{ page.project }}" />
           {% endif %}
         </div>
-        <div class="">
+        <div class="double">
           {% if page.image04 %}
           <img src="../../assets/images/portfolio-images/{{ page.image04 }}" class="" alt="Project example image for {{ page.project }}" />
           {% endif %}

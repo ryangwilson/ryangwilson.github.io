@@ -13,12 +13,12 @@ users:
 persona:
 constraints:
 process:
-processdoc: rgwilson_P3-REPORT[rfs].pdf
+processdoc: caloric-budget-process.pdf
 processdocprompt: Process Document
 outcome:
 externalurl:
 externalprompt:
-collection-image: rgwilson_672_poster-V3-B-2.jpg
+collection-image: production_ex.jpg
 image01: wire_to_high.jpg
 image02: cb_flow_V7.png
 image03: rgwilson_672_poster-V3.jpg

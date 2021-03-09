@@ -418,7 +418,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 @media (max-width: 799px) { .card-portfolio { flex-direction: column; } }
 
-.card-portfolio a { position: relative; background-color: lightgray; display: flex; justify-content: space-between; width: calc(50% - 25px); height: 250px; margin-bottom: 50px; }
+.card-portfolio a { background-color: lightgray; display: flex; flex-basis: calc(50% - 25px); justify-content: space-between; height: 250px; margin-bottom: 50px; }
 
 .card-portfolio a:nth-of-type(odd) { margin-right: 25px; }
 
@@ -426,7 +426,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 @media (max-width: 799px) { .card-portfolio a { margin-left: 0 !important; margin-bottom: 40px !important; width: 100%; } }
 
-.card-portfolio a img { width: 100%; max-height: 250px; object-fit: cover; }
+.card-portfolio a img { width: 100%; height: 100%; object-fit: cover; }
 
 .card-portfolio a h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 24px; box-shadow: none; margin: 0; }
 
@@ -464,7 +464,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .process-container .sidebar .estimate-overview i, .process-container .sidebar .estimate-overview b { color: #FFFFFF; font-size: 18px; }
 
-.process-container .phase-container { border: 5px solid #DADADA; border-radius: 10px; display: flex; flex-direction: column; padding: 25px 20px; margin: 25px 0 25px 25px; }
+.process-container .phase-container { border: 5px solid #DADADA; border-radius: 10px; display: flex; flex-direction: column; padding: 25px 20px; margin-top: 50px; }
 
 .process-container .phase-container:last-of-type { margin-bottom: 0; }
 
@@ -481,6 +481,22 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 .process-container .phase-container .toggle-content { display: none; height: 0; overflow: hidden; transition: height 350ms ease-in-out; }
 
 .process-container .phase-container .toggle-content.is-visible { display: block; height: auto; }
+
+.examples-container { display: flex; }
+
+.examples-container .content-column { flex: 1; }
+
+.examples-container .image-column { flex: 1; margin-left: 50px; }
+
+.examples-container .image-column .single { margin-bottom: 25px; }
+
+.examples-container .image-column .single img { width: 100%; height: 300px; object-fit: cover; }
+
+.examples-container .image-column .double { display: flex; justify-content: space-between; margin-bottom: 25px; }
+
+.examples-container .image-column .double img { width: calc(50% - 25px); height: 300px; object-fit: cover; }
+
+.examples-container .image-column .double img:nth-of-type(2) { margin-left: 50px; }
 
 .carousel-cell { display: flex; width: 100%; }
 
