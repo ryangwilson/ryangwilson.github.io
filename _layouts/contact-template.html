@@ -4,23 +4,25 @@
   <body>
     {% include navigation.html %}
     {% include card-dark.html %}
-    <section>
-      <div class="flex-two-col">
-        <div class="col-left">
-            <h3>{{ page.main-section-title }}</h3>
-            <p>{{ page.content }}</p>
-            {% include contact-form.html %}
+    <main>
+      <section>
+        <div class="flex-two-col">
+          <div class="col-left">
+              <h3>{{ page.main-section-title }}</h3>
+              <p>{{ page.content }}</p>
+              {% include contact-form.html %}
+          </div>
+          <div class="col-right">
+            <h3>{{ page.sidebar-title01 }}</h3>
+            {% for subnav in site.data.subnav %}
+            <p><a href="{{ subnav.url }}" target="_blank">{{ subnav.title }}</a></p>
+            {% endfor %}
+            <h3>{{ page.sidebar-title02 }}</h3>
+            {% include references.html %}
+          </div>
         </div>
-        <div class="col-right">
-          <h3>{{ page.sidebar-title01 }}</h3>
-          {% for subnav in site.data.subnav %}
-          <p><a href="{{ subnav.url }}" target="_blank">{{ subnav.title }}</a></p>
-          {% endfor %}
-          <h3>{{ page.sidebar-title02 }}</h3>
-          {% include references.html %}
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
     {% include footer.html %}
   </body>
 </html>

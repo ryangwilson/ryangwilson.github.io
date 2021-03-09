@@ -226,7 +226,6 @@ body, p {
     @include type-mixin($type-body, $body-font-size, $type-body-regular);
     line-height: $line-height-body;
     color: $black-00;
-    margin-bottom: 1em;
 }
 p:last-of-type {
     margin-bottom: 0;

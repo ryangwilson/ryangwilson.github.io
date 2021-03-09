@@ -22,7 +22,7 @@ h5 { font-family: "Roboto", sans-serif; font-size: 24px; font-weight: 400; font-
 
 h6 { font-family: "Roboto Condensed", sans-serif; font-size: 18px; font-weight: 400; font-style: normal; text-transform: uppercase; color: #232323; }
 
-body, p { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; font-style: normal; text-transform: none; line-height: 1.4; color: #232323; margin-bottom: 1em; }
+body, p { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; font-style: normal; text-transform: none; line-height: 1.4; color: #232323; }
 
 p:last-of-type { margin-bottom: 0; }
 
@@ -326,7 +326,7 @@ table th { padding: 10px 20px; background-color: #DADADA; text-align: left; }
 
 table tr:nth-child(even) { background-color: rgba(1, 1, 1, 0.05); }
 
-figure { position: relative; }
+figure { position: relative; width: 100%; }
 
 figcaption { position: absolute; z-index: 1; bottom: 0; left: 0; line-height: 1.4; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px); font-family: Arial, sans-serif; color: black; padding: 10px 50px 10px 20px; margin-bottom: 10px; max-width: 90%; }
 
@@ -349,6 +349,8 @@ nav a.active { color: #28d2c9; cursor: default; }
 nav a.active:hover { box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; }
 
 header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 10px 25px; border-bottom: 5px solid #FFFFFF; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.22), 0 14px 28px 0 rgba(0, 0, 0, 0.25); z-index: 99; position: sticky; top: 0; }
+
+main { flex: 1; }
 
 footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 15px 25px; margin-top: 50px; border-top: 5px solid #FFFFFF; line-height: 2; }
 

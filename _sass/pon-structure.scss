@@ -52,6 +52,10 @@ header {
   position: sticky;
   top: 0;
 }
+// main exists to push footer to the bottom on short desktop pages
+main {
+  flex: 1;
+}
 footer {
   display: flex;
   flex-wrap: wrap;
