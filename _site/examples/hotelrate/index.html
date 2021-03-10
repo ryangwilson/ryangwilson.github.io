@@ -5,6 +5,11 @@
   <title>Hotelrate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -21,15 +26,15 @@
   </a>
   <nav id="masternav">
   
-    <a href="/" >About</a>
+    <a href="/" class=" ">About</a>
   
-    <a href="/experience/" >Experience</a>
+    <a href="/experience/" class=" ">Experience</a>
   
-    <a href="/process/" >Process & Pricing</a>
+    <a href="/process/" class=" ">Process & Pricing</a>
   
-    <a href="/examples/" >Examples</a>
+    <a href="/examples/" class="  active">Examples</a>
   
-    <a href="/contact/" >Contact</a>
+    <a href="/contact/" class=" ">Contact</a>
   
   </nav>
 </header>
@@ -55,8 +60,8 @@ x.addListener(myFunction) // Attach listener function on state changes
 
 </script>
 
-    <a href="/examples/">Work Examples</a> / HotelRate
     <div class="card-dark">
+      <a href="/examples/" class="btn text white"><i data-feather="arrow-left"></i> Work Examples </a><br>
       <h2>HotelRate</h2>
       <p class="subtitle">Role: Product Designer</p>
     </div>
@@ -82,10 +87,10 @@ x.addListener(myFunction) // Attach listener function on state changes
           
           
           <p><b>Process</b><br/>
-          My first step in this process was to take pencil to paper to create a rough flow chart of the site so I could visualize the entirety of this project. This allowed me to envision the front end (aesthetics and layout) and back end (database) needs. From the sketch, I created a refined Version 2 of the IA (next page). <br><br> This revision allowed me to further refine the outcome of the design. From the Information Architecture V2, I began pencil sketches of the site (visuals) and interactions. Since this document is limited to three pages, I have created a PDF of my sketches for review available here: http://www.ryangwilson.com/_/images/pdf/rgwilson_crossover_sketches.pdf. My sketches informed the wireframe layout, created in Illustrator. Some aspects from a royalty free wireframe kit were used, but the layout and a majority of the assets used were my creation.</p>
+          My first step in this process was to take pencil to paper to create a rough flow chart of the site so I could visualize the entirety of this project. This allowed me to envision the front end (aesthetics and layout) and back end (database) needs. From the sketch, I created a refined Version 2 of the IA (next page).  <br><br>  This revision allowed me to further refine the outcome of the design. From the Information Architecture V2, I began pencil sketches of the site (visuals) and interactions. Since this document is limited to three pages, I have created a PDF of my sketches for review available here - http://www.ryangwilson.com/_/images/pdf/rgwilson_crossover_sketches.pdf. My sketches informed the wireframe layout, created in Illustrator. Some aspects from a royalty free wireframe kit were used, but the layout and a majority of the assets used were my creation.</p>
           
           <p><b>Outcome</b><br/>
-          From the initial wireframes, I created an InVision prototype to simulate the user experience/interaction for the HotelRate website. This interaction caused for further refinement of the wireframes and brought to my attention some of the overlooked necessary interactions. <br><br> InVision allowed for me to quickly mock up an interactive piece to show the intended flow through this project. <a href="https://invis.io/PQ6SZXF5M" target="_blank">The (rapid) prototype is hosted on InVision</a>.</p>
+          From the initial wireframes, I created an InVision prototype to simulate the user experience/interaction for the HotelRate website. This interaction caused for further refinement of the wireframes and brought to my attention some of the overlooked necessary interactions.  <br><br>  InVision allowed for me to quickly mock up an interactive piece to show the intended flow through this project. <a href="https://invis.io/PQ6SZXF5M" target="_blank">The (rapid) prototype is hosted on InVision</a>.</p>
           
             <p><b>Process Document</b><br/>
             <a href="../../assets/images/process-docs/hotelrate_sketches.pdf" target="_blank">HotelRate Process Sketches</a></p>
@@ -94,11 +99,15 @@ x.addListener(myFunction) // Attach listener function on state changes
         </div>
         <div class="image-column">
           <div class="single">
-            <img src="../../assets/images/portfolio-images/hotelrate_screen18.png" class="" alt="Project example image for HotelRate" />
+            <a href="../../assets/images/portfolio-images/hotelrate_screen18.png" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/hotelrate_screen18.png" class="" alt="Project example image for HotelRate" />
+            </a>
           </div>
           <div class="single">
           
-            <img src="../../assets/images/portfolio-images/hotelrate_ia.jpg" class="" alt="Project example image for HotelRate" />
+            <a href="../../assets/images/portfolio-images/hotelrate_ia.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/hotelrate_ia.jpg" class="" alt="Project example image for HotelRate" />
+            </a>
           
           </div>
           <div class="double">
@@ -112,19 +121,29 @@ x.addListener(myFunction) // Attach listener function on state changes
         </div>
       </section>
     </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
     <footer>
   <nav>
     <div>
       
-      <a href="/" >About</a>
+      <a href="/" class=" ">About</a>
       
-      <a href="/experience/" >Experience</a>
+      <a href="/experience/" class=" ">Experience</a>
       
-      <a href="/process/" >Process & Pricing</a>
+      <a href="/process/" class=" ">Process & Pricing</a>
       
-      <a href="/examples/" >Examples</a>
+      <a href="/examples/" class="  active">Examples</a>
       
-      <a href="/contact/" >Contact</a>
+      <a href="/contact/" class=" ">Contact</a>
       
     </div>
     <div class="subnav">

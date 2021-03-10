@@ -91,20 +91,29 @@ section {
   margin: $scale-20 $scale-10;
   .flex-two-col {
     display: flex;
+    @media (max-width: 859px) {
+      flex-direction: column;
+    }
+    justify-content: space-between;
     .col-left {
       display: flex;
+      flex: 3;
       flex-direction: column;
-      flex-basis: 66.66%;
       margin-right: $scale-10;
+      @media (max-width: 699px) {
+        margin-right: 0;
+      }
     }
     .col-right {
       display: flex;
+      flex: 1;
       flex-direction: column;
-      flex-basis: 33.33%;
+      min-width: 350px;
     }
   }
   .flex-three-col {
     display: flex;
+    flex-wrap: wrap;
     .col-left {
       display: flex;
       flex-direction: column;
@@ -123,6 +132,16 @@ section {
       flex-direction: column;
       padding: 0 0 0 $scale-5;
       flex-basis: 33.33%;
+    }
+    @media (max-width: 699px) {
+      .col-left, .col-center, .col-right {
+        flex-basis: 100%;
+        padding: 0;
+        box-shadow: none;
+      }
+      .col-center {
+        margin: 50px 0;
+      }
     }
   }
 }

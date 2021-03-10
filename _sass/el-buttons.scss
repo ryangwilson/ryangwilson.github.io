@@ -37,13 +37,20 @@ button, input[type=submit], input[type=button], input[type=reset] {
             box-shadow: $fake-medium $secondary-00;
         }
     }
-
+    &.white {
+        color: $white-00;
+        box-shadow: $fake-medium $white-00;
+        &:hover {
+            color: $secondary-00;
+            box-shadow: $fake-medium $secondary-00;
+        }
+    }
     &.secondary {
         background-color: $primary-00;
         box-shadow: $fake-medium $primary-00;
         &:hover {
             color: $secondary-00;
-                    background-color: $dk-gray-00;
+            background-color: $dk-gray-00;
             box-shadow: $fake-medium $dk-gray-00;
         }
     }
@@ -76,8 +83,8 @@ button, input[type=submit], input[type=button], input[type=reset] {
         }
     }
     svg {
-        margin-left: $scale-2;
-        margin-right: -($scale-2);
+        // margin-left: $scale-2;
+        // margin-right: -($scale-2);
     }
     &.pull-right {
         margin-left: auto;

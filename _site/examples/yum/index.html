@@ -5,6 +5,11 @@
   <title>Yum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -21,15 +26,15 @@
   </a>
   <nav id="masternav">
   
-    <a href="/" >About</a>
+    <a href="/" class=" ">About</a>
   
-    <a href="/experience/" >Experience</a>
+    <a href="/experience/" class=" ">Experience</a>
   
-    <a href="/process/" >Process & Pricing</a>
+    <a href="/process/" class=" ">Process & Pricing</a>
   
-    <a href="/examples/" >Examples</a>
+    <a href="/examples/" class="  active">Examples</a>
   
-    <a href="/contact/" >Contact</a>
+    <a href="/contact/" class=" ">Contact</a>
   
   </nav>
 </header>
@@ -55,8 +60,8 @@ x.addListener(myFunction) // Attach listener function on state changes
 
 </script>
 
-    <a href="/examples/">Work Examples</a> / Yum Admin
     <div class="card-dark">
+      <a href="/examples/" class="btn text white"><i data-feather="arrow-left"></i> Work Examples </a><br>
       <h2>Yum Admin</h2>
       <p class="subtitle">Role: Product Designer</p>
     </div>
@@ -85,7 +90,9 @@ x.addListener(myFunction) // Attach listener function on state changes
         </div>
         <div class="image-column">
           <div class="single">
-            <img src="../../assets/images/portfolio-images/haulhound-logo.jpg" class="" alt="Project example image for Yum Admin" />
+            <a href="../../assets/images/portfolio-images/haulhound-logo.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/haulhound-logo.jpg" class="" alt="Project example image for Yum Admin" />
+            </a>
           </div>
           <div class="single">
           
@@ -101,19 +108,29 @@ x.addListener(myFunction) // Attach listener function on state changes
         </div>
       </section>
     </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
     <footer>
   <nav>
     <div>
       
-      <a href="/" >About</a>
+      <a href="/" class=" ">About</a>
       
-      <a href="/experience/" >Experience</a>
+      <a href="/experience/" class=" ">Experience</a>
       
-      <a href="/process/" >Process & Pricing</a>
+      <a href="/process/" class=" ">Process & Pricing</a>
       
-      <a href="/examples/" >Examples</a>
+      <a href="/examples/" class="  active">Examples</a>
       
-      <a href="/contact/" >Contact</a>
+      <a href="/contact/" class=" ">Contact</a>
       
     </div>
     <div class="subnav">

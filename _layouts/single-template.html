@@ -3,8 +3,8 @@
   {% include head.html %}
   <body>
     {% include navigation.html %}
-    <a href="/examples/">Work Examples</a> / {{ page.project }}
     <div class="card-dark">
+      <a href="/examples/" class="btn text white"><i data-feather="arrow-left"></i> Work Examples </a><br>
       <h2>{{ page.project }}</h2>
       <p class="subtitle">Role: {{ page.role }}</p>
     </div>
@@ -53,32 +53,54 @@
         </div>
         <div class="image-column">
           <div class="single">
-            <img src="../../assets/images/portfolio-images/{{ page.collection-image }}" class="" alt="Project example image for {{ page.project }}" />
+            <a href="../../assets/images/portfolio-images/{{ page.collection-image }}" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/{{ page.collection-image }}" class="" alt="Project example image for {{ page.project }}" />
+            </a>
           </div>
           <div class="single">
           {% if page.image01 %}
-            <img src="../../assets/images/portfolio-images/{{ page.image01 }}" class="" alt="Project example image for {{ page.project }}" />
+            <a href="../../assets/images/portfolio-images/{{ page.image01 }}" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/{{ page.image01 }}" class="" alt="Project example image for {{ page.project }}" />
+            </a>
           {% endif %}
           </div>
           <div class="double">
             {% if page.image02 %}
-            <img src="../../assets/images/portfolio-images/{{ page.image02 }}" class="" alt="Project example image for {{ page.project }}" />
+            <a href="../../assets/images/portfolio-images/{{ page.image02 }}" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/{{ page.image02 }}" class="" alt="Project example image for {{ page.project }}" />
+            </a>
             {% endif %}
             {% if page.image03 %}
-            <img src="../../assets/images/portfolio-images/{{ page.image03 }}" class="" alt="Project example image for {{ page.project }}" />
+            <a href="../../assets/images/portfolio-images/{{ page.image03 }}" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/{{ page.image03 }}" class="" alt="Project example image for {{ page.project }}" />
+            </a>
             {% endif %}
           </div>
           <div class="double">
             {% if page.image04 %}
-            <img src="../../assets/images/portfolio-images/{{ page.image04 }}" class="" alt="Project example image for {{ page.project }}" />
+            <a href="../../assets/images/portfolio-images/{{ page.image04 }}" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/{{ page.image04 }}" class="" alt="Project example image for {{ page.project }}" />
+            </a>
             {% endif %}
             {% if page.image05 %}
-            <img src="../../assets/images/portfolio-images/{{ page.image05 }}" class="" alt="Project example image for {{ page.project }}" />
+            <a href="../../assets/images/portfolio-images/{{ page.image05 }}" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/{{ page.image05 }}" class="" alt="Project example image for {{ page.project }}" />
+            </a>
             {% endif %}
           </div>
         </div>
       </section>
     </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
     {% include footer.html %}
   </body>
 </html>
