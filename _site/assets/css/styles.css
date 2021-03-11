@@ -28,6 +28,8 @@ body, p { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; 
 
 p:last-of-type { margin-bottom: 0; }
 
+p + p { margin-top: 15px; }
+
 p + h3 { margin-top: 50px; }
 
 kbd, code, samp, pre { font-family: "PT Mono", monospace; font-size: 16px; font-weight: normal; font-style: normal; text-transform: none; color: #232323; }
@@ -72,7 +74,7 @@ time { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; fon
 
 dfn, abbr { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; font-style: italic; text-transform: none; text-decoration: dotted underline; color: #232323; }
 
-hr { border: 0; height: 25px; background: #232323; }
+hr { border: 0; height: 25px; background: #232323; box-shadow: 50vw 0 0 0 #232323, -50vw 0 0 0 #232323; }
 
 .bg-primary-00 { background-color: #ffca0a; }
 
@@ -232,6 +234,8 @@ button:focus, input[type=submit]:focus, input[type=button]:focus, input[type=res
 
 .btn.pull-right { margin-left: auto; }
 
+.btn svg { pointer-events: none; }
+
 progress[value] { appearance: none; border: none; width: 100%; height: 15px; /* Style for Firefox bar. */ background-color: whiteSmoke; border-radius: 10px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset; /* Fallback information */ color: #4A90E2; position: relative; margin: 0 0 1.5em; }
 
 /* Webkit browsers provide two pseudo classes to style */
@@ -369,7 +373,7 @@ nav a.active:hover { box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; }
 
 header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 10px 25px; border-bottom: 5px solid #FFFFFF; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.22), 0 14px 28px 0 rgba(0, 0, 0, 0.25); z-index: 99; position: sticky; top: 0; }
 
-main { flex: 1; }
+main { flex: 1; max-width: 1280px; margin-left: auto; margin-right: auto; }
 
 footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 15px 25px; margin-top: 50px; border-top: 5px solid #FFFFFF; line-height: 2; }
 
@@ -405,7 +409,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 @media (max-width: 699px) { section .flex-three-col .col-left, section .flex-three-col .col-center, section .flex-three-col .col-right { flex-basis: 100%; padding: 0; box-shadow: none; } section .flex-three-col .col-center { margin: 50px 0; } }
 
-.card-dark { background-color: #232323; color: #FFFFFF; padding: 50px; margin-top: 25px; border-top: 5px solid #FFFFFF; border-bottom: 5px solid #FFFFFF; }
+.card-dark { background-color: #232323; color: #FFFFFF; padding: 50px; margin-top: 25px; border-top: 5px solid #FFFFFF; border-bottom: 5px solid #FFFFFF; box-shadow: -50vw 0 0 -5px #232323, 50vw 0 0 -5px #232323; }
 
 .card-dark .subtitle { color: #ffca0a; font-size: 24px; margin-bottom: 25px; }
 
@@ -425,7 +429,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .card-container .reference-card h3 { display: flex; flex-direction: column; font-size: 16px; width: 100%; padding: 0; margin: 0; letter-spacing: 0; line-height: 1.4; box-shadow: none; }
 
-.card-container .reference-card.third, .card-container .reference-card.single { max-width: 400px; margin-top: 50px; padding: 20px; flex: 1; }
+.card-container .reference-card.third, .card-container .reference-card.single { max-width: 400px; padding: 20px; flex: 1; }
 
 @media (max-width: 799px) { .card-container .reference-card.third, .card-container .reference-card.single { flex: unset; } }
 
@@ -434,6 +438,8 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 .card-container .reference-card.third .name, .card-container .reference-card.third .title, .card-container .reference-card.third .company, .card-container .reference-card.single .name, .card-container .reference-card.single .title, .card-container .reference-card.single .company { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; }
 
 .card-container .reference-card.third .btn.icon, .card-container .reference-card.single .btn.icon { margin-left: auto; }
+
+.card-container .reference-card.third { margin-top: 25px; }
 
 .card-container .reference-card.third q { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; }
 

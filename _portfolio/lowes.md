@@ -18,8 +18,8 @@ process: Bitovi had already been building the application, so we knew what the p
 processdoc:
 processdocprompt:
 outcome: After a successful presentation, the client chose the in-app purchasing path and we began planning for implimentation.
-externalurl:
-externalprompt:
+externalurl: https://www.bitovi.com/web-application-consulting-work/iris-lowes-iot-home-automation-app
+externalprompt: Bitovi Development Case Study
 collection-image: lowes-iris_Page_03.jpg
 image01: lowes-iris_Page_04.jpg
 image02: lowes-iris_Page_05.jpg

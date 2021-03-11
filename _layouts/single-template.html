@@ -20,8 +20,10 @@
           {% endif %}
           <h3>Tools</h3>
           <p>{{ page.tools }}</p>
+          {% if page.overview %}
           <h3>Overview</h3>
           <p>{{ page.overview }}</p>
+          {% endif %}
           {% if page.problemstatement %}
           <h3>Problem Statement</h3>
           <p>{{ page.problemstatement }}</p>
@@ -41,8 +43,10 @@
           <h3>Process</h3>
           <p>{{ page.process }}</p>
           {% endif %}
+          {% if page.outcome %}
           <h3>Outcome</h3>
           <p>{{ page.outcome }}</p>
+          {% endif %}
           {% if page.processdoc %}
             <h3>Process Document</h3>
             <p>

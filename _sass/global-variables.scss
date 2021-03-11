@@ -234,6 +234,9 @@ p:last-of-type {
     margin-bottom: 0;
 }
 // Specialized spacing
+p + p {
+    margin-top: $scale-3;
+}
 p + h3 {
     margin-top: $scale-10;
 }
@@ -342,5 +345,5 @@ hr {
     border: 0;
     height: $scale-5;
     background: $black-00;
-    // background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    box-shadow: 50vw 0 0 0 #232323, -50vw 0 0 0 #232323;
 }

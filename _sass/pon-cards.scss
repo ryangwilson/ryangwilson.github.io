@@ -8,6 +8,7 @@
   margin-top: $scale-5;
   border-top: $scale-1 solid $white-00;
   border-bottom: $scale-1 solid $white-00;
+  box-shadow: -50vw 0 0 (-$scale-1) $black-00, 50vw 0 0 (-$scale-1) $black-00;
   .subtitle {
     color: $primary-00;
     font-size: $h5-font-size;
@@ -67,7 +68,6 @@
     }
     &.third, &.single {
       max-width: 400px;
-      margin-top: $scale-10;
       padding: $scale-4;
       flex: 1;
       @media (max-width: 799px) {
@@ -92,6 +92,7 @@
       }
     }
     &.third {
+      margin-top: $scale-5;
       q {
         display: -webkit-box;
         -webkit-box-orient: vertical;

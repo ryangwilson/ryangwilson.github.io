@@ -107,4 +107,7 @@ button, input[type=submit], input[type=button], input[type=reset] {
     &.pull-right {
         margin-left: auto;
     }
+    svg {
+        pointer-events: none;
+    }
 }

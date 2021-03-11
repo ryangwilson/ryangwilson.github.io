@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Elizabeth Johnson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+  <body class="nested-page">
+    <header id="masterhead">
+  <a href="/"><h1><span>Ryan G<i>.</i> Wilson</span> Product Designer</h1></a>
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
+    <a href="/" class="">About</a>
+  
+    <a href="/experience/" class="">Experience</a>
+  
+    <a href="/process/" class="">Process & Pricing</a>
+  
+    <a href="/examples/" class=" nested">Examples</a>
+  
+    <a href="/contact/" class="">Contact</a>
+  
+  </nav>
+</header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
+
+    <div class="card-dark">
+      <a href="/examples/" class="btn text white  svg-before"><i data-feather="arrow-left"></i> Work Examples </a><br>
+      <h2>Elizabeth Johnson Music Video</h2>
+      <p class="subtitle">Role: Motion Designer</p>
+    </div>
+    <main>
+      <section class="examples-container">
+        <div class="content-column">
+          <h3>Client</h3>
+          <p>Jon Drake & the Shakes, 2012</p>
+          <p>Created for:  Self  </p>
+          
+          <h3>Project Phases</h3>
+          <p>Animation</p>
+          
+          <h3>Tools</h3>
+          <p>Illustrator, Flash, After Effects</p>
+          
+          <h3>Overview</h3>
+          <p>Music by Jon Drake & the Shakes.</p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <h3>External Files</h3>
+            <p><a href="https://www.youtube.com/watch?v=g6NtYdrBPKY" target="_blank">View Music Video</a></p>
+          
+        </div>
+        <div class="image-column">
+          <div class="single">
+            <a href="../../assets/images/portfolio-images/elizabeth_johnson.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/elizabeth_johnson.jpg" class="" alt="Project example image for Elizabeth Johnson Music Video" />
+            </a>
+          </div>
+          <div class="single">
+          
+          </div>
+          <div class="double">
+            
+            
+          </div>
+          <div class="double">
+            
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
+    <footer>
+  <nav>
+    <div>
+      
+      <a href="/" class="">About</a>
+      
+      <a href="/experience/" class="">Experience</a>
+      
+      <a href="/process/" class="">Process & Pricing</a>
+      
+      <a href="/examples/" class=" nested">Examples</a>
+      
+      <a href="/contact/" class="">Contact</a>
+      
+    </div>
+    <div class="subnav">
+      
+      <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank">LinkedIn</a>
+      
+      <a href="https://codepen.io/ryangwilson/" target="_blank">CodePen</a>
+      
+      <a href="https://medium.com/@ryangwilson" target="_blank">Medium</a>
+      
+      <a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank">YouTube</a>
+      
+    </div>
+  </nav>
+  <p>© Ryan G. Wilson, 1978‑<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+  </span></p>
+</footer>
+<script>
+  feather.replace()
+</script>
+
+
+  </body>
+</html>

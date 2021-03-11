@@ -2,8 +2,8 @@
 {% if page.url == '/' %}
 <div class="card-portfolio">
     {% for example in example | limit:4 %}
-    <a href="{{ example.url }}">
-        <figure class="{{ example.type }}">
+    <a href="{{ example.url }}" class="{{ example.type }}">
+        <figure>
             <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
             <figcaption>
                 <h3>{{ example.project }}</h3>
@@ -16,8 +16,8 @@
 {% else %}
 <div class="card-portfolio">
     {% for example in example %}
-    <a href="{{ example.url }}">
-        <figure class="{{ example.type }}">
+    <a href="{{ example.url }}" class="{{ example.type }}">
+        <figure>
             <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
             <figcaption>
                 <h3>{{ example.project }}</h3>
