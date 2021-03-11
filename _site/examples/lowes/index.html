@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Lowes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+  <body class="nested-page">
+    <header id="masterhead">
+  <a href="/"><h1><span>Ryan G<i>.</i> Wilson</span> Product Designer</h1></a>
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
+    <a href="/" class="">About</a>
+  
+    <a href="/experience/" class="">Experience</a>
+  
+    <a href="/process/" class="">Process & Pricing</a>
+  
+    <a href="/examples/" class=" nested">Examples</a>
+  
+    <a href="/contact/" class="">Contact</a>
+  
+  </nav>
+</header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
+
+    <div class="card-dark">
+      <a href="/examples/" class="btn text white  svg-before"><i data-feather="arrow-left"></i> Work Examples </a><br>
+      <h2>Iris Home Automation</h2>
+      <p class="subtitle">Role: Product Designer</p>
+    </div>
+    <main>
+      <section class="examples-container">
+        <div class="content-column">
+          <h3>Client</h3>
+          <p>Lowes, 2018</p>
+          <p>Created for: <a href="https://www.bitovi.com" target="_blank"> Bitovi </a> </p>
+          
+          <h3>Project Phases</h3>
+          <p>Discovery Phase</p>
+          
+          <h3>Tools</h3>
+          <p>Research, Sketch, Axure</p>
+          <h3>Overview</h3>
+          <p>Bitovi was hired to build the web app for running, reviewing, and setting up rules for Lowes Iris home automation products. During our engagement we noticed that there was no direct way for users to purchase products through the webapp. Instead, users would have to navigate away from the Iris app to Lowes.com to find and purchase additional home automation products.</p>
+          
+          <h3>Problem Statement</h3>
+          <p>In the Lowes Iris app, users are able to see what products they need to be able to do a certain task. For example, a user could see that with the right product they could set up rules for watering their lawn. However, to purchase the product the user had to navigate away from the Iris app to Lowes.com to find and purchase the product want. <br><br> The Bitovi team identified this as a place to connect users with products.</p>
+          
+          
+          
+          
+          
+          <h3>Process</h3>
+          <p>Bitovi had already been building the application, so we knew what the possibilites were in integrating product sales within the product. Working alongside of a Bitovi developer, we created two optional flow solutions that we took to the client for approval.</p>
+          
+          <h3>Outcome</h3>
+          <p>After a successful presentation, the client chose the in-app purchasing path and we began planning for implimentation.</p>
+          
+          
+        </div>
+        <div class="image-column">
+          <div class="single">
+            <a href="../../assets/images/portfolio-images/lowes-iris_Page_03.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/lowes-iris_Page_03.jpg" class="" alt="Project example image for Iris Home Automation" />
+            </a>
+          </div>
+          <div class="single">
+          
+            <a href="../../assets/images/portfolio-images/lowes-iris_Page_04.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/lowes-iris_Page_04.jpg" class="" alt="Project example image for Iris Home Automation" />
+            </a>
+          
+          </div>
+          <div class="double">
+            
+            <a href="../../assets/images/portfolio-images/lowes-iris_Page_05.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/lowes-iris_Page_05.jpg" class="" alt="Project example image for Iris Home Automation" />
+            </a>
+            
+            
+            <a href="../../assets/images/portfolio-images/lowes-iris_Page_06.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/lowes-iris_Page_06.jpg" class="" alt="Project example image for Iris Home Automation" />
+            </a>
+            
+          </div>
+          <div class="double">
+            
+            <a href="../../assets/images/portfolio-images/lowes-iris_Page_07.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/lowes-iris_Page_07.jpg" class="" alt="Project example image for Iris Home Automation" />
+            </a>
+            
+            
+            <a href="../../assets/images/portfolio-images/lowes-iris_Page_08.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/lowes-iris_Page_08.jpg" class="" alt="Project example image for Iris Home Automation" />
+            </a>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
+    <footer>
+  <nav>
+    <div>
+      
+      <a href="/" class="">About</a>
+      
+      <a href="/experience/" class="">Experience</a>
+      
+      <a href="/process/" class="">Process & Pricing</a>
+      
+      <a href="/examples/" class=" nested">Examples</a>
+      
+      <a href="/contact/" class="">Contact</a>
+      
+    </div>
+    <div class="subnav">
+      
+      <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank">LinkedIn</a>
+      
+      <a href="https://codepen.io/ryangwilson/" target="_blank">CodePen</a>
+      
+      <a href="https://medium.com/@ryangwilson" target="_blank">Medium</a>
+      
+      <a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank">YouTube</a>
+      
+    </div>
+  </nav>
+  <p>© Ryan G. Wilson, 1978‑<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+  </span></p>
+</footer>
+<script>
+  feather.replace()
+</script>
+
+
+  </body>
+</html>

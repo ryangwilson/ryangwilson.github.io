@@ -4,6 +4,8 @@ type: product
 project: Starbucks
 role: Product Designer
 client: Student Project
+under: Iowa State University
+underurl:
 year: 2011
 phases: Discovery Phase
 tools: Paper/Pencil, Illustrator, After Effects

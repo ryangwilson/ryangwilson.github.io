@@ -70,6 +70,9 @@
       margin-top: $scale-10;
       padding: $scale-4;
       flex: 1;
+      @media (max-width: 799px) {
+        flex: unset;
+      }
       q {
         font-size: $body-font-size;
         height: 100%;
@@ -78,7 +81,13 @@
         -webkit-line-clamp: 5;
         overflow: hidden;
       }
-      .btn.text {
+      .name, .title, .company {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+      .btn.icon {
         margin-left: auto;
       }
     }
@@ -156,6 +165,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: 100% 0%;
     }
     h3 {
       font-family: $type-display-secondary;
@@ -257,6 +267,7 @@
     }
     .top {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         .duration-cost {
@@ -270,12 +281,17 @@
     }
     .middle {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         div:first-of-type {
             margin-right: $scale-5;
         }
         .purpose, .deliverables {
           flex: 1;
+          @media (max-width: 659px) {
+            flex: unset;
+            margin-right: 0;
+          }
         }
     }
     .toggle-content {
@@ -299,9 +315,6 @@
   }
   .content-column {
     flex: 1;
-    p {
-      margin-bottom: $scale-5;
-    }
   }
   .image-column {
     flex: 1;

@@ -1,54 +1,56 @@
 <!doctype html>
 <html>
   {% include head.html %}
-  <body>
+  <body class="nested-page">
     {% include navigation.html %}
     <div class="card-dark">
-      <a href="/examples/" class="btn text white"><i data-feather="arrow-left"></i> Work Examples </a><br>
+      <a href="/examples/" class="btn text white  svg-before"><i data-feather="arrow-left"></i> Work Examples </a><br>
       <h2>{{ page.project }}</h2>
       <p class="subtitle">Role: {{ page.role }}</p>
     </div>
     <main>
       <section class="examples-container">
         <div class="content-column">
-          <p><b>Client</b><br/>
-          {{ page.client }}, {{ page.year }}</p>
+          <h3>Client</h3>
+          <p>{{ page.client }}, {{ page.year }}</p>
+          <p>Created for: {% if page.underurl %}<a href="{{ page.underurl }}" target="_blank">{% endif %} {{ page.under }} {% if page.underurl %}</a>{% endif %} </p>
           {% if page.phases %}
-          <p><b>Project Phases</b><br/>
-          {{ page.phases }}</p>
+          <h3>Project Phases</h3>
+          <p>{{ page.phases }}</p>
           {% endif %}
-          <p><b>Tools</b><br/>
-          {{ page.tools }}</p>
-          <p><b>Overview</b><br/>
-          {{ page.overview }}</p>
+          <h3>Tools</h3>
+          <p>{{ page.tools }}</p>
+          <h3>Overview</h3>
+          <p>{{ page.overview }}</p>
           {% if page.problemstatement %}
-          <p><b>Problem Statement</b><br/>
-          {{ page.problemstatement }}</p>
+          <h3>Problem Statement</h3>
+          <p>{{ page.problemstatement }}</p>
           {% endif %}
           {% if page.users %}
-          <p><b>Users</b><br/>
-          {{ page.users }}</p>
+          <h3>Users</h3>
+          <p>{{ page.users }}</p>
           {% endif %}
           {% if page.persona %}
           <img src="../../assets/images/{{ page.persona }}" class="" alt="Persona examples for {{ page.project }}" />
           {% endif %}
           {% if page.constraints %}
-          <p><b>Constraints</b><br/>
-          {{ page.constraints }}</p>
+          <h3>Constraints</h3>
+          <p>{{ page.constraints }}</p>
           {% endif %}
           {% if page.process %}
-          <p><b>Process</b><br/>
-          {{ page.process }}</p>
+          <h3>Process</h3>
+          <p>{{ page.process }}</p>
           {% endif %}
-          <p><b>Outcome</b><br/>
-          {{ page.outcome }}</p>
+          <h3>Outcome</h3>
+          <p>{{ page.outcome }}</p>
           {% if page.processdoc %}
-            <p><b>Process Document</b><br/>
+            <h3>Process Document</h3>
+            <p>
             <a href="../../assets/images/process-docs/{{ page.processdoc }}" target="_blank">{{ page.processdocprompt }}</a></p>
           {% endif %}
           {% if page.externalurl %}
-            <p><b>External Files</b><br/>
-            <a href="{{ page.externalurl }}" target="_blank">{{ page.externalprompt }}</a></p>
+            <h3>External Files</h3>
+            <p><a href="{{ page.externalurl }}" target="_blank">{{ page.externalprompt }}</a></p>
           {% endif %}
         </div>
         <div class="image-column">

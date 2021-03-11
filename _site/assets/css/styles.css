@@ -218,9 +218,17 @@ button:focus, input[type=submit]:focus, input[type=button]:focus, input[type=res
 
 .btn.text:hover { box-shadow: 0 10px 0 -5px #28d2c9; }
 
+.btn.icon { padding: 5px 10px; border-radius: 0; margin: 0; box-shadow: 0 0 0 0 #232323; }
+
+.btn.icon:hover { color: #28d2c9; box-shadow: 0 0 0 0 #232323; }
+
 .btn:disabled { box-shadow: 0 0 0 2.5px #DADADA; color: #DADADA; cursor: default; }
 
 .btn:disabled:hover { box-shadow: 0 0 0 2.5px #DADADA; color: #DADADA; }
+
+.btn.svg-before svg { margin-left: -10px; margin-right: 10px; }
+
+.btn.svg-after svg { margin-left: 10px; margin-right: -10px; }
 
 .btn.pull-right { margin-left: auto; }
 
@@ -330,6 +338,9 @@ table th { padding: 10px 20px; background-color: #DADADA; text-align: left; }
 
 table tr:nth-child(even) { background-color: rgba(1, 1, 1, 0.05); }
 
+/* Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically. https://css-tricks.com/responsive-data-tables/ */
+@media (max-width: 659px) { table { margin-top: 25px; } /* Force table to not be like tables anymore */ table, thead, tbody, th, td, tr { display: block; } /* Hide table headers (but not display: none;, for accessibility) */ thead tr { position: absolute; top: -9999px; left: -9999px; } tr { margin: 0 0 1rem 0; } tr:nth-child(odd) { background: #ccc; } td { /* Behave  like a "row" */ border: none; border-bottom: 1px solid #eee; position: relative; } td:before { /* Top/left values mimic padding */ margin-right: 10px; } /* Label the data */ td:nth-of-type(1):before { content: "Short:"; font-weight: bold; } td:nth-of-type(2):before { content: "Medium:"; font-weight: bold; } td:nth-of-type(3):before { content: "Long:"; font-weight: bold; } }
+
 figure { position: relative; width: 100%; }
 
 figcaption { position: absolute; z-index: 1; bottom: 0; left: 0; line-height: 1.4; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px); font-family: Arial, sans-serif; color: black; padding: 10px 50px 10px 20px; margin-bottom: 10px; max-width: 90%; }
@@ -337,6 +348,10 @@ figcaption { position: absolute; z-index: 1; bottom: 0; left: 0; line-height: 1.
 figcaption h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 24px; box-shadow: none; margin: 0; }
 
 body { display: flex; min-height: 100vh; flex-direction: column; }
+
+body.nested-page .nested { color: #28d2c9; cursor: default; }
+
+body.nested-page .nested:hover { box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; }
 
 nav { display: flex; flex-wrap: wrap; }
 
@@ -367,6 +382,8 @@ footer nav a:last-of-type { margin-right: 50px; }
 footer nav .subnav a { text-transform: unset; font-weight: 400; color: #ffca0a; }
 
 section { margin: 100px 50px; }
+
+@media (max-width: 659px) { section { margin: 100px 25px; } }
 
 section .flex-two-col { display: flex; justify-content: space-between; }
 
@@ -410,9 +427,13 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .card-container .reference-card.third, .card-container .reference-card.single { max-width: 400px; margin-top: 50px; padding: 20px; flex: 1; }
 
+@media (max-width: 799px) { .card-container .reference-card.third, .card-container .reference-card.single { flex: unset; } }
+
 .card-container .reference-card.third q, .card-container .reference-card.single q { font-size: 16px; height: 100%; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; }
 
-.card-container .reference-card.third .btn.text, .card-container .reference-card.single .btn.text { margin-left: auto; }
+.card-container .reference-card.third .name, .card-container .reference-card.third .title, .card-container .reference-card.third .company, .card-container .reference-card.single .name, .card-container .reference-card.single .title, .card-container .reference-card.single .company { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; }
+
+.card-container .reference-card.third .btn.icon, .card-container .reference-card.single .btn.icon { margin-left: auto; }
 
 .card-container .reference-card.third q { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; }
 
@@ -444,7 +465,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 @media (max-width: 799px) { .card-portfolio a { margin-left: 0 !important; margin-bottom: 40px !important; width: 100%; } }
 
-.card-portfolio a img { width: 100%; height: 100%; object-fit: cover; }
+.card-portfolio a img { width: 100%; height: 100%; object-fit: cover; object-position: 100% 0%; }
 
 .card-portfolio a h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 24px; box-shadow: none; margin: 0; }
 
@@ -486,15 +507,17 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .process-container .phase-container:last-of-type { margin-bottom: 0; }
 
-.process-container .phase-container .top { display: flex; align-items: center; justify-content: space-between; }
+.process-container .phase-container .top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
 
 .process-container .phase-container .top .duration-cost { display: inline-block; width: fit-content; background-color: #232323; color: #FFFFFF; padding: 5px 50px; margin-right: -20px; }
 
-.process-container .phase-container .middle { display: flex; flex-direction: row; }
+.process-container .phase-container .middle { display: flex; flex-wrap: wrap; flex-direction: row; }
 
 .process-container .phase-container .middle div:first-of-type { margin-right: 25px; }
 
 .process-container .phase-container .middle .purpose, .process-container .phase-container .middle .deliverables { flex: 1; }
+
+@media (max-width: 659px) { .process-container .phase-container .middle .purpose, .process-container .phase-container .middle .deliverables { flex: unset; margin-right: 0; } }
 
 .process-container .phase-container .toggle-content { display: none; height: 0; overflow: hidden; transition: height 350ms ease-in-out; }
 
@@ -505,8 +528,6 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 @media (max-width: 959px) { .examples-container { flex-direction: column; } }
 
 .examples-container .content-column { flex: 1; }
-
-.examples-container .content-column p { margin-bottom: 25px; }
 
 .examples-container .image-column { flex: 1; margin-left: 50px; max-width: 480px; }
 
@@ -524,29 +545,29 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .carousel-cell { display: flex; width: 100%; }
 
-@media (max-width: 599px) { .carousel-cell { flex-direction: column-reverse; } }
+@media (max-width: 799px) { .carousel-cell { flex-direction: column-reverse; } }
 
 .carousel-cell .carousel-content { display: flex; flex: 4; flex-direction: column; margin-right: 50px; }
+
+.carousel-cell .carousel-content h2 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 48px; }
+
+@media (max-width: 499px) { .carousel-cell .carousel-content h2 { font-size: 36px; } }
 
 @media (max-width: 599px) { .carousel-cell .carousel-content p { font-size: 0; } }
 
 .carousel-cell .carousel-content .cta-container { margin-top: auto; margin-left: 5px; }
 
-.carousel-cell .carousel-img { flex: 1; }
+.carousel-cell .carousel-img { max-width: 50%; height: 297px; width: 496px; overflow: hidden; }
 
-.carousel-cell img { height: calc(297px * 0.75); width: calc(496px * 0.75); object-fit: cover; }
+@media (max-width: 799px) { .carousel-cell .carousel-img { max-width: 100%; width: 100%; max-height: 250px; padding-bottom: 25px; } }
 
-@media (max-width: 599px) { .carousel-cell img { width: 100%; padding-bottom: 25px; } }
+.carousel-cell img { height: 100%; width: 100%; object-fit: cover; object-position: 50% 0%; }
 
-.flickity-button.previous { left: -50px; }
-
-.flickity-button.next { right: -50px; }
-
-.flickity-button .flickity-button-icon { fill: rgba(1, 1, 1, 0.8); }
+.flickity-button { top: 100%; }
 
 .flickity-page-dots { bottom: -50px; }
 
-.flickity-page-dots .dot { width: 40px; height: 10px; border-radius: 0; background-color: rgba(0, 0, 0, 0.25); }
+.flickity-page-dots .dot { width: 30px; height: 10px; border-radius: 0; background-color: rgba(0, 0, 0, 0.25); }
 
 .flickity-page-dots .dot.is-selected { background-color: #28d2c9; }
 
@@ -570,6 +591,8 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 .mobile-menu #masternav.open a { margin: 0; font-size: 24px; }
 
 .mobile-menu { display: flex; justify-content: space-between; }
+
+.mobile-menu a h1 { font-size: 24px; }
 
 /* MENU TOGGLE */
 .menu-toggle { width: 40px; height: 30px; position: relative; margin-left: auto; transform: rotate(0deg); transition: .5s ease-in-out; cursor: pointer; z-index: 1001; outline: none; }

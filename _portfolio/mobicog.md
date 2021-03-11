@@ -4,6 +4,8 @@ type: product
 project: MobiCog
 role: Product Designer
 client: Student Project
+under: Iowa State University
+underurl:
 year: 2011
 phases: Discovery Phase, Product Refinement Phase, Development
 tools: Paper/Pencil, Illustrator
@@ -33,10 +35,10 @@ I would also like to be able to layout and skin the next version of the applicat
 rather than the wire-frame look it currently has.'
 externalurl:
 externalprompt:
-collection-image: mobicog.jpg
+collection-image: mobicog-screen.jpg
 image01: mobicog-user-flow.jpg
 image02: mobicog-screen.jpg
-image03: mobicog-survey.jpg
-image04:
-image05:
+image03: mobicog.jpg
+image04: mobicog-feedback.jpg
+image05: mobicog_0977.JPG
 ---

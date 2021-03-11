@@ -6,6 +6,13 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  &.nested-page .nested {
+    color: $secondary-00;
+    cursor: default;
+    &:hover {
+      box-shadow: 0 0 0 0 $white-00, 0 0 0 0 $white-00;
+    }
+  }
 }
 // styles the navigation - this is before header and footer to accommodate for overrides
 nav {
@@ -38,7 +45,7 @@ nav {
     }
   }
 }
-// header and footer styles
+// header styles
 header {
   display: flex;
   flex-wrap: wrap;
@@ -56,6 +63,7 @@ header {
 main {
   flex: 1;
 }
+// footer styles
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +97,9 @@ footer {
 }
 section {
   margin: $scale-20 $scale-10;
+  @media (max-width: 659px) {
+    margin: $scale-20 $scale-5;
+  }
   .flex-two-col {
     display: flex;
     @media (max-width: 859px) {

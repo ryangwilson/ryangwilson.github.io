@@ -4,6 +4,8 @@ type: product
 project: Yum Admin
 role: Product Designer
 client: Yum.dev
+under: Bitovi
+underurl: https://www.bitovi.com
 year: 2021
 phases: Discovery Phase, Product Refinement Phase, Product Support Contract, Product Review Contract
 tools: Axure, Sketch

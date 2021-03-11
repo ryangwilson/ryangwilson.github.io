@@ -4,6 +4,8 @@ type: product
 project: HotelRate
 role: Product Designer
 client: HotelRate
+under: Contract Work
+underurl:
 year: 2016
 phases: Discovery Phase
 tools: Paper/Pencil, Illustrator, InVision
@@ -26,9 +28,9 @@ users:
 persona:
 constraints:
 process: My first step in this process was to take pencil to paper to create a rough flow chart of the site so I could visualize the entirety of this project. This allowed me to envision the front end (aesthetics and layout) and back end (database) needs. From the sketch, I created a refined Version 2 of the IA (next page).  <br><br>  This revision allowed me to further refine the outcome of the design. From the Information Architecture V2, I began pencil sketches of the site (visuals) and interactions. Since this document is limited to three pages, I have created a PDF of my sketches for review available here - http://www.ryangwilson.com/_/images/pdf/rgwilson_crossover_sketches.pdf. My sketches informed the wireframe layout, created in Illustrator. Some aspects from a royalty free wireframe kit were used, but the layout and a majority of the assets used were my creation.
-processdoc: hotelrate_sketches.pdf
-processdocprompt: HotelRate Process Sketches
-outcome: From the initial wireframes, I created an InVision prototype to simulate the user experience/interaction for the HotelRate website. This interaction caused for further refinement of the wireframes and brought to my attention some of the overlooked necessary interactions.  <br><br>  InVision allowed for me to quickly mock up an interactive piece to show the intended flow through this project. <a href="https://invis.io/PQ6SZXF5M" target="_blank">The (rapid) prototype is hosted on InVision</a>.
+processdoc: hotelrate_process.pdf
+processdocprompt: HotelRate Process Document
+outcome: From the initial wireframes, I created an InVision prototype to simulate the user experience/interaction for the HotelRate website. This interaction caused for further refinement of the wireframes and brought to my attention some of the overlooked necessary interactions.  <br><br>  InVision allowed for me to quickly mock up an interactive piece to show the intended flow through this project.
 externalurl:
 externalprompt:
 collection-image: hotelrate_screen18.png

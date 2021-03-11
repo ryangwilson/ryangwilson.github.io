@@ -46,6 +46,9 @@
 .mobile-menu {
   display: flex;
   justify-content: space-between;
+  a h1 {
+    font-size: $h5-font-size;
+  }
 }
 
 /* MENU TOGGLE */

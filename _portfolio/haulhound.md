@@ -4,6 +4,8 @@ type: product
 project: HaulHound
 role: Product Designer
 client: Andy Kim
+under: Bitovi
+underurl: https://www.bitovi.com
 year: 2016
 phases: Discovery Phase, Product Refinement Phase, Product Support Contract, Product Review Contract
 tools: Axure, Sketch, Ilustrator, Stache, HTML, LESS
@@ -18,10 +20,10 @@ processdocprompt:
 outcome: In three months time we took the stakeholders idea from concept to MVP – but really more than that. In three moths time we had a highly polished application ready for users to be rolled out at a trade show. Along with all of the product design work, we helped to - Refine the HaulHound logo, develop marketing materials and trade show backdrops, and create 3D animations and promotional videos for display at the roll-out trade show.
 externalurl: Read More on Bitovi.comhttps://www.bitovi.com/web-application-consulting-work/haulhound-trucking-web-app
 externalprompt: Read More on Bitovi.com
-collection-image: haulhound-logo.jpg
-image01:
-image02:
-image03:
-image04:
-image05:
+collection-image: HH_social_marketing-01.png
+image01: HH_single.png
+image02: HH_side-by-side.png
+image03: user-testing.jpg
+image04: HH-screenshots-02.png
+image05: HH-screenshots-05.png
 ---

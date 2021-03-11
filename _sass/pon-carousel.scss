@@ -5,7 +5,7 @@
   display: flex;
   width: 100%;
 
-  @media (max-width: 599px) {
+  @media (max-width: 799px) {
     flex-direction: column-reverse;
   }
   .carousel-content {
@@ -13,6 +13,14 @@
     flex: 4;
     flex-direction: column;
     margin-right: $scale-10;
+    h2 {
+      font-family: $type-display-secondary;
+      font-weight: $type-display-light;
+      font-size: $h3-font-size;
+      @media (max-width: 499px) {
+        font-size: $h4-font-size;
+      }
+    }
     p {
       @media (max-width: 599px) {
         font-size: 0;
@@ -24,33 +32,31 @@
     }
   }
   .carousel-img {
-    flex: 1;
-  }
-  img {
-    height: calc(297px * 0.75);
-    width: calc(496px * 0.75);
-    @media (max-width: 599px) {
+    max-width: 50%;
+    height: 297px;
+    width: 496px;
+    overflow: hidden;
+    @media (max-width: 799px) {
+      max-width: 100%;
       width: 100%;
+      max-height: 250px;
       padding-bottom: $scale-5;
     }
+  }
+  img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    object-position: 50% 0%;
   }
 }
 .flickity-button {
-  &.previous {
-    left: (-$scale-10);
-  }
-  &.next {
-    right: (-$scale-10);
-  }
-  .flickity-button-icon {
-    fill: rgba(1, 1, 1, 0.8);
-  }
+  top: 100%;
 }
 .flickity-page-dots {
   bottom: (-$scale-10);
   .dot {
-    width: $scale-8;
+    width: $scale-6;
     height: $scale-2;
     border-radius: 0;
     background-color: rgba(0, 0, 0, 0.25);
