@@ -573,7 +573,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .flickity-page-dots .dot.is-selected { background-color: #28d2c9; }
 
-.nl-form { padding: 50px 50px 0; margin: 25px 0; box-shadow: 0 0 0 3px #232323; border-radius: 5px; width: fit-content; }
+.nl-form { padding: 50px 50px 0; margin: 25px 0; border: 5px solid #DADADA; border-radius: 10px; width: fit-content; }
 
 .nl-form input[type="text"], .nl-form input[type="email"], .nl-form input[type="tel"], .nl-form input[type="number"], .nl-form select { display: inline-flex; width: fit-content; margin: 0 5px; }
 

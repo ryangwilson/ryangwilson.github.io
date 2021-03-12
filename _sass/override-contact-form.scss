@@ -4,8 +4,8 @@
 .nl-form {
   padding: $scale-10 $scale-10 0;
   margin: $scale-5 0;
-  box-shadow: 0 0 0 3px #232323;
-  border-radius: 5px;
+  border: $border-width-wide solid $lt-gray-00;
+  border-radius: $radius-medium;
   width: fit-content;
   input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
     display: inline-flex;
