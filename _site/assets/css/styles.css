@@ -575,7 +575,7 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .nl-form { padding: 50px 50px 0; margin: 25px 0; box-shadow: 0 0 0 3px #232323; border-radius: 5px; width: fit-content; }
 
-.nl-form input[type="text"], .nl-form input[type="email"], .nl-form input[type="tel"], .nl-form select { display: inline-flex; width: fit-content; margin: 0 5px; }
+.nl-form input[type="text"], .nl-form input[type="email"], .nl-form input[type="tel"], .nl-form input[type="number"], .nl-form select { display: inline-flex; width: fit-content; margin: 0 5px; }
 
 .nl-form p { line-height: 3; }
 
