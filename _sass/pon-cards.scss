@@ -138,25 +138,18 @@
 
 .card-portfolio {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   @media (max-width: 799px) {
     flex-direction: column;
   }
   a {
-    background-color: lightgray;
     display: flex;
     flex-basis: calc(50% - #{$scale-5});
     justify-content: space-between;
     height: 250px;
     margin-bottom: $scale-10;
-    &:nth-of-type(odd) {
-      margin-right: $scale-5;
-    }
-    &:nth-of-type(even) {
-      margin-left: $scale-5;
-    }
     @media (max-width: 799px) {
       margin-left: 0 !important;
       margin-bottom: $scale-8 !important;

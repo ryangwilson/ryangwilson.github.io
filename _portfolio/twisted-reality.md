@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: motion
-project: Twisted Reality Packaging
+project: Twisted Reality
 role: Graphic Designer, Motion Designer
 client: Student Project
 under: Self
@@ -9,7 +9,7 @@ underurl:
 year: 2012
 phases: Animation
 tools: Illustrator, Cinema 4D
-overview:
+overview: Created game concept and packaging for a game Twisted Reality
 problemstatement:
 users:
 persona:

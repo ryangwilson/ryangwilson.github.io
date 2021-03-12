@@ -1,6 +1,7 @@
 // tables.scss
 // Styles for Tables
 table {
+    margin-top: $scale-5;
     td {
         padding: $scale-2 $scale-4;
     }
@@ -20,9 +21,6 @@ table {
 	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically. https://css-tricks.com/responsive-data-tables/
 	*/
 @media (max-width: 659px) {
-    table {
-        margin-top: $scale-5;
-    }
 
     /* Force table to not be like tables anymore */
     table,

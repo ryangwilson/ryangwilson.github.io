@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: motion
-project: Marshall University - Holiday Animation
+project: Marshall University
 role: Motion Designer
 client: Marshall University, School of Art & Design
 under: Marshall University, School of Art & Design
@@ -9,7 +9,7 @@ underurl:
 year: 2014
 phases: Animation
 tools: Cinema4D, After Effects
-overview:
+overview: Created the holiday animation for the Marshall University School of Art & Design building monitors.
 problemstatement:
 users:
 persona:

@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: graphic
-project: Pepper Jelly - Poster
+project: Pepper Jelly Poster
 role: Graphic Designer
 client: Iowa State University College of Design
 under: Self

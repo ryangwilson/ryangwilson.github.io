@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: graphic
-project: Reinventing Education - Book Cover
+project: Reinventing Education
 role: Graphic Designer
 client: Mel Hawkins
 under: Self
@@ -9,7 +9,7 @@ underurl:
 year: 2014
 phases: Graphic Design
 tools: Illustrator, PhotoShop
-overview: Created branding for ProjectCHILD, an Illinois institution committed to advancing the quality, affordability, and accessibility of child care.
+overview: Created the book cover for  Mel Hawkin's book Reinventing Education, Hope, and the American Dream.
 problemstatement:
 users:
 persona:

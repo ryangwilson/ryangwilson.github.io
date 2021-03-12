@@ -1,11 +1,11 @@
 ---
 layout: single-template
 type: graphic
-project: Gongola Wealth Management - Logo
+project: Gongola Financial
 role: Graphic Designer
-client: Gongola Wealth Management
-under: Gongola Wealth Management
-underurl: https://www.projectchild.net/
+client: Gongola Financial
+under: Self
+underurl: https://www.gongolafinancial.com/research.htm
 year: 2019
 phases: Graphic Design
 tools: Paper, Pencil, Illustrator

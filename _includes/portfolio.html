@@ -1,7 +1,8 @@
 {% assign example = site.portfolio | sort: 'year' | reverse %}
 {% if page.url == '/' %}
 <div class="card-portfolio">
-    {% for example in example | limit:4 %}
+    {% assign landing_page = example | where: "type", "product" %}
+    {% for example in landing_page | limit:4 %}
     <a href="{{ example.url }}" class="{{ example.type }}">
         <figure>
             <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">

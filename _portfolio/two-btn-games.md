@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: motion
-project: Two Button Games Intro Video
+project: Two Button Games
 role: Motion Designer
 client: Student Project
 under: Self
@@ -9,7 +9,7 @@ underurl:
 year: 2013
 phases: Animation
 tools: Illustrator, Cinema 4D
-overview:
+overview: Created the intro video for a retro video game company called Two Button Games/
 problemstatement:
 users:
 persona:

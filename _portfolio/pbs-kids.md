@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: graphic motion
-project: PBS Kids Presentation
+project: PBS Kids
 role: Graphic Designer, Motion Designer
 client: PBS Kids
 under: PBS Kids

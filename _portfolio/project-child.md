@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: graphic
-project: ProjectCHILD Logo
+project: ProjectCHILD
 role: Graphic Designer
 client: ProjectCHILD
 under: ProjectCHILD

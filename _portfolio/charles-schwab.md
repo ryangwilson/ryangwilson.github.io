@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: graphic
-project: Charles Schwab - Infographic
+project: Charles Schwab
 role: Graphic Designer
 client: Charles Schwab
 under: Infographic World

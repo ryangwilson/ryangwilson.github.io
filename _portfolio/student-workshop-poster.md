@@ -1,7 +1,7 @@
 ---
 layout: single-template
 type: graphic
-project: Student Workshop - Poster
+project: Student Workshop Poster
 role: Graphic Designer
 client: Iowa State University College of Design
 under: Self
@@ -9,7 +9,7 @@ underurl:
 year: 2013
 phases: Graphic Design
 tools: Illustrator
-overview:
+overview: Needs description
 problemstatement:
 users:
 persona:
