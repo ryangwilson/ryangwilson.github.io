@@ -68,15 +68,17 @@ x.addListener(myFunction) // Attach listener function on state changes
 </div>
 
       <section>
-        <label for="filter">Filter</label>
-        <select id="filter" class="select-filter">
-          <optgroup label="Option Group">
-            <option value="">All</option>
-            <option value="product" selected>Product Design</option>
-            <option value="graphic">Graphic Design</option>
-            <option value="motion">Motion Design</option>
-          </optgroup>
-        </select>
+        <div class="filter-container">
+          <label for="filter">Filter project type by</label>
+          <select id="filter" class="select-filter select-css">
+            <optgroup label="Option Group">
+              <option value="">All</option>
+              <option value="product" selected>Product Design</option>
+              <option value="graphic">Graphic Design</option>
+              <option value="motion">Motion Design</option>
+            </optgroup>
+          </select>
+        </div>
         
 
 <div class="card-portfolio">

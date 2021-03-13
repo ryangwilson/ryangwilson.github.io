@@ -319,3 +319,17 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: $primary-00;
 }
+
+// FILTER CONTAINER for Examples Page
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: $scale-5;
+  label {
+    margin-right: $scale-2;
+    margin-bottom: 0;
+  }
+  select {
+    width: auto;
+  }
+}

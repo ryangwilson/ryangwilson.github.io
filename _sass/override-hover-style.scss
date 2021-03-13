@@ -1,0 +1,27 @@
+// hover-style.scss
+// Hover Style
+
+.article, .reference-card.single, .reference-card.third, .card-portfolio a {
+  position: relative;
+}
+.article:after, .reference-card.single:after, .reference-card.third:after, .card-portfolio a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 0px 0px #28D0C8;
+  border-radius: 0;
+  transition: .15s ease-in;
+}
+.article:hover:after, .reference-card.single:hover:after, .reference-card.third:hover:after, .card-portfolio a:hover:after {
+  cursor: pointer;
+  top: -15px;
+  left: -15px;
+  padding: 15px 15px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 0px 5px #28D0C8;
+  z-index: 1;
+  transition: .4s ease-in-out;
+}
