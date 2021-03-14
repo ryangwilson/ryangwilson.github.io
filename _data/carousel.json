@@ -4,6 +4,7 @@
         "description": "Ryan has been working in the field of user-centered design crafting products for clients for 20+ years.",
         "image": "ryan-client-shot.jpg",
         "cta": "See Experience",
+        "cta-svg": "award",
         "link": "/experience/"
     },
     {
@@ -11,20 +12,23 @@
         "description": "We have found that our clients appreciate clarity around timelines, deliverables, and budget.",
         "image": "production_ex.jpg",
         "cta": "Estimate Now",
+        "cta-svg": "edit-3",
         "link": "/process/"
     },
     {
         "header": "Examples of Quality",
         "description": "View case studies of work that Ryan has provided when working with clients both big and small.",
         "image": "pbskids-01.jpg",
-        "cta": "See Work",
+        "cta": "View Work",
+        "cta-svg": "eye",
         "link": "/examples/"
     },
     {
         "header": "Credentialed & Professional",
         "description": "Ryan has four degrees focused in building great products for users and has been working with clients for over 20+ years.",
         "image": "DSC_0143.jpg",
-        "cta": "Read More",
+        "cta": "See Experience",
+        "cta-svg": "star",
         "link": "/experience/"
     },
     {
@@ -32,6 +36,7 @@
         "description": "Product design follows a trusted user-centered design process: Understand, Ideate, Test, Iterate, Repeat",
         "image": "user-testing.jpg",
         "cta": "Review Process",
+        "cta-svg": "list",
         "link": "/process/"
     }
 ]

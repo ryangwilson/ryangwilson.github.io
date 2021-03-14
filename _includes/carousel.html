@@ -4,7 +4,7 @@
         <div class="carousel-content">
             <h2>{{ item.header }}</h2>
             <p>{{ item.description }}</p>
-            <div class="cta-container"><a class="btn primary" href="{{ item.link }}">{{ item.cta }}</a></div>
+            <div class="cta-container"><a class="btn primary svg-after" href="{{ item.link }}">{{ item.cta }} <i data-feather="{{ item.cta-svg }}"></i></a></div>
         </div>
         <div class="carousel-img">
             <img class="fit-picture" src="../assets/images/portfolio-images/{{ item.image }}" alt="">
