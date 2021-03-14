@@ -405,6 +405,8 @@ section .flex-two-col .col-left { display: flex; flex: 3; flex-direction: column
 
 section .flex-two-col .col-right { display: flex; flex: 1; flex-direction: column; min-width: 350px; }
 
+@media (max-width: 699px) { section .flex-two-col .col-right { min-width: unset; } }
+
 section .flex-three-col { display: flex; flex-wrap: wrap; }
 
 section .flex-three-col .col-left { display: flex; flex-direction: column; padding: 0 25px 0 0; flex-basis: 33.33%; }
@@ -436,6 +438,8 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 .card-container .reference-card h3 { display: flex; flex-direction: column; font-size: 16px; width: 100%; padding: 0; margin: 0; letter-spacing: 0; line-height: 1.4; box-shadow: none; }
 
 .card-container .reference-card.third, .card-container .reference-card.single { max-width: 400px; padding: 20px; flex: 1; }
+
+@media (max-width: 799px) { .card-container .reference-card.third, .card-container .reference-card.single { max-width: 100%; } }
 
 @media (max-width: 799px) { .card-container .reference-card.third, .card-container .reference-card.single { flex: unset; } }
 
@@ -543,11 +547,13 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .examples-container .image-column .single { margin-bottom: 25px; }
 
-.examples-container .image-column .single img { width: 480px; height: 270px; object-fit: cover; }
+.examples-container .image-column .single img { width: 100%; height: 270px; object-fit: cover; }
 
 .examples-container .image-column .double { display: flex; justify-content: space-between; margin-bottom: 25px; }
 
-.examples-container .image-column .double img { width: 227px; height: 128px; object-fit: cover; }
+.examples-container .image-column .double a:nth-last-of-type(even) { margin-right: 25px; }
+
+.examples-container .image-column .double img { width: 100%; height: 128px; object-fit: cover; }
 
 .examples-container .image-column .double img:nth-of-type(2) { margin-left: 25px; }
 
@@ -581,11 +587,15 @@ section .flex-three-col .col-right { display: flex; flex-direction: column; padd
 
 .nl-form { padding: 50px 50px 0; margin: 25px 0; border: 5px solid #DADADA; border-radius: 10px; width: fit-content; }
 
+@media (max-width: 545px) { .nl-form { padding: 25px; margin: 0; } }
+
 .nl-form input[type="text"], .nl-form input[type="email"], .nl-form input[type="tel"], .nl-form input[type="number"], .nl-form select { display: inline-flex; width: fit-content; margin: 0 5px; }
 
 .nl-form p { line-height: 3; }
 
 .nl-form span { width: fit-content; }
+
+@media (max-width: 545px) { .nl-form select { width: 90%; } }
 
 /* Screen reader only */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }

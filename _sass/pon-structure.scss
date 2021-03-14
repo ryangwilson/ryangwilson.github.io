@@ -123,6 +123,9 @@ section {
       flex: 1;
       flex-direction: column;
       min-width: 350px;
+      @media (max-width: 699px) {
+        min-width: unset;
+      }
     }
   }
   .flex-three-col {

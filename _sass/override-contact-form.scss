@@ -4,6 +4,10 @@
 .nl-form {
   padding: $scale-10 $scale-10 0;
   margin: $scale-5 0;
+  @media (max-width: 545px) {
+    padding: $scale-5;
+    margin: 0;
+  }
   border: $border-width-wide solid $lt-gray-00;
   border-radius: $radius-medium;
   width: fit-content;
@@ -17,5 +21,10 @@
   }
   span {
     width: fit-content;
+  }
+  select {
+    @media (max-width: 545px) {
+      width: 90%;
+    }
   }
 }
