@@ -251,14 +251,16 @@ kbd, code, samp, pre {
 // *** style anchor tags ---------------------------------------------------
 a {
     @include type-mixin($type-body, $body-font-size, $type-body-medium);
-    color: $secondary-00;
+    color: $black-00;
     text-decoration: none;
 }
 p a {
-    box-shadow: 0 1px 0 0 $secondary-00;
+    box-shadow: 0 1px 0 0 $black-00;
+    text-shadow: 0 0 2px $secondary-00;
     transition: all .3s ease-in-out;
     &:hover {
-        color: $black-00;
+        color: $secondary-00;
+        text-shadow: 0 0 0 $black-00;
         box-shadow: 0 $scale-1 0 0 $black-00;
     }
 }

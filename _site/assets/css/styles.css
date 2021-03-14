@@ -34,11 +34,11 @@ p + h3 { margin-top: 50px; }
 
 kbd, code, samp, pre { font-family: "PT Mono", monospace; font-size: 16px; font-weight: normal; font-style: normal; text-transform: none; color: #232323; }
 
-a { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 500; font-style: normal; text-transform: none; color: #28d2c9; text-decoration: none; }
+a { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 500; font-style: normal; text-transform: none; color: #232323; text-decoration: none; }
 
-p a { box-shadow: 0 1px 0 0 #28d2c9; transition: all .3s ease-in-out; }
+p a { box-shadow: 0 1px 0 0 #232323; text-shadow: 0 0 2px #28d2c9; transition: all .3s ease-in-out; }
 
-p a:hover { color: #232323; box-shadow: 0 5px 0 0 #232323; }
+p a:hover { color: #28d2c9; text-shadow: 0 0 0 #232323; box-shadow: 0 5px 0 0 #232323; }
 
 b, strong { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; font-style: normal; text-transform: none; }
 
