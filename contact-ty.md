@@ -2,6 +2,7 @@
 layout: contact-template
 title: Contact Ryan
 permalink: /thank-you/
+meta: Ryan Wilson is an experienced, trustworthy Product Designer. If you are looking for someone to improve the user experience of your product, let's start the conversation today.
 subtitle: Thank you for visiting the site!
 card-content: We appreciate that you took the time to review the product design and user experience examples, user interface concepts, and branding & graphic design projects. Ryan would love to hear from you. Please fill out the form below.
 main-section-title: Thank You!
