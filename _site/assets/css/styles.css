@@ -359,9 +359,9 @@ figcaption h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; f
 
 body { display: flex; min-height: 100vh; flex-direction: column; }
 
-body.nested-page .nested { color: #28d2c9; cursor: default; }
+body.nested-page .nested, body.ty-page .contact { color: #28d2c9; cursor: default; }
 
-body.nested-page .nested:hover { box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; }
+body.nested-page .nested:hover, body.ty-page .contact:hover { box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; }
 
 nav { display: flex; flex-wrap: wrap; }
 

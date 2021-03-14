@@ -1,4 +1,4 @@
-{% if page.url == '/contact/' %}
+{% if page.url contains '/contact/' %}
 <div class="card-container">
     {% for testimonials in site.data.testimonials | limit: 1 %}
     <a class="reference-card single" href="../experience/#{{ testimonials.lastname }}">

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   {% include head.html %}
-  <body>
+  <body {% if page.url == '/thank-you/' %}class="ty-page"{% endif %}>
     {% include navigation.html %}
     <main>
       {% include card-dark.html %}
@@ -10,7 +10,14 @@
           <div class="col-left">
               <h3>{{ page.main-section-title }}</h3>
               <p>{{ page.content }}</p>
+              {% if page.url == '/contact/' %}
               {% include contact-form.html %}
+              {% else %}
+              <div class="nl-form">
+                {{ page.thanks-content }}
+                <br><br><br>
+              </div>
+              {% endif %}
           </div>
           <div class="col-right">
             <h3>{{ page.sidebar-title01 }}</h3>

@@ -9,7 +9,7 @@
   </a>
   <nav id="masternav">
   {% for navigation in site.data.navigation %}
-    <a href="{{ navigation.url }}" class="{% if navigation.url == page.url %}active{% endif %}{% if navigation.url == '/examples/' %} nested{% endif %}">{{ navigation.title }}</a>
+    <a href="{{ navigation.url }}" class="{% if navigation.url == page.url %}active{% endif %}{% if navigation.url == '/examples/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}">{{ navigation.title }}</a>
   {% endfor %}
   </nav>
 </header>
