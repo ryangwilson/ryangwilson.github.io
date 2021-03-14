@@ -409,13 +409,13 @@ section .flex-two-col .col-right { display: flex; flex: 1; flex-direction: colum
 
 section .flex-three-col { display: flex; flex-wrap: wrap; }
 
-section .flex-three-col .col-left { display: flex; flex-direction: column; padding: 0 25px 0 0; flex-basis: 33.33%; }
+section .flex-three-col .col-left { flex: 1; margin-right: 25px; margin-bottom: 50px; padding: 0 25px 0 0; }
 
-section .flex-three-col .col-center { display: flex; flex-direction: column; padding: 0 25px; flex-basis: 33.33%; box-shadow: -16px 0 10px -18px #232323, 16px 0 10px -18px #232323; }
+section .flex-three-col .col-center { flex: 1; margin-right: 25px; margin-bottom: 50px; padding: 0 25px; }
 
-section .flex-three-col .col-right { display: flex; flex-direction: column; padding: 0 0 0 25px; flex-basis: 33.33%; }
+section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
-@media (max-width: 699px) { section .flex-three-col .col-left, section .flex-three-col .col-center, section .flex-three-col .col-right { flex-basis: 100%; padding: 0; box-shadow: none; } section .flex-three-col .col-center { margin: 50px 0; } }
+@media (max-width: 699px) { section .flex-three-col .col-left, section .flex-three-col .col-center, section .flex-three-col .col-right { padding: 0; } }
 
 .card-dark { background-color: #232323; color: #FFFFFF; padding: 50px; margin-top: 25px; border-top: 5px solid #FFFFFF; border-bottom: 5px solid #FFFFFF; box-shadow: -50vw 0 0 -5px #232323, 50vw 0 0 -5px #232323; }
 
