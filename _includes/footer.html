@@ -7,7 +7,7 @@
     </div>
     <div class="subnav">
       {% for subnav in site.data.subnav %}
-      <a href="{{ subnav.url }}" target="_blank">{{ subnav.title }}</a>
+      <a href="{{ subnav.url }}" target="_blank" rel="noopener">{{ subnav.title }}</a>
       {% endfor %}
     </div>
   </nav>

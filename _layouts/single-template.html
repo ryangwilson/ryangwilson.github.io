@@ -13,7 +13,7 @@
         <div class="content-column">
           <h3>Client</h3>
           <p>{{ page.client }}, {{ page.year }}</p>
-          <p>Created for: {% if page.underurl %}<a href="{{ page.underurl }}" target="_blank">{% endif %} {{ page.under }} {% if page.underurl %}</a>{% endif %} </p>
+          <p>Created for: {% if page.underurl %}<a href="{{ page.underurl }}" target="_blank" rel="noopener">{% endif %} {{ page.under }} {% if page.underurl %}</a>{% endif %} </p>
           {% if page.phases %}
           <h3>Project Phases</h3>
           <p>{{ page.phases }}</p>
@@ -50,11 +50,11 @@
           {% if page.processdoc %}
             <h3>Process Document</h3>
             <p>
-            <a href="../../assets/images/process-docs/{{ page.processdoc }}" target="_blank">{{ page.processdocprompt }}</a></p>
+            <a href="../../assets/images/process-docs/{{ page.processdoc }}" target="_blank" rel="noopener">{{ page.processdocprompt }}</a></p>
           {% endif %}
           {% if page.externalurl %}
             <h3>External Files</h3>
-            <p><a href="{{ page.externalurl }}" target="_blank">{{ page.externalprompt }}</a></p>
+            <p><a href="{{ page.externalurl }}" target="_blank" rel="noopener">{{ page.externalprompt }}</a></p>
           {% endif %}
         </div>
         <div class="image-column">

@@ -22,7 +22,7 @@
           <div class="col-right">
             <h3>{{ page.sidebar-title01 }}</h3>
             {% for subnav in site.data.subnav %}
-            <p><a href="{{ subnav.url }}" target="_blank">{{ subnav.title }}</a></p>
+            <p><a href="{{ subnav.url }}" target="_blank" rel="noopener">{{ subnav.title }}</a></p>
             {% endfor %}
             <h3>{{ page.sidebar-title02 }}</h3>
             {% include references.html %}
