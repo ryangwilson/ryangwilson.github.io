@@ -21,10 +21,10 @@ processdocprompt:
 outcome:
 externalurl: https://www.youtube.com/watch?v=ewcFAv60haY
 externalprompt: View Game Concept Pitch
-collection-image: twisted_reality.jpg
-image01:
-image02:
-image03:
-image04:
+collection-image: twisted-reality-01.jpg
+image01: twisted-reality-02.jpg
+image02: twisted-reality-03.jpg
+image03: twisted-reality-04.jpg
+image04: twisted-reality-05.jpg
 image05:
 ---

@@ -38,8 +38,8 @@ externalurl:
 externalprompt:
 collection-image: mobicog-screen.jpg
 image01: mobicog-user-flow.jpg
-image02: mobicog-screen.jpg
-image03: mobicog.jpg
-image04: mobicog-feedback.jpg
-image05: mobicog_0977.JPG
+image02: mobicog-logo.jpg
+image03: mobicog_0972.JPG
+image04: mobicog_0977.JPG
+image05: mobicog-feedback.jpg
 ---

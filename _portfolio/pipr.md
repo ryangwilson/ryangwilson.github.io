@@ -21,10 +21,10 @@ processdocprompt:
 outcome: Bitovi had been working on an application for rendering 3D spaces and we thought that this would be a good use for that platform. We created and refined several user flows, vetted them with the stakeholders, and created a concept design to submit to the stakeholders.
 externalurl:
 externalprompt: Pipr Concept Video
-collection-image: pipr-1.png
-image01: pipr-3.png
-image02: pipr-4.png
-image03: pipr-5.png
-image04: pipr-6.png
-image05: pipr-7.png
+collection-image: pipr-1.jpg
+image01: pipr-3.jpg
+image02: pipr-4.jpg
+image03: pipr-5.jpg
+image04: pipr-6.jpg
+image05: pipr-7.jpg
 ---

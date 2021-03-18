@@ -21,10 +21,10 @@ processdocprompt:
 outcome:
 externalurl: https://www.youtube.com/watch?v=Ooq5MvlqmbM
 externalprompt: View Music Video
-collection-image: shiny.jpg
-image01:
-image02:
-image03:
-image04:
-image05:
+collection-image: shiny-01.jpg
+image01: shiny-02.jpg
+image02: shiny-03.jpg
+image03: shiny-04.jpg
+image04: shiny-05.jpg
+image05: shiny-06.jpg
 ---

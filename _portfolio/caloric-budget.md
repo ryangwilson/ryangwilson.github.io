@@ -24,7 +24,7 @@ externalprompt:
 collection-image: caloric-budget_Page_24.jpg
 image01: caloric-budget_Page_27.jpg
 image02: cb_flow_V7.png
-image03: wire_to_high.jpg
-image04: production_ex.jpg
-image05: rgwilson_672_poster-V3.jpg
+image03: cb-wire_to_high.jpg
+image04: cb-production_ex.jpg
+image05: cb-poster-V3.jpg
 ---

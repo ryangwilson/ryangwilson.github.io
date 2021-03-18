@@ -16,8 +16,8 @@ users:
 persona:
 constraints:
 process:
-processdoc:
-processdocprompt:
+processdoc: ProjectCHILD-branding-guide.pdf
+processdocprompt: Branding Guide
 outcome:
 externalurl:
 externalprompt:
