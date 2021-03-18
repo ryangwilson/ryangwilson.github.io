@@ -21,7 +21,7 @@ processdocprompt:
 outcome:
 externalurl:
 externalprompt:
-collection-image: haulhound-logo.jpg
+collection-image: yum-brands-rectangle.jpg
 image01:
 image02:
 image03:
