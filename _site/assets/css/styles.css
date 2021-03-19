@@ -365,11 +365,11 @@ body.nested-page .nested:hover, body.ty-page .contact:hover { box-shadow: 0 0 0 
 
 nav { display: flex; flex-wrap: wrap; }
 
-nav a { margin-left: 50px; color: #FFFFFF; text-transform: uppercase; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 0; box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; transition: all 0.3s ease; }
+nav a { margin-right: 50px; color: #FFFFFF; text-transform: uppercase; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 0; box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; transition: all 0.3s ease; }
 
-@media (max-width: 999px) { nav a { margin-left: 25px; } }
+@media (max-width: 999px) { nav a { margin-right: 25px; } }
 
-nav a:first-of-type { margin-left: 0; }
+nav a:last-of-type { margin-right: 0; }
 
 nav a:hover { color: #FFFFFF; box-shadow: 0 5px 0 0 #FFFFFF, 0 -5px 0 0 #FFFFFF; }
 
@@ -385,9 +385,7 @@ footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: s
 
 footer p { font-size: 12px; color: #A0A0A0; }
 
-footer nav a { margin-left: 25px; font-size: 12px; }
-
-footer nav a:last-of-type { margin-right: 50px; }
+footer nav a { font-size: 12px; }
 
 footer nav .subnav a { text-transform: unset; font-weight: 400; color: #ffca0a; }
 

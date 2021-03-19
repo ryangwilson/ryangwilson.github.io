@@ -19,8 +19,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   a {
-    margin-left: $scale-10;
-    @media (max-width: 999px) { margin-left: $scale-5; }
+    margin-right: $scale-10;
+    @media (max-width: 999px) { margin-right: $scale-5; }
     color: $white-00;
     text-transform: uppercase;
     text-decoration: none;
@@ -29,8 +29,8 @@ nav {
     padding: $scale-2 0;
     box-shadow: 0 0 0 0 $white-00, 0 0 0 0 $white-00;
     transition: all 0.3s ease;
-    &:first-of-type {
-      margin-left: 0;
+    &:last-of-type {
+      margin-right: 0;
     }
     &:hover {
       color: $white-00;
@@ -83,11 +83,7 @@ footer {
   }
   nav {
     a {
-      margin-left: $scale-5;
       font-size: $small-font-size;
-      &:last-of-type {
-        margin-right: $scale-10;
-      }
     }
     .subnav {
         a {
