@@ -393,6 +393,8 @@ section { margin: 100px 50px; }
 
 @media (max-width: 659px) { section { margin: 100px 25px; } }
 
+@media (max-width: 419px) { section { margin: 100px 25px; } }
+
 section .flex-two-col { display: flex; justify-content: space-between; }
 
 @media (max-width: 859px) { section .flex-two-col { flex-direction: column; } }
@@ -561,13 +563,15 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 .carousel-cell .carousel-content { display: flex; flex: 4; flex-direction: column; margin-right: 50px; }
 
+@media (max-width: 799px) { .carousel-cell .carousel-content { margin-right: 0; } }
+
 .carousel-cell .carousel-content h2 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 48px; }
 
-@media (max-width: 499px) { .carousel-cell .carousel-content h2 { font-size: 36px; } }
-
-@media (max-width: 599px) { .carousel-cell .carousel-content p { font-size: 0; } }
+@media (max-width: 499px) { .carousel-cell .carousel-content h2 { font-size: 24px; font-family: "Roboto", sans-serif; font-weight: 500; } }
 
 .carousel-cell .carousel-content .cta-container { margin-top: auto; margin-left: 5px; }
+
+@media (max-width: 799px) { .carousel-cell .carousel-content .cta-container { margin-right: auto; margin-left: auto; } }
 
 .carousel-cell .carousel-img { max-width: 50%; height: 297px; width: 496px; overflow: hidden; }
 

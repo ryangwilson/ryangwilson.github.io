@@ -13,22 +13,26 @@
     flex: 4;
     flex-direction: column;
     margin-right: $scale-10;
+    @media (max-width: 799px) {
+      margin-right: 0;
+    }
     h2 {
       font-family: $type-display-secondary;
       font-weight: $type-display-light;
       font-size: $h3-font-size;
       @media (max-width: 499px) {
-        font-size: $h4-font-size;
-      }
-    }
-    p {
-      @media (max-width: 599px) {
-        font-size: 0;
+        font-size: $h5-font-size;
+        font-family: $type-display-main;
+        font-weight: $type-main-bold;
       }
     }
     .cta-container {
       margin-top: auto;
       margin-left: $scale-1;
+      @media (max-width: 799px) {
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
   .carousel-img {
