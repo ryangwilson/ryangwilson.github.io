@@ -85,7 +85,11 @@ footer {
     a {
       font-size: $small-font-size;
     }
+    .footer-nav {
+      margin-right: $scale-5;
+    }
     .subnav {
+      margin-right: $scale-5;
         a {
           text-transform: unset;
           font-weight: $type-main-regular;

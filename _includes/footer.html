@@ -1,8 +1,8 @@
 <footer>
   <nav>
-    <div>
+    <div class="footer-nav">
       {% for navigation in site.data.navigation %}
-      <a href="{{ navigation.url }}" class="{% if page.url == navigation.url %}active{% endif %}{% if navigation.url == '/examples/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}">{{ navigation.title }}</a>
+      <a href="{{ navigation.url }}" class="{% if page.url == navigation.url %}active{% endif %}{% if navigation.url == '/projects/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}">{{ navigation.title }}</a>
       {% endfor %}
     </div>
     <div class="subnav">

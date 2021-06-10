@@ -1,7 +1,7 @@
 [
     {
         "header": "Experienced & Trustworthy",
-        "description": "Ryan has been working in the field of user-centered design crafting products for clients for 20+ years.",
+        "description": "Ryan has been working in the field of user-centered design crafting products for industry-leading clients for 20+ years.",
         "image": "ryan-client-shot.jpg",
         "cta": "See Experience",
         "cta-svg": "award",
@@ -21,11 +21,11 @@
         "image": "pbskids-01.jpg",
         "cta": "View Work",
         "cta-svg": "eye",
-        "link": "/examples/"
+        "link": "/projects/"
     },
     {
         "header": "Credentialed & Professional",
-        "description": "Ryan has four degrees focused in building great products for users and has been working with clients for over 20+ years.",
+        "description": "Ryan has 4 degrees focused in building user-centered products and is recommend by design leaders at major brands like Wayfair, PBS, Apple, and Google.",
         "image": "DSC_0143.jpg",
         "cta": "See Experience",
         "cta-svg": "star",
