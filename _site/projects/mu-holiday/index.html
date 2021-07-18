@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Mu Holiday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+  name="description"
+  content="Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.">
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+  <body class="nested-page">
+    <header id="masterhead">
+  <a href="/"><h1><span>Ryan G<i>.</i> Wilson</span> Product Designer</h1></a>
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
+    <a href="/" class="">About</a>
+  
+    <a href="/experience/" class="">Experience</a>
+  
+    <a href="/process/" class="">Process & Pricing</a>
+  
+    <a href="/projects/" class=" nested">Projects</a>
+  
+    <a href="/contact/" class=" contact">Contact</a>
+  
+  </nav>
+</header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
+
+    <div class="card-dark">
+      <a href="/projects/" class="btn text white  svg-before"><i data-feather="arrow-left"></i> Work Examples </a><br>
+      <h2>Marshall University</h2>
+      <p class="subtitle">Role: Motion Designer</p>
+    </div>
+    <main>
+      <section class="examples-container">
+        <div class="content-column">
+          <h3>Client</h3>
+          <p>Marshall University, School of Art & Design, 2014</p>
+          <p>Created for:  Marshall University, School of Art & Design  </p>
+          
+          <h3>Project Phases</h3>
+          <p>Animation</p>
+          
+          <h3>Tools</h3>
+          <p>Cinema4D, After Effects</p>
+          
+          <h3>Overview</h3>
+          <p>Created the holiday animation for the Marshall University School of Art & Design building monitors.</p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <h3>External Files</h3>
+            <p><a href="https://www.youtube.com/watch?v=kydbkA7KVNA" target="_blank" rel="noopener">View Animation</a></p>
+          
+        </div>
+        <div class="image-column">
+          <div class="single">
+            <a href="../../assets/images/portfolio-images/soad_holiday.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/soad_holiday.jpg" class="" alt="Project example image for Marshall University" />
+            </a>
+          </div>
+          <div class="single">
+          
+          </div>
+          <div class="double">
+            
+            
+          </div>
+          <div class="double">
+            
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
+    <footer>
+  <nav>
+    <div class="footer-nav">
+      
+      <a href="/" class="">About</a>
+      
+      <a href="/experience/" class="">Experience</a>
+      
+      <a href="/process/" class="">Process & Pricing</a>
+      
+      <a href="/projects/" class=" nested">Projects</a>
+      
+      <a href="/contact/" class=" contact">Contact</a>
+      
+    </div>
+    <div class="subnav">
+      
+      <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noopener">LinkedIn</a>
+      
+      <a href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen</a>
+      
+      <a href="https://medium.com/@ryangwilson" target="_blank" rel="noopener">Medium</a>
+      
+      <a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank" rel="noopener">YouTube</a>
+      
+    </div>
+  </nav>
+  <p>© Ryan G. Wilson, 1978‑<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+  </span></p>
+</footer>
+<script>
+  feather.replace()
+</script>
+
+
+  </body>
+</html>

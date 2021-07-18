@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Starbucks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+  name="description"
+  content="Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.">
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+  <body class="nested-page">
+    <header id="masterhead">
+  <a href="/"><h1><span>Ryan G<i>.</i> Wilson</span> Product Designer</h1></a>
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
+    <a href="/" class="">About</a>
+  
+    <a href="/experience/" class="">Experience</a>
+  
+    <a href="/process/" class="">Process & Pricing</a>
+  
+    <a href="/projects/" class=" nested">Projects</a>
+  
+    <a href="/contact/" class=" contact">Contact</a>
+  
+  </nav>
+</header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
+
+    <div class="card-dark">
+      <a href="/projects/" class="btn text white  svg-before"><i data-feather="arrow-left"></i> Work Examples </a><br>
+      <h2>Starbucks</h2>
+      <p class="subtitle">Role: Product Designer</p>
+    </div>
+    <main>
+      <section class="examples-container">
+        <div class="content-column">
+          <h3>Client</h3>
+          <p>Student Project, 2011</p>
+          <p>Created for:  Iowa State University  </p>
+          
+          <h3>Project Phases</h3>
+          <p>Discovery Phase</p>
+          
+          <h3>Tools</h3>
+          <p>Paper/Pencil, Illustrator, After Effects</p>
+          
+          <h3>Overview</h3>
+          <p>Users were juggling two mobile apps for Starbucks. We made recommendations to combine and refine sections of the app for better usabilty and a streamlined experience.</p>
+          
+          
+          <h3>Problem Statement</h3>
+          <p>We spent time observing the Starbucks iPhone app’s "myStarbucks" and "Starbucks Mobile Card". Within minutes of using the apps, it was clear that there was no need for two separate apps. The two could easily be combined into one app that would be highly functional, but we also have proposed adding additional functionality to help to decrease wait times both in waiting to order and waiting for the order to be complete. While we still need to hone this concept, the following observations are what led us to this idea for, what will be, our proposed design.</p>
+          
+          
+          
+          
+          
+          <h3>Process</h3>
+          <p>I downloaded and used the iPhone Starbucks Mobile Card app - it worked somewhat seamlessly. The process starts when the user buys a tangible gift card, activates the gift card online, creates a Starbucks account, if they don't already have one (this process takes about 5-10 minutes), then enters the gift card number and your Starbucks account information in to the app and you are ready to go. The app generates a QR barcode that the register can scan to deduct the cost of your item from your balance.  <br><br>  The woman behind the counter said that it is beneficial to the user because it speeds things up and visually keeps track of your balance. From my point of view, it isn't any faster than pulling a gift card out of my wallet. Thinking as the company, it is more beneficial for Starbucks because they are getting me to fill out my personal information by setting up a Starbucks account, then through the app, are able to capture and track the data of where, what and when I purchase from Starbucks.  <br><br>  The iPhone Starbucks Find Us app is pretty weak in comparison. It allows you to create drinks that you like and store them in a "My Drinks" favorites menu. You can apparently share this information with friends to see what your friends are drinking as well. It also works as a store finder, allows you to gather nutrition of drinks, incorporates a QR scanner for you to scan posters at your local Starbucks, and allows you to get more information about different blends of coffee they sell at Starbucks - if you turn this part sideways, it does a coverflow of the different blends, however, all the images are the same, so it loses its appeal, also it locked up my phone twice and I have to quit out of the app.</p>
+          
+          
+          <h3>Outcome</h3>
+          <p>Recommendations for how to refine the Starbucks app(s) and see how they can be streamlined and feature a digital ordering function. I see the options as such <br><br>  1. Combine the two currently available apps into one singular app with the same information. The Starbucks Card app, which I've used now on several different occasions, seems to be the stronger app, so I suggest adding the highlights (drink building/saving, nutrition information) into the Starbucks Card app, but changing the name to reflect overall Starbuckiness of the app. Here, the myStarbucks app is stronger, but only in name. <br><br>  2. Take the myDrinks aspect of the myStarbucks app a little further to allow for ordering. By creating a drink on our app, it would then generate a barcode (similar to the payment barcode) that you could order with. While this is a good idea, the question that arose was, "Why would you walk up to a counter that is staffed by a human and instead of telling them your drink order, you have them scan your phone?" Feels lifeless and socially awkward to me. Which brings me to point No. 3 or point No. 4. <br><br>  3. Create a Starbucks Quick-Order Kiosk. These Kiosks (one or many) would be placed near the entryway of each Starbucks. Each would be equipped with a barcode scanner (similar to the scanner they use at the register to scan the Starbucks Card app) that would scan in your drink order (fully customizable, see point No. 1) as well as allow you to pay with the same swipe (barcode incorporates your Starbucks balance and subtracts that order from it at the same time of taking your drink order). The order are then sent to the production area and made the same way they currently are. <br><br>  4. Allow for the app to both submit an order to a specified Starbucks and pay for it within the same button stroke. Payment is essential so Starbucks doesn’t lose money for orders not picked-up. The app could allow for scheduling, but probably should be limited to within 30-45 minutes of ordering. Orders would then be integrated into the current Starbucks system to avoid an additional interface that may break or be overlooked and take up space. The order are then sent to the production area and made the same way they currently are. <br><br>  The "Why?" for this point is, that in my short time observing Starbucks, the total time for the specialty coffee drink orders was approximately 3–4 minutes. If regular Starbucks customers could "quick order" their drinks from a kiosk (similar to the quick check in kiosks at the airport) or from an app before even entering the store, this would eliminate time waiting in line time at the register, allowing the customer to go directly to the staging area to wait for their drink to be made. <br><br>  One major con of this idea is that Starbucks then loses the ability to up-sell (pastries/breakfast sandwiches/fruit/CDs/Gift Cards) at the counter. To remedy this, an additional up-sell area could exist near the staging area (some of that already is in place - mugs, etc), which would cause the customer to get in line to pay. An additional issue might be the loss of an order within the app. It remedy this either the app would keep track of past orders, time & date placed and location sent, or each order would send an email receipt to the users preferred email address, much like a transaction at the Apple Store locations.</p>
+          
+          
+            <h3>Process Document</h3>
+            <p>
+            <a href="../../assets/images/process-docs/Starbucks-Service-Process.pdf" target="_blank" rel="noopener">Process Document</a></p>
+          
+          
+        </div>
+        <div class="image-column">
+          <div class="single">
+            <a href="../../assets/images/portfolio-images/starbucks-flow01.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/starbucks-flow01.jpg" class="" alt="Project example image for Starbucks" />
+            </a>
+          </div>
+          <div class="single">
+          
+            <a href="../../assets/images/portfolio-images/starbucks_app-P0.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/starbucks_app-P0.jpg" class="" alt="Project example image for Starbucks" />
+            </a>
+          
+          </div>
+          <div class="double">
+            
+            <a href="../../assets/images/portfolio-images/starbucks_app-P1.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/starbucks_app-P1.jpg" class="" alt="Project example image for Starbucks" />
+            </a>
+            
+            
+            <a href="../../assets/images/portfolio-images/starbucks_app-P2.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/starbucks_app-P2.jpg" class="" alt="Project example image for Starbucks" />
+            </a>
+            
+          </div>
+          <div class="double">
+            
+            <a href="../../assets/images/portfolio-images/starbucks_app-P3.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/starbucks_app-P3.jpg" class="" alt="Project example image for Starbucks" />
+            </a>
+            
+            
+            <a href="../../assets/images/portfolio-images/starbucks_app-P4.jpg" data-fancybox="images">
+              <img src="../../assets/images/portfolio-images/starbucks_app-P4.jpg" class="" alt="Project example image for Starbucks" />
+            </a>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
+    <footer>
+  <nav>
+    <div class="footer-nav">
+      
+      <a href="/" class="">About</a>
+      
+      <a href="/experience/" class="">Experience</a>
+      
+      <a href="/process/" class="">Process & Pricing</a>
+      
+      <a href="/projects/" class=" nested">Projects</a>
+      
+      <a href="/contact/" class=" contact">Contact</a>
+      
+    </div>
+    <div class="subnav">
+      
+      <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noopener">LinkedIn</a>
+      
+      <a href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen</a>
+      
+      <a href="https://medium.com/@ryangwilson" target="_blank" rel="noopener">Medium</a>
+      
+      <a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank" rel="noopener">YouTube</a>
+      
+    </div>
+  </nav>
+  <p>© Ryan G. Wilson, 1978‑<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+  </span></p>
+</footer>
+<script>
+  feather.replace()
+</script>
+
+
+  </body>
+</html>
