@@ -8,14 +8,6 @@
         "link": "/experience/"
     },
     {
-        "header": "Clear Process & Pricing",
-        "description": "We have found that our clients appreciate clarity around timelines, deliverables, and budget.",
-        "image": "cb-production_ex.jpg",
-        "cta": "Estimate Now",
-        "cta-svg": "edit-3",
-        "link": "/process/"
-    },
-    {
         "header": "Examples of Quality",
         "description": "View case studies of work that Ryan has provided when working with clients both big and small.",
         "image": "pbskids-01.jpg",
@@ -33,7 +25,7 @@
     },
     {
         "header": "Process-Driven",
-        "description": "Product design follows a trusted user-centered design process: Understand, Ideate, Test, Iterate, Repeat",
+        "description": "Product design follows a trusted user-centered design process: Understand, Ideate, Test, Iterate, Repeat.",
         "image": "user-testing.jpg",
         "cta": "Review Process",
         "cta-svg": "list",
