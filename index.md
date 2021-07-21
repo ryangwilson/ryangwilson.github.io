@@ -4,10 +4,10 @@ title: About Ryan
 permalink: /
 meta: Ryan Wilson is an experienced, trustworthy Product Designer. If you are looking for someone to improve the user experience of your product, let me introduce you to Ryan.
 subtitle: Product Designer, Graphic Designer, Leader
-card-content: Ryan is a Product Designer working for Bitovi. For over twenty years Ryan has been creating products with the user in mind. His passions are in the User Experience Process - research, understanding the user, developing product requirements, creating mockups and building prototypes, and iterating through documentation. He aims to understand and empathize with the needs, wants, and limitations of end-users to help create a better experience for that end-user.
+card-content: For over twenty years, I’ve been dedicated to creating products with the user in mind. As a Product Designer at Bitovi, as well as throughout my career, I’ve seen how approaching projects with understanding and empathy results in a better experience for the user. My passion is the process of understanding and refining the User Experience of a product - research, defining the user, developing product requirements, creating wireframes, mockups, and building prototypes, and iterating through documentation.
 main-title-01: Featured Work
 main-title-02: References
-content-02: One of the most important things that clients are looking for is trustworthyness. "Can this person know what they are doing and can do the work that they are saying they can?". Ryan has found that the best way to show ability and trust is through the voices of people he has worked with in the past.
+content-02: I’m proud of the successful relationships I’ve built throughout my career by being trustworthy, goal-oriented, and easy to work with. Here are a few things some people I’ve worked with have said -
 main-title-03: Articles, Papers, & Other Musings
 content-03: Ryan enjoys writing about things that interest him; user experience, graphic design, animation, etc.
 ---
