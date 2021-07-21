@@ -19,7 +19,7 @@ constraints:
 process:
 processdoc:
 processdocprompt:
-outcome: In a six-week discovery of the NRE Labs application and website were able to come back with an actionable list of requirements to for a refinement phase, including 40+ points for refining the product in the next phase, high-level website design concepts and aesthetic design requirements including a basic style guide, identifying the need for an in-depth accessibility (a11y) review, issues and solutions for fixing the website responsive design, a strong recommendation for performance improvements, and recommendations for improvements of the training app - including concepts for a mobile training layout.
+outcome: In a six-week discovery of the NRE Labs application and website were able to come back with an actionable list of requirements to for a refinement phase, including 40+ points for refining the product in the next phase, high-level website design concepts and aesthetic design requirements including&#58; <br>• A basic style guide <br>• Identifying the need for an in-depth accessibility (a11y) review <br>• Issues and solutions for fixing the website responsive design <br>• A strong recommendation for performance improvements <br>• Recommendations for improvements of the training app <br>• Concepts for a mobile training layout
 externalurl:
 externalprompt:
 collection-image: nrelabs-StyleGuide.jpg
