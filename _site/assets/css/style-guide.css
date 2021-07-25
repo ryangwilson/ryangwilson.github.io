@@ -10,7 +10,7 @@ h1 span i { color: #ffca0a; }
 
 h2 { font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 900; font-style: normal; text-transform: none; color: #FFFFFF; text-transform: uppercase; line-height: 1; margin-bottom: 10px; }
 
-@media (max-width: 699px) { h2 { font-size: 48px; } }
+@media (max-width: 699px) { h2 { font-size: 36px; } }
 
 section h2 { text-transform: none; color: #232323; }
 
