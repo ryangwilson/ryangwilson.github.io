@@ -10,7 +10,7 @@ underurl:
 year: 2013
 phases: Graphic Design
 tools: Illustrator
-overview: Needs description
+overview:
 problemstatement:
 users:
 persona:

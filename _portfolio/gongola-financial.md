@@ -10,7 +10,7 @@ underurl: https://www.gongolafinancial.com/research.htm
 year: 2019
 phases: Graphic Design
 tools: Paper, Pencil, Illustrator
-overview: Created branding for new wealth management company in the greater Cincinnati area.
+overview: Created branding for a wealth management company in the greater Cincinnati area.
 problemstatement:
 users:
 persona:

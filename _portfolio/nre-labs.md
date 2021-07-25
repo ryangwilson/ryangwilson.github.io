@@ -11,7 +11,7 @@ under: Bitovi
 underurl: https://www.bitovi.com
 phases: Discovery Phase
 tools: Research, Google Forms, Sketch
-overview: The client wanted to improve their information/marketing site as well their application, an existing product that helps users train to be Network Reliability Engineers (NREs). We engaged with the client starting with a Discovery phase, documented here. <br><br> We performed user interviews, two different heuristic analysis, a user flow review, an aesthetic review, and a responsive design audit.
+overview: The client wanted to improve their information/marketing site as well their application, an existing product that helps users train to be Network Reliability Engineers (NREs). We engaged with the client starting with a Discovery phase, documented here. <br><br> We performed user interviews, two different heuristic analyses, a user flow review, an aesthetic review, and a responsive design audit.
 problemstatement:
 users:
 persona:

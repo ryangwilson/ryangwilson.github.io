@@ -10,7 +10,7 @@ under: Bitovi
 underurl: https://www.bitovi.com
 phases: Concept Design
 tools: Research, Sketch, Axure
-overview: Yola Yoga is a placeholder concept for a client who asked not publicly share information about their application. While we can't share information about the real client's product, we can say that it is an innovative, online, remote training method that has benefited many durning COVID-19 lockdown.
+overview: Yola Yoga is a placeholder concept for a client who asked not publicly share information about their application. While we can't share information about the real client's product, we can say that it is an innovative, online, remote training method that has benefited many during the COVID-19 lockdown.
 problemstatement: How do you reach and share information with users that are across the world? Our client had a unique solution that follows strict privacy laws while still allowing real-time video training and student engagement. We helped out client realize this concept as a usable product.
 users:
 persona:

@@ -10,7 +10,7 @@ underurl:
 year: 2014
 phases: Graphic Design
 tools: Paper, Pen, Illustrator, Photoshop
-overview: Full process included researching recipe, making pepper jelly (recorded from two continuous angles), integrating jar textures, pepper jelly color (sampled), and notated recipe cards into the final design.
+overview: Full process included researching the recipe, making pepper jelly (recorded from two continuous angles), integrating jar textures, pepper jelly color (sampled), and notated recipe cards into the final design.
 problemstatement:
 users:
 persona:

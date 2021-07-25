@@ -10,7 +10,7 @@ underurl:
 year: 2013
 phases: Animation
 tools: Illustrator, Cinema 4D
-overview: Created the intro video for a retro video game company called Two Button Games/
+overview: Created the intro video for a retro video game company called Two Button Games.
 problemstatement:
 users:
 persona:
