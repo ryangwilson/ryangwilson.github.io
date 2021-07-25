@@ -9,6 +9,4 @@ main-section-title:
 sidebar-title01: Social Media
 sidebar-title02: References
 ---
-<p>Please note I typically respond to messages within 24 hours.</p>
-
-<p>Until then, please take a minute to review my experience, what people have said about working with me, and examples of my product design work.</p>
+<p>Please note I typically respond to messages within 24 hours. Until then, please take a minute to review my experience, what people have said about working with me, and examples of my product design work.</p>
