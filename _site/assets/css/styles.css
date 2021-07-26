@@ -369,8 +369,6 @@ nav a { margin-right: 50px; color: #FFFFFF; text-transform: uppercase; text-deco
 
 @media (max-width: 999px) { nav a { margin-right: 25px; } }
 
-nav a:last-of-type { margin-right: 0; }
-
 nav a:hover { color: #FFFFFF; box-shadow: 0 5px 0 0 #FFFFFF, 0 -5px 0 0 #FFFFFF; }
 
 nav a.active { color: #28d2c9; cursor: default; }
