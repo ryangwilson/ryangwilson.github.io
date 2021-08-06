@@ -25,6 +25,7 @@ The filtering system will allow users to drill down into multiple options to ref
 <br><br>
 The final product will want to avoid a zero-output option, meaning that, if a user drills down so far into the data that there are no results, the system will not allow for a zero result. Options to avoid this would be to start to limit (gray-out) filters when fewer topics become available, or when a zero-point has been reached, the system can suggest different options (e.g. “Would you prefer to remove XXX?”).'
 users:
+webppersona:
 persona:
 constraints:
 process: My first step in this process was to take pencil to paper to create a rough flow chart of the site so I could visualize the entirety of this project. This allowed me to envision the front end (aesthetics and layout) and back end (database) needs. From the sketch, I created a refined Version 2 of the IA.  <br><br>  This revision allowed me to further refine the outcome of the design. From the Information Architecture V2, I began pencil sketches of the site (visuals) and interactions. My sketches informed the wireframe layout, created in Illustrator.
@@ -33,6 +34,12 @@ processdocprompt: HotelRate Process Document
 outcome: From the initial wireframes, I created an InVision prototype to simulate the user experience/interaction for the HotelRate website. This interaction caused further refinement of the wireframes and brought to my attention some of the overlooked necessary interactions.  <br><br>  InVision allowed me to quickly mock up an interactive piece to show the intended flow through this project.
 externalurl:
 externalprompt:
+webpcollection-image: hotelrate_screen18.webp
+webpimage01: hotelrate_ia.webp
+webpimage02:
+webpimage03:
+webpimage04:
+webpimage05:
 collection-image: hotelrate_screen18.png
 image01: hotelrate_ia.jpg
 image02:

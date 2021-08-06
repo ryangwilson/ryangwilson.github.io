@@ -13,6 +13,7 @@ tools: Cinema4D, After Effects
 overview:
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt:
 outcome:
 externalurl: https://www.youtube.com/watch?v=Ooq5MvlqmbM
 externalprompt: View Music Video
+webpcollection-image: shiny-01.webp
+webpimage01: shiny-02.webp
+webpimage02: shiny-03.webp
+webpimage03: shiny-04.webp
+webpimage04: shiny-05.webp
+webpimage05: shiny-06.webp
 collection-image: shiny-01.jpg
 image01: shiny-02.jpg
 image02: shiny-03.jpg

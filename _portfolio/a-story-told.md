@@ -13,6 +13,7 @@ tools: Illustrator, Cinema4D
 overview: Created album art for the album Keep Watch by the band A Story Told.
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt: 3D Motion Test
 outcome:
 externalurl: https://open.spotify.com/album/4HboLAFvqXoAa5nHqKmAR4
 externalprompt: Listen to the Album
+webpcollection-image: ast_cover.webp
+webpimage01: ast_01.webp
+webpimage02: ast_02.webp
+webpimage03: ast_03.webp
+webpimage04:
+webpimage05:
 collection-image: ast_cover.jpg
 image01: ast_01.jpg
 image02: ast_02.jpg

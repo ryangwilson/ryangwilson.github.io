@@ -13,6 +13,7 @@ tools: Illustrator
 overview:
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt:
 outcome:
 externalurl:
 externalprompt:
+webpcollection-image: student_workshop.webp
+webpimage01:
+webpimage02:
+webpimage03:
+webpimage04:
+webpimage05:
 collection-image: student_workshop.jpg
 image01:
 image02:

@@ -2,7 +2,9 @@
     {
         "header": "Experienced & Trustworthy",
         "description": "Ryan has been working in the field of user-centered design crafting products for industry-leading clients for 20+ years.",
-        "image": "DSC_0143.jpg",
+        "webpimage": "DSC_0143.webp",
+        "jpgimage": "DSC_0143.jpg",
+        "alttext": "Ryan Wilson headshot",
         "cta": "See Experience",
         "cta-svg": "award",
         "link": "/experience/"
@@ -10,7 +12,9 @@
     {
         "header": "Examples of Quality",
         "description": "View case studies of work that Ryan has provided when working with clients both big and small.",
-        "image": "pbskids-01.jpg",
+        "webpimage": "pbskids-01.webp",
+        "jpgimage": "pbskids-01.jpg",
+        "alttext": "PBS Kids slide",
         "cta": "View Work",
         "cta-svg": "eye",
         "link": "/projects/"
@@ -18,7 +22,9 @@
     {
         "header": "Credentialed & Professional",
         "description": "Ryan has 4 degrees focused in building user-centered products and is recommended by design leaders at major brands like Wayfair, PBS, Apple, and Google.",
-        "image": "ryan-client-shot.jpg",
+        "webpimage": "ryan-client-shot.webp",
+        "jpgimage": "ryan-client-shot.jpg",
+        "alttext": "Ryan as an avatar",
         "cta": "See Experience",
         "cta-svg": "star",
         "link": "/experience/"
@@ -26,7 +32,9 @@
     {
         "header": "Process-Driven",
         "description": "Product design follows a trusted user-centered design process: Understand, Ideate, Test, Iterate, Repeat.",
-        "image": "user-testing.jpg",
+        "webpimage": "user-testing.webp",
+        "jpgimage": "user-testing.jpg",
+        "alttext": "Ryan user testing at a trade show",
         "cta": "Review Process",
         "cta-svg": "list",
         "link": "/process/"

@@ -13,6 +13,7 @@ tools: Paper, Pencil, Illustrator
 overview: Created branding for a wealth management company in the greater Cincinnati area.
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt: Branding Guide
 outcome:
 externalurl:
 externalprompt:
+webpcollection-image: gf-white-1000.webp
+webpimage01: gf-black-1000.webp
+webpimage02: gf-1000.webp
+webpimage03:
+webpimage04:
+webpimage05:
 collection-image: gf-white-1000.jpg
 image01: gf-black-1000.jpg
 image02: gf-1000.jpg

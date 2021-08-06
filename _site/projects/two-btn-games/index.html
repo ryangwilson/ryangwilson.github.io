@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <title>Two Btn Games</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-  name="description"
-  content="Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.">
+  <meta name="description" content="Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/images/favicons/site.webmanifest">
   
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
@@ -99,7 +101,11 @@ x.addListener(myFunction) // Attach listener function on state changes
         <div class="image-column">
           <div class="single">
             <a href="../../assets/images/portfolio-images/two_button.jpg" data-fancybox="images">
-              <img src="../../assets/images/portfolio-images/two_button.jpg" class="" alt="Project example image for Two Button Games" />
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/two_button.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/two_button.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/two_button.jpg" alt="Project example image for Two Button Games">
+              </picture>
             </a>
           </div>
           <div class="single">

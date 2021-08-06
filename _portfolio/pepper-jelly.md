@@ -13,6 +13,7 @@ tools: Paper, Pen, Illustrator, Photoshop
 overview: Full process included researching the recipe, making pepper jelly (recorded from two continuous angles), integrating jar textures, pepper jelly color (sampled), and notated recipe cards into the final design.
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt:
 outcome:
 externalurl:
 externalprompt:
+webpcollection-image: pepper_jelly_poster.webp
+webpimage01:
+webpimage02:
+webpimage03:
+webpimage04:
+webpimage05:
 collection-image: pepper_jelly_poster.jpg
 image01:
 image02:

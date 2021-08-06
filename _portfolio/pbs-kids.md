@@ -13,6 +13,7 @@ tools: Illustrator, Sketch, Google Slides
 overview: Proudly created presentations for PBS Kids to promote a new program supporting Pre-K learning and education.
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt:
 outcome:
 externalurl: https://www.youtube.com/watch?v=5Dv0YEI0vds
 externalprompt: Presentation Animation Examples
+webpcollection-image: pbskids-01.webp
+webpimage01: pbskids-02.webp
+webpimage02: pbskids-03.webp
+webpimage03: pbskids-04.webp
+webpimage04:
+webpimage05:
 collection-image: pbskids-01.jpg
 image01: pbskids-02.jpg
 image02: pbskids-03.jpg

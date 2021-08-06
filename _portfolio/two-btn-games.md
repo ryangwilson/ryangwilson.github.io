@@ -13,6 +13,7 @@ tools: Illustrator, Cinema 4D
 overview: Created the intro video for a retro video game company called Two Button Games.
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt:
 outcome:
 externalurl: https://www.youtube.com/watch?v=USsuI6xh5QE
 externalprompt: View Animation
+webpcollection-image: two_button.webp
+webpimage01:
+webpimage02:
+webpimage03:
+webpimage04:
+webpimage05:
 collection-image: two_button.jpg
 image01:
 image02:

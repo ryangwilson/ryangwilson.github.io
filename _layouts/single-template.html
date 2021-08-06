@@ -33,7 +33,11 @@
           <p>{{ page.users }}</p>
           {% endif %}
           {% if page.persona %}
-          <img src="../../assets/images/{{ page.persona }}" class="" alt="Persona examples for {{ page.project }}" />
+          <picture>
+            <source srcset="../../assets/images/{{ page.webppersona }}" type="image/webp">
+            <source srcset="../../assets/images/{{ page.persona }}" type="image/jpeg"> 
+            <img src="../../assets/images/{{ page.persona }}" alt="Persona examples for {{ page.project }}">
+          </picture>
           {% endif %}
           {% if page.constraints %}
           <h3>Constraints</h3>
@@ -60,37 +64,61 @@
         <div class="image-column">
           <div class="single">
             <a href="../../assets/images/portfolio-images/{{ page.collection-image }}" data-fancybox="images">
-              <img src="../../assets/images/portfolio-images/{{ page.collection-image }}" class="" alt="Project example image for {{ page.project }}" />
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.webpcollection-image }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.collection-image }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.collection-image }}" alt="Project example image for {{ page.project }}">
+              </picture>
             </a>
           </div>
           <div class="single">
           {% if page.image01 %}
             <a href="../../assets/images/portfolio-images/{{ page.image01 }}" data-fancybox="images">
-              <img src="../../assets/images/portfolio-images/{{ page.image01 }}" class="" alt="Project example image for {{ page.project }}" />
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.webpimage01 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.image01 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.image01 }}" alt="Project example image for {{ page.project }}">
+              </picture>
             </a>
           {% endif %}
           </div>
           <div class="double">
             {% if page.image02 %}
             <a href="../../assets/images/portfolio-images/{{ page.image02 }}" data-fancybox="images">
-              <img src="../../assets/images/portfolio-images/{{ page.image02 }}" class="" alt="Project example image for {{ page.project }}" />
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.webpimage02 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.image02 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.image02 }}" alt="Project example image for {{ page.project }}">
+              </picture>
             </a>
             {% endif %}
             {% if page.image03 %}
             <a href="../../assets/images/portfolio-images/{{ page.image03 }}" data-fancybox="images">
-              <img src="../../assets/images/portfolio-images/{{ page.image03 }}" class="" alt="Project example image for {{ page.project }}" />
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.webpimage03 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.image03 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.image03 }}" alt="Project example image for {{ page.project }}">
+              </picture>
             </a>
             {% endif %}
           </div>
           <div class="double">
             {% if page.image04 %}
             <a href="../../assets/images/portfolio-images/{{ page.image04 }}" data-fancybox="images">
-              <img src="../../assets/images/portfolio-images/{{ page.image04 }}" class="" alt="Project example image for {{ page.project }}" />
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.webpimage04 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.image04 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.image04 }}" alt="Project example image for {{ page.project }}">
+              </picture>
             </a>
             {% endif %}
             {% if page.image05 %}
             <a href="../../assets/images/portfolio-images/{{ page.image05 }}" data-fancybox="images">
-              <img src="../../assets/images/portfolio-images/{{ page.image05 }}" class="" alt="Project example image for {{ page.project }}" />
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.webpimage05 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.image05 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.image05 }}" alt="Project example image for {{ page.project }}">
+              </picture>
             </a>
             {% endif %}
           </div>

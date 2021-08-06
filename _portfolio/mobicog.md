@@ -12,6 +12,7 @@ tools: Paper/Pencil, Illustrator
 overview: 'In 2011, I had rediscovered an interest in running for exercise - an inexpensive and accessible activity with a large user base. While running, I often think about how fast I’m traveling and how many calories I’m burning. Thinking about those things, I developed my concept for a mobile application that tracks your GPS location and applies other variables (time, weight, age and height) to return after run results of average speed, distance, and calories burnt.'
 problemstatement: 'The highest rated category in the survey about what people are concerned most about when being active was Enjoyment. Ultimately, the app should be fun and easy to use – able to start using in a few clicks. The results need to be easy to read and easy to access. Other apps have a subscription base to view results remotely. I’m considering the ability to email results to a user-entered email address for them to review at a later date as well as on-screen.'
 users: 'I created a survey to gather information about people’s personal fitness routine (including biking, running and any other ground-based distance activity) and what information they are interested in while being active (stakeholders). I sent out a ten-question survey to 37 people in the age range of 23 – 65, in a variety of markets across the United States. 23 people responded, 22 people completed the survey.'
+webppersona:
 persona:
 constraints:
 process: 'Users will interact with MobiCog before and after working out, so the interface will have to be simple and easy to use. Using Nielsen’s Heuristics, the following should be included in the final design:<br><br>
@@ -30,6 +31,12 @@ As for Google MyTracks, the only way to compete would be to make MobiCog availab
 I feel that I achieved most of my primary features: Distance Tracking, Time Tracking, and added in my personal interest that wasn’t as popular in the survey, Speed Tracking. Route Tracking was too difficult to add to the App Inventor prototype.<br><br>
 From a prototype standpoint, App Inventor was ok to use. In the next version, I would want to program the app using a different method that would allow more freedom to integrate other options (maps, route tracking, and such). The next version (mobiCog2.0) has to have route tracking without question, seeing as it was an interest in the survey and from the user testing.<br><br>
 I would also like to be able to layout and skin the next version of the application to match the proposed graphics before the next round of user testing. I think that the users who commented that they wouldn’t use the application regularly might have felt differently if the application looked like it was ready for distribution rather than the wire-frame look it currently has.'
+webpcollection-image: mobicog-screen.webp
+webpimage01: mobicog-user-flow.webp
+webpimage02: mobicog-logo.webp
+webpimage03: mobicog_0972.webp
+webpimage04: mobicog_0977.webp
+webpimage05: mobicog-feedback.webp
 collection-image: mobicog-screen.jpg
 image01: mobicog-user-flow.jpg
 image02: mobicog-logo.jpg

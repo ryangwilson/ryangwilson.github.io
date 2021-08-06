@@ -13,6 +13,7 @@ tools: Paper, Pencil, Illustrator
 overview: Created branding for ProjectCHILD, an Illinois institution committed to advancing the quality, affordability, and accessibility of child care.
 problemstatement:
 users:
+webppersona:
 persona:
 constraints:
 process:
@@ -21,6 +22,12 @@ processdocprompt: Branding Guide
 outcome:
 externalurl:
 externalprompt:
+webpcollection-image: projectCHILD-logo.webp
+webpimage01:
+webpimage02:
+webpimage03:
+webpimage04:
+webpimage05:
 collection-image: projectCHILD-logo.jpg
 image01:
 image02:
