@@ -19,12 +19,19 @@ process: We were engaged for an eight-week discovery phase to identify the requi
 processdoc:
 processdocprompt:
 outcome: We created and vetted improved user flows that would be more user-friendly, would direct users to use the self-service documentation, and empower users to find solutions before contacting the support team. From those flows, we created and tested an updated wireframe prototype concept.
+value: <ul><li>Captured a detailed understanding of what users are looking for in a ticketing system</li> <li>Increased awareness of self-support</li> <li>Recommended a streamlined user flow to reduce time to report an issue</li> <li>Recommended uniform design patterns to increase usability of UI</li> </ul>
 externalurl:
 externalprompt:
+webpcollection-image: jandj-report_Page_19.webp
+webpimage01: jandj-report_Page_18.webp
+webpimage02: jandj-1.webp
+webpimage03: jandj-2.webp
+webpimage04: jandj-3.webp
+webpimage05: jandj-4.webp
 collection-image: jandj-report_Page_19.jpg
 image01: jandj-report_Page_18.jpg
-image02: jandj-1.png
-image03: jandj-2.png
-image04: jandj-3.png
-image05: jandj-4.png
+image02: jandj-1.jpg
+image03: jandj-2.jpg
+image04: jandj-3.jpg
+image05: jandj-4.jpg
 ---

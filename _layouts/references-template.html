@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include navigation.html %}
+    <main>
+      {% include card-dark.html %}
+      <section>
+        <h2>{{ page.main-title-02 }}</h2>
+        <p>{{ content }}</p>
+        {% include references.html %}
+      </section>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

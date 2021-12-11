@@ -31,6 +31,7 @@ As for Google MyTracks, the only way to compete would be to make MobiCog availab
 I feel that I achieved most of my primary features: Distance Tracking, Time Tracking, and added in my personal interest that wasn’t as popular in the survey, Speed Tracking. Route Tracking was too difficult to add to the App Inventor prototype.<br><br>
 From a prototype standpoint, App Inventor was ok to use. In the next version, I would want to program the app using a different method that would allow more freedom to integrate other options (maps, route tracking, and such). The next version (mobiCog2.0) has to have route tracking without question, seeing as it was an interest in the survey and from the user testing.<br><br>
 I would also like to be able to layout and skin the next version of the application to match the proposed graphics before the next round of user testing. I think that the users who commented that they wouldn’t use the application regularly might have felt differently if the application looked like it was ready for distribution rather than the wire-frame look it currently has.'
+value: <ul><li>Provides a smart system for users to track their exercise routine</li> <li>Streamlines interface so that users can focus on their activity over figuring out wich button to press</li></ul>
 webpcollection-image: mobicog-screen.webp
 webpimage01: mobicog-user-flow.webp
 webpimage02: mobicog-logo.webp

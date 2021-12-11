@@ -6,18 +6,13 @@ role: Product Designer
 client: HotelRate
 under: Contract Work
 underurl:
-year: 2016
+year: 2015
 phases: Discovery Phase
 tools: Paper/Pencil, Illustrator, InVision
 overview: 'I began this project by conceptualizing the pathways through the full website for HotelRate. There is a public facing side and a secure side to the site. The public-facing side is to capture a new user base (secondary audience) and to support the existing user. As in the project statement, the primary user – a hotel owner or hotel manager or similar – seeks to find out (1) how good or bad their hotel is rated and (2) how to prepare for the next review.
 <br><br>
 The secure site will give the primary user access to review their current review(s) and past reviews if they exist. It was assumed that primary users would (1) already have an account and be provided a username and password to log in to the secure side of the website, and (2) primary users would receive an email notification that a review had been made with a direct link to log in from that email. Within the secure side of the site, primary users will be able to navigate to the public-facing content, but remain logged in to their active session to get back to the review data without having to log back in.'
-problemstatement: 'As noted in the project description, the data has potential to be massive for these 5 diamond infraction reviews. The table system for the data will be built in to be displayed by infraction order by default. The user can then click on the header name of the table to view results:<br>
-• Order by Severity (highest to lowest, or lowest to highest)<br>
-• Order by Room (room number ascending or descending)<br>
-• Order by Rule (rule number ascending or descending)<br>
-• Order by Location (location in a room alphabetical or reverse)<br>
-• Order by Category (rule category alphabetical or reverse)
+problemstatement: 'As noted in the project description, the data has potential to be massive for these 5 diamond infraction reviews. The table system for the data will be built in to be displayed by infraction order by default. The user can then click on the header name of the table to view results:<ul> <li>Order by Severity (highest to lowest, or lowest to highest)</li> <li>Order by Room (room number ascending or descending)</li> <li>Order by Rule (rule number ascending or descending)</li> <li>Order by Location (location in a room alphabetical or reverse)</li> <li>Order by Category (rule category alphabetical or reverse)</li> </ul>
 <br><br>
 Users will also have the ability to determine how many results the user can view on a page at a time (10, 25, 50, 100, ####).
 <br><br>
@@ -32,6 +27,7 @@ process: My first step in this process was to take pencil to paper to create a r
 processdoc: hotelrate_process.pdf
 processdocprompt: HotelRate Process Document
 outcome: From the initial wireframes, I created an InVision prototype to simulate the user experience/interaction for the HotelRate website. This interaction caused further refinement of the wireframes and brought to my attention some of the overlooked necessary interactions.  <br><br>  InVision allowed me to quickly mock up an interactive piece to show the intended flow through this project.
+value: <ul><li>Simplified how data and content is displayed so users can more easily understand infractions to start the resolution process</li> <li>Increase usability – simplified the user's path through the product to get to the information they need quicker</li> <li>Recommended filtering for infractions so users can more quickly find and resolve issues</li> </ul>
 externalurl:
 externalprompt:
 webpcollection-image: hotelrate_screen18.webp

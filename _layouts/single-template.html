@@ -47,6 +47,10 @@
           <h3>Process</h3>
           <p>{{ page.process }}</p>
           {% endif %}
+          {% if page.value %}
+          <h3>Value Provided to Users</h3>
+          <p>{{ page.value }}</p>
+          {% endif %}
           {% if page.outcome %}
           <h3>Outcome</h3>
           <p>{{ page.outcome }}</p>

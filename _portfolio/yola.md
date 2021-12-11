@@ -15,11 +15,12 @@ problemstatement: How do you reach and share information with users that are acr
 users:
 webppersona:
 persona:
-constraints: • Video training must be secure <br> • Video training Trainers must have access to review their videos from home, even if the video was recorded on a device on location <br> • Starting and stopping video recordings and taking still images from the camera feed must be simple and hands-free <br> • Multiple video sources may be provided to the outgoing main feed
+constraints: <ul> <li>Video training must be secure</li> <li>Video training Trainers must have access to review their videos from home, even if the video was recorded on a device on location</li> <li>Starting and stopping video recordings and taking still images from the camera feed must be simple and hands-free</li> <li>Multiple video sources may be provided to the outgoing main feed</li> </ul>
 process: We had a long term relationship with this client and wanted to recommend some functional and aesthetic improvements to their product.
 processdoc:
 processdocprompt:
 outcome: The client loved the proposed concept design. They have used the screens and updated flow to help generate more interest and funding for their product.
+value: <ul><li>Cleaner, modern interface – improved visual value</li> <li>Increase usability – While the application is for educational purposes, the UI patterns borrow from common video entertainment products</li> <li>Value for the client and developers – Provided living style guide so page and pattern expansion will be easier to implement in the future</li> </ul>
 externalurl:
 externalprompt:
 webpcollection-image: yola-yoga-01.webp

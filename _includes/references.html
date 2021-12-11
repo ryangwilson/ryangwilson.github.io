@@ -1,7 +1,7 @@
 {% if page.url contains '/contact/' %}
 <div class="card-container">
     {% for testimonials in site.data.testimonials | limit: 1 %}
-    <a class="reference-card single" href="../experience/#{{ testimonials.lastname }}">
+    <a class="reference-card single" href="../references/#{{ testimonials.lastname }}">
         <q>{{ testimonials.quote }}</q>
         <span class="btn icon"><i data-feather="plus-circle"></i></span>
         <div class="image-title">
@@ -19,7 +19,7 @@
 {% if page.url == '/' %}
 <div class="card-container">
     {% for testimonials in site.data.testimonials | limit: 3 %}
-    <a class="reference-card third" href="../experience/#{{ testimonials.lastname }}">
+    <a class="reference-card third" href="../references/#{{ testimonials.lastname }}">
         <q>{{ testimonials.quote }}</q>
         <span class="btn icon"><i data-feather="plus-circle"></i></span>
         <div class="image-title">
@@ -34,7 +34,7 @@
     {% endfor %}
 </div>
 {% endif %}
-{% if page.url == '/experience/' %}
+{% if page.url == '/references/' %}
 <div class="card-container all">
     {% for testimonials in site.data.testimonials %}
     <div class="reference-card half" id="{{ testimonials.lastname }}">

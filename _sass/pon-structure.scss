@@ -20,7 +20,7 @@ nav {
   flex-wrap: wrap;
   a {
     margin-right: $scale-10;
-    @media (max-width: 999px) { margin-right: $scale-5; }
+    @media (max-width: 1050px) { margin-right: $scale-5; }
     color: $white-00;
     text-transform: uppercase;
     text-decoration: none;
@@ -58,6 +58,9 @@ header {
   z-index: 99;
   position: sticky;
   top: 0;
+  .branding {
+    margin-right: $scale-5;
+  }
 }
 // main exists to push footer to the bottom on short desktop pages
 main {

@@ -1,7 +1,7 @@
 [
     {
         "header": "Experienced & Trustworthy",
-        "description": "Ryan has been working in the field of user-centered design crafting products for industry-leading clients for 20+ years.",
+        "description": "I have been crafting user-centered products for industry-leading clients for 20+ years.",
         "webpimage": "DSC_0143.webp",
         "jpgimage": "DSC_0143.jpg",
         "alttext": "Ryan Wilson headshot",
@@ -10,8 +10,18 @@
         "link": "/experience/"
     },
     {
+        "header": "Educator & Mentor",
+        "description": "I have a track record of teaching and nurturing UX professionals through leadership and scholarly roles.",
+        "webpimage": "isu-class.webp",
+        "jpgimage": "isu-class.jpg",
+        "alttext": "One of Ryan's Classes at ISU",
+        "cta": "20 Years of Experience",
+        "cta-svg": "coffee",
+        "link": "/experience/"
+    },
+    {
         "header": "Examples of Quality",
-        "description": "View case studies of work that Ryan has provided when working with clients both big and small.",
+        "description": "View case studies of work for clients big and small and how my work has impacted the user.",
         "webpimage": "pbskids-01.webp",
         "jpgimage": "pbskids-01.jpg",
         "alttext": "PBS Kids slide",
@@ -21,7 +31,7 @@
     },
     {
         "header": "Credentialed & Professional",
-        "description": "Ryan has 4 degrees focused in building user-centered products and is recommended by design leaders at major brands like Wayfair, PBS, Apple, and Google.",
+        "description": "I have 4 degrees focused in building user-centered products and am recommended by design leaders at major brands like Wayfair, PBS, Apple, and Google.",
         "webpimage": "ryan-client-shot.webp",
         "jpgimage": "ryan-client-shot.jpg",
         "alttext": "Ryan as an avatar",
@@ -31,7 +41,7 @@
     },
     {
         "header": "Process-Driven",
-        "description": "Product design follows a trusted user-centered design process: Understand, Ideate, Test, Iterate, Repeat.",
+        "description": "User experience design follows a trusted user-centered design process: Understand, Ideate, Test, Iterate, Repeat.",
         "webpimage": "user-testing.webp",
         "jpgimage": "user-testing.jpg",
         "alttext": "Ryan user testing at a trade show",

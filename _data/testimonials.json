@@ -1,6 +1,17 @@
 [
   {
     "id": 1,
+    "webpimage": "1623071352178.webp",
+    "image": "1623071352178.jpg",
+    "name": "Chris Ochs",
+    "firstname": "Chris",
+    "lastname": "Ochs",
+    "title": "Product Manager",
+    "company": "Kroger",
+    "quote": "Ryan has the uncommon ability to absorb new concepts at a ferocious rate. This sets him up to create strategies and find solutions from a position of knowledge and strength. He effortlessly adapts to new and changing information to incorporate it into his working models. His input has always been measured and direct on projects where we have collaborated. In my time working with him he has been a key member of my team and we would not function as successfully without him."
+  },
+  {
+    "id": 2,
     "webpimage": "1571068147236.webp",
     "image": "1571068147236.jpg",
     "name": "Mark Brehaut",
@@ -11,7 +22,7 @@
     "quote": "Value-driven is a term that often gets thrown around undeservingly. Ryan is the exception because he wears his values on his sleeve (in the most positive way). His values guide how he works, builds a team, mentors employees, and excels at his craft. <br><br>He knows more about design than anybody I've worked with and is passionate about continuously putting out the best product possible. He is a deliberate and thoughtful designer who constantly seeks feedback from users to stress-test assumptions and ensure the right product gets put to market. <br><br>He also understands and cares about people. Whether they are teammates, employees, users, or clients, Ryan listens and communicates with an open mind. Ryan is one of the finest people I've worked with. If you are looking to hire him or work with him as well, you will not be disappointed."
   },
   {
-    "id": 2,
+    "id": 3,
     "webpimage": "1588593915975.webp",
     "image": "1588593915975.jpg",
     "name": "Matthew McDole",
@@ -22,7 +33,7 @@
     "quote": "Ryan is an amazing designer and I have really enjoyed working with him. He designed our tax engine UI which not only looked awesome but also really simplified what is an inherently complex process. <br><br>When we needed to iterate on our design to accommodate our release timelines he quickly worked with our team to pivot on the designs as well!"
   },
   {
-    "id": 3,
+    "id": 4,
     "webpimage": "1516900632096.webp",
     "image": "1516900632096.jpg",
     "name": "Eileen Cannon",
@@ -33,7 +44,7 @@
     "quote": "Fun, flexible, collaborative, and whip smart--these adjectives only begin to describe Ryan as a colleague. 'Creative' has a variety of meanings and plenty of nuance, and Ryan embodies it all. Ryan led a visual design project for my team, and to our delight he turned it into an experience. He takes the time to understand the challenge, is always open to feedback, and his designs exceed expectations. Using simple, replicable techniques, Ryan's independent project sustained the design needs of our initiative for many months to come. I'd recommend him without hesitation, and I look forward to working with him again, too."
   },
   {
-    "id": 4,
+    "id": 5,
     "webpimage": "1548978272523.webp",
     "image": "1548978272523.jpg",
     "name": "Erica Price",
@@ -44,7 +55,7 @@
     "quote": "Ryan as a Boss at Bitovi <br><br>I came for the job but I’m staying for the boss. Ryan is one of the best managers I’ve ever had. He is personable, entertaining, genuine and passionate. I respect his transparency and I know he has my best interest at heart. He makes me feel protected, like I wont be taken advantage of. He respects my opinions and empowers me to be the best UXer I can be. His people first mentality is the best way to lead. Ryan has a knack for bringing us together and making it feel like we’ve been a team for so much longer than we have. I would say our team vibe is “we are all in this together.” In past experiences, I would feel like a cog in a business, but with Ryan, I feel as though I’m genuinely contributing to the department and to my field. <br><br>Ryan as a UX Leader <br><br>I value Ryan’s views for the UX department. They align with my career goals. I love all the UX values that he stands for. For the first time, I don’t feel like I’m contributing to someone else’s objective. They are mine too. I cannot wait to see what our team looks like in the future. <br><br>Ryan is a bad ass and I respect him tremendously. UX often times doesn’t get the respect it deserves in companies. I hope to help Ryan in his quest to educate our company and clients on how big of an impact UX can have on a product."
   },
   {
-    "id": 5,
+    "id": 6,
     "webpimage": "1517373588949.webp",
     "image": "1517373588949.jpg",
     "name": "Kathleen Dominiak",
@@ -55,7 +66,7 @@
     "quote": "Ryan Wilson was hired by Legal Video Services in September of 2006 and worked for us until May of 2009. While he was with us, Ryan created our Graphics Arts Department, which was the envy of our industry. He assisted attorneys in court during very stressful trials while creating graphics and animation for those trials. He rebranded our company and designed our website, which is so good and ahead of it's time that we continue using it today. He produced our ad copy and created forms to streamline our production department He mentored and trained employees. We still call Ryan to create graphics and animation for our most important clients. <br><br>Ryan was one of the most creative and quick minded employees that we have ever had. It was a pleasure working with Ryan. I know that he would be an exceptional asset to any company."
   },
   {
-    "id": 6,
+    "id": 7,
     "webpimage": "1517729833667.webp",
     "image": "1517729833667.jpg",
     "name": "Debra Satterfield",
@@ -66,7 +77,7 @@
     "quote": "Ryan Wilson has an excellent understanding of UX and the design of web sites, digital media, and visual communication. His work is always of the highest quality and he works well both independently or as part of a design team. He has experience both in industry and in higher education making him well suited to the design of user experiences, information and educational experiences. I highly recommend Ryan and have had great experiences working with him as part of my team."
   },
   {
-    "id": 7,
+    "id": 8,
     "webpimage": "1544823383290.webp",
     "image": "1544823383290.jpg",
     "name": "Jeremy Lueck",
@@ -77,7 +88,7 @@
     "quote": "I have known Ryan for 8 years and can honestly say that he is one of the most talented and hardworking designers that I have ever met. Ryan and I have collaborated together on a number of personal projects and I have directly observed him as a graphic design instructor at Iowa State University. From these interactions, I can speak with authority about Ryan&#39;s character, the quality of his work, and his professionalism. I feel qualified to voice this opinion as my background is in software engineering and my role often requires daily interaction with UX teams. <br><br>First and foremost, Ryan is a highly motivated individual. As a freelance consultant, his completed projects were always delivered on time to the delight of his clients. He is a stickler to his own prepared schedules that guarantee timely deliverables. As a professor and instructor, he spends a large portion of his free time teaching himself modern techniques in visual design in order to make his curriculum as relevant as possible to his students who are about to be new employees entering the job market. You can see concrete examples of this by visiting his #DailyRender page where he showcases what he&#39;s currently learning about modeling in Cinema4D. This particular drive is infectious and can even be amplified when Ryan is placed on a team of competent engineers and designers. <br><br>I was particularly interested in collaborating with Ryan on personal projects because I was a true fan of his visual design skills and creativity in multiple mediums. Ryan&#39;s knack for pleasing, sometimes eye-popping, visuals is always front and center. After realizing how easy it was to collaborate with him, I truly understood how special his talents are. When asked by anyone looking for a designer, my first thought is to put them in touch with Ryan Wilson."
   },
   {
-    "id": 8,
+    "id": 9,
     "webpimage": "1612974065391.webp",
     "image": "1612974065391.jpg",
     "name": "Ryan Williams",
@@ -88,7 +99,7 @@
     "quote": "I worked with Ryan for two years and have direct experience with his ability to lead, organize, and communicate industry best practices to students as an instructor for a sophomore level graphic design course. When course content became technically challenging to students, Ryan went out of his way to create instructional demonstration videos to ensure his students had convenient access to learning materials. Ryan also organized industry professionals to speak and answer questions from students multiple times through the year. This was extremely helpful in engaging student's interests in understanding the relationship between course content and industry application. As a lead instructor, Ryan communicated teaching objectives to the team and engaged others for input and participation for project planning. <br><br>Ryan is also a fantastic designer. He has natural creative talent and a process oriented method for creative execution. He is able to apply his creativity to front-end development and multi-media domains. I had direct experience working with Ryan in web development using PHP, MySQL, HTML5, and CSS3. His expert technical production knowledge ensures timely and efficient execution of his work. <br><br>Ryan ensures that his digital experiences are useful and engaging to users. I have witnessed his ability to engage users in his design process through early contextual inquiry and user studies. Ryan is able to incorporate user feedback into his designs appropriately to produce products that are functional and useful."
   },
   {
-    "id": 9,
+    "id": 10,
     "webpimage": "1516272554707.webp",
     "image": "1516272554707.jpg",
     "name": "Amy Trager",
@@ -99,7 +110,7 @@
     "quote": "For years I have been working with Ryan Wilson to maximize my presence online. Over the course of our professional relationship, he has designed a website for my company, redesigned and adjusted it as my business grew and eventually taught me to personally update the site. <br><br>Though I have little experience in website design, html or any other technical aspect of much at all really, Ryan has created a site that is user friendly and not intimidating in the least. Even after walking me through the steps I now take to update the site myself, he created tutorials that I can reference if need be, at any time. However, I will confess, that I’ve yet to have to do that. When teaching me the aspects of updating any of the pages of my site, he was thorough and patient with me. His punctuality and professionalism is always a shining example for any professional service I’ve worked alongside. <br><br>After both the initial design of my website and the redesigns, I’ve received visible, tangible results of new and more people finding my site. The site is truly optimized, and on all platforms. The site looks and functions excellently on any device. This is something I know sets my site apart from my competition."
   },
   {
-    "id": 10,
+    "id": 11,
     "webpimage": "1565503433700.webp",
     "image": "1565503433700.jpg",
     "name": "Austin Smith",
@@ -110,7 +121,7 @@
     "quote": "Ryan was an excellent educator, mentor, and personal acquaintance. His skillset quickly proved to be vast and thorough, and his ability to adapt to new situations and professional practices is extremely apparent. <br><br>Ryan stood out to me as a professor who simply knew what he was talking about, and could back it up with experience and anecdotes from his career before his venture into education. It is all too common to see designers jump into education too early, removing their advice and feedback from any real world context. Ryan was quite the opposite. He always responded to questions and concerns with examples of similar situations he had faced throughout his career. He understands the industry and how to please clients, because he has done it himself. That alone made his input more valuable than other professors and he was highly sought after in this regard. <br><br>A University is a place of constructive criticism and guidance. In the design world, this often translates to over bearing professors who can hijack projects and inhibit any real learning. Ryan takes a much more effective approach, guiding our work rather than dictating changes. He taught a class as if he were an Art Director, helping us find the best design solution through collaboration and experimentation. Ryan is the right person to lead a team of designers, as he will provide both structure and a solid foundation that talented minds can build off of. <br><br>Ryan’s character cannot be questioned, and he is simply one of the most likable people you will ever meet. He is a valuable asset to any design team and an extremely capable leader."
   },
   {
-    "id": 11,
+    "id": 12,
     "webpimage": "1517753434231.webp",
     "image": "1517753434231.jpg",
     "name": "Cyndi Wiley",
@@ -121,7 +132,7 @@
     "quote": "The word 'wow' comes to mind when thinking of Ryan's work. I rarely meet another designer with as much ambition and zeal for the field of design. I would unreservedly and unstintingly recommend him for any job. Plus, he's just a super nice guy to work with!"
   },
   {
-    "id": 12,
+    "id": 13,
     "webpimage": "1554491330124.webp",
     "image": "1554491330124.jpg",
     "name": "Rachel Yeomans",
@@ -132,7 +143,7 @@
     "quote": "I hired Ryan based off another recommendation provided by a colleague and I couldn't have been more pleased. From day one Ryan has been extremely forthcoming with what my vision was and assisting me in molding it to deliver my message via my website, letterheads, business cards and additional marketing materials. Ryan went above and beyond each aspect of the services he offered to provide and greatly respect his opinions and industry knowledge. He will deliver to you what you want even if you don't quite know what it is yet. I highly recommend Ryan's services to anyone."
   },
   {
-    "id": 13,
+    "id": 14,
     "webpimage": "1516345032626.webp",
     "image": "1516345032626.jpg",
     "name": "Douglas England",
@@ -143,7 +154,7 @@
     "quote": "Ryan is an incredibly talented, hard-working and creative person who brings a tremendous amount of energy and expertise to his clients. His skills and strategic vision set him apart from others in the business."
   },
     {
-    "id": 14,
+    "id": 15,
     "webpimage": "1516306851503.webp",
     "image": "1516306851503.jpg",
     "name": "Jennifer Lizak",
