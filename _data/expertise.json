@@ -1,7 +1,11 @@
 [
     {
         "title": "Leadership & Mentorship",
-        "details": "Team management, Direction, Recruiting, Excellent verbal and written communication"
+        "details": "Team management, Direction, Recruiting, Coaching, <a href='https://medium.com/@ryangwilson/im-going-to-be-wfh-today-9f73e6501882' target='_blank' rel='nofollow'>Experience with distributed teams</a>"
+    },
+    {
+        "title": "Excellent Verbal & Written Communication",
+        "details": "Great soft skills, Contributes across teams, Highly technical communication, Organized/detail-oriented, Enjoys presenting & sharing knowledge"
     },
     {
         "title": "User-Centered Design",
@@ -25,6 +29,6 @@
     },
     {
         "title": "Implementation",
-        "details": "HTML (Mustache, Stache), CSS (SCSS, LESS), basic vanilla JavaScript"
+        "details": "Fluent wih HTML & CSS, basic vanilla JavaScript, Shipped numerous products"
     }
 ]

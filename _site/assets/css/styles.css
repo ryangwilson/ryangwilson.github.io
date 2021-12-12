@@ -399,6 +399,8 @@ section { margin: 100px 50px; }
 
 @media (max-width: 419px) { section { margin: 100px 25px; } }
 
+section .details { margin-top: 50px; }
+
 section .flex-two-col { display: flex; justify-content: space-between; }
 
 @media (max-width: 859px) { section .flex-two-col { flex-direction: column; } }

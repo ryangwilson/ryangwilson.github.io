@@ -11,7 +11,11 @@
               <h3>{{ page.sidebar-title01 }}</h3>
               {% for education in site.data.education %}
               <p><b>{{ education.degree }}</b></br>
-              {{ education.location }} {{ education.date }}</p>
+              {{ education.location }} {{ education.date }}
+              {% if education.paper %}
+              <br>{{ education.paper }}
+              {% endif %}
+              </p>
               {% endfor %}
               <h3>{{ page.sidebar-title02 }}</h3>
               {% for projects in site.data.projects %}

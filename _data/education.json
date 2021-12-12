@@ -2,16 +2,19 @@
     {
         "degree": "Ph.D. Human Computer Interaction",
         "location": "Iowa State",
+        "paper": "Dissertation: <a href='https://lib.dr.iastate.edu/etd/14693/' target='_blank' rel='nofollow'>Understanding the User in Online Education</a>",
         "date": "2015"
     },
     {
         "degree": "MFA Graphic Design",
         "location": "Iowa State",
+        "paper": "Thesis: <a href='https://lib.dr.iastate.edu/etd/13677/' target='_blank' rel='nofollow'>Preparing graphic design & visual communication students</a>",
         "date": "2014"
     },
     {
         "degree": "MS Human Computer Interaction",
         "location": "Iowa State",
+        "paper": "Capstone: User-Centered Design analysis through creation of a web application",
         "date": "2012"
     },
     {

@@ -109,6 +109,9 @@ section {
   @media (max-width: 419px) {
     margin: $scale-20 $scale-5;
   }
+  .details {
+    margin-top: $scale-10;
+  }
   .flex-two-col {
     display: flex;
     @media (max-width: 859px) {
