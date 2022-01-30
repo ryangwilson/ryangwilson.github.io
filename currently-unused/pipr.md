@@ -8,7 +8,7 @@ client: Lowes
 year: 2018
 under: Bitovi
 underurl: https://www.bitovi.com
-phases: Discovery Phase
+phases: Discovery
 tools: Research, Sketch, After Effects
 overview: Pipr is a concept project to assist in the estimation process for installing compressed air piping and products in industrial settings.
 problemstatement: In the compressed air market,I found that companies that install compressed air piping and products find the estimation process the most difficult and frustrating part of the job. There are many things that can go wrong when estimating a job which can leave the installer stuck eating the cost for misquoted jobs or spending additional costs for shipping to get unique fixtures delivered that were not identified upfront.

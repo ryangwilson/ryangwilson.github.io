@@ -2,6 +2,7 @@
 layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: motion
+title: Two Button Games
 project: Two Button Games
 role: Motion Designer
 client: Student Project

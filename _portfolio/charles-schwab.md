@@ -2,6 +2,7 @@
 layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: graphic
+title: Charles Schwab
 project: Charles Schwab
 role: Graphic Designer
 client: Charles Schwab

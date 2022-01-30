@@ -254,7 +254,7 @@ a {
     color: $black-00;
     text-decoration: none;
 }
-p a {
+p a, li a {
     box-shadow: 0 1px 0 0 $secondary-00;
     transition: all .3s ease-in-out;
     &:hover {

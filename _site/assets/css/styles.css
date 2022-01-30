@@ -36,9 +36,9 @@ kbd, code, samp, pre { font-family: "PT Mono", monospace; font-size: 16px; font-
 
 a { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 500; font-style: normal; text-transform: none; color: #232323; text-decoration: none; }
 
-p a { box-shadow: 0 1px 0 0 #28d2c9; transition: all .3s ease-in-out; }
+p a, li a { box-shadow: 0 1px 0 0 #28d2c9; transition: all .3s ease-in-out; }
 
-p a:hover { box-shadow: 0 5px 0 0 #28d2c9; }
+p a:hover, li a:hover { box-shadow: 0 5px 0 0 #28d2c9; }
 
 b, strong { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; font-style: normal; text-transform: none; }
 
@@ -212,7 +212,7 @@ button:focus, input[type=submit]:focus, input[type=button]:focus, input[type=res
 
 .btn.tertiary:hover { background-color: transparent; color: #232323; box-shadow: 0 0 0 2.5px #232323; }
 
-.btn.text { padding: 5px 10px; border-radius: 0; margin: 0; box-shadow: 0 10px 0 -5px #232323; }
+.btn.text { padding: 5px 10px; border-radius: 0; margin: 0; box-shadow: 0 1px 0 0 #28d2c9; }
 
 .btn.text:hover { box-shadow: 0 10px 0 -5px #28d2c9; }
 
@@ -379,7 +379,7 @@ header { display: flex; flex-wrap: wrap; align-items: center; justify-content: s
 
 header .branding { margin-right: 25px; }
 
-main { flex: 1; max-width: 1280px; margin-left: auto; margin-right: auto; }
+main { flex: 1; max-width: 1280px; margin-left: auto; margin-right: auto; width: 100%; }
 
 footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 15px 25px; margin-top: 50px; border-top: 5px solid #FFFFFF; line-height: 2; }
 
@@ -428,6 +428,10 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 .card-dark .subtitle { color: #ffca0a; font-size: 24px; margin-bottom: 25px; }
 
 .card-dark p { color: #FFFFFF; }
+
+.card-dark.short-card { padding: 5px 50px; }
+
+.card-dark.short-card .subtitle { margin-bottom: 5px; }
 
 .card-container { display: flex; flex-wrap: wrap; justify-content: space-between; }
 
@@ -513,7 +517,7 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 .process-container { display: flex; }
 
-.process-container h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 24px; }
+.process-container h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 36px; }
 
 .process-container .sidebar { border: 5px solid #DADADA; border-radius: 10px; max-width: 33.33%; padding: 25px 20px; margin-top: 25px; height: fit-content; }
 
@@ -547,7 +551,11 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 .examples-container .content-column { flex: 1; }
 
-.examples-container .image-column { flex: 1; margin-left: 50px; max-width: 480px; }
+.examples-container h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 36px; margin-top: 30px; margin-bottom: 15px; }
+
+.examples-container h3:first-of-type { margin-top: 0; }
+
+.examples-container .image-column { flex: 1; margin-left: 50px; max-width: 480px; position: -webkit-sticky; position: sticky; top: 100px; height: 100%; }
 
 @media (max-width: 959px) { .examples-container .image-column { margin: 50px auto 0; } }
 
@@ -562,6 +570,12 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 .examples-container .image-column .double img { width: 100%; height: 128px; object-fit: cover; }
 
 .examples-container .image-column .double img:nth-of-type(2) { margin-left: 25px; }
+
+.examples-container .image-column a { position: relative; width: 100%; height: 100%; display: inline-block; }
+
+.examples-container .image-column a:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: inset 0px 0px 0px 0px #28d0c8; border-radius: 0; transition: .15s ease-in; }
+
+.examples-container .image-column a:hover:after { cursor: pointer; top: -15px; left: -15px; padding: 15px 15px; border-radius: 10px; box-shadow: inset 0px 0px 0px 5px #28d0c8; z-index: 1; transition: .4s ease-in-out; }
 
 .carousel-cell { display: flex; width: 100%; }
 

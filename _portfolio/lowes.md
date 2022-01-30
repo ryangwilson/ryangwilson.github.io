@@ -2,24 +2,28 @@
 layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: product
+title: Lowe's Iris
 project: Iris Home Automation
 role: Product Designer
-client: Lowes
+client: Lowe's
 year: 2018
 under: Bitovi
 underurl: https://www.bitovi.com
-phases: Discovery Phase
+phases: Discovery
 tools: Research, Sketch, Axure
-overview: Bitovi was hired to build the web app for running, reviewing, and setting up rules for Lowes Iris home automation products. As Product Designer, during our engagement, we noticed that there was no direct way for users to purchase products through the webapp. Instead, users would have to navigate away from the Iris app to Lowes.com to find and purchase additional home automation products, resulting in lost sales and a user flow that lost customers
-problemstatement: In the Lowes Iris app, users are able to see what products they need to be able to do a certain task. For example, a user could see that with the right product, they could set up rules for watering their lawn. However, to purchase the product the user had to navigate away from the Iris app to Lowes.com to find and purchase the product they wanted. <br><br> The Bitovi team identified this as a place to connect users with products and increase sales for Lowes.
+represents: <ul><li>Performing the end-to-end UX process</li><li>How efficiently I work</li><li>How I collaborate with stakeholders and teams</li><li>My focus on creating user-centered products</li><li>Writing HTML (Stache) and CSS (SCSS and LESS)</li><li>How I help identify beneficial solutions for the stakeholder and the users</li></ul>
+overview: Bitovi was hired to build the web app for running, reviewing, and setting up rules for Lowe's Iris home automation products. As Product Designer, during our engagement, a team member and I noticed that there was no direct way for users to purchase products through the web application. Instead, users would have to navigate away from the Iris app to lowes.com to find and purchase additional home automation products, resulting in lost sales and a user flow that lost customers
+problemstatement: The group at Lowe's that we were working with was not directly related to the eCommerce project. We had to get introduced, prepare a presentation that outlined two possible solutions, and present to a different team and stakeholders to get buy-in and approval.
 users:
 webppersona:
 persona:
 constraints:
-process: Bitovi had already been building the application, so we knew what the possibilities were in integrating product sales within the product. Working alongside a Bitovi developer, we created two optional flow solutions that we took to the client for approval.
+process:
 processdoc:
 processdocprompt:
-outcome: After a successful presentation, the client chose the in-app purchasing path and we began planning for implimentation.
+solutions: Bitovi had already been building the web application, so we knew what the possibilities were in integrating product sales within the product. Working alongside a developer, we created two optional flow solutions that we took to the client for approval.
+outcome: After a successful presentation, the client chose the in-app purchasing path and we began planning for implementation and integration on the product. 
+value: <ul><li>Improved retention of users to the automation site</li> <li>Increase sales of products by allowing purchase in-app</li> </ul>
 externalurl: https://www.bitovi.com/web-application-consulting-work/iris-lowes-iot-home-automation-app
 externalprompt: Bitovi Development Case Study
 webpcollection-image: lowes-iris_Page_03.webp

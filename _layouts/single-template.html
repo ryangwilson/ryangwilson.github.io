@@ -3,34 +3,48 @@
   {% include head.html %}
   <body class="nested-page">
     {% include navigation.html %}
-    <div class="card-dark">
-      <a href="/projects/" class="btn text white  svg-before"><i data-feather="arrow-left"></i> Work Examples </a><br>
-      <h2>{{ page.project }}</h2>
-      <p class="subtitle">Role: {{ page.role }}</p>
-    </div>
     <main>
+      <div class="card-dark short-card">
+        <a href="/projects/" class="btn text white svg-before"><i data-feather="arrow-left"></i> Projects Overview </a><br>
+        <h2>{{ page.project }}</h2>
+        <p class="subtitle">{{ page.role }} – {{ page.client }}, {{ page.year }}</p>
+      </div>
       <section class="examples-container">
         <div class="content-column">
-          <h3>Client</h3>
-          <p>{{ page.client }}, {{ page.year }}</p>
-          <p>Created for: {% if page.underurl %}<a href="{{ page.underurl }}" target="_blank" rel="noopener">{% endif %} {{ page.under }} {% if page.underurl %}</a>{% endif %} </p>
-          {% if page.phases %}
+          <!-- <h3>Client</h3>
+          <p>{{ page.client }}, {{ page.year }}</p> -->
+          <!-- <p><i>Created with: {% if page.underurl %}<a href="{{ page.underurl }}" target="_blank" rel="noopener">{% endif %} {{ page.under }} {% if page.underurl %}</a>{% endif %} </i></p> -->
+          {% if page.type != "product" and page.phases %}
           <h3>Project Phases</h3>
           <p>{{ page.phases }}</p>
           {% endif %}
+          {% if page.type != "product" and page.tools %}
           <h3>Tools</h3>
           <p>{{ page.tools }}</p>
+          {% endif %}
+          {% if page.type == "product" and page.represents %}
+          <h3>This Project Represents</h3>
+          <p>{{ page.represents }}</p>
+          {% endif %}
           {% if page.overview %}
           <h3>Overview</h3>
           <p>{{ page.overview }}</p>
           {% endif %}
-          {% if page.problemstatement %}
-          <h3>Problem Statement</h3>
-          <p>{{ page.problemstatement }}</p>
-          {% endif %}
           {% if page.users %}
           <h3>Users</h3>
           <p>{{ page.users }}</p>
+          {% endif %}
+          {% if page.process %}
+          <h3>Process</h3>
+          <p>{{ page.process }}</p>
+          {% endif %}
+          {% if page.problemstatement %}
+          <h3>Difficulties</h3>
+          <p>{{ page.problemstatement }}</p>
+          {% endif %}
+          {% if page.solutions %}
+          <h3>Solutions</h3>
+          <p>{{ page.solutions }}</p>
           {% endif %}
           {% if page.persona %}
           <picture>
@@ -42,10 +56,6 @@
           {% if page.constraints %}
           <h3>Constraints</h3>
           <p>{{ page.constraints }}</p>
-          {% endif %}
-          {% if page.process %}
-          <h3>Process</h3>
-          <p>{{ page.process }}</p>
           {% endif %}
           {% if page.value %}
           <h3>Value Provided to Users</h3>

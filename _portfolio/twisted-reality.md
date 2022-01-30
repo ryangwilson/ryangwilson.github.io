@@ -2,6 +2,7 @@
 layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: motion
+title: Twisted Reality
 project: Twisted Reality
 role: Graphic Designer, Motion Designer
 client: Student Project

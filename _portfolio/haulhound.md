@@ -2,36 +2,40 @@
 layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: product
+title: HaulHound
 project: HaulHound
 role: Product Designer
 client: Andy Kim
 under: Bitovi
 underurl: https://www.bitovi.com
 year: 2016
-phases: Discovery Phase, Product Refinement Phase, Product Support Contract, Product Review Contract
+phases: Discovery, Product Refinement, Product Support Contract, Product Review Contract
 tools: Axure, Sketch, Ilustrator, Stache, HTML, LESS
-overview: The client approached us with a concept - Truck drivers lose money whenever they have to drive home with partial or completely empty trailers – how do we help them fill their trucks?<br/><br/>In three months, the client wanted to unveil a solution at a trade show. In that time, we delivered a fully-functional mobile app in both Android and Apple app stores.
-problemstatement: Truck drivers lose money when they have empty space on their trucks. Driving back to home-base with an empty trailer is called 'deadheading'. Not only does an empty truck mean that there won't be a paycheck associated with delivering goods, but also the cost of fuel on the return trip.<br/><br/>HaulHound had the idea to build an application that would be 'the Uber for the trucking industry'. This application would give truck drivers the ability to fill a portion or all empty space in their trailer using a mobile and web-based logistics search engine. Users can search and schedule pickups in their destination city so they won't have to drive back with an empty trailer.
-users: The users of HaulHound target the owner-operator truck driver.
+represents: <ul><li>Performing the end-to-end UX process</li><li>How efficiently I work</li><li>How I collaborate with stakeholders and teams</li><li>My focus on creating user-centered products</li><li>User testing in person and remotely</li><li>Prototyping in Axure</li><li>Creating, scheduling, running, and analyzing user tests</li></ul>
+overview: A client came to us with an idea and wanted to create the "Uber for Trucking." There is a problem in the trucking industry that is specifically painful to independent truckers and small trucking companies. When driving a fully loaded trailer from, for example, Chicago to Dallas, there is no efficient way to book your trailer to be refilled on your return trip to Chicago. Driving an empty trailer, called 'deadheading', is costly for two reasons; you have to pay for the gas to get back home AND there is no load to deliver and get paid for when you arrive home.
+problemstatement: <ul><li>Short timeline – We had three months to get from Discovery to MVP launch. MVP launch corresponded with a trucking trade show</li><li>Product conception and decisions had to be made quickly</li><li>Remote user testing with some users was complex; it relied on the user to be able to join from a laptop, know how to use video chat, and knowing how to share screens</li></ul>
+users: <ul><li>Owner-operator truck drivers</li><li>Small trucking companies</li><li>Dispatchers</li><li>Logistics Specialists</li></ul>
 webppersona:
 persona:
 constraints: The truck driver user spends most of their time driving. We are creating a mobile application to assist them in filling their trucks, yet we don't want the user to interact with their mobile device while driving.
 process:
 processdoc:
 processdocprompt:
-outcome: In three months time we took the stakeholders idea from concept to MVP – but really more than that. We had a highly polished application ready for users to sign up for the service at a trucking trade show. Along with the product design work, I helped to - Refine the HaulHound logo, develop marketing materials and trade show backdrops, and create motion graphics and promotional videos for display at HaulHound's trade show booth.
-externalurl: Read More on Bitovi.comhttps://www.bitovi.com/web-application-consulting-work/haulhound-trucking-web-app
+solutions: <ul><li>I worked in tandem with the Lead Developer to vet concepts and align expectations for the build. I made myself available for clarification outside of the documentation and chipped in by writing HTML (Stache) and CSS (LESS) for the project</li><li>I established a great relationship with the stakeholder, making it easy to reach out for answers and/or to get confirmation on direction quickly</li><li>I front-loaded testing information like where the prototype was hosted and what devices would be required when recruiting testers. I planned for extra time for base-level technical support</li></ul>
+outcome: In three months, we took the stakeholders idea from concept to MVP and had the product in the Google Play and App stores before the first day of the trade show. I provided a highly polished application ready to sign up users at a trade show. My work helped the stakeholder promote the concept, getting more seed money for the project, and capture users signing up for the service when the app was rolled out. </br></br> Along with all of the product design work I&#58;<ul><li>Refined the HaulHound logo</li><li>Created all in-app icons</li><li>Prepared App and Play store graphics</li><li>Developed marketing and presentation materials</li><li>Created trade show backdrops</li><li>Designed motion graphics and promotional videos for display at the trade show</li></ul>
+value: <ul><li>Provided a solution for users to backfill their trailers</li> <li>Gave users the ability to combat "deadheading"</li> </ul>
+externalurl: https://www.bitovi.com/web-application-consulting-work/haulhound-trucking-web-app
 externalprompt: Read More on Bitovi.com
-webpcollection-image: HH_social_marketing-01.webp
-webpimage01: HH_single.webp
-webpimage02: HH_side-by-side.webp
+webpcollection-image: HH_side-by-side.webp
+webpimage01: hh-personas.webp
+webpimage02: hh-userflow.webp
 webpimage03: user-testing.webp
-webpimage04: HH-screenshots-02.webp
-webpimage05: HH-screenshots-05.webp
-collection-image: HH_social_marketing-01.jpg
-image01: HH_single.jpg
-image02: HH_side-by-side.jpg
+webpimage04: hh-load.webp
+webpimage05: HH-screenshots-02.webp
+collection-image: HH_side-by-side.jpg
+image01: hh-personas.jpg
+image02: hh-userflow.jpg
 image03: user-testing.jpg
-image04: HH-screenshots-02.jpg
-image05: HH-screenshots-05.jpg
+image04: hh-load.gif
+image05: HH-screenshots-02.jpg
 ---

@@ -1,13 +1,14 @@
 ---
 layout: single-template
 type: product
+title: Activities4Us
 project: Activities4Us
 role: Product Designer
 client: Student Project
 under: Iowa State University
 underurl:
 year: 2012
-phases: Discovery Phase, Product Refinement Phase
+phases: Discovery, Product Refinement
 tools: Paper/Pencil, Illustrator, PhotoShop, IntuitionHQ, Numbers, Keynote
 overview: It is Saturday afternoon. You are sitting on your couch, home alone with no plans. The friends you usually hang out with are either sick or traveling. you've read everything on your bookshelf? you've already cleaned your apartment for the week? you've finished this week's laundry?. You've recently heard through office colleagues that there is a new website that helps you find activities in your area. You grab your laptop and enter the website address - www.activities4.us
 problemstatement: My project is a system (human-machine) designed for its users to seek out activities. Activities 4 Us is a web-based application where a user inputs their location by zip code, how many people will participate in the activity and starts a query. They are then presented with a list of results of activities; in their area, happening within 24 hours from their search, displayed depending on local weather (no Frisbee in the park option offered if it is currently raining or calling for rain), date accessed (no picnic suggestions if it is winter) and separated by low-to-no cost activities and activities requiring money. Additionally, at this point, users can also select a set of filters to narrow down the type of activity they might want to take part in.

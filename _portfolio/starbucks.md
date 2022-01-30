@@ -1,13 +1,14 @@
 ---
 layout: single-template
 type: product
+title: Starbucks
 project: Starbucks
 role: Product Designer
 client: Student Project
 under: Iowa State University
 underurl:
 year: 2011
-phases: Discovery Phase
+phases: Discovery
 tools: Paper/Pencil, Illustrator, After Effects
 overview: 'In 2011, users were juggling two mobile apps for Starbucks. We made recommendations to combine and refine sections of the app for better usability and a streamlined experience.'
 problemstatement: 'We spent time observing the Starbucks iPhone app’s "myStarbucks" and "Starbucks Mobile Card". Within minutes of using the apps, it was clear that there was no need for two separate apps. The two could easily be combined into one app that would be highly functional, but we also have proposed adding additional functionality to help to decrease wait times both in waiting to order and waiting for the order to be complete. While we still need to hone this concept, the following observations are what led us to this idea for, what will be, our proposed design.'

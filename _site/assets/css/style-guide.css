@@ -34,9 +34,9 @@ kbd, code, samp, pre { font-family: "PT Mono", monospace; font-size: 16px; font-
 
 a { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 500; font-style: normal; text-transform: none; color: #232323; text-decoration: none; }
 
-p a { box-shadow: 0 1px 0 0 #28d2c9; transition: all .3s ease-in-out; }
+p a, li a { box-shadow: 0 1px 0 0 #28d2c9; transition: all .3s ease-in-out; }
 
-p a:hover { box-shadow: 0 5px 0 0 #28d2c9; }
+p a:hover, li a:hover { box-shadow: 0 5px 0 0 #28d2c9; }
 
 b, strong { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; font-style: normal; text-transform: none; }
 

@@ -1,13 +1,14 @@
 ---
 layout: single-template
 type: product
+title: MobiCog
 project: MobiCog
 role: Product Designer
 client: Student Project
 under: Iowa State University
 underurl:
 year: 2011
-phases: Discovery Phase, Product Refinement Phase, Development
+phases: Discovery, Product Refinement, Development
 tools: Paper/Pencil, Illustrator
 overview: 'In 2011, I had rediscovered an interest in running for exercise - an inexpensive and accessible activity with a large user base. While running, I often think about how fast I’m traveling and how many calories I’m burning. Thinking about those things, I developed my concept for a mobile application that tracks your GPS location and applies other variables (time, weight, age and height) to return after run results of average speed, distance, and calories burnt.'
 problemstatement: 'The highest rated category in the survey about what people are concerned most about when being active was Enjoyment. Ultimately, the app should be fun and easy to use – able to start using in a few clicks. The results need to be easy to read and easy to access. Other apps have a subscription base to view results remotely. I’m considering the ability to email results to a user-entered email address for them to review at a later date as well as on-screen.'
