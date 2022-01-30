@@ -8,7 +8,7 @@ role: Senior Product Designer
 client: Kroger
 under: Kroger
 underurl: 
-year: 2021 - 2022
+year: 2021
 phases: Discovery, Product Refinement, Product Support Contract, Product Review Contract
 tools: Axure, Sketch, Documentation
 represents: <ul><li>Performing the end-to-end UX process</li><li>How I learn quickly and efficiently - <a href="http://localhost:4000/references/#Ochs">See Chris Ochs reference</a></li><li>Collaboration across brands, teams, and pods</li><li>How I approach simplifying complexity with a focus on making a better experience for the user</li><li>How I approach processing and outputting large amounts of information</li><li>The level of detail I put into my work</li></ul>
