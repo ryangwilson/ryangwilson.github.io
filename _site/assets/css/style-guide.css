@@ -72,7 +72,7 @@ time { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; fon
 
 dfn, abbr { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; font-style: italic; text-transform: none; text-decoration: dotted underline; color: #232323; }
 
-hr { border: 0; height: 25px; background: #232323; box-shadow: 50vw 0 0 0 #232323, -50vw 0 0 0 #232323; }
+hr { border: 0; height: 25px; background: #232323; box-shadow: -50vw 0 0 0 #232323, 50vw 0 0 0 #232323, -25vw 0 0 0 #232323, 25vw 0 0 0 #232323; }
 
 .style-guide-header-main { background-color: #000000; color: #FFFFFF; font-family: 'Open Sans Condensed', sans-serif; font-size: 21px; font-weight: bold; text-transform: uppercase; padding: 5px 10px; }
 

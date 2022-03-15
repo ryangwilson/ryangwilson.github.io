@@ -74,7 +74,7 @@ time { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; fon
 
 dfn, abbr { font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; font-style: italic; text-transform: none; text-decoration: dotted underline; color: #232323; }
 
-hr { border: 0; height: 25px; background: #232323; box-shadow: 50vw 0 0 0 #232323, -50vw 0 0 0 #232323; }
+hr { border: 0; height: 25px; background: #232323; box-shadow: -50vw 0 0 0 #232323, 50vw 0 0 0 #232323, -25vw 0 0 0 #232323, 25vw 0 0 0 #232323; }
 
 .bg-primary-00 { background-color: #ffca0a; }
 
@@ -423,7 +423,7 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 @media (max-width: 699px) { section .flex-three-col .col-left, section .flex-three-col .col-center, section .flex-three-col .col-right { padding: 0; } }
 
-.card-dark { background-color: #232323; color: #FFFFFF; padding: 50px; margin-top: 25px; border-top: 5px solid #FFFFFF; border-bottom: 5px solid #FFFFFF; box-shadow: -50vw 0 0 -5px #232323, 50vw 0 0 -5px #232323; }
+.card-dark { background-color: #232323; color: #FFFFFF; padding: 50px; margin-top: 25px; border-top: 5px solid #FFFFFF; border-bottom: 5px solid #FFFFFF; box-shadow: -50vw 0 0 -5px #232323, 50vw 0 0 -5px #232323, -25vw 0 0 -5px #232323, 25vw 0 0 -5px #232323; }
 
 .card-dark .subtitle { color: #ffca0a; font-size: 24px; margin-bottom: 25px; }
 

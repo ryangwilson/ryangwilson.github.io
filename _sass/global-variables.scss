@@ -344,5 +344,6 @@ hr {
     border: 0;
     height: $scale-5;
     background: $black-00;
-    box-shadow: 50vw 0 0 0 #232323, -50vw 0 0 0 #232323;
+    box-shadow: -50vw 0 0 0 $black-00, 50vw 0 0 0 $black-00, -25vw 0 0 0 $black-00, 25vw 0 0 0 $black-00;
+    ;
 }

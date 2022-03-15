@@ -8,7 +8,7 @@
   margin-top: $scale-5;
   border-top: $scale-1 solid $white-00;
   border-bottom: $scale-1 solid $white-00;
-  box-shadow: -50vw 0 0 (-$scale-1) $black-00, 50vw 0 0 (-$scale-1) $black-00;
+  box-shadow: -50vw 0 0 (-$scale-1) $black-00, 50vw 0 0 (-$scale-1) $black-00, -25vw 0 0 (-$scale-1) $black-00, 25vw 0 0 (-$scale-1) $black-00;
   .subtitle {
     color: $primary-00;
     font-size: $h5-font-size;
