@@ -8,7 +8,7 @@ role: Product Owner & UX Specialist
 client: Yum.dev
 under: Bitovi
 underurl: https://www.bitovi.com
-year: 2019
+year: 2020
 phases: Discovery, Product Refinement, Product Support Contract, Product Review Contract
 tools: Axure, Sketch, Documentation
 represents: <ul><li>Performing the end-to-end UX process</li><li>How I capture and disseminate information</li><li>Collaboration across brands, teams, and pods</li><li>How I approach simplifying complexity with a focus on making a better experience for the user</li><li>How I support building teams and mentoring others</li></ul>
