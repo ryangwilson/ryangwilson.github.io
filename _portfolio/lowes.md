@@ -6,7 +6,7 @@ title: Lowe's Iris
 project: Iris Home Automation
 role: Product Designer
 client: Lowe's
-year: 2018
+year: 2020
 under: Bitovi
 underurl: https://www.bitovi.com
 phases: Discovery
