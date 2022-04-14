@@ -6,7 +6,7 @@ title: Johnson & Johnson
 project: Johnson & Johnson
 role: Product Designer
 client: Acorio
-year: 2018
+year: 2019
 under: Bitovi
 underurl: https://www.bitovi.com
 phases: Discovery
