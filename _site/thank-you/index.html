@@ -13,6 +13,9 @@
   
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- RANDOM TESTIMONIAL -->
+  <script src="../../assets/js/testimonials.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75680704-1"></script>
   <script>
@@ -52,10 +55,6 @@
   
     <a href="/experience/" class="">Experience</a>
   
-    <a href="/references/" class="">References</a>
-  
-    <a href="/process/" class="">Process</a>
-  
     <a href="/projects/" class=" nested">Projects</a>
   
     <a href="/contact/" class=" contact">Contact</a>
@@ -86,37 +85,47 @@ x.addListener(myFunction) // Attach listener function on state changes
 
   <main>
     <div class="card-dark">
-  <h2>Contact Ryan</h2>
-  <p class="subtitle">Let's Talk!</p>
-  <p>I would love to hear about your project. Please take a minute to fill out the form below. After reviewing your information, I will contact you to arrange a 30-minute introductory video call to discuss your product needs.</p>
+  <div class="content-container">
+    <h2>Contact Ryan</h2>
+    
+    <p class="subtitle">Let's Talk!</p>
+    
+    
+    <p>I would love to hear about your project. Please take a minute to fill out the form below. After reviewing your information, I will contact you to arrange a 30-minute introductory video call to discuss your product needs.</p>
+    
+  </div>
+
+  <div class="card-container">
+    <a href="" target="_blank" class="reference-card single" random-testimonial>
+      <q class="quote"></q>
+      <div class="image-title">
+        <picture>
+          <source class="webpimage" srcset="../assets/images/testimonial-images/" type="image/webp">
+          <source class="image" srcset="../assets/images/testimonial-images/" type="image/jpeg"> 
+          <img src="../assets/images/testimonial-images/" alt="Image of ">
+        </picture>
+        <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+      </div>
+    </a>
+  </div>
 </div>
 
-    <section>
+    <section style="margin-top: 50px">
+      
       <div class="flex-three-col">
         <div class="col-left">
           <h3>Social Media</h3>
-          
-          <p><a href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noopener">LinkedIn</a></p>
-          
-          <p><a href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen</a></p>
-          
-          <p><a href="https://medium.com/@ryangwilson" target="_blank" rel="noopener">Medium</a></p>
-          
-          <p><a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank" rel="noopener">YouTube</a></p>
-          
-          
-          <!-- <div class="nl-form">
-            Thank you for your message. I do my best to respond to messages within 24 hours. Until then, please take a minute to review my experience, what people have said about working with me, and examples of my product design work.
-            <br><br><br>
-          </div> -->
-          
-        </div>
-        <div class="col-right">
-          <h3>References</h3>
-          
-
-
-
+          <div class="card-container">
+            
+            <a class="btn primary svg-after" href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noopener">LinkedIn <i data-feather="linkedin"></i></a>
+            
+            <a class="btn secondary svg-after" href="https://medium.com/@ryangwilson" target="_blank" rel="noopener">Medium <i data-feather="bookmark"></i></a>
+            
+            <a class="btn secondary svg-after" href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen <i data-feather="codepen"></i></a>
+            
+            <a class="btn tertiary svg-after" href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank" rel="noopener">YouTube <i data-feather="youtube"></i></a>
+            
+          </div>
         </div>
       </div>
     </section>
@@ -129,10 +138,6 @@ x.addListener(myFunction) // Attach listener function on state changes
       
       <a href="/experience/" class="">Experience</a>
       
-      <a href="/references/" class="">References</a>
-      
-      <a href="/process/" class="">Process</a>
-      
       <a href="/projects/" class=" nested">Projects</a>
       
       <a href="/contact/" class=" contact">Contact</a>
@@ -142,9 +147,9 @@ x.addListener(myFunction) // Attach listener function on state changes
       
       <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noopener">LinkedIn</a>
       
-      <a href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen</a>
-      
       <a href="https://medium.com/@ryangwilson" target="_blank" rel="noopener">Medium</a>
+      
+      <a href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen</a>
       
       <a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank" rel="noopener">YouTube</a>
       

@@ -143,7 +143,7 @@ $type-body-light: 300;
 $type-body-regular: 400;
 $type-body-medium: 500;
 $type-body-bold: 700;
-$line-height-body: 1.4;
+$line-height-body: 1.8;
 
 // ** DEFINE CODE TEXT ---------------------------------------------------
 $type-code: 'PT Mono', monospace;
@@ -154,8 +154,8 @@ $h2-font-size: 60px;
 $h3-font-size: 48px;
 $h4-font-size: 36px;
 $h5-font-size: 24px;
-$h6-font-size: 18px;
-$body-font-size: 16px;
+$h6-font-size: 21px;
+$body-font-size: 18px;
 $small-font-size: 12px;
 
 // Type Mixin
@@ -188,7 +188,7 @@ h1 {
 h2 {
     @include type-mixin($type-display-main, $h2-font-size, $type-main-black);
     color: $white-00;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     line-height: 1;
     margin-bottom: $scale-2;
     @media (max-width: 699px) {
@@ -284,11 +284,13 @@ q, blockquote p {
     @include type-mixin($type-body, $body-font-size, $type-body-light, italic);
     color: $black-00;
     line-height: 1.8;
-    &:before {
-        content:'';
-    }
-    &:after {
-        content:'';
+    &:before, &:after {
+        position: relative;
+        font-family: 'PT Mono';
+        font-size: $h3-font-size;
+        line-height: 0;
+        top: 18px;
+        color: $md-gray-00;
     }
 }
 

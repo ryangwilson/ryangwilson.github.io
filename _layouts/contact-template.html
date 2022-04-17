@@ -6,27 +6,16 @@
   {% include navigation.html %}
   <main>
     {% include card-dark.html %}
-    <section>
+    <section style="margin-top: 50px">
+      {{ page.content }}
       <div class="flex-three-col">
         <div class="col-left">
           <h3>{{ page.sidebar-title01 }}</h3>
-          {% for subnav in site.data.subnav %}
-          <p><a href="{{ subnav.url }}" target="_blank" rel="noopener">{{ subnav.title }}</a></p>
-          {% endfor %}
-          {% if page.url == '/contact/' %}
-          <!-- {% include contact-form.html %} -->
-          <!-- <h3>{{ page.main-section-title }}</h3> -->
-          <p>{{ page.content }}</p>
-          {% else %}
-          <!-- <div class="nl-form">
-            {{ page.thanks-content }}
-            <br><br><br>
-          </div> -->
-          {% endif %}
-        </div>
-        <div class="col-right">
-          <h3>{{ page.sidebar-title02 }}</h3>
-          {% include references.html %}
+          <div class="card-container">
+            {% for subnav in site.data.subnav %}
+            <a class="btn {{ subnav.priority }} svg-after" href="{{ subnav.url }}" target="_blank" rel="noopener">{{ subnav.title }} <i data-feather="{{ subnav.icon }}"></i></a>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </section>

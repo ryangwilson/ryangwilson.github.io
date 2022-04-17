@@ -13,17 +13,54 @@
         {% include portfolio.html %}
       </section>
       <hr>
-      <section>
-        <h2>{{ page.main-title-02 }}</h2>
-        <p>{{ page.content-02 }}</p>
-        {% include references.html %}
-      </section>
-      <hr>
       <section class="blog-container">
         <div class="content">
           <h2>{{ page.main-title-03 }}</h2>
         </div>
         {% include articles.html %}
+      </section>
+      <hr>
+      <section>
+        <h2>{{ page.main-title-02 }}</h2>
+        <p>{{ page.content-02 }}</p>
+
+        <div class="card-container">
+          <a href="" target="_blank" class="reference-card third" random-testimonial>
+            <q class="quote"></q>
+            <div class="image-title">
+              <picture>
+                <source class="webpimage" srcset="../assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
+                <source class="image" srcset="../assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg"> 
+                <img src="../assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
+              </picture>
+              <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+            </div>
+          </a>
+
+          <a href="" target="_blank" class="reference-card third" random-testimonial>
+            <q class="quote"></q>
+            <div class="image-title">
+              <picture>
+                <source class="webpimage" srcset="../assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
+                <source class="image" srcset="../assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg"> 
+                <img src="../assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
+              </picture>
+              <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+            </div>
+          </a>
+
+          <a href="" target="_blank" class="reference-card third" random-testimonial>
+            <q class="quote"></q>
+            <div class="image-title">
+              <picture>
+                <source class="webpimage" srcset="../assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
+                <source class="image" srcset="../assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg"> 
+                <img src="../assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
+              </picture>
+              <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
 

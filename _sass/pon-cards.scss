@@ -1,7 +1,14 @@
 // cards.scss
 // Styles for the card components
 
+:root {
+  --random-deg: -2deg;
+}
+
 .card-dark {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: $black-00;
   color: $white-00;
   padding: $scale-10;
@@ -16,6 +23,7 @@
   }
   p {
     color: $white-00;
+    line-height: 1.8;
   }
   &.short-card {
     padding: $scale-1 $scale-10;
@@ -23,48 +31,46 @@
       margin-bottom: $scale-1;
     }
   }
+  .content-container {
+    flex: 1;
+  }
 }
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: $scale-5;
   .reference-card {
     position: relative;
     quotes: "“" "”";
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    box-shadow: none;
-    &::before {
-      font-family: 'PT Mono';
-      content: open-quote;
-      display: inline;
-      height: 0;
-      line-height: 0;
-      position: relative;
-      top: 110px;
-      left: -40px;
-      color: $black-00;
-      opacity: .15;
-      font-size: 240px;
-      width: 0;
-      z-index: -1;
-  }
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    margin: 0 $scale-2;
+    border-radius: $scale-2;
+    background-color: $white-00;
   &::after {
       content: '';
   }
     .image-title {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      flex-direction: column;
+      background-color: $primary-00;
+      padding: 0 $scale-5 $scale-5;
+      border-radius: 0 0 $scale-2 $scale-2;
       img {
         width: 100px;
-        margin-right: $scale-4;
+        border-radius: 100%;
+        margin-top: -($scale-5);
       }
     }
     h3 {
       display: flex;
       flex-direction: column;
       font-size: $body-font-size;
+      text-align: center;
       width: 100%;
       padding: 0;
       margin: 0;
@@ -74,21 +80,22 @@
     }
     &.third, &.single {
       max-width: 400px;
-      @media (max-width: 799px) {
+      @media (max-width: 899px) {
         max-width: 100%;
       }
-      padding: $scale-4;
-      flex: 1;
-      @media (max-width: 799px) {
+      flex: 1 calc(33.333% - #{$scale-4});
+      @media (max-width: 899px) {
         flex: unset;
       }
       q {
         font-size: $body-font-size;
+        font-style: normal;
         height: 100%;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
-        overflow: hidden;
+        padding: $scale-5 $scale-5 $scale-10;
+      }
+      .name {
+        font-size: $h5-font-size;
+        font-weight: 500;
       }
       .name, .title, .company {
         display: -webkit-box;
@@ -102,11 +109,20 @@
     }
     &.third {
       margin-top: $scale-5;
-      q {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
-        overflow: hidden;
+      @media (max-width: 899px) {
+        q {
+          padding-bottom: $scale-5;
+        }
+        .image-title {
+          flex-direction: row;
+          padding: $scale-2 $scale-4;
+          img {
+            margin: 0 $scale-3 0 0;
+          }
+          h3 {
+            text-align: left;
+          }
+        }
       }
     }
     &.half {
@@ -150,6 +166,7 @@
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: $scale-5;
   @media (max-width: 799px) {
     flex-direction: column;
   }
@@ -166,9 +183,14 @@
       margin-bottom: $scale-8 !important;
       width: 100%;
     }
+    figure {
+      border-radius: $scale-2;
+      overflow: hidden;
+    }
     img {
       width: 100%;
       height: 100%;
+      border-radius: $scale-2;
       object-fit: cover;
       object-position: 0 0;
     }
@@ -192,15 +214,24 @@
   flex-wrap: wrap;
   align-items: flex-end;
   margin: $scale-20 $scale-10;
-  @media (max-width: 659px) {
+  @media (max-width: 899px) {
       flex-direction: column;
+      align-items: flex-start;
+  }
+  h2 {
+    @media (max-width: 899px) {
+      margin-bottom: $scale-6;
+    }
   }
   h3 {
     box-shadow: none;
     font-size: $body-font-size;
     font-weight: $type-body-bold;
     letter-spacing: 0;
-    margin: 0;
+    margin: 0 0 $scale-1 0;
+  }
+  p {
+    font-size: $body-font-size - 2;
   }
   .content {
     display: flex;
@@ -211,14 +242,14 @@
     flex-wrap: wrap;
     flex: 3;
     flex-direction: row;
-    @media (max-width: 799px) {
+    @media (max-width: 899px) {
       flex-direction: column;
     }
     .column {
       flex: 1;
       margin-left: $scale-10;
-      @media (max-width: 659px) {
-        margin-left: 0;
+      @media (max-width: 899px) {
+        margin-left: $scale-2;
         margin-top: $scale-5;
       }
     }
@@ -393,5 +424,65 @@
             transition: .4s ease-in-out;
       }
     }
+  }
+}
+
+.card-dark .card-container {
+  width: max-content;
+  .reference-card.single {
+    background-color: #333333;
+    min-width: 400px;
+    height: min-content;
+    opacity: 0; 
+    animation: rotate-in 1.5s forwards ease-out;
+    margin: 0 (-$scale-6) 0 $scale-12;
+    @media (max-width: 899px) {
+      min-width: unset;
+      margin: 0;
+    }
+    q {
+      font-size: calc($body-font-size - 2);
+      font-weight: 400;
+      padding: $scale-4;
+      color: $white-00;
+      &:before, &:after {
+        color: $primary-00;
+      }
+    }
+    h3 {
+      text-align: left;
+    }
+    .image-title {
+      align-items: center;
+      flex-direction: row-reverse;
+      padding: $scale-2 $scale-4;
+      background-color: #FFFFFF;
+      picture {
+        height: 70px;
+        filter: grayscale(100%);
+      }
+      img {
+        margin: 0;
+        width: 70px;
+      }
+      .name, .title, .company {
+        font-size: calc($body-font-size - 2);
+      }
+    }
+  }
+}
+
+@keyframes rotate-in {
+  0% {
+    transform: scale(1.1) rotateZ(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1.1) rotateZ(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotateZ(var(--random-deg));
+    opacity: 1;
   }
 }
