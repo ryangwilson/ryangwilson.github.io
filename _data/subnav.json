@@ -1,18 +1,26 @@
 [
     {
         "title": "LinkedIn",
+        "priority": "primary",
+        "icon": "linkedin",
         "url": "https://www.linkedin.com/in/ryangwilson/"
     },
     {
-        "title": "CodePen",
-        "url": "https://codepen.io/ryangwilson/"
-    },
-    {
         "title": "Medium",
+        "priority": "secondary",
+        "icon": "bookmark",
         "url": "https://medium.com/@ryangwilson"
     },
     {
+        "title": "CodePen",
+        "priority": "secondary",
+        "icon": "codepen",
+        "url": "https://codepen.io/ryangwilson/"
+    },
+    {
         "title": "YouTube",
+        "priority": "tertiary",
+        "icon": "youtube",
         "url": "https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos"
     }
 ]

@@ -8,7 +8,7 @@ role: Product Designer
 client: Andy Kim
 under: Bitovi
 underurl: https://www.bitovi.com
-year: 2016
+year: 2018
 phases: Discovery, Product Refinement, Product Support Contract, Product Review Contract
 tools: Axure, Sketch, Ilustrator, Stache, HTML, LESS
 represents: <ul><li>Performing the end-to-end UX process</li><li>How efficiently I work</li><li>How I collaborate with stakeholders and teams</li><li>My focus on creating user-centered products</li><li>User testing in person and remotely</li><li>Prototyping in Axure</li><li>Creating, scheduling, running, and analyzing user tests</li></ul>

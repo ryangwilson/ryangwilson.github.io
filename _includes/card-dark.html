@@ -1,5 +1,25 @@
 <div class="card-dark">
-  <h2>{{ page.title }}</h2>
-  <p class="subtitle">{{ page.subtitle }}</p>
-  <p>{{ page.card-content }}</p>
+  <div class="content-container">
+    <h2>{{ page.title }}</h2>
+    {% if page.subtitle %}
+    <p class="subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.card-content %}
+    <p>{{ page.card-content }}</p>
+    {% endif %}
+  </div>
+
+  <div class="card-container">
+    <a href="" target="_blank" class="reference-card single" random-testimonial>
+      <q class="quote"></q>
+      <div class="image-title">
+        <picture>
+          <source class="webpimage" srcset="../assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
+          <source class="image" srcset="../assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg"> 
+          <img src="../assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
+        </picture>
+        <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+      </div>
+    </a>
+  </div>
 </div>

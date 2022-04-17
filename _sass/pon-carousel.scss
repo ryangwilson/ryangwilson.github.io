@@ -40,6 +40,8 @@
     height: 297px;
     width: 496px;
     overflow: hidden;
+    opacity: 0;
+    animation: fade-in 1.5s forwards ease-out;
     @media (max-width: 799px) {
       max-width: 100%;
       width: 100%;
@@ -67,5 +69,17 @@
     &.is-selected {
       background-color: $secondary-00;
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

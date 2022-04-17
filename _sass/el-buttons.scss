@@ -32,10 +32,15 @@ button, input[type=submit], input[type=button], input[type=reset] {
     width: fit-content;
     transition: .25s ease-in-out;
     &.primary {
-        &:hover {
-            color: $secondary-00;
-            box-shadow: $fake-medium $secondary-00;
+        background-color: $dk-gray-00;
+        color: $primary-00;
+        box-shadow: $fake-medium $dk-gray-00;
+                &:hover {
+                    background-color: transparent;
+                    color: $black-00;
+            box-shadow: $fake-medium $black-00;
         }
+
     }
     &.white {
         color: $white-00;
@@ -55,13 +60,9 @@ button, input[type=submit], input[type=button], input[type=reset] {
         }
     }
     &.tertiary {
-        background-color: $dk-gray-00;
-        color: $primary-00;
-        box-shadow: $fake-medium $dk-gray-00;
-                &:hover {
-                    background-color: transparent;
-                    color: $black-00;
-            box-shadow: $fake-medium $black-00;
+        &:hover {
+            color: $secondary-00;
+            box-shadow: $fake-medium $secondary-00;
         }
     }
     &.text {

@@ -6,7 +6,7 @@ title: NRE Labs
 project: NRE Labs
 role: Product Designer
 client: Juniper Networks
-year: 2019
+year: 2016
 under: Bitovi
 underurl: https://www.bitovi.com
 phases: Discovery

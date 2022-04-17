@@ -12,16 +12,16 @@
   width: 100%;
   height: 100%;
   box-shadow: inset 0px 0px 0px 0px #28D0C8;
-  border-radius: 0;
+  border-radius: $scale-2;
   transition: .15s ease-in;
 }
 .article:hover:after, .reference-card.single:hover:after, .reference-card.third:hover:after, .card-portfolio a:hover:after {
   cursor: pointer;
   top: -15px;
   left: -15px;
-  padding: 15px 15px;
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 0px 5px #28D0C8;
+  padding: $scale-3 $scale-3;
+  border-radius: $scale-4;
+  box-shadow: inset 0px 0px 0px $scale-1 #28D0C8;
   z-index: 1;
   transition: .4s ease-in-out;
 }
