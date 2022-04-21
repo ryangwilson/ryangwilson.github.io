@@ -34,7 +34,7 @@ const testimonials = [
     "lastname": "Meyer",
     "title": "CEO",
     "company": "Bitovi",
-    "topic": "",
+    "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/justinbmeyer",
     "quote": "There's no one more knowledgeable or a better advocate for UX processes than Ryan Wilson. He's also a strong advocate for his team and leader."
   },
@@ -47,7 +47,7 @@ const testimonials = [
     "lastname": "Price",
     "title": "Senior User Experience Designer",
     "company": "Yum! Brands",
-    "topic": "",
+    "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/eekprice",
     "quote": "Ryan is one of the best managers I’ve ever had. He is personable, entertaining, genuine, and passionate. I respect his transparency, he respects my opinions, and empowers me to be the best UX Designer I can be. "
   },
@@ -60,7 +60,7 @@ const testimonials = [
     "lastname": "Brehaut",
     "title": "Senior Product Designer",
     "company": "Z League",
-    "topic": "",
+    "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/markbrehaut",
     "quote": "Ryan's values guide how he works, builds a team, mentors employees, and excels at his craft. He is a deliberate and thoughtful designer who constantly seeks feedback from users to ensure the right product gets put to market."
   },
@@ -203,7 +203,7 @@ const testimonials = [
     "lastname": "Greever",
     "title": "Product Strategy & UX Design",
     "company": "Author, Articulating Design Decisions",
-    "topic": "",
+    "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/tomgreever",
     "quote": "Ryan's an excellent problem solver, UX thinker, and researcher. He led several design projects for us at a senior and lead level in a client-facing role, including some of our largest Fortune 500 clients. Not many people have the breadth of skills Ryan has."
   }
