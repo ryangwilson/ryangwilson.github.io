@@ -193,6 +193,19 @@ const testimonials = [
     "topic": "",
     "linkedin": "https://www.linkedin.com/in/hannahtitus",
     "quote": "Dr. Wilson is a wonderful professor with a unique teaching style that works well no matter what learning style. His instruction is relaxed, creating an atmosphere that encourages questions and really engage with the teaching."
+  },
+  {
+    "id": 16,
+    "webpimage": "1586313574566.webp",
+    "image": "1586313574566.jpg",
+    "name": "Tom Greever",
+    "firstname": "Tom",
+    "lastname": "Greever",
+    "title": "Product Strategy & UX Design",
+    "company": "Author, Articulating Design Decisions",
+    "topic": "",
+    "linkedin": "https://www.linkedin.com/in/tomgreever",
+    "quote": "Ryan's an excellent problem solver, UX thinker, and researcher. He led several design projects for us at a senior and lead level in a client-facing role, including some of our largest Fortune 500 clients. Not many people have the breadth of skills Ryan has."
   }
 ]
 
