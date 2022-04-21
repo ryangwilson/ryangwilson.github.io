@@ -209,35 +209,66 @@ const testimonials = [
   }
 ]
 
-function getRandomItems(items, count, result = []) {
-  count--;
-  const itemsCopy = items.slice(0);
-  const randomIndex = Math.floor(Math.random()*items.length);
-  const randomItem = itemsCopy.splice(randomIndex, 1);
-  result.push(randomItem[0]);
-  if (count) return getRandomItems(itemsCopy, count, result);
-  return result;
+function shuffleArray(array) {
+  const arrayCopy = array.slice(0);
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
+  return arrayCopy;
 }
 
-window.onload = function() {
-  const testimonialCount = document.querySelectorAll('[random-testimonial]')
-  // console.log(testimonialCount.length)
-  const randomTestimonials = getRandomItems(testimonials, testimonialCount.length)
-  testimonialCount.forEach(function(testimonialElement, index) {
-    testimonialElement.querySelector('.quote').innerText = randomTestimonials[index].quote
-    testimonialElement.querySelector('.name').innerText = randomTestimonials[index].name
-    testimonialElement.querySelector('.title').innerText = randomTestimonials[index].title
-    testimonialElement.querySelector('.company').innerText = randomTestimonials[index].company
-    testimonialElement.querySelector('.webpimage').srcset = "../assets/images/testimonial-images/" + randomTestimonials[index].webpimage
-    testimonialElement.querySelector('.image').srcset = "../assets/images/testimonial-images/" + randomTestimonials[index].image
-    testimonialElement.querySelector('img').src = "../assets/images/testimonial-images/" + randomTestimonials[index].image
-    testimonialElement.querySelector('img').alt = "Testimonial image of " + randomTestimonials[index].name
-    testimonialElement.href = randomTestimonials[index].linkedin
-  }) 
+window.onload = function () {
+  const testimonialsCopy = shuffleArray(testimonials);
+  const testimonialElements = document.querySelectorAll('[testimonial]');
+  testimonialElements.forEach((element) => {
+      const rawValue = element.getAttribute("testimonial");
+      if (rawValue) {
+          const [key, value] = rawValue.split(":");
+          const testiminialIndex = testimonialsCopy.findIndex((item) => {
+              return String(item[key]).toLowerCase().includes(value.toLowerCase());
+          })
+          if (testiminialIndex > -1) {
+              const testiminial = removeIndexFromArray(testimonialsCopy, testiminialIndex);
+              initiateCard(testiminial, element);   
+              return;
+          }
+          console.warn(value + " was not found in " + key + ". Falling back to random!");
+      }
+      initiateCard(getRandomItem(testimonialsCopy), element);
+   });
+}
+
+function initiateCard(item, element) {
+  element.querySelector('.quote').innerText = item.quote
+  element.querySelector('.name').innerText = item.name
+  element.querySelector('.title').innerText = item.title
+  element.querySelector('.company').innerText = item.company
+  element.querySelector('.webpimage').srcset = "../assets/images/testimonial-images/" + item.webpimage
+  element.querySelector('.image').srcset = "../assets/images/testimonial-images/" + item.image
+  element.querySelector('img').src = "../assets/images/testimonial-images/" + item.image
+  element.querySelector('img').alt = "Testimonial image of " + item.name
+  element.href = item.linkedin
+}
+
+function removeIndexFromArray(items, index) {
+  const [item] = items.splice(index, 1);
+  return item;
+}
+
+function getRandomItem(items) {
+  const randomIndex = getRandomNumber(items.length);
+  return removeIndexFromArray(items, randomIndex);
+}
+
+function getRandomNumber(max) {
+  return Math.floor(Math.random() * max);
 }
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max) * (Math.round(Math.random()) ? 1 : -1) + "deg";
+return Math.floor(Math.random() * max) * (Math.round(Math.random()) ? 1 : -1) + "deg";
 }
 
 console.log(getRandomInt(4));
