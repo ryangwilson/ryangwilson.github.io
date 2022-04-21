@@ -151,7 +151,7 @@ const testimonials = [
     "lastname": "Smith",
     "title": "Product Designer",
     "company": "ActiveCampaign",
-    "topic": "",
+    "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/austin-smith-71755352",
     "quote": "Ryan was an excellent educator and mentor. He taught class as if he were an Art Director, helping us find the best design solution through collaboration and experimentation. Ryan is the right person to lead a team of designers."
   },
@@ -177,7 +177,7 @@ const testimonials = [
     "lastname": "Wang",
     "title": "Senior User Experience Designer",
     "company": "Yum! Brands",
-    "topic": "",
+    "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/karenwangdesign",
     "quote": "Ryan's witty personality and years of experiences made him a great mentor. I can consult him whenever I was uncertain on how to approach research or design projects and he’d help me work through and find the solutions."
   },
