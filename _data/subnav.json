@@ -18,6 +18,12 @@
         "url": "https://codepen.io/ryangwilson/"
     },
     {
+        "title": "GitHub",
+        "priority": "secondary",
+        "icon": "github",
+        "url": "https://github.com/ryangwilson"
+    },
+    {
         "title": "YouTube",
         "priority": "tertiary",
         "icon": "youtube",
