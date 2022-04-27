@@ -10,5 +10,11 @@ sidebar-title01: Education
 sidebar-title02: Examples
 sidebar-title03: Experience
 sidebar-title04: Expertise
+button01-title: Resume
+button01-link: assets/RyanGWilson-Resume.pdf
+button01-icon: file-text
+button02-title: References
+button02-link: assets/RyanGWilson-References.pdf
+button02-icon: file-text
 ---
 

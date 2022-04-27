@@ -194,11 +194,9 @@ button, input[type=submit], input[type=button], input[type=reset] { background: 
 
 button:focus, input[type=submit]:focus, input[type=button]:focus, input[type=reset]:focus { outline: 5px solid #ffca0a; outline-offset: -5px; }
 
-.btn { display: flex; align-items: center; flex-direction: row; color: #232323; text-decoration: none; text-transform: uppercase; padding: 10px 30px; margin: 25px 0; border-radius: 50px; box-shadow: 0 0 0 2.5px #232323; width: -moz-fit-content; width: fit-content; transition: .25s ease-in-out; }
+.btn { display: flex; align-items: center; flex-direction: row; color: #232323; text-decoration: none; text-transform: uppercase; padding: 5px 30px; margin: 25px 10px 25px 0; border-radius: 10px; box-shadow: 0 0 0 2.5px #232323; width: -moz-fit-content; width: fit-content; transition: .25s ease-in-out; }
 
-.btn.primary { background-color: #4F4F4F; color: #ffca0a; box-shadow: 0 0 0 2.5px #4F4F4F; }
-
-.btn.primary:hover { background-color: transparent; color: #232323; box-shadow: 0 0 0 2.5px #232323; }
+.btn.primary:hover { background-color: #28d2c9; color: #FFFFFF; box-shadow: 0 0 0 5px #4F4F4F; }
 
 .btn.white { color: #FFFFFF; box-shadow: 0 0 0 2.5px #FFFFFF; }
 
@@ -206,9 +204,11 @@ button:focus, input[type=submit]:focus, input[type=button]:focus, input[type=res
 
 .btn.secondary { background-color: #ffca0a; box-shadow: 0 0 0 2.5px #ffca0a; }
 
-.btn.secondary:hover { color: #28d2c9; background-color: #4F4F4F; box-shadow: 0 0 0 2.5px #4F4F4F; }
+.btn.secondary:hover { background-color: #4F4F4F; color: #FFFFFF; box-shadow: 0 0 0 5px #28d2c9; }
 
-.btn.tertiary:hover { color: #28d2c9; box-shadow: 0 0 0 2.5px #28d2c9; }
+.btn.tertiary { background-color: #DADADA; color: #4F4F4F; box-shadow: 0 0 0 2.5px #DADADA; }
+
+.btn.tertiary:hover { box-shadow: 0 0 0 5px #28d2c9; }
 
 .btn.text { padding: 5px 10px; border-radius: 0; margin: 0; box-shadow: 0 1px 0 0 #28d2c9; }
 
