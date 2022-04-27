@@ -24,23 +24,20 @@ button, input[type=submit], input[type=button], input[type=reset] {
     color: $black-00;
     text-decoration: none;
     text-transform: uppercase;
-    padding: $scale-2 $scale-6;
-    margin: $scale-5 0;
-    border-radius: $scale-10;
+    padding: $scale-1 $scale-6;
+    margin: $scale-5 $scale-2 $scale-5 0;
+    border-radius: $radius-medium;
     box-shadow: $fake-medium $black-00;
     width: -moz-fit-content;
     width: fit-content;
     transition: .25s ease-in-out;
     &.primary {
-        background-color: $dk-gray-00;
-        color: $primary-00;
-        box-shadow: $fake-medium $dk-gray-00;
-                &:hover {
-                    background-color: transparent;
-                    color: $black-00;
-            box-shadow: $fake-medium $black-00;
+        
+        &:hover {
+            background-color: $secondary-00;
+            color: $white-00;
+            box-shadow: $fake-wide $dk-gray-00;
         }
-
     }
     &.white {
         color: $white-00;
@@ -54,15 +51,17 @@ button, input[type=submit], input[type=button], input[type=reset] {
         background-color: $primary-00;
         box-shadow: $fake-medium $primary-00;
         &:hover {
-            color: $secondary-00;
             background-color: $dk-gray-00;
-            box-shadow: $fake-medium $dk-gray-00;
+            color: $white-00;
+            box-shadow: $fake-wide $secondary-00;
         }
     }
     &.tertiary {
+        background-color: $lt-gray-00;
+        color: $dk-gray-00;
+        box-shadow: $fake-medium $lt-gray-00;
         &:hover {
-            color: $secondary-00;
-            box-shadow: $fake-medium $secondary-00;
+            box-shadow: $fake-wide $secondary-00;
         }
     }
     &.text {

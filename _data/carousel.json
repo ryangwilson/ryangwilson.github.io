@@ -38,15 +38,5 @@
         "cta": "See Experience",
         "cta-svg": "star",
         "link": "/experience/"
-    },
-    {
-        "header": "Process-Driven",
-        "description": "User experience design follows a trusted user-centered design process: Understand, Ideate, Test, Iterate, Repeat.",
-        "webpimage": "user-testing.webp",
-        "jpgimage": "user-testing.jpg",
-        "alttext": "Ryan user testing at a trade show",
-        "cta": "Review Process",
-        "cta-svg": "list",
-        "link": "/process/"
     }
 ]
