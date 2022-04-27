@@ -149,7 +149,7 @@ $line-height-body: 1.8;
 $type-code: 'PT Mono', monospace;
 
 // ** ALL TYPE SIZING ---------------------------------------------------
-$h1-font-size: 30px;
+$h1-font-size: 32px;
 $h2-font-size: 60px;
 $h3-font-size: 48px;
 $h4-font-size: 36px;
@@ -173,15 +173,17 @@ h1 {
     color: $primary-00;
     text-transform: uppercase;
     line-height: 1;
-    letter-spacing: -1px;
+    letter-spacing: 0;
     span {
         display: block;
         color: $white-00;
-        font-size: $body-font-size;
+        font-size: $h6-font-size;
         font-weight: $type-main-bold;
         letter-spacing: 0;
         i {
             color: $primary-00;
+            font-size: $h6-font-size;
+            font-weight: $type-main-black;
         }
     }
 }

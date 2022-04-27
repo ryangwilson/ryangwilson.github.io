@@ -4,11 +4,11 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 * { padding: 0; margin: 0; box-sizing: border-box; }
 
-h1 { font-family: "Roboto", sans-serif; font-size: 30px; font-weight: 900; font-style: normal; text-transform: none; color: #ffca0a; text-transform: uppercase; line-height: 1; letter-spacing: -1px; }
+h1 { font-family: "Roboto", sans-serif; font-size: 32px; font-weight: 900; font-style: normal; text-transform: none; color: #ffca0a; text-transform: uppercase; line-height: 1; letter-spacing: 0; }
 
-h1 span { display: block; color: #FFFFFF; font-size: 18px; font-weight: 500; letter-spacing: 0; }
+h1 span { display: block; color: #FFFFFF; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 
-h1 span i { color: #ffca0a; }
+h1 span i { color: #ffca0a; font-size: 21px; font-weight: 900; }
 
 h2 { font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 900; font-style: normal; text-transform: none; color: #FFFFFF; line-height: 1; margin-bottom: 10px; }
 
@@ -373,7 +373,7 @@ nav a.active { color: #28d2c9; cursor: default; }
 
 nav a.active:hover { box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; }
 
-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 10px 25px; border-bottom: 5px solid #FFFFFF; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.22), 0 14px 28px 0 rgba(0, 0, 0, 0.25); z-index: 99; position: sticky; top: 0; }
+header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 10px 25px 5px; border-bottom: 5px solid #FFFFFF; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.22), 0 14px 28px 0 rgba(0, 0, 0, 0.25); z-index: 99; position: sticky; top: 0; }
 
 header .branding { margin-right: 25px; }
 
