@@ -26,6 +26,7 @@
     line-height: 1.8;
   }
   &.short-card {
+    flex-direction: column;
     padding: $scale-1 $scale-10;
     .subtitle {
       margin-bottom: $scale-1;
