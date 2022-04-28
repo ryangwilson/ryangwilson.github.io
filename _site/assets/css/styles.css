@@ -363,7 +363,7 @@ body.nested-page .nested:hover, body.ty-page .contact:hover { box-shadow: 0 0 0 
 
 nav { display: flex; flex-wrap: wrap; }
 
-nav a { margin-right: 50px; color: #FFFFFF; text-transform: uppercase; text-decoration: none; font-weight: 500; font-size: 18px; padding: 10px 0; box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; transition: all 0.3s ease; }
+nav a { position: relative; margin-right: 50px; color: #FFFFFF; text-transform: uppercase; text-decoration: none; font-weight: 500; font-size: 18px; padding: 10px 0; box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; transition: all 0.3s ease; }
 
 @media (max-width: 1050px) { nav a { margin-right: 25px; } }
 
@@ -373,9 +373,14 @@ nav a.active { color: #28d2c9; cursor: default; }
 
 nav a.active:hover { box-shadow: 0 0 0 0 #FFFFFF, 0 0 0 0 #FFFFFF; }
 
+nav .badge-animation:after { position: absolute; z-index: 111; display: flex; justify-content: center; align-items: center; content: '11'; top: 0; right: -20px; width: 25px; height: 25px; background: #FF3266; border-radius: 20px; font-size: 16px; line-height: 0; color: #FFFFFF; transform: scale(0); animation: notification-bounce 1s cubic-bezier(0.34, 2, 0.64, 1) forwards; }
+
 header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background-color: #232323; padding: 10px 25px 5px; border-bottom: 5px solid #FFFFFF; box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.22), 0 14px 28px 0 rgba(0, 0, 0, 0.25); z-index: 99; position: sticky; top: 0; }
 
 header .branding { margin-right: 25px; }
+
+@keyframes notification-bounce { 0% { transform: scale(0); }
+  100% { transform: scale(1); } }
 
 main { flex: 1; max-width: 1280px; margin-left: auto; margin-right: auto; width: 100%; }
 
