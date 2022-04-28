@@ -432,6 +432,7 @@
   max-height: 250px;
   margin-top: 0;
   @media (max-width: 899px) {
+    max-height: unset;
     margin-top: $scale-5;
   }
   .reference-card.single {
