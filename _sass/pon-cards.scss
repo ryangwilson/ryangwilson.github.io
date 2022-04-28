@@ -7,7 +7,7 @@
 
 .card-dark {
   display: flex;
-  align-items: center;
+  // align-items: center;
   flex-wrap: wrap;
   background-color: $black-00;
   color: $white-00;
@@ -429,6 +429,11 @@
 
 .card-dark .card-container {
   width: max-content;
+  max-height: 250px;
+  margin-top: 0;
+  @media (max-width: 899px) {
+    margin-top: $scale-5;
+  }
   .reference-card.single {
     background-color: #333333;
     min-width: 400px;
