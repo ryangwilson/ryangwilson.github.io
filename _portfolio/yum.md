@@ -3,8 +3,8 @@ layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: product
 title: Yum! Brands
-project: Menu Admin Tool
-role: Product Owner & UX Specialist
+project: Menu Management Tool (MMT)
+role: Product Owner & UX Consultant
 client: Yum.dev
 under: Bitovi
 underurl: https://www.bitovi.com
