@@ -2,9 +2,9 @@
 layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: product
-title: Kroger DSD
-project: Kroger DSD
-role: Senior Product Designer
+title: Kroger DSD Receiving
+project: ChainTrack Replacement, Build v Buy
+role: Product Designer
 client: Kroger
 under: Kroger
 underurl: 
