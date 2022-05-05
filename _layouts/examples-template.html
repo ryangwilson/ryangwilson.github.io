@@ -1,58 +1,19 @@
 <!doctype html>
 <html lang="en">
   {% include head.html %}
-  <body>
+  <body id="top">
     {% include navigation.html %}
     <main>
       {% include card-dark.html %}
       <section>
-        {{ page.overview }}
-        <br>
-        <div class="filter-container">
-          <label for="filter">Filter project type by</label>
-          <select id="filter" class="select-filter select-css">
-            <optgroup label="Project Types">
-              <option value="">All</option>
-              <option value="product" selected>Product Design</option>
-              <option value="graphic">Graphic Design</option>
-              <option value="motion">Motion Design</option>
-            </optgroup>
-          </select>
-        </div>
-        {% include portfolio.html %}
+        {% if page.url == '/work/' %}
+          {% include portfolio.html %}
+        {% endif %}
+        {% if page.url == '/art/' %}
+          {% include art.html %}
+        {% endif %}
       </section>
     </main>
     {% include footer.html %}
-    <script>
-      var loaded = false
-      var $items = $('.card-portfolio a')
-      $('#filter').change(
-        function () {
-          var selected = this.value;
-
-          if (selected) {
-            history.replaceState( null, "", "?display="+selected)
-          } else {
-            history.replaceState( null, "", window.location.pathname)
-          }
-
-          $items.each( function () {
-            if (!selected || $(this).hasClass(selected)) {
-              $(this).show(loaded ? 'slow' : undefined);
-            } else {
-              $(this).hide(loaded ? 'slow' : undefined);
-            }
-          })
-        }
-      );
-
-      var display = new URL(window.location.href).searchParams.get('display')
-      if (display){
-        $('#filter').val(display)
-      }
-
-      $('#filter').change()
-      loaded = true;
-    </script>
   </body>
 </html>

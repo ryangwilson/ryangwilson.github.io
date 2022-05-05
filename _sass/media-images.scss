@@ -16,18 +16,21 @@ figcaption {
     bottom: 0;
     left: 0;
     line-height: 1.4;
-    background: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur($scale-1);
     font-family: Arial, sans-serif;
     color: black;
-    padding: $scale-2 $scale-10 $scale-2 $scale-4;
+    padding: $scale-2 $scale-3;
     margin-bottom: $scale-2;
     max-width: 90%;
+    box-shadow: $elevation-near;
+    border-left: $primary-00 $scale-1 solid;
     h3 {
         font-family: $type-display-secondary;
         font-weight: $type-display-light;
         font-size: $h5-font-size;
         box-shadow: none;
         margin: 0;
+        padding: 0;
     }
 }

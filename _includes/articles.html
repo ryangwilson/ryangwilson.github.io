@@ -1,10 +1,12 @@
 <div class="list">
     <div class="column">
         {% for article in site.data.articles %}
+        {% if article.show == "yes" %}
         <a class="article" href="{{ article.url }}" target="_blank" rel="noopener">
             <h3>{{ article.name }}</h3>
             <p>{{ article.description }}</p>
         </a>
+        {% endif %}
         {% if forloop.index == 4 %}
     </div><div class="column">
         {% endif %}

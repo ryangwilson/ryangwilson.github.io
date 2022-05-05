@@ -1,45 +1,54 @@
 [
     {
+        "show": "yes",
         "name": "UX is not (just) UI",
         "description": "‘UX’ and ‘UI’ are commonly misunderstood and conflated to mean the same practice...",
         "url": "https://medium.com/@ryangwilson/ux-is-not-just-ui-d229d8ef0180"
     },
     {
+        "show": "yes",
         "name": "I’m Going to be WFH Today",
         "description": "Tips & Tricks for being a successful remote employee",
         "url": "https://medium.com/@ryangwilson/im-going-to-be-wfh-today-9f73e6501882"
     },
     {
+        "show": "yes",
         "name": "Creating an SVG Icon Typeface",
         "description": "Icons are used in applications, websites, marketing materials, you name it.",
         "url": "https://medium.com/@ryangwilson/creating-an-svg-icon-typeface-211c72e8943d"
     },
     {
+        "show": "yes",
         "name": "Best Practices for Working with SVGs",
         "description": "For the past several years I’ve been working with SVGs — a lot.",
         "url": "https://medium.com/@ryangwilson/best-practices-for-working-with-svgs-5acfdd020091"
     },
     {
+        "show": "yes",
         "name": "Finding Ideas Through Sketching",
         "description": "Finding the correct, best, or most successful ideas out of all possible...",
         "url": "https://medium.com/@ryangwilson/finding-ideas-through-sketching-27681756fef3"
     },
     {
+        "show": "yes",
         "name": "What is UX Design?",
         "description": "Creating an app that just makes sense, the one that feels like it was built just for you.",
         "url": "https://medium.com/@ryangwilson/what-is-ux-design-d64a9abee033"
     },
     {
+        "show": "yes",
         "name": "User Testing from a Tradeshow Booth",
         "description": "There is nothing more rewarding than watching people use your app.",
         "url": "https://medium.com/@ryangwilson/user-testing-from-a-tradeshow-booth-52e5ba93d1a"
     },
     {
+        "show": "no",
         "name": "Understanding the user in online education",
         "description": "Ph.D. dissertation",
         "url": "https://lib.dr.iastate.edu/etd/14693/"
     },
     {
+        "show": "no",
         "name": "Preparing Visual Communication students for the industry",
         "description": "MFA thesis",
         "url": "https://lib.dr.iastate.edu/etd/13677/"

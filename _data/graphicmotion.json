@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/gf-white-1000.webp",
+    "image": "../assets/images/portfolio-images/gf-white-1000.jpg",
+    "project": "Gongola Financial",
+    "deliverable": "Logo",
+    "caption": "Created a logo and branding guide for a wealth management company in the greater Cincinnati area."
+  },
+  {
+    "id": 2,
+    "type": "graphic",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=5Dv0YEI0vds?rel=0",
+    "thumb": "../assets/images/portfolio-images/pbskids-01.jpg",
+    "project": "PBS Kids",
+    "deliverable": "Presentation",
+    "caption": "Proudly created presentations for PBS Kids to promote a new program supporting Pre-K learning and education."
+  },
+  {
+    "id": 3,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/projectCHILD-logo.webp",
+    "image": "../assets/images/portfolio-images/projectCHILD-logo.jpg",
+    "project": "Project Child",
+    "deliverable": "Logo",
+    "caption": "Created branding for ProjectCHILD, an Illinois institution committed to advancing the quality, affordability, and accessibility of child care."
+  },
+  {
+    "id": 4,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/ast_cover.webp",
+    "image": "../assets/images/portfolio-images/ast_cover.jpg",
+    "project": "A Story Told",
+    "deliverable": "Album Cover",
+    "caption": "Created album art for the album Keep Watch by A Story Told – Check them out on Spotify!"
+  },
+  {
+    "id": 5,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/haulhound-logo.webp",
+    "image": "../assets/images/portfolio-images/haulhound-logo.jpg",
+    "project": "HaulHound",
+    "deliverable": "Logo",
+    "caption": "Created the logo and icon set for the mobile application HaulHound."
+  },
+  {
+    "id": 6,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/cb-production_ex.webp",
+    "image": "../assets/images/portfolio-images/cb-production_ex.jpg",
+    "project": "Caloric Budget",
+    "deliverable": "Poster",
+    "caption": "Created a poster to communicate the process of researching and designing for a calorie tracking mobile application."
+  },
+  {
+    "id": 7,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/cs_infographic01.webp",
+    "image": "../assets/images/portfolio-images/cs_infographic01.jpg",
+    "project": "Charles Schwab",
+    "deliverable": "Poster",
+    "caption": "Created a poster design for Infographic World for their client Charles Schwab."
+  },
+  {
+    "id": 8,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/pepper_jelly_poster.webp",
+    "image": "../assets/images/portfolio-images/pepper_jelly_poster.jpg",
+    "project": "Class Project",
+    "deliverable": "Poster",
+    "caption": "Full process included researching the recipe, making pepper jelly (recorded from two continuous angles), integrating jar textures, pepper jelly color (sampled), and notated recipe cards into the final design."
+  },
+  {
+    "id": 9,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/reinventing.webp",
+    "image": "../assets/images/portfolio-images/reinventing.jpg",
+    "project": "Mel Hawkins",
+    "deliverable": "Book Cover",
+    "caption": "Created the book cover for  Mel Hawkin's book Reinventing Education, Hope, and the American Dream."
+  },
+  {
+    "id": 10,
+    "type": "graphic",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/student_workshop.webp",
+    "image": "../assets/images/portfolio-images/student_workshop.jpg",
+    "project": "Iowa State University College of Design",
+    "deliverable": "Poster",
+    "caption": "Designed a poster to promote an upcoming Graphic Design student workshop."
+  },
+  {
+    "id": 11,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=kydbkA7KVNA?rel=0",
+    "thumb": "../assets/images/portfolio-images/soad_holiday.jpg",
+    "project": "MU, School of Art & Design",
+    "deliverable": "Display Video",
+    "caption": "Created the holiday animation for the Marshall University, School of Art & Design building monitors."
+  },
+  {
+    "id": 12,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=Ooq5MvlqmbM?rel=0",
+    "thumb": "../assets/images/portfolio-images/shiny-01.jpg",
+    "project": "Shiny",
+    "deliverable": "Music Video",
+    "caption": "Created a music video to demonstrate connecting audio to drive animation in Cinema 4D."
+  },
+  {
+    "id": 13,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=USsuI6xh5QE?rel=0",
+    "thumb": "../assets/images/portfolio-images/two_button.jpg",
+    "project": "Two Button Games",
+    "deliverable": "Game Intro",
+    "caption": "Created the intro video for a retro video game company called Two Button Games."
+  },
+  {
+    "id": 14,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=ewcFAv60haY?rel=0",
+    "thumb": "../assets/images/portfolio-images/twisted-reality-01.jpg",
+    "project": "Twisted Reality",
+    "deliverable": "Prototype",
+    "caption": "Created game concept and packaging for a game Twisted Reality."
+  },
+  {
+    "id": 15,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=g6NtYdrBPKY?rel=0",
+    "thumb": "../assets/images/portfolio-images/elizabeth-johnson-1.jpg",
+    "project": "John Drake & the Shakes",
+    "deliverable": "Music Video",
+    "caption": "Created a music video for Jon Drake & the Shakes song Elizabeth Johnson."
+  },
+  {
+    "id": 16,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=GxuRmja_9IM?rel=0",
+    "thumb": "../assets/images/portfolio-images/bongo.jpg",
+    "project": "Bongo",
+    "deliverable": "Splash Video",
+    "caption": "Created as a demonstration for a motion graphics course I taught."
+  },
+  {
+    "id": 17,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=ARaofa6uuPg?rel=0",
+    "thumb": "../assets/images/portfolio-images/herb_lubalin.jpg",
+    "project": "Lubalin",
+    "deliverable": "Splash Video",
+    "caption": "Created as an homage to Herb Lubalin as part of my 'render-a-day' experimentation."
+  },
+  {
+    "id": 18,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=R_3pwflGXwM?rel=0",
+    "thumb": "../assets/images/portfolio-images/beans.jpg",
+    "project": "Has Bean",
+    "deliverable": "Splash Video",
+    "caption": "Created as part of my 'render-a-day' experimentation."
+  },
+  {
+    "id": 19,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=a7WzggaGApo?rel=0",
+    "thumb": "../assets/images/portfolio-images/kunst_cube.jpg",
+    "project": "Kunst Cube",
+    "deliverable": "Splash Video",
+    "caption": "Created as part of my 'render-a-day' experimentation."
+  },
+  {
+    "id": 20,
+    "type": "motion",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=hFTOFthJ8ZY?rel=0",
+    "thumb": "../assets/images/portfolio-images/type_poster2.jpg",
+    "project": "Type Poster",
+    "deliverable": "Splash Video",
+    "caption": "Created as part of my 'render-a-day' experimentation."
+  }
+]

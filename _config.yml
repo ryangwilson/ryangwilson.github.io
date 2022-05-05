@@ -56,4 +56,4 @@ github_username:  ryangwilson
 collections:
   portfolio:
     output: true
-    permalink: /projects/:path/
+    permalink: /work/:path/

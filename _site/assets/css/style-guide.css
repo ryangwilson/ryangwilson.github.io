@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+html { scroll-behavior: smooth; }
+
+:target:before { content: ""; display: block; height: 100px; margin: -100px 0 0; }
+
 h1 { font-family: "Roboto", sans-serif; font-size: 32px; font-weight: 900; font-style: normal; text-transform: none; color: #ffca0a; text-transform: uppercase; line-height: 1; letter-spacing: 0; }
 
 h1 span { display: block; color: #FFFFFF; font-size: 21px; font-weight: 500; letter-spacing: 0; }
@@ -10,13 +14,13 @@ h1 span i { color: #ffca0a; font-size: 21px; font-weight: 900; }
 
 h2 { font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 900; font-style: normal; text-transform: none; color: #FFFFFF; line-height: 1; margin-bottom: 10px; }
 
-@media (max-width: 699px) { h2 { font-size: 36px; } }
+@media (max-width: 699px) { h2 { font-size: 32px; } }
 
 section h2 { text-transform: none; color: #232323; }
 
-h3 { font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 300; font-style: normal; text-transform: none; color: #232323; letter-spacing: -1px; line-height: 1; width: fit-content; padding-right: 25px; margin-bottom: 25px; box-shadow: 0px 5px 0px 0px #ffca0a; }
+h3 { font-family: "Roboto", sans-serif; font-size: 36px; font-weight: 300; font-style: normal; text-transform: none; color: #232323; letter-spacing: -1px; line-height: 1; width: fit-content; padding-right: 25px; margin-bottom: 25px; box-shadow: 0px 5px 0px 0px #ffca0a; }
 
-h4 { font-family: "Roboto Condensed", sans-serif; font-size: 36px; font-weight: 500; font-style: normal; text-transform: uppercase; color: #232323; }
+h4 { font-family: "Roboto Condensed", sans-serif; font-size: 32px; font-weight: 500; font-style: normal; text-transform: uppercase; color: #232323; }
 
 h5 { font-family: "Roboto", sans-serif; font-size: 24px; font-weight: 400; font-style: italic; text-transform: none; color: #232323; }
 
@@ -48,7 +52,7 @@ del, s { text-decoration: line-through; }
 
 q, blockquote p { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300; font-style: italic; text-transform: none; color: #232323; line-height: 1.8; }
 
-q:before, q:after, blockquote p:before, blockquote p:after { position: relative; font-family: 'PT Mono'; font-size: 48px; line-height: 0; top: 18px; color: #A0A0A0; }
+q:before, q:after, blockquote p:before, blockquote p:after { position: relative; font-family: 'PT Mono'; font-size: 36px; line-height: 0; top: 18px; color: #A0A0A0; }
 
 cite { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 500; font-style: normal; text-transform: none; color: #232323; }
 

@@ -4,6 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 * { padding: 0; margin: 0; box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
+:target:before { content: ""; display: block; height: 100px; margin: -100px 0 0; }
+
 h1 { font-family: "Roboto", sans-serif; font-size: 32px; font-weight: 900; font-style: normal; text-transform: none; color: #ffca0a; text-transform: uppercase; line-height: 1; letter-spacing: 0; }
 
 h1 span { display: block; color: #FFFFFF; font-size: 21px; font-weight: 500; letter-spacing: 0; }
@@ -12,13 +16,13 @@ h1 span i { color: #ffca0a; font-size: 21px; font-weight: 900; }
 
 h2 { font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 900; font-style: normal; text-transform: none; color: #FFFFFF; line-height: 1; margin-bottom: 10px; }
 
-@media (max-width: 699px) { h2 { font-size: 36px; } }
+@media (max-width: 699px) { h2 { font-size: 32px; } }
 
 section h2 { text-transform: none; color: #232323; }
 
-h3 { font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 300; font-style: normal; text-transform: none; color: #232323; letter-spacing: -1px; line-height: 1; width: fit-content; padding-right: 25px; margin-bottom: 25px; box-shadow: 0px 5px 0px 0px #ffca0a; }
+h3 { font-family: "Roboto", sans-serif; font-size: 36px; font-weight: 300; font-style: normal; text-transform: none; color: #232323; letter-spacing: -1px; line-height: 1; width: fit-content; padding-right: 25px; margin-bottom: 25px; box-shadow: 0px 5px 0px 0px #ffca0a; }
 
-h4 { font-family: "Roboto Condensed", sans-serif; font-size: 36px; font-weight: 500; font-style: normal; text-transform: uppercase; color: #232323; }
+h4 { font-family: "Roboto Condensed", sans-serif; font-size: 32px; font-weight: 500; font-style: normal; text-transform: uppercase; color: #232323; }
 
 h5 { font-family: "Roboto", sans-serif; font-size: 24px; font-weight: 400; font-style: italic; text-transform: none; color: #232323; }
 
@@ -50,7 +54,7 @@ del, s { text-decoration: line-through; }
 
 q, blockquote p { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300; font-style: italic; text-transform: none; color: #232323; line-height: 1.8; }
 
-q:before, q:after, blockquote p:before, blockquote p:after { position: relative; font-family: 'PT Mono'; font-size: 48px; line-height: 0; top: 18px; color: #A0A0A0; }
+q:before, q:after, blockquote p:before, blockquote p:after { position: relative; font-family: 'PT Mono'; font-size: 36px; line-height: 0; top: 18px; color: #A0A0A0; }
 
 cite { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 500; font-style: normal; text-transform: none; color: #232323; }
 
@@ -351,9 +355,9 @@ figure { position: relative; width: 100%; height: auto; box-shadow: inset 0 0 50
 
 figure img { z-index: -2; position: relative; }
 
-figcaption { position: absolute; z-index: 1; bottom: 0; left: 0; line-height: 1.4; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(5px); font-family: Arial, sans-serif; color: black; padding: 10px 50px 10px 20px; margin-bottom: 10px; max-width: 90%; }
+figcaption { position: absolute; z-index: 1; bottom: 0; left: 0; line-height: 1.4; background-color: rgba(255, 255, 255, 0.75); backdrop-filter: blur(5px); font-family: Arial, sans-serif; color: black; padding: 10px 15px; margin-bottom: 10px; max-width: 90%; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.24); border-left: #ffca0a 5px solid; }
 
-figcaption h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 24px; box-shadow: none; margin: 0; }
+figcaption h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 24px; box-shadow: none; margin: 0; padding: 0; }
 
 body { display: flex; min-height: 100vh; flex-direction: column; }
 
@@ -486,11 +490,11 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 .card-container .reference-card.half:last-of-type { margin-bottom: 0; }
 
-.card-portfolio { display: flex; justify-content: space-between; flex-direction: row; flex-wrap: wrap; margin-top: 25px; }
+.card-portfolio { display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 25px; }
 
 @media (max-width: 799px) { .card-portfolio { flex-direction: column; } }
 
-.card-portfolio a { display: flex; flex-basis: calc(50% - 25px); justify-content: space-between; height: 250px; min-height: 250px; max-height: 250px; margin-bottom: 50px; }
+.card-portfolio a { display: flex; flex-basis: calc(50% - 25px); height: 250px; min-height: 250px; max-height: 250px; margin-bottom: 50px; margin-right: 25px; }
 
 @media (max-width: 799px) { .card-portfolio a { margin-left: 0 !important; margin-bottom: 40px !important; width: 100%; } }
 
@@ -498,9 +502,15 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 .card-portfolio a img { width: 100%; height: 100%; border-radius: 10px; object-fit: cover; object-position: 0 0; }
 
-.card-portfolio a h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 24px; box-shadow: none; margin: 0; }
+.card-portfolio a h3 { font-family: "Roboto", sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 1px; box-shadow: none; margin: 0; }
 
 @media (max-width: 599px) { .card-portfolio a p { font-size: 0; } }
+
+@media (max-width: 799px) { .card-portfolio.fifth-card { flex-direction: row; } }
+
+.card-portfolio.fifth-card a { flex-basis: calc(20% - 25px); margin-right: 25px; min-height: 100px; max-height: 100px; }
+
+@media (max-width: 799px) { .card-portfolio.fifth-card a { flex-basis: calc(50% - 25px); } }
 
 .blog-container { display: flex; flex-wrap: wrap; align-items: flex-end; margin: 100px 50px; }
 
@@ -530,7 +540,7 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 .process-container { display: flex; }
 
-.process-container h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 36px; }
+.process-container h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 32px; }
 
 .process-container .sidebar { border: 5px solid #DADADA; border-radius: 10px; max-width: 33.33%; padding: 25px 20px; margin-top: 25px; height: fit-content; }
 
@@ -564,7 +574,7 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 .examples-container .content-column { flex: 1; }
 
-.examples-container h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 36px; margin-top: 30px; margin-bottom: 15px; }
+.examples-container h3 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 32px; margin-top: 30px; margin-bottom: 15px; }
 
 .examples-container h3:first-of-type { margin-top: 0; }
 
@@ -627,7 +637,7 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
 
 @media (max-width: 799px) { .carousel-cell .carousel-content { margin-right: 0; } }
 
-.carousel-cell .carousel-content h2 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 48px; }
+.carousel-cell .carousel-content h2 { font-family: "Roboto Condensed", sans-serif; font-weight: 300; font-size: 36px; }
 
 @media (max-width: 499px) { .carousel-cell .carousel-content h2 { font-size: 24px; font-family: "Roboto", sans-serif; font-weight: 500; } }
 

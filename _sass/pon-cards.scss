@@ -164,7 +164,6 @@
 
 .card-portfolio {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: $scale-5;
@@ -174,11 +173,11 @@
   a {
     display: flex;
     flex-basis: calc(50% - #{$scale-5});
-    justify-content: space-between;
     height: 250px;
     min-height: 250px;
     max-height: 250px;
     margin-bottom: $scale-10;
+    margin-right: $scale-5;
     @media (max-width: 799px) {
       margin-left: 0 !important;
       margin-bottom: $scale-8 !important;
@@ -196,9 +195,10 @@
       object-position: 0 0;
     }
     h3 {
-      font-family: $type-display-secondary;
-      font-weight: $type-display-light;
-      font-size: $h5-font-size;
+      font-family: $type-display-main;
+      font-weight: $type-main-bold;
+      font-size: $body-font-size - 2;
+      letter-spacing: 1px;
       box-shadow: none;
       margin: 0;
     }
@@ -206,6 +206,20 @@
       @media (max-width: 599px) {
           font-size: 0;
       }
+    }
+  }
+  &.fifth-card {
+    @media (max-width: 799px) {
+      flex-direction: row;
+    }
+    a{
+      flex-basis: calc(20% - #{$scale-5});
+      @media (max-width: 799px) {
+        flex-basis: calc(50% - #{$scale-5});
+      }
+      margin-right: $scale-5;
+      min-height: 100px;
+      max-height: 100px;
     }
   }
 }

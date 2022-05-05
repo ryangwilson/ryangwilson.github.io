@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "type": "leadership",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/process-docs.webp",
+    "image": "../assets/images/portfolio-images/process-docs.jpg",
+    "project": "UX Process Documentation",
+    "deliverable": "Documentation",
+    "caption": "In support of my department and team, I create and refine documentation of our UX process to point to for direction and for others to reference as needed."
+  },
+  {
+    "id": 2,
+    "type": "leadership",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/onboarding-docs.webp",
+    "image": "../assets/images/portfolio-images/onboarding-docs.jpg",
+    "project": "UX Team Onboarding",
+    "deliverable": "Onboarding",
+    "caption": "I created and refined the onboarding processes for my UX department to get all new team members up to speed quickly and equally."
+  },
+  {
+    "id": 3,
+    "type": "leadership",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=HOwa65K0qkg?rel=0",
+    "thumb": "../assets/images/portfolio-images/style-guide-driven-dev.jpg",
+    "project": "Style Guide Driven Development",
+    "deliverable": "Training",
+    "caption": "My team and I created training videos to demonstrate and train others on our style guide-driven development process."
+  },
+  {
+    "id": 4,
+    "type": "leadership",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/ux-hiring-flow.webp",
+    "image": "../assets/images/portfolio-images/ux-hiring-flow.jpg",
+    "project": "UX Hiring Flow",
+    "deliverable": "Recruiting",
+    "caption": "I developed a hiring workflow for recruiting new UX team members and leveraged this workflow to help clients like Yum! Brands to build their UX team."
+  },
+  {
+    "id": 5,
+    "type": "leadership",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/ux-training-plan.webp",
+    "image": "../assets/images/portfolio-images/ux-training-plan.jpg",
+    "project": "UX Training Plan",
+    "deliverable": "Assessment",
+    "caption": "New hires don't come from the same backgrounds and bring the same skillsets. I developed an assessment to level set with all new hires, identifying gaps and establishing a training plan."
+  },
+  {
+    "id": 6,
+    "type": "kickoff",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/project_plan.webp",
+    "image": "../assets/images/portfolio-images/project_plan.jpg",
+    "project": "Example",
+    "deliverable": "Project Plan",
+    "caption": "I create a UX project plan for all new projects to communicate and capture stakeholder buy-in for how we will approach the work."
+  },
+  {
+    "id": 7,
+    "type": "kickoff",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/project-checklist.webp",
+    "image": "../assets/images/portfolio-images/project-checklist.jpg",
+    "project": "Project Checklist",
+    "deliverable": "Checklist",
+    "caption": "Leveraging existing resources for UI design, I developed a UX checklist to capture information in the pre-sales, contract, and kickoff phases."
+  },
+  {
+    "id": 8,
+    "type": "kickoff",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/blank-workshop-template.webp",
+    "image": "../assets/images/portfolio-images/blank-workshop-template.jpg",
+    "project": "Workshop Template",
+    "deliverable": "Template",
+    "caption": "I have found it beneficial to create and share templates with team members to have a starting point for user testing & observations,  presentations, and workshops."
+  },
+  {
+    "id": 9,
+    "type": "kickoff",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/toc.webp",
+    "image": "../assets/images/portfolio-images/toc.jpg",
+    "project": "Source of Truth",
+    "deliverable": "Table of Contents",
+    "caption": "I think that it is essential to start every project organized. A table of contents allows tracking and sharing of information in a single, bookmarkable location."
+  },
+  {
+    "id": 10,
+    "type": "kickoff",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=OnU3BiBZr7Y",
+    "thumb": "../assets/images/portfolio-images/project-review.jpg",
+    "project": "Lowe's",
+    "deliverable": "Design Review",
+    "caption": "Here you see an example of a design review for a client project produced and delivered as a video."
+  },
+  {
+    "id": 11,
+    "type": "research",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/research-notes.webp",
+    "image": "../assets/images/portfolio-images/research-notes.jpg",
+    "project": "Example",
+    "deliverable": "Research",
+    "caption": "Research comes in all shapes and sizes, but it typically starts as sketches and annotations to visualize and communicate thoughts, concepts, and direction."
+  },
+  {
+    "id": 12,
+    "type": "research",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/observation-test-planning.webp",
+    "image": "../assets/images/portfolio-images/observation-test-planning.jpg",
+    "project": "Templates",
+    "deliverable": "Observation",
+    "caption": "I have found it beneficial to create and share templates with team members to have a starting point for user testing & observations,  presentations, and workshops."
+  },
+  {
+    "id": 13,
+    "type": "research",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/persona-creation.webp",
+    "image": "../assets/images/portfolio-images/persona-creation.jpg",
+    "project": "Personas",
+    "deliverable": "Personas",
+    "caption": "Creating personas to represent your user helps communicate with stakeholders and the team details of the intended audience."
+  },
+  {
+    "id": 14,
+    "type": "research",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/sketching-wireframes.webp",
+    "image": "../assets/images/portfolio-images/sketching-wireframes.jpg",
+    "project": "Sketching",
+    "deliverable": "Sketching",
+    "caption": "I believe in 'ugly first' - focus on layout and functionality first. This is the time to ideate, fail, problem solve, and iterate."
+  },
+  {
+    "id": 15,
+    "type": "research",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/digital-wireframes.webp",
+    "image": "../assets/images/portfolio-images/digital-wireframes.jpg",
+    "project": "Wireframes",
+    "deliverable": "Wireframes",
+    "caption": "Once you have a solid sketch concept in place, it is time to create quick, simple digital wireframes to use to build testable prototypes."
+  },
+  {
+    "id": 16,
+    "type": "ui",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/assembly-label.webp",
+    "image": "../assets/images/portfolio-images/assembly-label.jpg",
+    "project": "Mockups",
+    "deliverable": "Mockup",
+    "caption": "I like to create video mockups to communicate to the stakeholder and my developers the product's vision."
+  },
+  {
+    "id": 17,
+    "type": "ui",
+    "flag": "",
+    "webpimage": "../assets/images/portfolio-images/mockups-lowes.webp",
+    "image": "../assets/images/portfolio-images/mockups-lowes.jpg",
+    "project": "Mockups",
+    "deliverable": "Mockup",
+    "caption": "Mockups increase from low to high fidelity the more you prove the interaction design is solid. Leveraging a design system helps to expedite this process."
+  },
+  {
+    "id": 18,
+    "type": "ui",
+    "flag": "",
+    "extra-class": "blur-image",
+    "webpimage": "../assets/images/portfolio-images/yum-pos-blur.webp",
+    "image": "../assets/images/portfolio-images/yum-pos-blur.jpg",
+    "project": "Axure Prototype",
+    "deliverable": "Prototype",
+    "caption": "I prefer to create prototypes using Axure. Axure is a powerful tool that allows for the simulation of input fields, leverages actual product data, and provides the user an experience more similar to the final environment."
+  },
+  {
+    "id": 19,
+    "type": "ui",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=9yJAbUrUcUY?rel=0",
+    "thumb": "../assets/images/portfolio-images/paper-user-test.jpg",
+    "project": "Paper Prototype",
+    "deliverable": "User Testing",
+    "caption": "Paper prototyping speeds up the time to get a concept in front of users."
+  },
+  {
+    "id": 20,
+    "type": "ui",
+    "flag": "video",
+    "video": "https://www.youtube.com/watch?v=F7tNO4mOtBc?rel=0",
+    "thumb": "../assets/images/portfolio-images/user-test-cb.jpg",
+    "project": "Axure Prototypes",
+    "deliverable": "User Testing",
+    "caption": "Recording user tests is an excellent way to capture feedback while focusing on the user. I will create highlight clips from the recordings to share and communicate with stakeholders."
+  }
+
+]
