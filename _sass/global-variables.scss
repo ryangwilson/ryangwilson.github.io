@@ -1,6 +1,14 @@
 // master-variables.scss
 // Details about what this is...
-
+html {
+    scroll-behavior: smooth;
+}
+:target:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
 // ** PRIMARY COLORS ---------------------------------------------------
 $primary-00: hsla(47, 100%, 52%, 1);
 $secondary-00: hsla(177, 68%, 49%, 1);
@@ -151,8 +159,8 @@ $type-code: 'PT Mono', monospace;
 // ** ALL TYPE SIZING ---------------------------------------------------
 $h1-font-size: 32px;
 $h2-font-size: 60px;
-$h3-font-size: 48px;
-$h4-font-size: 36px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
 $h5-font-size: 24px;
 $h6-font-size: 21px;
 $body-font-size: 18px;

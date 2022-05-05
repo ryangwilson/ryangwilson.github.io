@@ -8,21 +8,6 @@
       <section>
         <div class="flex-three-col">
           <div class="col-left">
-              <h3>{{ page.sidebar-title01 }}</h3>
-              {% for education in site.data.education %}
-              <p><b>{{ education.degree }}</b></br>
-              {{ education.location }} {{ education.date }}
-              {% if education.paper %}
-              <br>{{ education.paper }}
-              {% endif %}
-              </p>
-              {% endfor %}
-              <h3>{{ page.sidebar-title02 }}</h3>
-              {% for projects in site.data.projects %}
-              <p><a href="{{ projects.link }}">{{ projects.title }}</a></p>
-              {% endfor %}
-          </div>
-          <div class="col-center">
             <h3>{{ page.sidebar-title03 }}</h3>
             {% for experience in site.data.experience %}
               <p><b>{{ experience.title }}</b></br>
@@ -30,13 +15,24 @@
               {{ experience.dates }}</p>
             {% endfor %}
           </div>
-          <div class="col-right">
+          <div class="col-center">
             <h3>{{ page.sidebar-title04 }}</h3>
             {% for expertise in site.data.expertise %}
               <p><b>{{ expertise.title }}</b></br>
               {{ expertise.details }}</p>
             {% endfor %}
           </div>
+          <div class="col-right">
+            <h3>{{ page.sidebar-title01 }}</h3>
+            {% for education in site.data.education %}
+            <p><b>{{ education.degree }}</b></br>
+            {{ education.location }} {{ education.date }}
+            {% if education.paper %}
+            <br>{{ education.paper }}
+            {% endif %}
+            </p>
+            {% endfor %}
+        </div>
         </div>
         <div class="details">
           <p>Download PDFs of my resume and references:</p>

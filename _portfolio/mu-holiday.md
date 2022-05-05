@@ -3,7 +3,7 @@ layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: motion
 title: Marshall University, School of Art & Design
-project: Marshall University
+project: Display
 role: Motion Designer
 client: Marshall University, School of Art & Design
 under: Marshall University, School of Art & Design

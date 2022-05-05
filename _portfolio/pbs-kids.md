@@ -1,9 +1,9 @@
 ---
 layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
-type: graphic motion
+type: graphic
 title: PBS Kids
-project: PBS Kids
+project: Presentation
 role: Graphic Designer, Motion Designer
 client: PBS Kids
 under: PBS Kids

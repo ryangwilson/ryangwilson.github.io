@@ -3,7 +3,7 @@ layout: single-template
 meta: Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.
 type: graphic
 title: Student Workshop Poster
-project: Student Workshop Poster
+project: Poster
 role: Graphic Designer
 client: Iowa State University College of Design
 under: Self

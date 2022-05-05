@@ -12,28 +12,209 @@
             </picture>
             <figcaption>
                 <h3>{{ example.project }}</h3>
-                <p>Role: {{ example.role }}</p>
+                <p>{{ example.role }}</p>
             </figcaption>
         </figure>
     </a>
     {% endfor %}
 </div>
 {% else %}
+<h2>Deliverable Examples</h2>
+<p>{{ page.deliverables }}</p>
+<h3 id="leadership">Leadership & Mentorship</h3>
+<div class="card-portfolio fifth-card">
+    {% for visuals in site.data.visuals | type:"userflow" %}
+        {% if visuals.type == "leadership" and visuals.flag == "video" %}
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
+            <figure>
+                <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% elsif visuals.type == "leadership" and visuals.flag == "" %}      
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.image }}">
+            <figure>
+                <picture>
+                    <source srcset="{{ visuals.webpimage }}" type="image/webp">
+                    <source srcset="{{ visuals.image }}" type="image/jpeg"> 
+                    <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                </picture>
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<h3 id="process">Project Kickoff</h3>
+<div class="card-portfolio fifth-card">
+    {% for visuals in site.data.visuals | type:"userflow" %}
+        {% if visuals.type == "kickoff" and visuals.flag == "video" %}
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
+            <figure>
+                <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% elsif visuals.type == "kickoff" and visuals.flag == "" %}      
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.image }}">
+            <figure>
+                <picture>
+                    <source srcset="{{ visuals.webpimage }}" type="image/webp">
+                    <source srcset="{{ visuals.image }}" type="image/jpeg"> 
+                    <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                </picture>
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<h3 id="product">Research & Design</h3>
+<div class="card-portfolio fifth-card">
+    {% for visuals in site.data.visuals | type:"userflow" %}
+        {% if visuals.type == "research" and visuals.flag == "video" %}
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
+            <figure>
+                <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% elsif visuals.type == "research" and visuals.flag == "" %}      
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.image }}">
+            <figure>
+                <picture>
+                    <source srcset="{{ visuals.webpimage }}" type="image/webp">
+                    <source srcset="{{ visuals.image }}" type="image/jpeg"> 
+                    <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                </picture>
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<h3 id="ui">Mockups & Prototypes</h3>
+<div class="card-portfolio fifth-card">
+    {% for visuals in site.data.visuals | type:"userflow" %}
+        {% if visuals.type == "ui" and visuals.flag == "video" %}
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
+            <figure>
+                <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% elsif visuals.type == "ui" and visuals.flag == "" %}      
+        <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.image }}">
+            <figure>
+                <picture>
+                    <source srcset="{{ visuals.webpimage }}" type="image/webp">
+                    <source srcset="{{ visuals.image }}" type="image/jpeg"> 
+                    <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
+                </picture>
+                <figcaption>
+                    <h3>{{ visuals.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+    
+<h2 id="casestudies">UX Case Studies</h2>
+<p>{{ page.casestudies }}</p>
 <div class="card-portfolio">
     {% for example in example %}
-    <a href="{{ example.url }}" class="{{ example.type }}">
-        <figure>
-            <picture>
-                <source srcset="../assets/images/portfolio-images/{{ example.webpcollection-image}}" type="image/webp">
-                <source srcset="../assets/images/portfolio-images/{{ example.collection-image}}" type="image/jpeg"> 
-                <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
-            </picture>
-            <figcaption>
-                <h3>{{ example.project }}</h3>
-                <p>Role: {{ example.role }}</p>
-            </figcaption>
-        </figure>
-    </a>
+        {% if example.type == "product" %}
+        <a href="{{ example.url }}" class="{{ example.type }}">
+            <figure>
+                <picture>
+                    <source srcset="../assets/images/portfolio-images/{{ example.webpcollection-image}}" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/{{ example.collection-image}}" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
+                </picture>
+                <figcaption>
+                    <h3>{{ example.project }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+<hr/>
+<br/><br/>
+<p>{{ page.otherthings }}</p>
+<br/>
+<h2 id="graphic">Graphic Design</h2>
+<div class="card-portfolio fifth-card">
+    {% for graphicmotion in site.data.graphicmotion | type:"graphic" %}
+        {% if graphicmotion.type == "graphic" and graphicmotion.flag == "video" %}
+        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.video }}">
+            <figure>
+                <img src="{{ graphicmotion.thumb }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
+                <figcaption>
+                    <h3>{{ graphicmotion.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% elsif graphicmotion.type == "graphic" and graphicmotion.flag == "" %}      
+        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.image }}">
+            <figure>
+                <picture>
+                    <source srcset="{{ graphicmotion.webpimage }}" type="image/webp">
+                    <source srcset="{{ graphicmotion.image }}" type="image/jpeg"> 
+                    <img src="{{ graphicmotion.image }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
+                </picture>
+                <figcaption>
+                    <h3>{{ graphicmotion.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+<h2 id="motion">Motion Graphics</h2>
+<div class="card-portfolio fifth-card">
+    {% for graphicmotion in site.data.graphicmotion | type:"motion" %}
+        {% if graphicmotion.type == "motion" and graphicmotion.flag == "video" %}
+        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.video }}">
+            <figure>
+                <img src="{{ graphicmotion.thumb }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
+                <figcaption>
+                    <h3>{{ graphicmotion.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% elsif graphicmotion.type == "motion" and graphicmotion.flag == "" %}      
+        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.image }}">
+            <figure>
+                <picture>
+                    <source srcset="{{ graphicmotion.webpimage }}" type="image/webp">
+                    <source srcset="{{ graphicmotion.image }}" type="image/jpeg"> 
+                    <img src="{{ graphicmotion.image }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
+                </picture>
+                <figcaption>
+                    <h3>{{ graphicmotion.deliverable }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
     {% endfor %}
 </div>
 {% endif %}

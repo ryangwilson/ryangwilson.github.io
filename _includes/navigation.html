@@ -9,7 +9,7 @@
   </a>
   <nav id="masternav">
   {% for navigation in site.data.navigation %}
-    <a href="{{ navigation.url }}" class="{% if navigation.url == page.url %}active{% endif %}{% if page.url == '/' and navigation.url == '/projects/' %} badge-animation{% endif %}{% if navigation.url == '/projects/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}">{{ navigation.title }}</a>
+    <a href="{{ navigation.url }}" class="{% if navigation.url == page.url %}active{% endif %}{% if page.url == '/' and navigation.url == '/work/' %} badge-animation{% endif %}{% if navigation.url == '/work/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}">{{ navigation.title }}</a>
   {% endfor %}
   </nav>
 </header>

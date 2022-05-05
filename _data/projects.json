@@ -1,14 +1,14 @@
 [
     {
         "title": "Product Design",
-        "link": "/projects/?display=product"
+        "link": "/work/?display=product"
     },
     {
         "title": "Graphic Design",
-        "link": "/projects/?display=graphic"
+        "link": "/work/?display=graphic"
     },
     {
         "title": "2D & 3D Animation",
-        "link": "/projects/?display=motion"
+        "link": "/work/?display=motion"
     }
 ]
