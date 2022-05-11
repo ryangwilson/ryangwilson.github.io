@@ -6,12 +6,7 @@
     <main>
       {% include card-dark.html %}
       <section>
-        {% if page.url == '/work/' %}
           {% include portfolio.html %}
-        {% endif %}
-        {% if page.url == '/art/' %}
-          {% include art.html %}
-        {% endif %}
       </section>
     </main>
     {% include footer.html %}
