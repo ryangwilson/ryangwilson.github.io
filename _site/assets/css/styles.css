@@ -663,6 +663,8 @@ section .flex-three-col .col-right { flex: 1; padding: 0 0 0 25px; }
   25% { opacity: 0; }
   100% { opacity: 1; } }
 
+.fancybox__caption { max-width: 960px; }
+
 .nl-form { padding: 50px 50px 0; margin: 25px 0 50px; border: 5px solid #DADADA; border-radius: 10px; width: fit-content; }
 
 @media (max-width: 545px) { .nl-form { padding: 25px; margin: 0; } }
