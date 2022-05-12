@@ -7,5 +7,6 @@ subtitle: Let's Talk!
 card-content: Unfortunately, I have reached my capacity for contract work.<br><br> If you want to reach out to me for other opportunities or talk about a mentorship, <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noreferrer" style="color:white;">please send me a direct message on LinkedIn</a>.
 main-section-title:
 sidebar-title01: Social Media
-sidebar-title02: 
+sidebar-title02: Work Examples
+work-link: For more examples, <a href="work/">please visit my Work page</a>.
 ---
