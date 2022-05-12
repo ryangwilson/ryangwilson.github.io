@@ -18,6 +18,25 @@
     </a>
     {% endfor %}
 </div>
+{% elsif page.url == '/contact/' %}
+<div class="card-portfolio">
+    {% assign contact_page = example | where: "type", "product" %}
+    {% for example in contact_page | limit:2 %}
+    <a href="{{ example.url }}" class="{{ example.type }}">
+        <figure>
+            <picture>
+                <source srcset="../assets/images/portfolio-images/{{ example.webpcollection-image}}" type="image/webp">
+                <source srcset="../assets/images/portfolio-images/{{ example.collection-image}}" type="image/jpeg"> 
+                <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
+            </picture>
+            <figcaption>
+                <h3>{{ example.project }}</h3>
+                <p>{{ example.role }}</p>
+            </figcaption>
+        </figure>
+    </a>
+    {% endfor %}
+</div>
 {% else %}
 <p>{{ page.content-01a }}</p>
 <p>{{ page.content-01b }}</p>

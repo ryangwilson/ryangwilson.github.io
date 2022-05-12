@@ -7,17 +7,17 @@
   <main>
     {% include card-dark.html %}
     <section style="margin-top: 50px">
-      {{ page.content }}
-      <div class="flex-three-col">
-        <div class="col-left">
-          <h3>{{ page.sidebar-title01 }}</h3>
-          <div class="card-container">
-            {% for subnav in site.data.subnav %}
-            <a class="btn {{ subnav.priority }} svg-after" href="{{ subnav.url }}" target="_blank" rel="noopener">{{ subnav.title }} <i data-feather="{{ subnav.icon }}"></i></a>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
+      <h2>{{ page.sidebar-title01 }}</h2>
+      <div class="card-container">
+        {% for subnav in site.data.subnav %}
+        <a class="btn {{ subnav.priority }} svg-after" href="{{ subnav.url }}" target="_blank" rel="noopener">{{ subnav.title }} <i data-feather="{{ subnav.icon }}"></i></a>
+        {% endfor %}
+    </section>
+    <hr>
+    <section>
+      <h2>{{ page.sidebar-title02 }}</h2>
+      <p>{{ page.work-link }}</p>
+      {% include portfolio.html %}
     </section>
   </main>
   {% include footer.html %}
