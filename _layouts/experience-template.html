@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   {% include head.html %}
-  <body>
+  <body class="">
     {% include navigation.html %}
     <main>
       {% include card-dark.html %}
@@ -9,6 +9,9 @@
         <div class="flex-three-col">
           <div class="col-left">
             <h3>{{ page.sidebar-title03 }}</h3>
+            <div class="details">
+              <a class="btn primary svg-after" href="../{{ page.button01-link }}" target="_blank" rel="noopener">{{ page.button01-title }} <i data-feather="{{ page.button01-icon }}"></i></a>
+            </div>
             {% for experience in site.data.experience %}
               <p><b>{{ experience.title }}</b></br>
               {{ experience.company }}</br>
@@ -34,10 +37,6 @@
             {% endfor %}
           </div>
           <p><i>{{ page.overview }}</i></p>
-        </div>
-        <div class="details">
-          <p>Download a PDF of my resume:</p>
-          <a class="btn primary svg-after" href="../{{ page.button01-link }}" target="_blank" rel="noopener">{{ page.button01-title }} <i data-feather="{{ page.button01-icon }}"></i></a>
         </div>
       </section>
     </main>
