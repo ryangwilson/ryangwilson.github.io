@@ -54,7 +54,7 @@ del, s { text-decoration: line-through; }
 
 q, blockquote p { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300; font-style: italic; text-transform: none; color: #232323; line-height: 1.8; }
 
-q:before, q:after, blockquote p:before, blockquote p:after { position: relative; font-family: 'PT Mono'; font-size: 36px; line-height: 0; top: 18px; color: #A0A0A0; }
+q:before, q:after, blockquote p:before, blockquote p:after { position: relative; font-family: 'PT Mono'; font-size: 36px; line-height: 0; top: 10px; color: #A0A0A0; }
 
 cite { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 500; font-style: normal; text-transform: none; color: #232323; }
 
