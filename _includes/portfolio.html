@@ -40,7 +40,32 @@
 {% else %}
 <p>{{ page.content-01a }}</p>
 <p>{{ page.content-01b }}</p>
-<h2>Deliverable Examples</h2>
+
+<h2 id="casestudies">UX Case Studies</h2>
+<p>{{ page.casestudies }}</p>
+<div class="card-portfolio">
+    {% for example in example %}
+        {% if example.type == "product" %}
+        <a href="{{ example.url }}" class="{{ example.type }}">
+            <figure>
+                <picture>
+                    <source srcset="../assets/images/portfolio-images/{{ example.webpcollection-image}}" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/{{ example.collection-image}}" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
+                </picture>
+                <figcaption>
+                    <h3>{{ example.project }}</h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<hr/>
+<br/><br/>
+
+<h2 id="deliverables">Deliverable Examples</h2>
 <p>{{ page.deliverables }}</p>
 <h3 id="leadership">Leadership & Mentorship</h3>
 <div class="card-portfolio fifth-card">
@@ -158,84 +183,6 @@
     {% endfor %}
 </div>
     
-<h2 id="casestudies">UX Case Studies</h2>
-<p>{{ page.casestudies }}</p>
-<div class="card-portfolio">
-    {% for example in example %}
-        {% if example.type == "product" %}
-        <a href="{{ example.url }}" class="{{ example.type }}">
-            <figure>
-                <picture>
-                    <source srcset="../assets/images/portfolio-images/{{ example.webpcollection-image}}" type="image/webp">
-                    <source srcset="../assets/images/portfolio-images/{{ example.collection-image}}" type="image/jpeg"> 
-                    <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
-                </picture>
-                <figcaption>
-                    <h3>{{ example.project }}</h3>
-                </figcaption>
-            </figure>
-        </a>
-        {% endif %}
-    {% endfor %}
-</div>
-<hr/>
-<br/><br/>
 <p>{{ page.otherthings }}</p>
-<br/>
-<h2 id="graphic">Graphic Design</h2>
-<div class="card-portfolio fifth-card">
-    {% for graphicmotion in site.data.graphicmotion | type:"graphic" %}
-        {% if graphicmotion.type == "graphic" and graphicmotion.flag == "video" %}
-        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.video }}">
-            <figure>
-                <img src="{{ graphicmotion.thumb }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
-                <figcaption>
-                    <h3>{{ graphicmotion.deliverable }}</h3>
-                </figcaption>
-            </figure>
-        </a>
-        {% elsif graphicmotion.type == "graphic" and graphicmotion.flag == "" %}      
-        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.image }}">
-            <figure>
-                <picture>
-                    <source srcset="{{ graphicmotion.webpimage }}" type="image/webp">
-                    <source srcset="{{ graphicmotion.image }}" type="image/jpeg"> 
-                    <img src="{{ graphicmotion.image }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
-                </picture>
-                <figcaption>
-                    <h3>{{ graphicmotion.deliverable }}</h3>
-                </figcaption>
-            </figure>
-        </a>
-        {% endif %}
-    {% endfor %}
-</div>
-<h2 id="motion">Motion Graphics</h2>
-<div class="card-portfolio fifth-card">
-    {% for graphicmotion in site.data.graphicmotion | type:"motion" %}
-        {% if graphicmotion.type == "motion" and graphicmotion.flag == "video" %}
-        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.video }}">
-            <figure>
-                <img src="{{ graphicmotion.thumb }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
-                <figcaption>
-                    <h3>{{ graphicmotion.deliverable }}</h3>
-                </figcaption>
-            </figure>
-        </a>
-        {% elsif graphicmotion.type == "motion" and graphicmotion.flag == "" %}      
-        <a data-fancybox="gallery-{{ graphicmotion.type }}" data-caption="{{ graphicmotion.project }}: {{ graphicmotion.caption }}" href="{{ graphicmotion.image }}">
-            <figure>
-                <picture>
-                    <source srcset="{{ graphicmotion.webpimage }}" type="image/webp">
-                    <source srcset="{{ graphicmotion.image }}" type="image/jpeg"> 
-                    <img src="{{ graphicmotion.image }}" alt="Image of {{ graphicmotion.type }} for {{ graphicmotion.project }}">
-                </picture>
-                <figcaption>
-                    <h3>{{ graphicmotion.deliverable }}</h3>
-                </figcaption>
-            </figure>
-        </a>
-        {% endif %}
-    {% endfor %}
-</div>
+
 {% endif %}
