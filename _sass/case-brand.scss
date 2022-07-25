@@ -83,7 +83,8 @@
 }
 
 #mainCarousel {
-  min-width: 460px;
+  aspect-ratio: 16 / 9;
+  min-width: 290px;
   max-width: 760px;
   max-height: 250px;
   width: 100%;
