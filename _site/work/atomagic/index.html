@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>AtoMagic Figma Plug-In</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/images/favicons/site.webmanifest">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind('[data-fancybox]', {
+        Toolbar: false,
+      closeButton: "top",
+      Image: {
+        Panzoom: {
+            maxScale: function () {
+          return 1;
+          },
+        },
+      },
+      Thumbs: {
+        Carousel: {
+          fill: false,
+          center: true
+        },
+      },
+    });
+  </script>
+    
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- RANDOM TESTIMONIAL -->
+  <script src="../../assets/js/testimonials.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9RYVMFSV7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-X9RYVMFSV7');
+  </script>
+  <!-- Hotjar Tracking Code for www.ryangwilson.com -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2540690,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+</head>
+
+  <body class="nested-page">
+    <header id="masterhead">
+  <a href="/" class="branding"><h1><span>Ryan G<i>.</i> Wilson</span> UX Leader</h1></a>
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
+    <a href="/" class="">About</a>
+  
+    <a href="/experience/" class="">Experience</a>
+  
+    <a href="/work/" class=" nested">Work</a>
+  
+    <a href="/contact/" class=" contact">Contact</a>
+  
+  </nav>
+</header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
+
+    <main class="cs-container atomagic">
+      <div class="card-dark case-study">
+        <h2>Figma Plug-In</h2>
+        <h3>AtoMagic</h3>
+        <p>A Figma plug-in that automates HTML/CSS style guides</p>
+        <picture>
+          <source srcset="../../assets/images/portfolio-images/atomagic-hero.webp" type="image/webp">
+          <source srcset="../../assets/images/portfolio-images/atomagic-hero.png" type="image/png"> 
+          <img src="../../assets/images/portfolio-images/atomagic-hero.png" alt="Hosted style guide hero image for Figma Plug-In">
+        </picture>
+      </div>
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / Figma Plug-In 
+        </div>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../johnsonandjohnson" title="J&J Support App"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../kroger" title="Kroger Build v Buy"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
+      <section>
+        <h3>Overview</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>One problem I've always wanted to solve since I started designing websites in the 1990s was to reduce the work for visual designers. I have always wanted to figure out a method to get the style guide information out of the design tool and automatically generate a living style guide - AND - for the design program to update the style guide automatically when there is an update to the design file. Enter AtoMagic.<br> <br>Working with a Developer friend, I was able to create a plugin that begins to automate style guides.</p>
+          </div>
+          <div class="col-right">
+            <h4>Role</h4>
+            <p>Product Owner, Product Designer</p>
+            <h4>Scope</h4>
+            <p>One Year</p>
+            <h4>Tools</h4>
+            <p>Research, User Testing, Figma, Documentation</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Approach</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Problem Statement</h4>
+            <p>Creating and maintaining an HTML and CSS style guide for each project is a repetitive and time-consuming task. However, a living style guide is valuable as a source of truth for the project and a hand-off tool for developers. Many newer visual designers are coming into the practice without a background in front-end code. Automating style guides from a design file alleviates the need for a web, visual, or UX designer to create and maintain a style guide and removes the need to know how to write HTML or CSS.</p>
+          </div>
+          <div class="col-right">
+            <div id="mainCarousel" class="carousel">
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/atomagic-wireframe.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Figma Plug-In: Early wireframe concept"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/atomagic-wireframe.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/atomagic-wireframe.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/atomagic-wireframe.jpg" alt=" example image for Figma Plug-In">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/atomagic-components-as-vars.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Figma Plug-In: Early component POC testing"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/atomagic-components-as-vars.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/atomagic-components-as-vars.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/atomagic-components-as-vars.jpg" alt=" example image for Figma Plug-In">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/atomagic-figma-styles.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Figma Plug-In: Early styles POC testing"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/atomagic-figma-styles.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/atomagic-figma-styles.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/atomagic-figma-styles.jpg" alt=" example image for Figma Plug-In">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/atomagic-overview.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Figma Plug-In: Functioning Figma style guide"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/atomagic-overview.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/atomagic-overview.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/atomagic-overview.jpg" alt=" example image for Figma Plug-In">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/atomagic-plugin-flow.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Figma Plug-In: Plugin user flow"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/atomagic-plugin-flow.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/atomagic-plugin-flow.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/atomagic-plugin-flow.jpg" alt=" example image for Figma Plug-In">
+                </picture>
+              </div>
+              
+            </div>
+            
+
+          </div>
+        </div>
+        <h4>Goals</h4>
+        <ul><li>Create Figma plugin that allows visual designers will little to no experience with code to create and update a living style guide simply by modifying their Figma design file</li><li>Make the style guide generation and update process easy to use for an audience not familiar with development tools</li><li>Create an experience for advanced visual designers - those who are familiar with code - that is equally enjoyable and valuable</li><li>Launch the AtoMagic Plug-in to the Figma Community</li></ul>
+      </section>
+      <section>
+        <h3>Process</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>Automating the style guides from a design file was a problem I had been thinking about for about twenty years. I had tried to find solutions during that time, but tooling was always the limitation. So when I started using Figma, I saw a potential answer.<br> <br>I have over 25 years of experience with web design - writing HTML and CSS and style guide best practices. I follow Brad Frost's Atomic Design methodology, so I saw that the MVP for the plugin would need only to utilize base-level Atoms of design.<br> <br>I created mockups in Figma for the elements I intended to target in the living style guide. Then I made a static HTML and CSS style guide in parity with the mockup layout in Figma. With these two files, the Figma design file and the living style guide, I could visually communicate what I wanted to achieve with a plugin.<br> <br>Consulting with a Developer friend, we began researching the Figma API to see what was possible, what we could control, and what would not be possible now. Then, using the files I created, my friend could wire up a functional proof of concept. Using this POC I ran two rounds of user testing with users familiar with using Figma.</p>
+          </div>
+          <div class="col-right">
+            <ul><li>Research</li><li>User Flows</li><li>Sketches</li><li>Wireframes</li><li>Proof of concept</li><li>User Testing</li></ul>
+          </div>
+        </div>
+        
+        <div class="single-col">
+          <h4>Findings</h4>
+          <p>The results of the testing were very positive. In both testing rounds, all users could complete all tasks. After testing, the users with web design backgrounds commented that they couldn't wait to get their hands on a copy. There is a unique need for a product like this for users who don't want to create their project style guides manually. And for users who don't know how to code, they can now provide a living style guide to engineers without needing to know code.</p>
+        </div>
+        
+        <div class="card-portfolio fifth-card">
+          
+          <a data-fancybox="gallery-process" data-caption="Figma Plug-In: Plugin mockups" href="../../assets/images/portfolio-images/atomagic-mocks.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/atomagic-mocks.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/atomagic-mocks.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/atomagic-mocks.jpg" alt="Plugin mockups example image for Figma Plug-In">
+              </picture>
+              <figcaption>
+                <h3>Plugin mockups</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Figma Plug-In: Side-by-side demo" href="../../assets/images/portfolio-images/automagic-demo-02.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-02.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-02.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/automagic-demo-02.jpg" alt="Side-by-side demo example image for Figma Plug-In">
+              </picture>
+              <figcaption>
+                <h3>Side-by-side demo</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Figma Plug-In: Side-by-side demo" href="../../assets/images/portfolio-images/automagic-demo-03.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-03.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-03.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/automagic-demo-03.jpg" alt="Side-by-side demo example image for Figma Plug-In">
+              </picture>
+              <figcaption>
+                <h3>Side-by-side demo</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Figma Plug-In: Side-by-side demo" href="../../assets/images/portfolio-images/automagic-demo-04.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-04.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-04.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/automagic-demo-04.jpg" alt="Side-by-side demo example image for Figma Plug-In">
+              </picture>
+              <figcaption>
+                <h3>Side-by-side demo</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Figma Plug-In: Side-by-side demo" href="../../assets/images/portfolio-images/automagic-demo-05.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-05.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/automagic-demo-05.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/automagic-demo-05.jpg" alt="Side-by-side demo example image for Figma Plug-In">
+              </picture>
+              <figcaption>
+                <h3>Side-by-side demo</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+        </div>
+      </section>
+      <section class="solution-section">
+        <h3>Solution</h3>
+          
+            <p>The Figma plugin, AtoMagic, is currently in development, and I hope to have it live in the Figma Community later this year. While still in development, I have identified the need for a product that can automatically generate and maintain a living style guide from a Figma design file. I am very proud of the upcoming MVP.<br> <br><u>Sidenote</u> – The etymology of the name comes from "Atom", The smallest building block matter. In relation to HTML, atoms are base-level tags as laid out in Brad Frost's Atomic Design &plus; "Magic", wondrous happenstance that surprises and delights, also similar to "Automatic", Happens without direct interaction = "AtoMagic".</p>
+          
+          
+          
+              <iframe src="https://www.youtube.com/embed/UmTLQWT8ny8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          
+      </section>
+      <section>
+        <h3>Impact</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Results</h4>
+            <p>I have created the ability to control a living HTML/CSS style guide from a Figma design file. As you change and update your baseline styles like color, typography, scale, and border, the plugin communicates with the hosted living style guide in real-time, allowing you to see changes in the style guide within seconds.</p>
+          </div>
+          <div class="col-right">
+            <h4>Achievements</h4>
+            <ul><li>Was able to find a solution to a problem I have been trying to tackle for over 20 years</li><li>The product has been impressive to everyone that I have demoed it to</li><li>I have had multiple users from the tests that I ran reach out and let me know they are eager for AtoMagic to be available</li></ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Takeaways</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <h4>What would I do differently?</h4>
+            <p>I was a late adopter of Figma. When Figma first came out, I did not immediately see the value of a web-based design tool. I wish that I had engaged with Figma earlier. If I had, I think I would have identified this solution sooner, and the plugin would have been in the Figma Community already.</p>
+            
+          <h4>How did I grow?</h4>
+            <p>One of the lessons from this project is that, no matter how long you have been trying to approach a problem, don't give up. AtoMagic wasn't possible until the tooling allowed for it. So if I had given up on the idea when there was no solution in 1997, 2002, or 2007, ... I wouldn't be building towards a product that I'm proud of today.</p>
+          </div>
+          <div class="col-right card-container">
+            <a href="" target="_blank" class="reference-card single" testimonial="topic:dev">
+              <q class="quote"></q>
+              <div class="image-title">
+                <picture>
+                  <source class="webpimage" srcset="../../assets/images/testimonial-images/" type="image/webp">
+                  <source class="image" srcset="../../assets/images/testimonial-images/" type="image/jpeg"> 
+                  <img src="../../assets/images/testimonial-images/" alt="Image of ">
+                </picture>
+                <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+      </section>
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / Figma Plug-In 
+        </div>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../johnsonandjohnson" title="J&J Support App"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../kroger" title="Kroger Build v Buy"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
+    </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
+    <script>
+      // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+      Dots: true,
+    });
+    </script>
+    <footer>
+  <nav>
+    <div class="footer-nav">
+      
+      <a href="/" class="">About</a>
+      
+      <a href="/experience/" class="">Experience</a>
+      
+      <a href="/work/" class=" nested">Work</a>
+      
+      <a href="/contact/" class=" contact">Contact</a>
+      
+    </div>
+    <div class="subnav">
+      
+      <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noopener">LinkedIn</a>
+      
+      <a href="https://medium.com/@ryangwilson" target="_blank" rel="noopener">Medium</a>
+      
+      <a href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen</a>
+      
+      <a href="https://github.com/ryangwilson" target="_blank" rel="noopener">GitHub</a>
+      
+      <a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank" rel="noopener">YouTube</a>
+      
+    </div>
+  </nav>
+  <p>© Ryan G. Wilson, 1978‑<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+  </span></p>
+</footer>
+<script>
+  feather.replace()
+</script>
+<!--  -->
+
+  </body>
+</html>

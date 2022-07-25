@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Yum! Brands Point of Sale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/images/favicons/site.webmanifest">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind('[data-fancybox]', {
+        Toolbar: false,
+      closeButton: "top",
+      Image: {
+        Panzoom: {
+            maxScale: function () {
+          return 1;
+          },
+        },
+      },
+      Thumbs: {
+        Carousel: {
+          fill: false,
+          center: true
+        },
+      },
+    });
+  </script>
+    
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- RANDOM TESTIMONIAL -->
+  <script src="../../assets/js/testimonials.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9RYVMFSV7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-X9RYVMFSV7');
+  </script>
+  <!-- Hotjar Tracking Code for www.ryangwilson.com -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2540690,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+</head>
+
+  <body class="nested-page">
+    <header id="masterhead">
+  <a href="/" class="branding"><h1><span>Ryan G<i>.</i> Wilson</span> UX Leader</h1></a>
+  <span class="sr-only">Toggle main menu</span>
+  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <nav id="masternav">
+  
+    <a href="/" class="">About</a>
+  
+    <a href="/experience/" class="">Experience</a>
+  
+    <a href="/work/" class=" nested">Work</a>
+  
+    <a href="/contact/" class=" contact">Contact</a>
+  
+  </nav>
+</header>
+<script>
+  var menuToggle = document.querySelector('.menu-toggle');
+menuToggle.onclick = function() {
+  menuToggle.classList.toggle('open');
+  document.querySelector('#masternav').classList.toggle('open');
+}
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#masternav').classList.remove('open');
+    document.querySelector('.menu-toggle').classList.remove('open');
+    document.querySelector('#masterhead').classList.remove('mobile-menu');
+  } else {
+    document.querySelector('#masterhead').classList.add('mobile-menu');
+  }
+}
+var x = window.matchMedia("(min-width: 699px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+</script>
+
+    <main class="cs-container taco">
+      <div class="card-dark case-study">
+        <h2>Point of Sale</h2>
+        <h3>Yum! Brands</h3>
+        <p>Supporting team members in the creation of a POS tool</p>
+        <picture>
+          <source srcset="../../assets/images/portfolio-images/yum-pos-hero.webp" type="image/webp">
+          <source srcset="../../assets/images/portfolio-images/yum-pos-hero.png" type="image/png"> 
+          <img src="../../assets/images/portfolio-images/yum-pos-hero.png" alt="POS user test screen in mockup hero image for Point of Sale">
+        </picture>
+      </div>
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / Point of Sale 
+        </div>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../yum-tax" title="Yum! Brands Tax Tool"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../yum" title="Yum! Brands MMT"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
+      <section>
+        <h3>Overview</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>Yum! Brands was building a next-generation Point of Sale (POS) system in partnership with Taco Bell. I was mentoring the Yum! mid-level UX Designer who was working on the POS team. I worked with the team member to review their work and provided feedback. When it came time to start user testing, we worked together to create the task list users would perform.</p>
+          </div>
+          <div class="col-right">
+            <h4>Role</h4>
+            <p>UX Designer</p>
+            <h4>Scope</h4>
+            <p>Six Weeks</p>
+            <h4>Tools</h4>
+            <p>Research, Documentation, User Testing, Sketching, Sketch, Axure</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Approach</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Problem Statement</h4>
+            <p>A team member needed support reviewing work, providing feedback, planning to test, building an advanced prototype, and running and reporting on user tests.</p>
+          </div>
+          <div class="col-right">
+            <div id="mainCarousel" class="carousel">
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/yum-pos-example-01.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Point of Sale: Interaction recommendation"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-01.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-01.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/yum-pos-example-01.jpg" alt=" example image for Point of Sale">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/yum-pos-example-02.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Point of Sale: Interaction recommendation"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-02.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-02.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/yum-pos-example-02.jpg" alt=" example image for Point of Sale">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/yum-pos-example-03.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Point of Sale: Interaction recommendation"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-03.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-03.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/yum-pos-example-03.jpg" alt=" example image for Point of Sale">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/yum-pos-example-04.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Point of Sale: Interaction recommendation"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-04.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-04.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/yum-pos-example-04.jpg" alt=" example image for Point of Sale">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/yum-pos-example-05.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Point of Sale: Interaction recommendation"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-05.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/yum-pos-example-05.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/yum-pos-example-05.jpg" alt=" example image for Point of Sale">
+                </picture>
+              </div>
+              
+            </div>
+            
+
+          </div>
+        </div>
+        <h4>Goals</h4>
+        <ul><li>Mentor and guide a mid-level UX Design team member</li><li>Create realistic prototypes for testing</li><li>Capture feedback to refine the next-gen POS product</li></ul>
+      </section>
+      <section>
+        <h3>Process</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>For this project, I was mentoring a Yum! mid-level UX team member who was working on the POS team. I worked with the team member to review their work and provided feedback. When it came time to start user testing, we worked together to create the task list users would perform.<br> <br>Because I had more experience with Axure, I was asked to create the prototype. Additionally, I ran the first two rounds of user testing and worked with the UX team member to review the results.<br> <br> Throughout reporting, I made recommendations to improve and normalize patterns, establish a grid for the UI, and clarify interactions. I then updated the prototype and handed it off to the Yum team member for additional rounds of testing.</p>
+          </div>
+          <div class="col-right">
+            <ul><li>Mentorship</li><li>Sketches</li><li>Mockups</li><li>Prototypes</li><li>User Testing</li><li>Recommendations & Iteration</li></ul>
+          </div>
+        </div>
+        
+        <div class="single-col">
+          <h4>Findings</h4>
+          <p><b>Round One Testing</b><ul><li>The 'Quantity' menu was unclear to users – users are familiar with selecting quantity first, then product, much like the sentence structure of ordering, e.g., "I'd like three soft tacos"</li><li>The 'Edit' interaction on an active modifier was being overlooked. I recommended increasing the label and the size of the button to make it more noticeable </li><li>All users tested commented that the design was modern</li><li>Mostly all of the users mentioned that the concept was easy-to-use and intuitive</li><li>One user commented that the colors were more vivid than the existing POS and they liked that</li><li>Two users commented that the Modifier images were too small to clearly see what was in the photo</li></ul><br><b>Round Two Testing</b><ul><li>Updates to the quantity menu pattern still unclear to users. I recommend adding a signifier to call additional focus</li><li>Refinements to the 'Edit' menu were successful at a rate of 86%</li><li>No users mentioned that the modifier card images were too small in this round</li><li>Mostly all of the users mentioned that the design was easy-to-use/intuitive</li><li>Many of the users mentioned the similarity to the Taco Bell kiosk application</li></ul></p>
+        </div>
+        
+        <div class="card-portfolio fifth-card">
+          
+          <a data-fancybox="gallery-process" data-caption="Point of Sale: Test 1 Report" href="../../assets/images/portfolio-images/yum-pos-test1-findings-01.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test1-findings-01.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test1-findings-01.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/yum-pos-test1-findings-01.jpg" alt="Test 1 Report example image for Point of Sale">
+              </picture>
+              <figcaption>
+                <h3>Test 1 Report</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Point of Sale: Test 1 Report" href="../../assets/images/portfolio-images/yum-pos-test1-findings-02.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test1-findings-02.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test1-findings-02.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/yum-pos-test1-findings-02.jpg" alt="Test 1 Report example image for Point of Sale">
+              </picture>
+              <figcaption>
+                <h3>Test 1 Report</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Point of Sale: Test 1 Report" href="../../assets/images/portfolio-images/yum-pos-test1-findings-03.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test1-findings-03.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test1-findings-03.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/yum-pos-test1-findings-03.jpg" alt="Test 1 Report example image for Point of Sale">
+              </picture>
+              <figcaption>
+                <h3>Test 1 Report</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Point of Sale: Test 2 Report" href="../../assets/images/portfolio-images/yum-pos-test2-findings-01.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test2-findings-01.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test2-findings-01.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/yum-pos-test2-findings-01.jpg" alt="Test 2 Report example image for Point of Sale">
+              </picture>
+              <figcaption>
+                <h3>Test 2 Report</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Point of Sale: Test 2 Report" href="../../assets/images/portfolio-images/yum-pos-test2-findings-02.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test2-findings-02.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/yum-pos-test2-findings-02.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/yum-pos-test2-findings-02.jpg" alt="Test 2 Report example image for Point of Sale">
+              </picture>
+              <figcaption>
+                <h3>Test 2 Report</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+        </div>
+      </section>
+      <section class="solution-section">
+        <h3>Solution</h3>
+          
+            <p>While building and observing the prototype, I noticed a potential issue with the Modifiers menu when items will have many modifiers. For the mental model for the user, it is important to keep interactions (meaning the modifier cards) in the same location from page to page. Meaning "Jalapeno Slices" should be in the same location on the screen for all places that those would be a modifier option. This can be relative to product types as well, meaning Jalapeno Slices are in one location for tacos/burritos and a different place for nachos.<br> <br>In the existing design concept, the "included" section on the modifier list keeps the modifier cards moving from product to product. A new concept would require keeping the cards in the main list and displaying them in an "included" list. In this proposed layout, we can expose the modifier scale to the top-level menu rather than rely on a modal menu for modification.</p>
+          
+          
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/yum-pos-final-2021.webp" type="image/webp">
+              <source srcset="../../assets/images/portfolio-images/yum-pos-final-2021.jpg" type="image/jpeg"> 
+              <img src="../../assets/images/portfolio-images/yum-pos-final-2021.jpg" alt="POS user test screen demo example image for Point of Sale">
+            </picture>
+            </div>
+          
+          
+      </section>
+      <section>
+        <h3>Impact</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Results</h4>
+            <p>The new Yum Point of Sale system is currently rolled out in over 400 Taco Bell stores and expanding. While I can't take credit for the design of the POS, many of the recommendations I made are in the interaction design.<br <br>I empowered team member to do their best work. I enjoyed watching them grow, and they have recently become a senior-level UX designer in their newest role. Their hard work paid off, and I was proud to be part of their journey.</p>
+          </div>
+          <div class="col-right">
+            <h4>Achievements</h4>
+            <ul><li>Made recommendations to normalize interaction patterns</li><li>Created and iterated advanced Axure prototypes</li><li>Ran user testing with Taco Bell team members</li><li>Reported on feedback and made recommendations on improvements based on user feedback</li></ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Takeaways</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <h4>What would I do differently?</h4>
+            <p>The one thing I would have done differently on this project is that I should have worked in parallel with the UX team member instead of taking full ownership of creating the prototypes. This would have helped improve their abilities within Axure and included them in the build of the advanced prototype. Having the team member work alongside me as I built the prototype would have helped avoid the difficult handoff after I no longer supported the project.</p>
+            
+          <h4>How did I grow?</h4>
+            <p>This project allowed me to continue to mentor others. I am a teacher by nature. I have mentored other UX professionals in their careers. I enjoy educating others, and I want to help others get to a better place than they were before.<br> <br>This project also allowed me to create an advanced, nested Axure prototype. I have worked with Axure for over 15 years. However, there is always something new (or to refamiliarize yourself with) in Axure.</p>
+          </div>
+          <div class="col-right card-container">
+            <a href="" target="_blank" class="reference-card single" testimonial="topic:pos">
+              <q class="quote"></q>
+              <div class="image-title">
+                <picture>
+                  <source class="webpimage" srcset="../../assets/images/testimonial-images/" type="image/webp">
+                  <source class="image" srcset="../../assets/images/testimonial-images/" type="image/jpeg"> 
+                  <img src="../../assets/images/testimonial-images/" alt="Image of ">
+                </picture>
+                <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+      </section>
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / Point of Sale 
+        </div>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../yum-tax" title="Yum! Brands Tax Tool"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../yum" title="Yum! Brands MMT"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
+    </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
+    <script>
+      // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+      Dots: true,
+    });
+    </script>
+    <footer>
+  <nav>
+    <div class="footer-nav">
+      
+      <a href="/" class="">About</a>
+      
+      <a href="/experience/" class="">Experience</a>
+      
+      <a href="/work/" class=" nested">Work</a>
+      
+      <a href="/contact/" class=" contact">Contact</a>
+      
+    </div>
+    <div class="subnav">
+      
+      <a href="https://www.linkedin.com/in/ryangwilson/" target="_blank" rel="noopener">LinkedIn</a>
+      
+      <a href="https://medium.com/@ryangwilson" target="_blank" rel="noopener">Medium</a>
+      
+      <a href="https://codepen.io/ryangwilson/" target="_blank" rel="noopener">CodePen</a>
+      
+      <a href="https://github.com/ryangwilson" target="_blank" rel="noopener">GitHub</a>
+      
+      <a href="https://www.youtube.com/channel/UCjdTSWNzpR2jx31iOtT_NLg/videos" target="_blank" rel="noopener">YouTube</a>
+      
+    </div>
+  </nav>
+  <p>© Ryan G. Wilson, 1978‑<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+  </span></p>
+</footer>
+<script>
+  feather.replace()
+</script>
+<!--  -->
+
+  </body>
+</html>

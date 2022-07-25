@@ -1,4 +1,4 @@
-{% assign example = site.portfolio | sort: 'year' | reverse %}
+{% assign example = site.portfolio | sort: 'order' | forward %}
 {% if page.url == '/' %}
 <div class="card-portfolio">
     {% assign landing_page = example | where: "type", "product" %}

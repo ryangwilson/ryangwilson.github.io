@@ -52,7 +52,7 @@ nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      content: '11';
+      content: '8';
       top: 0;
       right: -20px;
       width: $scale-5;
@@ -152,7 +152,7 @@ section {
     justify-content: space-between;
     .col-left {
       display: flex;
-      flex: 3;
+      flex: 1;
       flex-direction: column;
       margin-right: $scale-10;
       @media (max-width: 699px) {

@@ -17,6 +17,13 @@
     Fancybox.bind('[data-fancybox]', {
         Toolbar: false,
       closeButton: "top",
+      Image: {
+        Panzoom: {
+            maxScale: function () {
+          return 1;
+          },
+        },
+      },
       Thumbs: {
         Carousel: {
           fill: false,
@@ -135,15 +142,60 @@ x.addListener(myFunction) // Attach listener function on state changes
 <div class="card-portfolio">
     
         
+        <a href="/work/atomagic/" class="product">
+            <figure>
+                <picture>
+                    <source srcset="../assets/images/portfolio-images/atomagic-logo.webp" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/atomagic-logo.jpg" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/atomagic-logo.jpg" alt="Image representation of Figma Plug-In project">
+                </picture>
+                <figcaption>
+                    <h3>Figma Plug-In</h3>
+                </figcaption>
+            </figure>
+        </a>
+        
+    
+        
         <a href="/work/kroger/" class="product">
             <figure>
                 <picture>
                     <source srcset="../assets/images/portfolio-images/kroger-logo.webp" type="image/webp">
                     <source srcset="../assets/images/portfolio-images/kroger-logo.jpg" type="image/jpeg"> 
-                    <img src="../assets/images/portfolio-images/kroger-logo.jpg" alt="Image representation of ChainTrack Replacement, Build v Buy project">
+                    <img src="../assets/images/portfolio-images/kroger-logo.jpg" alt="Image representation of Build v. Buy Discovery project">
                 </picture>
                 <figcaption>
-                    <h3>ChainTrack Replacement, Build v Buy</h3>
+                    <h3>Build v. Buy Discovery</h3>
+                </figcaption>
+            </figure>
+        </a>
+        
+    
+        
+        <a href="/work/yum-tax/" class="product">
+            <figure>
+                <picture>
+                    <source srcset="../assets/images/portfolio-images/yum-logo-red.webp" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/yum-logo-red.jpg" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/yum-logo-red.jpg" alt="Image representation of Logic Tax Tool project">
+                </picture>
+                <figcaption>
+                    <h3>Logic Tax Tool</h3>
+                </figcaption>
+            </figure>
+        </a>
+        
+    
+        
+        <a href="/work/yum-pos/" class="product">
+            <figure>
+                <picture>
+                    <source srcset="../assets/images/portfolio-images/taco-bell-logo.webp" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/taco-bell-logo.jpg" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/taco-bell-logo.jpg" alt="Image representation of Point of Sale project">
+                </picture>
+                <figcaption>
+                    <h3>Point of Sale</h3>
                 </figcaption>
             </figure>
         </a>
@@ -153,60 +205,24 @@ x.addListener(myFunction) // Attach listener function on state changes
         <a href="/work/yum/" class="product">
             <figure>
                 <picture>
-                    <source srcset="../assets/images/portfolio-images/yum-brands-rectangle.webp" type="image/webp">
-                    <source srcset="../assets/images/portfolio-images/yum-brands-rectangle.jpg" type="image/jpeg"> 
-                    <img src="../assets/images/portfolio-images/yum-brands-rectangle.jpg" alt="Image representation of Menu Management Tool (MMT) project">
+                    <source srcset="../assets/images/portfolio-images/yum-logo-white.webp" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/yum-logo-white.jpg" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/yum-logo-white.jpg" alt="Image representation of Menu Management Tool project">
                 </picture>
                 <figcaption>
-                    <h3>Menu Management Tool (MMT)</h3>
+                    <h3>Menu Management Tool</h3>
                 </figcaption>
             </figure>
         </a>
-        
-    
-        
-        <a href="/work/lowes/" class="product">
-            <figure>
-                <picture>
-                    <source srcset="../assets/images/portfolio-images/lowes-iris_Page_03.webp" type="image/webp">
-                    <source srcset="../assets/images/portfolio-images/lowes-iris_Page_03.jpg" type="image/jpeg"> 
-                    <img src="../assets/images/portfolio-images/lowes-iris_Page_03.jpg" alt="Image representation of Iris Home Automation project">
-                </picture>
-                <figcaption>
-                    <h3>Iris Home Automation</h3>
-                </figcaption>
-            </figure>
-        </a>
-        
-    
-        
-    
-        
-    
-        
-        <a href="/work/johnsonandjohnson/" class="product">
-            <figure>
-                <picture>
-                    <source srcset="../assets/images/portfolio-images/jandj-report_Page_19.webp" type="image/webp">
-                    <source srcset="../assets/images/portfolio-images/jandj-report_Page_19.jpg" type="image/jpeg"> 
-                    <img src="../assets/images/portfolio-images/jandj-report_Page_19.jpg" alt="Image representation of Johnson & Johnson project">
-                </picture>
-                <figcaption>
-                    <h3>Johnson & Johnson</h3>
-                </figcaption>
-            </figure>
-        </a>
-        
-    
         
     
         
         <a href="/work/haulhound/" class="product">
             <figure>
                 <picture>
-                    <source srcset="../assets/images/portfolio-images/HH_side-by-side.webp" type="image/webp">
-                    <source srcset="../assets/images/portfolio-images/HH_side-by-side.jpg" type="image/jpeg"> 
-                    <img src="../assets/images/portfolio-images/HH_side-by-side.jpg" alt="Image representation of HaulHound project">
+                    <source srcset="../assets/images/portfolio-images/haulhound-logo.webp" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/haulhound-logo.jpg" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/haulhound-logo.jpg" alt="Image representation of HaulHound project">
                 </picture>
                 <figcaption>
                     <h3>HaulHound</h3>
@@ -216,38 +232,33 @@ x.addListener(myFunction) // Attach listener function on state changes
         
     
         
-        <a href="/work/nre-labs/" class="product">
+        <a href="/work/lowes/" class="product">
             <figure>
                 <picture>
-                    <source srcset="../assets/images/portfolio-images/nrelabs-StyleGuide.webp" type="image/webp">
-                    <source srcset="../assets/images/portfolio-images/nrelabs-StyleGuide.jpg" type="image/jpeg"> 
-                    <img src="../assets/images/portfolio-images/nrelabs-StyleGuide.jpg" alt="Image representation of NRE Labs project">
+                    <source srcset="../assets/images/portfolio-images/lowes-iris-logo.webp" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/lowes-iris-logo.jpg" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/lowes-iris-logo.jpg" alt="Image representation of Home Automation project">
                 </picture>
                 <figcaption>
-                    <h3>NRE Labs</h3>
+                    <h3>Home Automation</h3>
                 </figcaption>
             </figure>
         </a>
         
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+        <a href="/work/johnsonandjohnson/" class="product">
+            <figure>
+                <picture>
+                    <source srcset="../assets/images/portfolio-images/jnj-logo.webp" type="image/webp">
+                    <source srcset="../assets/images/portfolio-images/jnj-logo.jpg" type="image/jpeg"> 
+                    <img src="../assets/images/portfolio-images/jnj-logo.jpg" alt="Image representation of IT Service Portal project">
+                </picture>
+                <figcaption>
+                    <h3>IT Service Portal</h3>
+                </figcaption>
+            </figure>
+        </a>
         
     
 </div>
