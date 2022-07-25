@@ -13,9 +13,7 @@
   color: $white-00;
   padding: $scale-10;
   margin-top: $scale-5;
-  border-top: $scale-1 solid $white-00;
-  border-bottom: $scale-1 solid $white-00;
-  box-shadow: -50vw 0 0 (-$scale-1) $black-00, 50vw 0 0 (-$scale-1) $black-00, -25vw 0 0 (-$scale-1) $black-00, 25vw 0 0 (-$scale-1) $black-00;
+  box-shadow: -50vw 0 0 0 $black-00, 50vw 0 0 0 $black-00, -25vw 0 0 0 $black-00, 25vw 0 0 0 $black-00;
   .subtitle {
     color: $primary-00;
     font-size: $h5-font-size;
@@ -192,7 +190,7 @@
       height: 100%;
       border-radius: $scale-2;
       object-fit: cover;
-      object-position: 0 0;
+      object-position: top center;
     }
     h3 {
       font-family: $type-display-main;

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Kroger DSD Receiving</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ryan Wilson has worked on many client projects. These are just an example of some of the excellent product design work that he could do on your project.">
+  <meta name="description" content="Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicons/favicon-16x16.png">
@@ -17,6 +17,13 @@
     Fancybox.bind('[data-fancybox]', {
         Toolbar: false,
       closeButton: "top",
+      Image: {
+        Panzoom: {
+            maxScale: function () {
+          return 1;
+          },
+        },
+      },
       Thumbs: {
         Carousel: {
           fill: false,
@@ -97,95 +104,274 @@ x.addListener(myFunction) // Attach listener function on state changes
 
 </script>
 
-    <main>
-      <div class="card-dark short-card">
-        <a href="/work/" class="btn text white svg-before"><i data-feather="arrow-left"></i> Projects Overview </a><br>
-        <h2>ChainTrack Replacement, Build v Buy</h2>
-        <p class="subtitle">Product Designer – Kroger</p>
+    <main class="cs-container kroger">
+      <div class="card-dark case-study">
+        <h2>Build v. Buy Discovery</h2>
+        <h3>Kroger</h3>
+        <p>Replacing software that intakes 28B worth of product, yearly</p>
+        <picture>
+          <source srcset="../../assets/images/portfolio-images/kroger-hero.webp" type="image/webp">
+          <source srcset="../../assets/images/portfolio-images/kroger-hero.png" type="image/png"> 
+          <img src="../../assets/images/portfolio-images/kroger-hero.png" alt="In-device CT replacement product mockup hero image for Build v. Buy Discovery">
+        </picture>
       </div>
-      <section class="examples-container">
-        <div class="content-column">
-          <!-- <h3>Client</h3>
-          <p>Kroger, 2022</p> -->
-          <!-- <p><i>Created with:  Kroger  </i></p> -->
-          
-          
-          
-          <h3>This Project Represents</h3>
-          <p><ul><li>Performing the end-to-end UX process</li><li>How I learn quickly and efficiently - <a href="http://localhost:4000/references/#Ochs">See Chris Ochs reference</a></li><li>Collaboration across brands, teams, and pods</li><li>How I approach simplifying complexity with a focus on making a better experience for the user</li><li>How I approach processing and outputting large amounts of information</li><li>The level of detail I put into my work</li></ul></p>
-          
-          
-          <h3>Overview</h3>
-          <p>My focus for this projects was to make a build vs. buy recommendation for replacing a piece of 35+ year-old software called ChainTrack. ChainTrack is used for receiving certain types of products through the docks at Kroger stores, a process called Direct Store Delivery, or DSD. This is where products like Coke, Fritos, and alcohol come into the store.I worked with a Product Manager and a Tech Lead to research, observe, and understand how to replace ChainTrack most effectively. <br> <i>NOTE&#58; I can not publicly share a visual representation of this product</i>.</p>
-          
-          
-          <h3>Users</h3>
-          <p>The users for this product are DSD Receivers, Grocery Managers, Admins, and the System Operations team.</p>
-          
-          
-          <h3>Process</h3>
-          <p><h5>1. Empathize</h5><ul><li>Research the DSD process</li><li>Understand the DSD Receiver, & identify other users</li><li>Capture the Voice of the Customer through a survey</li><li>Observe DSD Receivers in their environment</li></ul><h5>2. Define</h5><ul><li>Business and user requirements for the replacement solution</li><li>Identify places for improvement</li>Identify clear industry differentiator, if any<li>Do a “fit” test – Meet with third-party providers</li><li>Create and maintain living documentation</li></ul><h5>3. Present to Leadership</h5></p>
-          
-          
-          <h3>Difficulties</h3>
-          <p><ul><li>Users are and have been familiar with the ChainTrack product</li><li>All Kroger digital products are deployed on Zebra devices, ChainTrack cannot run on modern devices</li><li>In a solution product data has to be easily output and shared</li></ul></p>
-          
-          
-          <h3>Solutions</h3>
-          <p><ul><li>Support change management through training to offset any difficulties in migrating to the new software and device</li> <li>The new software runs on the Zebra device natively and will easily fit into the Kroger Associate Experience products</li> <li>Sharing data internally between departments will be easy with the new software</li></ul></p>
-          
-          
-          
-          
-          <h3>Value Provided to Users</h3>
-          <p><ul><li>My work for this project provided a wealth of research that supported our recommendation to buy a third-party replacement <li>I advocated for the UX process throughout the project</li> <li>I facilitated workshops with my team and cross-teams to capture information and helped to align our understanding</li> <li>After we obtained approval for our recommendation, I pushed the project forward despite contract delays, allowing me to begin to ideate and iterate through user flows and prototypes</li> <li>Creation of both the user flows and prototypes vetted the product, calling out errors and highlighting gaps in flow and understanding. The prototype allowed the team to step through the product and identify questions we had for the software provider before we had access to the product.The prototype allowed us to preview the software to the business, which, since we did not yet have a copy, was an excellent method to visualize and communicate what we are buying</li></ul></p>
-          
-          
-          <h3>Outcome</h3>
-          <p>Our buy recommendation was approved by the VPs of Kroger Digital Technologies. We provided this document to the VPs for early review before the meeting. A short way into our presentation our recommendation was enthusiastically approved to move forward in partnering with the company we recommended. The VPs noted that it was the amount of research and documentation that we provided provided a lot of trust in our decision.</p>
-          
-          
-          
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / Build v. Buy Discovery 
         </div>
-        <div class="image-column">
-          <div class="single">
-            <a href="../../assets/images/portfolio-images/kroger-logo.jpg" data-fancybox="images">
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/kroger-logo.webp" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/kroger-logo.jpg" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/kroger-logo.jpg" alt="Project example image for ChainTrack Replacement, Build v Buy">
-              </picture>
-            </a>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../atomagic" title="AtoMagic Plug-In"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../yum-tax" title="Yum! Brands Tax Tool"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
+      <section>
+        <h3>Overview</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>My focus for this project was to make a recommendation for replacing a piece of 35+-year-old software called ChainTrack. ChainTrack is used across the enterprise for receiving certain types of products through the docks at Kroger stores, a process called Direct Store Delivery, or DSD, where products like Coke, Fritos, and alcohol come into the store. Kroger DSD intakes ~28 Billion dollars of products using this software. <br><br>Working with a Product Manager and Tech Lead, my team was to research and understand enough to be able to recommend building our own or purchasing a replacement product.</p>
           </div>
-          <div class="single">
-          
-            <a href="../../assets/images/portfolio-images/chris-ochs-reference.jpg" data-fancybox="images">
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/chris-ochs-reference.webp" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/chris-ochs-reference.jpg" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/chris-ochs-reference.jpg" alt="Project example image for ChainTrack Replacement, Build v Buy">
-              </picture>
-            </a>
-          
-          </div>
-          <div class="double">
-            
-            <a href="../../assets/images/portfolio-images/rahul-parke-quote.jpg" data-fancybox="images">
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/rahul-parke-quote.webp" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/rahul-parke-quote.jpg" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/rahul-parke-quote.jpg" alt="Project example image for ChainTrack Replacement, Build v Buy">
-              </picture>
-            </a>
-            
-            
-          </div>
-          <div class="double">
-            
-            
+          <div class="col-right">
+            <h4>Role</h4>
+            <p>Product Designer</p>
+            <h4>Scope</h4>
+            <p>Eight weeks</p>
+            <h4>Tools</h4>
+            <p>Axure, Sketch, Documentation</p>
           </div>
         </div>
       </section>
+      <section>
+        <h3>Approach</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Problem Statement</h4>
+            <p>The problem I needed to solve was how to replace an antiquated piece of technology with something more robust. One of the business requirements was that the replacement product needs to be able to exist on TC-52 Zebra devices so that Kroger is only maintaining a single device type across all stores.<br><br>The next iteration of this product must:<ul><li> Make data more accessible</li><li>Reduce printing and invoice storage costs</li><li>Support DSD Receivers to intake products at a lower cost</li></ul></p>
+          </div>
+          <div class="col-right">
+            <div id="mainCarousel" class="carousel">
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/kroger-CT-Existing-User-Flow.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Build v. Buy Discovery: Existing product user flow"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/kroger-CT-Existing-User-Flow.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/kroger-CT-Existing-User-Flow.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/kroger-CT-Existing-User-Flow.jpg" alt=" example image for Build v. Buy Discovery">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/kroger-Build-User-Flow.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Build v. Buy Discovery: Build replacement user flow"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/kroger-Build-User-Flow.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/kroger-Build-User-Flow.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/kroger-Build-User-Flow.jpg" alt=" example image for Build v. Buy Discovery">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/kroger-bvb-phases.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Build v. Buy Discovery: Proposed build/roll-out phases"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/kroger-bvb-phases.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/kroger-bvb-phases.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/kroger-bvb-phases.jpg" alt=" example image for Build v. Buy Discovery">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/kroger-vendor-comparison.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Build v. Buy Discovery: Vendor report card"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/kroger-vendor-comparison.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/kroger-vendor-comparison.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/kroger-vendor-comparison.jpg" alt=" example image for Build v. Buy Discovery">
+                </picture>
+              </div>
+              
+              
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/kroger-sort2.jpg"
+                data-fancybox="carousel-gallery"
+                data-caption="Build v. Buy Discovery: Survey feedback card sort/grouping"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/kroger-sort2.webp" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/kroger-sort2.jpg" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/kroger-sort2.jpg" alt=" example image for Build v. Buy Discovery">
+                </picture>
+              </div>
+              
+            </div>
+            
+
+          </div>
+        </div>
+        <h4>Goals</h4>
+        <ul><li>To understand and document the existing DSD Receiving process and use of the ChainTrack product</li><li>Run observations and workshops with my team, stakeholders, and software vendors to collect information</li><li>To conceptualize what would be needed in a replacement product</li><li>Evaluate competitor products that could function as a replacement</li><li>Create and visualize concepts like feature timelines, user flows, existing state click-through prototypes, and other deliverables to share with others and support a build or buy decision</li><li>Support change management</li></ul>
+      </section>
+      <section>
+        <h3>Process</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>Going into the project, I had no experience with product receiving or the DSD process. I began the project by researching the DSD process to understand the DSD Receiver and identify secondary users. Through a survey, I captured the needs and pain points of users, trainers, and managers within the DSD space.<br><br>I led my team in in-store observations to see DSD Receivers' intake products and interact with the ChainTrack product in their environment.</p>
+          </div>
+          <div class="col-right">
+            <ul><li>User Observations</li><li>User Flows</li><li>Sketches</li><li>Wireframes</li><li>Prototypes</li><li>User Testing</li></ul>
+          </div>
+        </div>
+        
+        <div class="single-col">
+          <h4>Findings</h4>
+          <p>Once I understood ChainTrack and the DSD process, I ran a workshop with my team to vet the order of priority for the business and user requirements for a build or buy replacement recommendation. I created a phased feature timeline and a vendor report card from this activity. Items we listed as Top Priority were parity with ChainTrack, ways to improve the user experience, and solve business goals that cannot be achieved with the current product. I used the vendor report card in meetings with software vendors to assess their software solutions against Kroger's requirements.</p>
+        </div>
+        
+        <div class="card-portfolio fifth-card">
+          
+          <a data-fancybox="gallery-process" data-caption="Build v. Buy Discovery: User stories" href="../../assets/images/portfolio-images/kroger-stories.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/kroger-stories.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/kroger-stories.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/kroger-stories.jpg" alt="User stories example image for Build v. Buy Discovery">
+              </picture>
+              <figcaption>
+                <h3>User stories</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Build v. Buy Discovery: User flow concept sketches" href="../../assets/images/portfolio-images/kroger-vendor-user-flow.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/kroger-vendor-user-flow.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/kroger-vendor-user-flow.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/kroger-vendor-user-flow.jpg" alt="User flow concept sketches example image for Build v. Buy Discovery">
+              </picture>
+              <figcaption>
+                <h3>User flow concept sketches</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Build v. Buy Discovery: InVision prototype" href="../../assets/images/portfolio-images/kroger-itasca-click-through.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/kroger-itasca-click-through.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/kroger-itasca-click-through.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/kroger-itasca-click-through.jpg" alt="InVision prototype example image for Build v. Buy Discovery">
+              </picture>
+              <figcaption>
+                <h3>InVision prototype</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Build v. Buy Discovery: Proposed updates for MVP" href="../../assets/images/portfolio-images/kroger-itasca ui updates.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/kroger-itasca ui updates.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/kroger-itasca ui updates.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/kroger-itasca ui updates.jpg" alt="Proposed updates for MVP example image for Build v. Buy Discovery">
+              </picture>
+              <figcaption>
+                <h3>Proposed updates for MVP</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+          
+          <a data-fancybox="gallery-process" data-caption="Build v. Buy Discovery: User flow presentation" href="../../assets/images/portfolio-images/kroger-user-flow-presentation.jpg" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/kroger-user-flow-presentation.webp" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/kroger-user-flow-presentation.jpg" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/kroger-user-flow-presentation.jpg" alt="User flow presentation example image for Build v. Buy Discovery">
+              </picture>
+              <figcaption>
+                <h3>User flow presentation</h3>
+              </figcaption>
+            </figure>
+          </a>
+          
+        </div>
+      </section>
+      <section class="solution-section">
+        <h3>Solution</h3>
+          
+            <p>Not only was there a clear path for which company to move forwards with, but the software provider we recommended voiced interest in finding solutions to many of our requirements, asked for clarity around others, and offered to build the solutions we needed throughout our partnership.<br> <br>If Kroger is going to build a product itself, there needs to be a clear industry differentiator. It was obvious to myself and the team that there was no clear differentiator in building our own solution. Additionally, over at least five years, partnering with the vendor would be less expensive and more rewarding for Kroger and the users than if we were to build the product ourselves.</p>
+          
+          
+          
+      </section>
+      <section>
+        <h3>Impact</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Results</h4>
+            <p>I supported the creation of my team's presentation deck. There were six slides to present and ~150 slides representing my research in the appendix. We presented our findings to a panel of Kroger VPs. Our buy recommendation was approved by the VPs of Kroger Digital Technologies, noting the amount of research and documentation I provided trust in our decision.</p>
+          </div>
+          <div class="col-right">
+            <h4>Achievements</h4>
+            <ul><li>My work for this project provided a wealth of research that supported our recommendation to buy a third-party replacement</li> <li>I advocated for the UX process throughout the project</li> <li>I facilitated workshops with my team and cross-teams to capture information and helped to align our understanding</li> <li>I worked alongside the software provider to ideate and iterate through user flows and prototypes of their product which vetted the product, called out errors, and highlighted gaps in product flow</li></ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Takeaways</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <h4>What would I do differently?</h4>
+            <p>If I could do this project again, I would have pushed harder to shorten the eight-week timeline to four weeks. The team had ~85% confidence in our direction by the end of week three. The remaining five weeks allowed us to meet with more users, capture additional information, and iterate through requirements. This extra time was beneficial in adding to the materials that helped to green-light the project. Still, a shorter timeline would have allowed the contract process to begin sooner, allowing the team to move to the next project phase more quickly.</p>
+            
+          <h4>How did I grow?</h4>
+            <p>This project introduced me to a new industry, Direct Store Delivery. Going into the project without prior knowledge helped me approach solutions from a fresh perspective while still applying my understanding of the UX process. <br <br>Another lesson I learned is that, regardless of the size of the business, the industry, type of team, or length of time co-workers have worked in SaaS, I still find that many people don't understand the role of a UXD or PD. What I like about the constant advocacy approach is that there is always room to help others learn and to surprise team members through my transparent process, helping to change the mindset that "designer" = "visual design".</p>
+          </div>
+          <div class="col-right card-container">
+            <a href="" target="_blank" class="reference-card single" testimonial="topic:Kroger">
+              <q class="quote"></q>
+              <div class="image-title">
+                <picture>
+                  <source class="webpimage" srcset="../../assets/images/testimonial-images/" type="image/webp">
+                  <source class="image" srcset="../../assets/images/testimonial-images/" type="image/jpeg"> 
+                  <img src="../../assets/images/testimonial-images/" alt="Image of ">
+                </picture>
+                <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+      </section>
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / Build v. Buy Discovery 
+        </div>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../atomagic" title="AtoMagic Plug-In"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../yum-tax" title="Yum! Brands Tax Tool"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
     </main>
     <script>
       $('[data-fancybox]').fancybox({
@@ -196,6 +382,12 @@ x.addListener(myFunction) // Attach listener function on state changes
           "close"
         ]
       });
+    </script>
+    <script>
+      // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+      Dots: true,
+    });
     </script>
     <footer>
   <nav>

@@ -8,7 +8,7 @@ const testimonials = [
     "lastname": "Kurpuis",
     "title": "Senior Developer",
     "company": "Bitovi",
-    "topic": "",
+    "topic": "dev",
     "linkedin": "https://www.linkedin.com/in/austinkurpuis",
     "quote": "Ryan's combination of knowledge, experience, education, and personality make him the ideal UX professional to interface with Engineers."
   },
@@ -21,7 +21,7 @@ const testimonials = [
     "lastname": "Ochs",
     "title": "Retail Partnerships Manager",
     "company": "Auror",
-    "topic": "",
+    "topic": "kroger",
     "linkedin": "https://www.linkedin.com/in/chrisochs253",
     "quote": "Ryan has the uncommon ability to absorb new concepts at a ferocious rate. He effortlessly adapts to new and changing information to incorporate it into his working models."
   },
@@ -73,7 +73,7 @@ const testimonials = [
     "lastname": "McDole",
     "title": "Director, eCommerce Technology",
     "company": "Yum! Brands",
-    "topic": "",
+    "topic": "tax",
     "linkedin": "https://www.linkedin.com/in/matthewmcdole",
     "quote": "Ryan is an amazing designer. He designed our tax engine which not only looked awesome but also really simplified what is an inherently complex process."
   },
@@ -125,7 +125,7 @@ const testimonials = [
     "lastname": "Lueck",
     "title": "Staff Software Engineer",
     "company": "Tock",
-    "topic": "",
+    "topic": "lowes",
     "linkedin": "https://www.linkedin.com/in/jeremy-lueck-1187993",
     "quote": "Ryan is one of the most talented and hardworking designers that I have ever met. He is a stickler to his own prepared schedules that guarantee timely deliverables."
   },
@@ -138,7 +138,7 @@ const testimonials = [
     "lastname": "Williams",
     "title": "Senior Designer",
     "company": "Microsoft",
-    "topic": "",
+    "topic": "jnj",
     "linkedin": "https://www.linkedin.com/in/rygwilliams",
     "quote": "Ryan ensures that his digital experiences are useful and engaging to users. He engages users through contextual inquiry and incorporates feedback into his designs to produce functional and useful products."
   },
@@ -177,7 +177,7 @@ const testimonials = [
     "lastname": "Wang",
     "title": "Senior User Experience Designer",
     "company": "Yum! Brands",
-    "topic": "leadership",
+    "topic": "leadership pos",
     "linkedin": "https://www.linkedin.com/in/karenwangdesign",
     "quote": "Ryan's witty personality and years of experiences made him a great mentor. I can consult him whenever I was uncertain on how to approach research or design projects and he’d help me work through and find the solutions."
   },
@@ -206,6 +206,46 @@ const testimonials = [
     "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/tomgreever",
     "quote": "Ryan's an excellent problem solver, UX thinker, and researcher. He led several design projects for us at a senior and lead level in a client-facing role, including some of our largest Fortune 500 clients. Not many people have the breadth of skills Ryan has."
+  },
+  {
+    "id": 17,
+    "webpimage": "1592952223004.webp",
+    "image": "1592952223004.jpg",
+    "name": "Rahul Parke",
+    "firstname": "Rahul",
+    "lastname": "Parke",
+    "title": "Applications Development Lead",
+    "company": "Vizio, Inc.",
+    "topic": "Kroger",
+    "linkedin": "https://www.linkedin.com/in/rahulkumarrp",
+    "quote": " Ryan's thought process in laying down the entire user flow and his ability to picture it clearly was truly amazing and inspirational!"
+  },
+  {
+    "id": 18,
+    "webpimage": "1648081397531.webp",
+    "image": "1648081397531.jpg",
+    "name": "Shiv Adhiappan",
+    "firstname": "Shiv",
+    "lastname": "Adhiappan",
+    "title": "Director of Site Reliability Engineering",
+    "company": "Yum! Brands",
+    "topic": "mmt",
+    "linkedin": "https://www.linkedin.com/in/sivaramadhiappan",
+    "quote": "Ryan laid the groundwork and helped drive the project's success. I was impressed by how easily he ran workshops with heads of Yum! and the brands to collect requirements and get buy-in on the product's direction."
+  }
+  ,
+  {
+    "id": 19,
+    "webpimage": "1523279264785.webp",
+    "image": "1523279264785.jpg",
+    "name": "Andy Kim",
+    "firstname": "Andy",
+    "lastname": "Kim",
+    "title": "CEO",
+    "company": "HaulHound",
+    "topic": "haulhound",
+    "linkedin": "https://www.linkedin.com/in/the-andrew-kim",
+    "quote": "I’ve never had such a positive experience, not just the results, but the process as well. People are shocked to know that this is our minimal first version."
   }
 ]
 
@@ -246,9 +286,9 @@ function initiateCard(item, element) {
   element.querySelector('.name').innerText = item.name
   element.querySelector('.title').innerText = item.title
   element.querySelector('.company').innerText = item.company
-  element.querySelector('.webpimage').srcset = "../assets/images/testimonial-images/" + item.webpimage
-  element.querySelector('.image').srcset = "../assets/images/testimonial-images/" + item.image
-  element.querySelector('img').src = "../assets/images/testimonial-images/" + item.image
+  element.querySelector('.webpimage').srcset = "/assets/images/testimonial-images/" + item.webpimage
+  element.querySelector('.image').srcset = "/assets/images/testimonial-images/" + item.image
+  element.querySelector('img').src = "/assets/images/testimonial-images/" + item.image
   element.querySelector('img').alt = "Testimonial image of " + item.name
   element.href = item.linkedin
 }

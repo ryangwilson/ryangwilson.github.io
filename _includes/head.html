@@ -20,6 +20,13 @@
     Fancybox.bind('[data-fancybox]', {
         Toolbar: false,
       closeButton: "top",
+      Image: {
+        Panzoom: {
+            maxScale: function () {
+          return 1;
+          },
+        },
+      },
       Thumbs: {
         Carousel: {
           fill: false,

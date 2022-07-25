@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body class="nested-page">
+    {% include navigation.html %}
+    <main class="cs-container {{ page.brandclass }}">
+      <div class="card-dark case-study">
+        <h2>{{ page.project }}</h2>
+        <h3>{{ page.client }}</h3>
+        <p>{{ page.subtitle }}</p>
+        <picture>
+          <source srcset="../../assets/images/portfolio-images/{{ page.hero-image-webp }}" type="image/webp">
+          <source srcset="../../assets/images/portfolio-images/{{ page.hero-image-png }}" type="image/png"> 
+          <img src="../../assets/images/portfolio-images/{{ page.hero-image-png }}" alt="{{ page.hero-caption }} hero image for {{ page.project }}">
+        </picture>
+      </div>
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / {{ page.project }} 
+        </div>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../{{ page.previous-cs-link }}" title="{{ page.previous-cs-title }}"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../{{ page.next-cs-link }}" title="{{ page.next-cs-title }}"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
+      <section>
+        <h3>Overview</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>{{ page.overview }}</p>
+          </div>
+          <div class="col-right">
+            <h4>Role</h4>
+            <p>{{ page.role }}</p>
+            <h4>Scope</h4>
+            <p>{{ page.scope }}</p>
+            <h4>Tools</h4>
+            <p>{{ page.tools }}</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Approach</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Problem Statement</h4>
+            <p>{{ page.problemstatement }}</p>
+          </div>
+          <div class="col-right">
+            <div id="mainCarousel" class="carousel">
+              {% if page.approach-image01 %}
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/{{ page.approach-image01 }}"
+                data-fancybox="carousel-gallery"
+                data-caption="{{ page.project }}: {{ page.approach-caption01 }}"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage01 }}" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image01 }}" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/{{ page.approach-image01 }}" alt="{{ page.approach-caption-01 }} example image for {{ page.project }}">
+                </picture>
+              </div>
+              {% endif %}
+              {% if page.approach-image02 %}
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/{{ page.approach-image02 }}"
+                data-fancybox="carousel-gallery"
+                data-caption="{{ page.project }}: {{ page.approach-caption02 }}"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage02 }}" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image02 }}" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/{{ page.approach-image02 }}" alt="{{ page.approach-caption-02 }} example image for {{ page.project }}">
+                </picture>
+              </div>
+              {% endif %}
+              {% if page.approach-image03 %}
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/{{ page.approach-image03 }}"
+                data-fancybox="carousel-gallery"
+                data-caption="{{ page.project }}: {{ page.approach-caption03 }}"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage03 }}" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image03 }}" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/{{ page.approach-image03 }}" alt="{{ page.approach-caption-03 }} example image for {{ page.project }}">
+                </picture>
+              </div>
+              {% endif %}
+              {% if page.approach-image04 %}
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/{{ page.approach-image04 }}"
+                data-fancybox="carousel-gallery"
+                data-caption="{{ page.project }}: {{ page.approach-caption04 }}"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage04 }}" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image04 }}" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/{{ page.approach-image04 }}" alt="{{ page.approach-caption-04 }} example image for {{ page.project }}">
+                </picture>
+              </div>
+              {% endif %}
+              {% if page.approach-image05 %}
+              <div
+                class="carousel__slide"
+                data-src="../../assets/images/portfolio-images/{{ page.approach-image05 }}"
+                data-fancybox="carousel-gallery"
+                data-caption="{{ page.project }}: {{ page.approach-caption05 }}"
+              >
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage05 }}" type="image/webp">
+                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image05 }}" type="image/jpeg"> 
+                  <img src="../../assets/images/portfolio-images/{{ page.approach-image05 }}" alt="{{ page.approach-caption-05 }} example image for {{ page.project }}">
+                </picture>
+              </div>
+              {% endif %}
+            </div>
+            
+
+          </div>
+        </div>
+        <h4>Goals</h4>
+        {{ page.goals }}
+      </section>
+      <section>
+        <h3>Process</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <p>{{ page.process }}</p>
+          </div>
+          <div class="col-right">
+            {{ page.processlist }}
+          </div>
+        </div>
+        {% if page.findings %}
+        <div class="single-col">
+          <h4>Findings</h4>
+          <p>{{ page.findings }}</p>
+        </div>
+        {% endif %}
+        <div class="card-portfolio fifth-card">
+          {% if page.process-image01 %}
+          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption01 }}" href="../../assets/images/portfolio-images/{{ page.process-image01 }}" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage01 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-image01 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.process-image01 }}" alt="{{ page.process-caption01 }} example image for {{ page.project }}">
+              </picture>
+              <figcaption>
+                <h3>{{ page.process-caption01 }}</h3>
+              </figcaption>
+            </figure>
+          </a>
+          {% endif %}
+          {% if page.process-image02 %}
+          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption02 }}" href="../../assets/images/portfolio-images/{{ page.process-image02 }}" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage02 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-image02 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.process-image02 }}" alt="{{ page.process-caption02 }} example image for {{ page.project }}">
+              </picture>
+              <figcaption>
+                <h3>{{ page.process-caption02 }}</h3>
+              </figcaption>
+            </figure>
+          </a>
+          {% endif %}
+          {% if page.process-image03 %}
+          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption03 }}" href="../../assets/images/portfolio-images/{{ page.process-image03 }}" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage03 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-image03 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.process-image03 }}" alt="{{ page.process-caption03 }} example image for {{ page.project }}">
+              </picture>
+              <figcaption>
+                <h3>{{ page.process-caption03 }}</h3>
+              </figcaption>
+            </figure>
+          </a>
+          {% endif %}
+          {% if page.process-image04 %}
+          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption04 }}" href="../../assets/images/portfolio-images/{{ page.process-image04 }}" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage04 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-image04 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.process-image04 }}" alt="{{ page.process-caption04 }} example image for {{ page.project }}">
+              </picture>
+              <figcaption>
+                <h3>{{ page.process-caption04 }}</h3>
+              </figcaption>
+            </figure>
+          </a>
+          {% endif %}
+          {% if page.process-image05 %}
+          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption05 }}" href="../../assets/images/portfolio-images/{{ page.process-image05 }}" data-fancybox="images">
+            <figure>
+              <picture>
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage05 }}" type="image/webp">
+                <source srcset="../../assets/images/portfolio-images/{{ page.process-image05 }}" type="image/jpeg"> 
+                <img src="../../assets/images/portfolio-images/{{ page.process-image05 }}" alt="{{ page.process-caption05 }} example image for {{ page.project }}">
+              </picture>
+              <figcaption>
+                <h3>{{ page.process-caption05 }}</h3>
+              </figcaption>
+            </figure>
+          </a>
+          {% endif %}
+        </div>
+      </section>
+      <section class="solution-section">
+        <h3>Solution</h3>
+          {% if page.prototype-orientation == 'vertical' %}
+            <div class="flex-two-col">
+              <div class="col-left flex-third">
+          {% endif %}
+            <p>{{ page.solutions }}</p>
+          {% if page.prototype-orientation == 'vertical' %}
+            </div>
+            <div class="col-right vertical">
+          {% endif %}
+          {% if page.prototype-type == 'image' %}
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.prototype-webp }}" type="image/webp">
+              <source srcset="../../assets/images/portfolio-images/{{ page.prototype }}" type="image/jpeg"> 
+              <img src="../../assets/images/portfolio-images/{{ page.prototype }}" alt="{{ page.prototype-alt }} example image for {{ page.project }}">
+            </picture>
+            </div>
+          {% endif %}
+          {% if page.prototype-type == 'figma' %}
+              {{ page.prototype }}
+            </div>
+          {% endif %}
+      </section>
+      <section>
+        <h3>Impact</h3>
+        <div class="flex-two-col">
+          <div class="col-left">
+            <h4>Results</h4>
+            <p>{{ page.outcomes }}</p>
+          </div>
+          <div class="col-right">
+            <h4>Achievements</h4>
+            {{ page.achievements }}
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Takeaways</h3>
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <h4>What would I do differently?</h4>
+            <p>{{ page.takeaways }}</p>
+            {% if page.testimonial-topic == '' %}
+          </div>
+          <div class="col-right">
+            <h4>How did I grow?</h4>
+            <p>{{ page.learnings }}</p>
+          </div>
+          {% else %}
+          <h4>How did I grow?</h4>
+            <p>{{ page.learnings }}</p>
+          </div>
+          <div class="col-right card-container">
+            <a href="" target="_blank" class="reference-card single" testimonial="topic:{{ page.testimonial-topic }}">
+              <q class="quote"></q>
+              <div class="image-title">
+                <picture>
+                  <source class="webpimage" srcset="../../assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
+                  <source class="image" srcset="../../assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg"> 
+                  <img src="../../assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
+                </picture>
+                <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </section>
+      <div class="breadcrumb">
+        <div class="bc-right">
+          <a class="btn text" href="../" title="Work Overview"> Work </a> / {{ page.project }} 
+        </div>
+        <div class="bc-left">
+          <a class="btn text svg-before" href="../{{ page.previous-cs-link }}" title="{{ page.previous-cs-title }}"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../{{ page.next-cs-link }}" title="{{ page.next-cs-title }}"> Next <i data-feather="arrow-right"></i> </a>
+        </div>
+      </div>
+    </main>
+    <script>
+      $('[data-fancybox]').fancybox({
+        protect: true,
+        loop: true,
+        clickContent: false,
+        buttons: [
+          "close"
+        ]
+      });
+    </script>
+    <script>
+      // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+      Dots: true,
+    });
+    </script>
+    {% include footer.html %}
+  </body>
+</html>
