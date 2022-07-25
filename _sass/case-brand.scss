@@ -23,7 +23,11 @@
     justify-content: space-between;
     background-color: $lt-gray-00;
     padding: $scale-1 $scale-2;
+    font-size: 12px;
     box-shadow: -50vw 0 0 0 $lt-gray-00, 50vw 0 0 0 $lt-gray-00, -25vw 0 0 0 $lt-gray-00, 25vw 0 0 0 $lt-gray-00;
+    a {
+      font-size: 12px;
+    }
     .bc-right {
       display: flex;
       align-items: center;
