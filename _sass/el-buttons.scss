@@ -32,10 +32,12 @@ button, input[type=submit], input[type=button], input[type=reset] {
     width: fit-content;
     transition: .25s ease-in-out;
     &.primary {
-        
+        background-color: $black-00;
+        color: $white-00;
+        box-shadow: $fake-medium $black-00;
         &:hover {
             background-color: $secondary-00;
-            color: $white-00;
+            color: $black-00;
             box-shadow: $fake-wide $dk-gray-00;
         }
     }
