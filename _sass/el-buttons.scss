@@ -9,7 +9,7 @@ button, input[type=submit], input[type=button], input[type=reset] {
     text-align: center;
     -webkit-appearance: none;
     -moz-appearance: none;
-    &:focus {
+    &:focus-visible {
         outline: $border-width-wide solid $primary-00;
         outline-offset: -($scale-1);
     }
