@@ -1,0 +1,24 @@
+<!-- Reusable testimonial card, populated client-side by assets/js/testimonials.js
+     via the `testimonial` attribute. Was previously duplicated verbatim in 5
+     places (_includes/card-dark.html, _layouts/about-template.html x3,
+     _layouts/case-study-template.html) - the same accessibility/JS bugs had
+     to be fixed in all 5 spots independently. One copy now.
+
+     Params:
+       include.variant     - "single" or "third" (reference-card size class)
+       include.topic       - value for the testimonial="topic:X" matching
+                              attribute. Leave blank/omit for a random pick.
+       include.path-prefix - relative path back to the site root, e.g. ".."
+                              from a page one level deep, "../.." from two
+                              levels deep (case studies). -->
+<a href="" target="_blank" rel="noopener" aria-label="Loading testimonial" class="reference-card {{ include.variant }}"{% if include.topic %} testimonial="topic:{{ include.topic }}"{% else %} testimonial{% endif %}>
+  <q class="quote"></q>
+  <div class="image-title">
+    <picture>
+      <source class="webpimage" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
+      <source class="image" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg">
+      <img src="{{ include.path-prefix }}/assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
+    </picture>
+    <p class="byline"><b class="name"></b> <i class="title"></i> <span class="company"></span></p>
+  </div>
+</a>

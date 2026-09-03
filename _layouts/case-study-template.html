@@ -269,17 +269,8 @@
             <p>{{ page.learnings }}</p>
           </div>
           <div class="col-right card-container">
-            <a href="" target="_blank" rel="noopener" aria-label="Loading testimonial" class="reference-card single" testimonial="topic:{{ page.testimonial-topic }}">
-              <q class="quote"></q>
-              <div class="image-title">
-                <picture>
-                  <source class="webpimage" srcset="../../assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
-                  <source class="image" srcset="../../assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg"> 
-                  <img src="../../assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
-                </picture>
-                <p class="byline"><b class="name"></b> <i class="title"></i> <span class="company"></span></p>
-              </div>
-            </a>
+            {% assign cs_testimonial_topic = page["testimonial-topic"] %}
+            {% include testimonial-card.html variant="single" topic=cs_testimonial_topic path-prefix="../.." %}
           </div>
           {% endif %}
         </div>
