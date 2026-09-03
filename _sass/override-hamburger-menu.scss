@@ -46,7 +46,7 @@
 .mobile-menu {
   display: flex;
   justify-content: space-between;
-  a h1 {
+  .branding .brand-name {
     font-size: $h5-font-size;
   }
 }
@@ -62,6 +62,10 @@
   cursor: pointer;
   z-index: 1001;
   outline: none;
+}
+.menu-toggle:focus {
+  outline: $border-width-wide solid $primary-00;
+  outline-offset: -($scale-1);
 }
 .menu-toggle span {
   display: block;

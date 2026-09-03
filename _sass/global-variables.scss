@@ -176,7 +176,8 @@ $small-font-size: 12px;
 }
 
 // *** style headers  ---------------------------------------------------
-h1 {
+// Site branding (logo) — chrome, not a page heading. See .branding in navigation.html.
+.branding .brand-name {
     @include type-mixin($type-display-main, $h1-font-size, $type-main-black);
     color: $primary-00;
     text-transform: uppercase;
@@ -209,6 +210,17 @@ section {
     h2 {
         text-transform: none;
         color: $black-00;
+    }
+}
+// Page-title heading (rendered as a true <h1> per page) — reuses the
+// visual treatment the site previously applied to these titles as <h2>.
+.page-title {
+    @include type-mixin($type-display-main, $h2-font-size, $type-main-black);
+    color: $white-00;
+    line-height: 1;
+    margin-bottom: $scale-2;
+    @media (max-width: 699px) {
+        font-size: $h4-font-size;
     }
 }
 h3 {

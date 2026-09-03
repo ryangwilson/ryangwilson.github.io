@@ -1,29 +1,42 @@
 <header id="masterhead">
-  <a href="/" class="branding"><h1><span>Ryan G<i>.</i> Wilson</span> UX Leader</h1></a>
+  <a href="/" class="branding"><span class="brand-name"><span>Ryan G<i>.</i> Wilson</span> UX Leader</span></a>
   <span class="sr-only">Toggle main menu</span>
-  <a href="#main-menu" role="button" class="menu-toggle" aria-label="Toggle main menu">
+  <button type="button" class="menu-toggle" aria-label="Toggle main menu" aria-expanded="false" aria-controls="masternav">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-  </a>
+  </button>
   <nav id="masternav">
   {% for navigation in site.data.navigation %}
-    <a href="{{ navigation.url }}" class="{% if navigation.url == page.url %}active{% endif %}{% if page.url == '/' and navigation.url == '/work/' %} badge-animation{% endif %}{% if navigation.url == '/work/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}">{{ navigation.title }}</a>
+    {% if navigation.url == page.url %}{% assign is_active = true %}{% else %}{% assign is_active = false %}{% endif %}
+    <a href="{{ navigation.url }}" class="{% if is_active %}active{% endif %}{% if page.url == '/' and navigation.url == '/work/' %} badge-animation{% endif %}{% if navigation.url == '/work/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}"{% if is_active %} aria-current="page"{% endif %}>{{ navigation.title }}</a>
   {% endfor %}
   </nav>
 </header>
 <script>
   var menuToggle = document.querySelector('.menu-toggle');
-menuToggle.onclick = function() {
-  menuToggle.classList.toggle('open');
-  document.querySelector('#masternav').classList.toggle('open');
-}
+  var masternav = document.querySelector('#masternav');
+
+  menuToggle.onclick = function() {
+    var isOpen = menuToggle.classList.toggle('open');
+    masternav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && menuToggle.classList.contains('open')) {
+      menuToggle.classList.remove('open');
+      masternav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 
 function myFunction(x) {
   if (x.matches) { // If media query matches
-    document.querySelector('#masternav').classList.remove('open');
-    document.querySelector('.menu-toggle').classList.remove('open');
+    masternav.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
     document.querySelector('#masterhead').classList.remove('mobile-menu');
   } else {
     document.querySelector('#masterhead').classList.add('mobile-menu');
