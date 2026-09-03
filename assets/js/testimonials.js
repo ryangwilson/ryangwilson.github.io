@@ -264,6 +264,7 @@ window.onload = function () {
   const testimonialsCopy = shuffleArray(testimonials);
   const testimonialElements = document.querySelectorAll('[testimonial]');
   testimonialElements.forEach((element) => {
+    try {
       const rawValue = element.getAttribute("testimonial");
       if (rawValue) {
           const [key, value] = rawValue.split(":");
@@ -272,25 +273,54 @@ window.onload = function () {
           })
           if (testiminialIndex > -1) {
               const testiminial = removeIndexFromArray(testimonialsCopy, testiminialIndex);
-              initiateCard(testiminial, element);   
+              initiateCard(testiminial, element);
               return;
           }
           console.warn(value + " was not found in " + key + ". Falling back to random!");
       }
       initiateCard(getRandomItem(testimonialsCopy), element);
-   });
+    } catch (error) {
+      // A malformed card shouldn't stop the rest of the cards on the page
+      // from being populated (forEach doesn't stop on a thrown error from
+      // one iteration, but a rethrow would still be lost silently, so we
+      // catch and log here instead).
+      console.error("Failed to initialize a testimonial card:", error, element);
+    }
+  });
 }
 
 function initiateCard(item, element) {
-  element.querySelector('.quote').innerText = item.quote
-  element.querySelector('.name').innerText = item.name
-  element.querySelector('.title').innerText = item.title
-  element.querySelector('.company').innerText = item.company
-  element.querySelector('.webpimage').srcset = "/assets/images/testimonial-images/" + item.webpimage
-  element.querySelector('.image').srcset = "/assets/images/testimonial-images/" + item.image
-  element.querySelector('img').src = "/assets/images/testimonial-images/" + item.image
-  element.querySelector('img').alt = "Testimonial image of " + item.name
-  element.href = item.linkedin
+  const quoteEl = element.querySelector('.quote');
+  if (quoteEl) quoteEl.innerText = item.quote;
+
+  const nameEl = element.querySelector('.name');
+  if (nameEl) nameEl.innerText = item.name;
+
+  const titleEl = element.querySelector('.title');
+  if (titleEl) titleEl.innerText = item.title;
+
+  const companyEl = element.querySelector('.company');
+  if (companyEl) companyEl.innerText = item.company;
+
+  const webpImageEl = element.querySelector('.webpimage');
+  if (webpImageEl) webpImageEl.srcset = "/assets/images/testimonial-images/" + item.webpimage;
+
+  const jpgImageEl = element.querySelector('.image');
+  if (jpgImageEl) jpgImageEl.srcset = "/assets/images/testimonial-images/" + item.image;
+
+  const imgEl = element.querySelector('img');
+  if (imgEl) {
+    imgEl.src = "/assets/images/testimonial-images/" + item.image;
+    imgEl.alt = "Testimonial image of " + item.name;
+  }
+
+  if (item.linkedin) element.href = item.linkedin;
+
+  // The static markup carries an aria-label="Loading testimonial" fallback
+  // so the link has a non-empty accessible name if this script never runs.
+  // Now that real content is in place, drop it so the accessible name is
+  // computed from the populated content instead.
+  element.removeAttribute('aria-label');
 }
 
 function removeIndexFromArray(items, index) {
