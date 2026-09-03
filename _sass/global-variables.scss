@@ -230,7 +230,40 @@ h3 {
     width: fit-content;
     margin-bottom: $scale-5;
 }
+/* Two elements previously used <h3> in ways that broke heading order
+   (accessibility audit: axe-core "heading-order") - both keep h3's exact
+   visual treatment via these classes instead of relying on the tag. */
+
+/* Testimonial-card name/title/company line, and a case study's client
+   label: attribution/byline text, not real section headings. */
+.byline {
+    @include type-mixin($type-display-main, $h3-font-size, $type-main-black);
+    color: $black-00;
+    line-height: 1;
+    width: fit-content;
+    margin-bottom: $scale-5;
+}
+
+/* Case-study/single-project page section headings (Overview, Approach,
+   Process, Solution, Impact, Takeaways, etc.) were all <h3> directly
+   under the page's <h1>, with no <h2> anywhere on the page - promoted
+   to real <h2>, kept visually identical to the old h3 via this class. */
+.section-title {
+    @include type-mixin($type-display-main, $h3-font-size, $type-main-black);
+    color: $black-00;
+    line-height: 1;
+    width: fit-content;
+    margin-bottom: $scale-5;
+}
 h4 {
+    @include type-mixin($type-display-main, $h4-font-size, $type-main-black, normal, uppercase);
+    color: $black-00;
+}
+/* Case-study sub-headings (Role, Scope, Tools, Problem Statement, Goals,
+   Findings, Results, Achievements, etc.) were <h4> directly under the
+   section h3's promoted to h2 above - now a h2 -> h4 skip. Promoted to
+   real <h3>, kept visually identical to the old h4 via this class. */
+.subsection-title {
     @include type-mixin($type-display-main, $h4-font-size, $type-main-black, normal, uppercase);
     color: $black-00;
 }

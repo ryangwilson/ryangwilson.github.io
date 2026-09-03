@@ -6,7 +6,7 @@
     <main class="cs-container {{ page.brandclass }}">
       <div class="card-dark case-study">
         <h1 class="page-title">{{ page.project }}</h1>
-        <h3>{{ page.client }}</h3>
+        <p class="byline">{{ page.client }}</p>
         <p>{{ page.subtitle }}</p>
         <picture>
           <source srcset="../../assets/images/portfolio-images/{{ page.hero-image-webp }}" type="image/webp">
@@ -24,26 +24,26 @@
         </div>
       </div>
       <section>
-        <h3>Overview</h3>
+        <h2 class="section-title">Overview</h2>
         <div class="flex-two-col">
           <div class="col-left flex-third">
             <p>{{ page.overview }}</p>
           </div>
           <div class="col-right">
-            <h4>Role</h4>
+            <h3 class="subsection-title">Role</h3>
             <p>{{ page.role }}</p>
-            <h4>Scope</h4>
+            <h3 class="subsection-title">Scope</h3>
             <p>{{ page.scope }}</p>
-            <h4>Tools</h4>
+            <h3 class="subsection-title">Tools</h3>
             <p>{{ page.tools }}</p>
           </div>
         </div>
       </section>
       <section>
-        <h3>Approach</h3>
+        <h2 class="section-title">Approach</h2>
         <div class="flex-two-col">
           <div class="col-left">
-            <h4>Problem Statement</h4>
+            <h3 class="subsection-title">Problem Statement</h3>
             <p>{{ page.problemstatement }}</p>
           </div>
           <div class="col-right">
@@ -123,11 +123,11 @@
 
           </div>
         </div>
-        <h4>Goals</h4>
+        <h3 class="subsection-title">Goals</h3>
         {{ page.goals }}
       </section>
       <section>
-        <h3>Process</h3>
+        <h2 class="section-title">Process</h2>
         <div class="flex-two-col">
           <div class="col-left flex-third">
             <p>{{ page.process }}</p>
@@ -138,7 +138,7 @@
         </div>
         {% if page.findings %}
         <div class="single-col">
-          <h4>Findings</h4>
+          <h3 class="subsection-title">Findings</h3>
           <p>{{ page.findings }}</p>
         </div>
         {% endif %}
@@ -216,7 +216,7 @@
         </div>
       </section>
       <section class="solution-section">
-        <h3>Solution</h3>
+        <h2 class="section-title">Solution</h2>
           {% if page.prototype-orientation == 'vertical' %}
             <div class="flex-two-col">
               <div class="col-left flex-third">
@@ -240,32 +240,32 @@
           {% endif %}
       </section>
       <section>
-        <h3>Impact</h3>
+        <h2 class="section-title">Impact</h2>
         <div class="flex-two-col">
           <div class="col-left">
-            <h4>Results</h4>
+            <h3 class="subsection-title">Results</h3>
             <p>{{ page.outcomes }}</p>
           </div>
           <div class="col-right">
-            <h4>Achievements</h4>
+            <h3 class="subsection-title">Achievements</h3>
             {{ page.achievements }}
           </div>
         </div>
       </section>
       <section>
-        <h3>Takeaways</h3>
+        <h2 class="section-title">Takeaways</h2>
         <div class="flex-two-col">
           <div class="col-left flex-third">
-            <h4>What would I do differently?</h4>
+            <h3 class="subsection-title">What would I do differently?</h3>
             <p>{{ page.takeaways }}</p>
             {% if page.testimonial-topic == '' %}
           </div>
           <div class="col-right">
-            <h4>How did I grow?</h4>
+            <h3 class="subsection-title">How did I grow?</h3>
             <p>{{ page.learnings }}</p>
           </div>
           {% else %}
-          <h4>How did I grow?</h4>
+          <h3 class="subsection-title">How did I grow?</h3>
             <p>{{ page.learnings }}</p>
           </div>
           <div class="col-right card-container">
@@ -277,7 +277,7 @@
                   <source class="image" srcset="../../assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg"> 
                   <img src="../../assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
                 </picture>
-                <h3><b class="name"></b> <i class="title"></i> <span class="company"></span></h3>
+                <p class="byline"><b class="name"></b> <i class="title"></i> <span class="company"></span></p>
               </div>
             </a>
           </div>

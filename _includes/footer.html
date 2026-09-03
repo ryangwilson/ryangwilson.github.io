@@ -1,5 +1,5 @@
 <footer>
-  <nav>
+  <nav aria-label="Footer">
     <div class="footer-nav">
       {% for navigation in site.data.navigation %}
       <a href="{{ navigation.url }}" class="{% if page.url == navigation.url %}active{% endif %}{% if navigation.url == '/work/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}">{{ navigation.title }}</a>

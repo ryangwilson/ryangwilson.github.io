@@ -7,7 +7,7 @@
     <span></span>
     <span></span>
   </button>
-  <nav id="masternav">
+  <nav id="masternav" aria-label="Primary">
   {% for navigation in site.data.navigation %}
     {% if navigation.url == page.url %}{% assign is_active = true %}{% else %}{% assign is_active = false %}{% endif %}
     <a href="{{ navigation.url }}" class="{% if is_active %}active{% endif %}{% if page.url == '/' and navigation.url == '/work/' %} badge-animation{% endif %}{% if navigation.url == '/work/' %} nested{% endif %}{% if navigation.url == '/contact/' %} contact{% endif %}"{% if is_active %} aria-current="page"{% endif %}>{{ navigation.title }}</a>

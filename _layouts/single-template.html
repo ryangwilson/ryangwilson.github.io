@@ -15,35 +15,35 @@
           <p>{{ page.client }}, {{ page.year }}</p> -->
           <!-- <p><i>Created with: {% if page.underurl %}<a href="{{ page.underurl }}" target="_blank" rel="noopener">{% endif %} {{ page.under }} {% if page.underurl %}</a>{% endif %} </i></p> -->
           {% if page.type != "product" and page.phases %}
-          <h3>Project Phases</h3>
+          <h2 class="section-title">Project Phases</h2>
           <p>{{ page.phases }}</p>
           {% endif %}
           {% if page.type != "product" and page.tools %}
-          <h3>Tools</h3>
+          <h2 class="section-title">Tools</h2>
           <p>{{ page.tools }}</p>
           {% endif %}
           {% if page.type == "product" and page.represents %}
-          <h3>This Project Represents</h3>
+          <h2 class="section-title">This Project Represents</h2>
           <p>{{ page.represents }}</p>
           {% endif %}
           {% if page.overview %}
-          <h3>Overview</h3>
+          <h2 class="section-title">Overview</h2>
           <p>{{ page.overview }}</p>
           {% endif %}
           {% if page.users %}
-          <h3>Users</h3>
+          <h2 class="section-title">Users</h2>
           <p>{{ page.users }}</p>
           {% endif %}
           {% if page.process %}
-          <h3>Process</h3>
+          <h2 class="section-title">Process</h2>
           <p>{{ page.process }}</p>
           {% endif %}
           {% if page.problemstatement %}
-          <h3>Difficulties</h3>
+          <h2 class="section-title">Difficulties</h2>
           <p>{{ page.problemstatement }}</p>
           {% endif %}
           {% if page.solutions %}
-          <h3>Solutions</h3>
+          <h2 class="section-title">Solutions</h2>
           <p>{{ page.solutions }}</p>
           {% endif %}
           {% if page.persona %}
@@ -54,24 +54,24 @@
           </picture>
           {% endif %}
           {% if page.constraints %}
-          <h3>Constraints</h3>
+          <h2 class="section-title">Constraints</h2>
           <p>{{ page.constraints }}</p>
           {% endif %}
           {% if page.value %}
-          <h3>Value Provided to Users</h3>
+          <h2 class="section-title">Value Provided to Users</h2>
           <p>{{ page.value }}</p>
           {% endif %}
           {% if page.outcome %}
-          <h3>Outcome</h3>
+          <h2 class="section-title">Outcome</h2>
           <p>{{ page.outcome }}</p>
           {% endif %}
           {% if page.processdoc %}
-            <h3>Process Document</h3>
+            <h2 class="section-title">Process Document</h2>
             <p>
             <a href="../../assets/images/process-docs/{{ page.processdoc }}" target="_blank" rel="noopener">{{ page.processdocprompt }}</a></p>
           {% endif %}
           {% if page.externalurl %}
-            <h3>External Files</h3>
+            <h2 class="section-title">External Files</h2>
             <p><a href="{{ page.externalurl }}" target="_blank" rel="noopener">{{ page.externalprompt }}</a></p>
           {% endif %}
         </div>
