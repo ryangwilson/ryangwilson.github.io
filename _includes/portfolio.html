@@ -69,7 +69,7 @@
 <p>{{ page.deliverables }}</p>
 <h3 id="leadership">Leadership & Mentorship</h3>
 <div class="card-portfolio fifth-card">
-    {% for visuals in site.data.visuals | type:"userflow" %}
+    {% for visuals in site.data.visuals %}
         {% if visuals.type == "leadership" and visuals.flag == "video" %}
         <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
             <figure>
@@ -98,7 +98,7 @@
 
 <h3 id="process">Project Kickoff</h3>
 <div class="card-portfolio fifth-card">
-    {% for visuals in site.data.visuals | type:"userflow" %}
+    {% for visuals in site.data.visuals %}
         {% if visuals.type == "kickoff" and visuals.flag == "video" %}
         <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
             <figure>
@@ -127,7 +127,7 @@
 
 <h3 id="product">Research & Design</h3>
 <div class="card-portfolio fifth-card">
-    {% for visuals in site.data.visuals | type:"userflow" %}
+    {% for visuals in site.data.visuals %}
         {% if visuals.type == "research" and visuals.flag == "video" %}
         <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
             <figure>
@@ -156,7 +156,7 @@
 
 <h3 id="ui">Mockups & Prototypes</h3>
 <div class="card-portfolio fifth-card">
-    {% for visuals in site.data.visuals | type:"userflow" %}
+    {% for visuals in site.data.visuals %}
         {% if visuals.type == "ui" and visuals.flag == "video" %}
         <a data-fancybox="gallery-{{ visuals.type }}" data-caption="{{ visuals.project }}: {{ visuals.caption }}" href="{{ visuals.video }}">
             <figure>

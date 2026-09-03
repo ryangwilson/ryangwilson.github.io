@@ -243,7 +243,7 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: $scale-1;
   cursor: pointer;
-  animate: 0.2s;
+  transition: 0.2s;
   box-shadow: 0 0 0 0 $black-00;
   background: $secondary-50;
   border-radius: 1px;
@@ -267,7 +267,7 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: $scale-1;
   cursor: pointer;
-  animate: 0.2s;
+  transition: 0.2s;
   box-shadow: 0 0 0 3px $black-00;
   background: $secondary-00;
   border-radius: 1px;
@@ -286,7 +286,7 @@ input[type=range]::-ms-track {
   width: 100%;
   height: $scale-1;
   cursor: pointer;
-  animate: 0.2s;
+  transition: 0.2s;
   background: transparent;
   border-color: transparent;
   color: transparent;
