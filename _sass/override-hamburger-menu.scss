@@ -20,23 +20,23 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  left: -100vw;
+  left: 0;
   top: 0;
   height: 100vh;
-	transition: left .5s ease-in-out;
-	z-index: 999;
+  transform: translateX(-100%);
+  z-index: 999;
   overflow: hidden;
   background-color: $black-00;
-  transition: all .2s ease-in;
+  transition: transform .2s ease-in, background-color .2s ease-in;
 }
 
 /* On small devices, allow it to toggle - :target for non-JavaScript
  aria-expanded="true/false" will be for JavaScript */
 .mobile-menu #masternav.open {
-  left: 0;
+  transform: translateX(0);
   background-color: rgba(0,0,0,1);
   z-index: 1000;
-  transition: all .5s ease-out;
+  transition: transform .5s ease-out, background-color .5s ease-out;
   a {
     margin: 0;
     font-size: $h5-font-size;
