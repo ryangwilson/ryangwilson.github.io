@@ -64,7 +64,17 @@
   margin-left: auto;
   cursor: pointer;
   z-index: 1001;
-  outline: none;
+}
+/* Own focus-visible rule (higher specificity than el-buttons.scss's
+   generic button:focus-visible) sized for this 24px-tall icon - the
+   generic rule's 5px inset outline was cutting across the bars.
+   No `outline: none` fallback here on purpose: in browsers without
+   :focus-visible support, this rule (and the generic one) simply
+   don't match, so the button's native default focus outline still
+   shows - a functional fallback rather than no indicator at all. */
+.menu-toggle:focus-visible {
+  outline: 2px solid $primary-00;
+  outline-offset: 2px;
 }
 .menu-toggle span {
   display: block;
