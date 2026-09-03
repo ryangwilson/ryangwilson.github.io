@@ -1,0 +1,84 @@
+---
+permalink: /nav-hover-preview/
+robots: noindex,nofollow
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nav hover preview — not a real page</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<style>
+  body { padding: 0 0 80px; }
+  h2 { color: #fff; text-transform: none; font-size: 20px; margin: 40px 40px 8px; }
+  h2:first-of-type { margin-top: 40px; }
+  p.note { color: #aaa; font-size: 14px; margin: 0 40px 16px; max-width: 600px; }
+  code { color: #ddd; }
+
+  /* Real header markup is reused unmodified below via Jekyll's include
+     tag, avatar-reveal span and all (it's now part of the real
+     navigation.html, hidden/inert everywhere by default via real site
+     CSS) - only sizing/position + the per-variant hover rules below
+     are new, scoped per variant so three copies can be compared. */
+  .variant-demo #masterhead { position: static; } /* header is normally sticky/fixed-ish; keep it in flow here */
+
+  .avatar-reveal {
+    width: 60px;
+    height: 60px;
+    top: -6px;
+    left: 82px;
+  }
+  .avatar-reveal img { width: 100%; height: 100%; display: block; }
+
+  .brand-name .subtitle { transition: letter-spacing .35s ease, color .35s ease; }
+
+  /* Variant 1: avatar scales up from the dot, bouncy overshoot; UX LEADER -> teal + wider tracking */
+  .v1 .avatar-reveal { transform-origin: 0% 50%; transform: scale(0); opacity: 0; transition: transform .4s cubic-bezier(.34,1.56,.64,1), opacity .25s ease; }
+  .v1 .branding:hover .avatar-reveal { transform: scale(1); opacity: 1; }
+  .v1 .branding:hover .subtitle { letter-spacing: 3px; color: #28D2C9; }
+
+  /* Variant 2: iris / circular reveal; same UX LEADER treatment as v1 */
+  .v2 .avatar-reveal { clip-path: circle(0% at 0% 50%); transition: clip-path .5s ease; }
+  .v2 .branding:hover .avatar-reveal { clip-path: circle(75% at 50% 50%); }
+  .v2 .branding:hover .subtitle { letter-spacing: 3px; color: #28D2C9; }
+
+  /* Variant 3: gentle pop/slide, white accent instead of teal */
+  .v3 .avatar-reveal { top: -22px; opacity: 0; transform: translateY(6px) scale(.4); transform-origin: 0% 100%; transition: transform .4s ease, opacity .35s ease; }
+  .v3 .branding:hover .avatar-reveal { opacity: 1; transform: translateY(0) scale(1); }
+  .v3 .branding:hover .subtitle { letter-spacing: 3px; color: #fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .avatar-reveal, .subtitle { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<h2>Variant 1 — scale up from the dot</h2>
+<p class="note">Avatar scales from nothing, anchored at the dot, with a slight bounce. "UX LEADER" widens its tracking and shifts to teal. Real header markup below (nav, hamburger icon, etc. included as-is).</p>
+<div class="variant-demo v1">
+  {% include navigation.html %}
+</div>
+
+<h2>Variant 2 — iris reveal (circular clip)</h2>
+<p class="note">Avatar is always present but clipped to nothing at the dot; hover opens a circular aperture, like a camera iris. Same teal shift on "UX LEADER".</p>
+<div class="variant-demo v2">
+  {% include navigation.html %}
+</div>
+
+<h2>Variant 3 — gentle pop-up, white accent</h2>
+<p class="note">Softer entrance (fade + small upward pop, no overshoot); "UX LEADER" shifts to white instead of teal.</p>
+<div class="variant-demo v3">
+  {% include navigation.html %}
+</div>
+
+<h2>Notes</h2>
+<p class="note">
+  This uses the real <code>{% raw %}{% include navigation.html %}{% endraw %}</code> three times, so everything except the avatar and the hover rules above is the actual live site CSS - not a reconstruction.<br><br>
+  The avatar SVG has its own built-in looping blink animation, so once visible it animates on its own.<br><br>
+  All three respect <code>prefers-reduced-motion</code>.
+</p>
+
+</body>
+</html>

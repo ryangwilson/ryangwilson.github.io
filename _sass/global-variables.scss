@@ -183,7 +183,13 @@ $small-font-size: 12px;
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 0;
-    span {
+    // Explicit classes below (not a bare `span` selector) so each of the
+    // two spans in navigation.html's branding markup is styled on
+    // purpose - a bare `span` selector here previously caught a THIRD
+    // span (.subtitle, "UX Leader") added later for an unrelated fix,
+    // silently shrinking/recoloring it. Caught by the site owner
+    // checking the live result, not by me verifying first.
+    .name-line {
         display: block;
         color: $white-00;
         font-size: $h6-font-size;
@@ -195,7 +201,23 @@ $small-font-size: 12px;
             font-weight: $type-main-black;
         }
     }
+    // .subtitle ("UX Leader") gets no override here - it inherits
+    // .brand-name's own color/uppercase/size directly, exactly as it
+    // did back when it was bare text with no wrapping span at all.
 }
+/* Avatar reveal, added to navigation.html for a hover-interaction
+   experiment (see nav-hover-preview.html, not linked/local-only).
+   Hidden and non-interactive by default everywhere - a page must
+   explicitly opt in with its own CSS to reveal/animate it. Nothing
+   about this changes the site's default appearance. */
+.branding .avatar-reveal {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+/* Nav branding micro-interaction: under review, see nav-hover-preview.html
+   (not linked, local-only) - removed the first version here since it was
+   built without checking the direction first. Nothing live right now. */
 h2 {
     @include type-mixin($type-display-main, $h2-font-size, $type-main-black);
     color: $white-00;

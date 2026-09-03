@@ -82,6 +82,7 @@ header {
   top: 0;
   .branding {
     margin-right: $scale-5;
+    position: relative; // positioning context for .avatar-reveal
   }
 }
 
