@@ -53,6 +53,8 @@ github_username:  ryangwilson
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - styleguide/
 collections:
   portfolio:
     output: true
