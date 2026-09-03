@@ -142,8 +142,12 @@
 
 .yum {
   .case-study {
-    background-color: #ED1C24;
-    box-shadow: -50vw 0 0 0 #ED1C24, 50vw 0 0 0 #ED1C24, -25vw 0 0 0 #ED1C24, 25vw 0 0 0 #ED1C24;
+    // Darkened from #ED1C24 (white-text contrast 4.38:1, failed the 4.5:1
+    // AA minimum for the regular-weight subtitle text) - same hue/saturation,
+    // reduced lightness only. New contrast: 4.81:1 (verified, WCAG
+    // relative-luminance formula).
+    background-color: #E3121A;
+    box-shadow: -50vw 0 0 0 #E3121A, 50vw 0 0 0 #E3121A, -25vw 0 0 0 #E3121A, 25vw 0 0 0 #E3121A;
   }
   section:nth-of-type(2), section:nth-of-type(4) {
     background-color: #fef3f4;
@@ -256,8 +260,11 @@
 
 .atomagic {
   .case-study {
-    background-color: #2592D0;
-    box-shadow: -50vw 0 0 0 #2592D0, 50vw 0 0 0 #2592D0, -25vw 0 0 0 #2592D0, 25vw 0 0 0 #2592D0;
+    // Darkened from #2592D0 (white-text contrast 3.44:1, failed the 4.5:1
+    // AA minimum) - same hue/saturation, reduced lightness only. New
+    // contrast: 4.53:1 (verified, WCAG relative-luminance formula).
+    background-color: #207DB2;
+    box-shadow: -50vw 0 0 0 #207DB2, 50vw 0 0 0 #207DB2, -25vw 0 0 0 #207DB2, 25vw 0 0 0 #207DB2;
   }
   section:nth-of-type(2), section:nth-of-type(4) {
     background-color: #f3f9fc;
