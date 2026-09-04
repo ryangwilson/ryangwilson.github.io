@@ -132,6 +132,9 @@ $elevation-near: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.24);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+// Variable font, used for the nav branding/nav-link hover interactions
+// (font-variation-settings "wght"/"GRAD" axes) - see navigation.html.
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD@8..144,25..151,100..1000,-200..150&display=swap');
 
 // ** DEFINE DISPLAY TEXT ---------------------------------------------------
 $type-display-main: 'Roboto', sans-serif;
@@ -192,12 +195,12 @@ $small-font-size: 12px;
     .name-line {
         display: block;
         color: $white-00;
-        font-size: $h6-font-size;
+        font-size: 24px;
         font-weight: $type-main-bold;
         letter-spacing: 0;
         i {
             color: $primary-00;
-            font-size: $h6-font-size;
+            font-size: 24px;
             font-weight: $type-main-black;
         }
     }

@@ -25,7 +25,10 @@ nav {
     color: $white-00;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: $type-body-medium;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-variation-settings: "wght" 300, "GRAD" 0;
     font-size: $body-font-size;
     padding: $scale-2 0;
     box-shadow: 0 0 0 0 $white-00, 0 0 0 0 $white-00;
@@ -35,7 +38,8 @@ nav {
     }
     &:hover {
       color: $white-00;
-      box-shadow: 0 $scale-1 0 0 $white-00, 0 (-$scale-1) 0 0 $white-00;
+      font-variation-settings: "wght" 300, "GRAD" 150;
+      box-shadow: 0 $scale-1 0 0 $secondary-00, 0 (-$scale-1) 0 0 $secondary-00;
     }
     &.active {
       color: $secondary-00;
