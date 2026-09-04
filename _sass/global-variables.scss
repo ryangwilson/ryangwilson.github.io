@@ -259,20 +259,15 @@ h3 {
    (accessibility audit: axe-core "heading-order") - both keep h3's exact
    visual treatment via these classes instead of relying on the tag. */
 
-/* Testimonial-card name/title/company line, and a case study's client
-   label: attribution/byline text, not real section headings. */
-.byline {
-    @include type-mixin($type-display-main, $h3-font-size, $type-main-black);
-    color: $black-00;
-    line-height: 1;
-    width: fit-content;
-    margin-bottom: $scale-5;
-}
-
-/* Case-study/single-project page section headings (Overview, Approach,
-   Process, Solution, Impact, Takeaways, etc.) were all <h3> directly
-   under the page's <h1>, with no <h2> anywhere on the page - promoted
-   to real <h2>, kept visually identical to the old h3 via this class. */
+/* .byline: testimonial-card name/title/company line, and a case
+   study's client label - attribution text, not a real heading.
+   .section-title: case-study/single-project/experience/process page
+   section headings that were all <h3> directly under the page's <h1>,
+   with no <h2> anywhere on the page - promoted to real <h2>, kept
+   visually identical to the old h3 via this class. Same visual
+   treatment, different semantic roles, hence two class names on one
+   shared ruleset. */
+.byline,
 .section-title {
     @include type-mixin($type-display-main, $h3-font-size, $type-main-black);
     color: $black-00;
