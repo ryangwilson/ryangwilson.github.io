@@ -196,7 +196,6 @@ $small-font-size: 12px;
         display: block;
         color: $white-00;
         font-size: 24px;
-        font-weight: $type-main-bold;
         letter-spacing: 0;
         i {
             color: $primary-00;
@@ -204,23 +203,80 @@ $small-font-size: 12px;
             font-weight: $type-main-black;
         }
     }
-    // .subtitle ("UX Leader") gets no override here - it inherits
-    // .brand-name's own color/uppercase/size directly, exactly as it
-    // did back when it was bare text with no wrapping span at all.
+    // .subtitle ("UX Leader") gets no size/color/transform override
+    // here - it inherits .brand-name's own uppercase/size directly.
+    // Both .name-line and .subtitle get their font-family/weight from
+    // the shared Roboto Flex rule below (needed for the hover effect).
 }
-/* Avatar reveal, added to navigation.html for a hover-interaction
-   experiment (see nav-hover-preview.html, not linked/local-only).
-   Hidden and non-interactive by default everywhere - a page must
-   explicitly opt in with its own CSS to reveal/animate it. Nothing
-   about this changes the site's default appearance. */
+// Middle initial ("G.") dropped from the branding lockup - decided
+// after comparing options in a local preview page.
+.branding .middle-initial {
+    display: none;
+}
+// Branding hover micro-interaction: name/title set in Roboto Flex at
+// a light 300 weight, both animate a
+// "GRAD" (grade) axis on hover for a subtle heft change with no
+// font-swap flash; "UX Leader" also shifts to the teal secondary
+// color. The avatar is a real inline child of .name-line (right after
+// "Wilson", see navigation.html) rather than an absolutely-positioned
+// overlay with a hardcoded offset, so it can't drift out of place if
+// the text before it ever changes again.
+.branding .name-line,
+.branding .subtitle {
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-variation-settings: "wght" 300, "GRAD" 0;
+}
+.branding .name-line {
+    transition: font-variation-settings .35s ease;
+}
+.branding .subtitle {
+    transition: color .35s ease, font-variation-settings .35s ease;
+}
+.branding:hover .name-line {
+    font-variation-settings: "wght" 300, "GRAD" 150;
+}
+.branding:hover .subtitle {
+    color: $secondary-00;
+    font-variation-settings: "wght" 300, "GRAD" 150;
+}
 .branding .avatar-reveal {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 1em;
+    overflow: visible;
+    vertical-align: middle;
+    transition: width .4s ease, margin-left .4s ease;
 }
-/* Nav branding micro-interaction: under review, see nav-hover-preview.html
-   (not linked, local-only) - removed the first version here since it was
-   built without checking the direction first. Nothing live right now. */
+.branding .avatar-reveal img {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 50px;
+    height: 50px;
+    transform-origin: 0% 50%;
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+    transition: transform .4s cubic-bezier(.34, 1.56, .64, 1), opacity .25s ease;
+}
+.branding:hover .avatar-reveal {
+    width: 24px;
+    margin-left: 10px;
+}
+.branding:hover .avatar-reveal img {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+    .branding .name-line,
+    .branding .subtitle,
+    .branding .avatar-reveal,
+    .branding .avatar-reveal img {
+        transition: none;
+    }
+}
 h2 {
     @include type-mixin($type-display-main, $h2-font-size, $type-main-black);
     color: $white-00;
