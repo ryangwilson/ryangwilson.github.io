@@ -8,27 +8,27 @@
       <section>
         <div class="flex-three-col">
           <div class="col-left">
-            <h3>{{ page.sidebar-title03 }}</h3>
+            <h2 class="section-title">{{ page.sidebar-title03 }}</h2>
             <div class="details">
               <a class="btn primary svg-after" href="../{{ page.button01-link }}" target="_blank" rel="noopener">{{ page.button01-title }} <i data-feather="{{ page.button01-icon }}"></i></a>
             </div>
             {% for experience in site.data.experience %}
-              <p><b>{{ experience.title }}</b></br>
-              {{ experience.company }}</br>
+              <p><b>{{ experience.title }}</b><br>
+              {{ experience.company }}<br>
               {{ experience.dates }}</p>
             {% endfor %}
           </div>
           <div class="col-center">
-            <h3>{{ page.sidebar-title04 }}</h3>
+            <h2 class="section-title">{{ page.sidebar-title04 }}</h2>
             {% for expertise in site.data.expertise %}
-              <p><b>{{ expertise.title }}</b></br>
+              <p><b>{{ expertise.title }}</b><br>
               {{ expertise.details }}</p>
             {% endfor %}
           </div>
           <div class="col-right">
-            <h3>{{ page.sidebar-title01 }}</h3>
+            <h2 class="section-title">{{ page.sidebar-title01 }}</h2>
             {% for education in site.data.education %}
-            <p><b>{{ education.degree }}</b></br>
+            <p><b>{{ education.degree }}</b><br>
             {{ education.location }} {{ education.date }}
             {% if education.paper %}
             <br>{{ education.paper }}

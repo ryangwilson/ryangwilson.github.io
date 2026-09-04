@@ -3,3 +3,13 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# Jekyll build output - was previously tracked in this repo, which is
+# not standard practice (GitHub Pages builds from source, it doesn't
+# serve the committed copy) and caused a real bug: reverting stale
+# tracked drift in _site/ during local dev would overwrite whatever
+# `jekyll serve` had just freshly built, silently serving old content.
+_site/
+.jekyll-cache/
+.bundle/
+vendor/

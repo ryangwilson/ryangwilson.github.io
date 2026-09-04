@@ -65,7 +65,7 @@
         margin-top: -($scale-5);
       }
     }
-    h3 {
+    .byline {
       display: flex;
       flex-direction: column;
       font-size: $body-font-size;
@@ -118,7 +118,7 @@
           img {
             margin: 0 $scale-3 0 0;
           }
-          h3 {
+          .byline {
             text-align: left;
           }
         }

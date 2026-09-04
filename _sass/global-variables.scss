@@ -132,6 +132,9 @@ $elevation-near: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.24);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+// Variable font, used for the nav branding/nav-link hover interactions
+// (font-variation-settings "wght"/"GRAD" axes) - see navigation.html.
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD@8..144,25..151,100..1000,-200..150&display=swap');
 
 // ** DEFINE DISPLAY TEXT ---------------------------------------------------
 $type-display-main: 'Roboto', sans-serif;
@@ -176,25 +179,48 @@ $small-font-size: 12px;
 }
 
 // *** style headers  ---------------------------------------------------
-h1 {
+// Site branding (logo) — chrome, not a page heading. See .branding in navigation.html.
+.branding .brand-name {
     @include type-mixin($type-display-main, $h1-font-size, $type-main-black);
     color: $primary-00;
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 0;
-    span {
+    // Explicit classes below (not a bare `span` selector) so each of the
+    // two spans in navigation.html's branding markup is styled on
+    // purpose - a bare `span` selector here previously caught a THIRD
+    // span (.subtitle, "UX Leader") added later for an unrelated fix,
+    // silently shrinking/recoloring it. Caught by the site owner
+    // checking the live result, not by me verifying first.
+    .name-line {
         display: block;
         color: $white-00;
-        font-size: $h6-font-size;
+        font-size: 24px;
         font-weight: $type-main-bold;
         letter-spacing: 0;
         i {
             color: $primary-00;
-            font-size: $h6-font-size;
+            font-size: 24px;
             font-weight: $type-main-black;
         }
     }
+    // .subtitle ("UX Leader") gets no override here - it inherits
+    // .brand-name's own color/uppercase/size directly, exactly as it
+    // did back when it was bare text with no wrapping span at all.
 }
+/* Avatar reveal, added to navigation.html for a hover-interaction
+   experiment (see nav-hover-preview.html, not linked/local-only).
+   Hidden and non-interactive by default everywhere - a page must
+   explicitly opt in with its own CSS to reveal/animate it. Nothing
+   about this changes the site's default appearance. */
+.branding .avatar-reveal {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+/* Nav branding micro-interaction: under review, see nav-hover-preview.html
+   (not linked, local-only) - removed the first version here since it was
+   built without checking the direction first. Nothing live right now. */
 h2 {
     @include type-mixin($type-display-main, $h2-font-size, $type-main-black);
     color: $white-00;
@@ -211,6 +237,17 @@ section {
         color: $black-00;
     }
 }
+// Page-title heading (rendered as a true <h1> per page) — reuses the
+// visual treatment the site previously applied to these titles as <h2>.
+.page-title {
+    @include type-mixin($type-display-main, $h2-font-size, $type-main-black);
+    color: $white-00;
+    line-height: 1;
+    margin-bottom: $scale-2;
+    @media (max-width: 699px) {
+        font-size: $h4-font-size;
+    }
+}
 h3 {
     @include type-mixin($type-display-main, $h3-font-size, $type-main-black);
     color: $black-00;
@@ -218,7 +255,35 @@ h3 {
     width: fit-content;
     margin-bottom: $scale-5;
 }
+/* Two elements previously used <h3> in ways that broke heading order
+   (accessibility audit: axe-core "heading-order") - both keep h3's exact
+   visual treatment via these classes instead of relying on the tag. */
+
+/* .byline: testimonial-card name/title/company line, and a case
+   study's client label - attribution text, not a real heading.
+   .section-title: case-study/single-project/experience/process page
+   section headings that were all <h3> directly under the page's <h1>,
+   with no <h2> anywhere on the page - promoted to real <h2>, kept
+   visually identical to the old h3 via this class. Same visual
+   treatment, different semantic roles, hence two class names on one
+   shared ruleset. */
+.byline,
+.section-title {
+    @include type-mixin($type-display-main, $h3-font-size, $type-main-black);
+    color: $black-00;
+    line-height: 1;
+    width: fit-content;
+    margin-bottom: $scale-5;
+}
 h4 {
+    @include type-mixin($type-display-main, $h4-font-size, $type-main-black, normal, uppercase);
+    color: $black-00;
+}
+/* Case-study sub-headings (Role, Scope, Tools, Problem Statement, Goals,
+   Findings, Results, Achievements, etc.) were <h4> directly under the
+   section h3's promoted to h2 above - now a h2 -> h4 skip. Promoted to
+   real <h3>, kept visually identical to the old h4 via this class. */
+.subsection-title {
     @include type-mixin($type-display-main, $h4-font-size, $type-main-black, normal, uppercase);
     color: $black-00;
 }
