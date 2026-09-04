@@ -474,9 +474,6 @@
         color: $primary-00;
       }
     }
-    h3 {
-      text-align: left;
-    }
     .image-title {
       align-items: center;
       flex-direction: row-reverse;
@@ -492,6 +489,16 @@
       }
       .name, .title, .company {
         font-size: calc($body-font-size - 2);
+      }
+      // The byline used to be a <h3> here, left-aligned via a rule
+      // targeting that tag directly. The accessibility heading-order
+      // fix changed it to <p class="byline"> (a testimonial is
+      // attribution text, not a real heading), which silently orphaned
+      // that rule - nothing matched `h3` anymore, so this card fell
+      // back to the shared .byline's centered alignment. Restoring the
+      // original left alignment on the actual current element.
+      .byline {
+        text-align: left;
       }
     }
   }
