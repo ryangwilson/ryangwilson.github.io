@@ -76,6 +76,12 @@
       letter-spacing: 0;
       line-height: 1.4;
       box-shadow: none;
+      // This card always has a white background of its own, even when
+      // nested inside a .card-dark section - explicit black here wins
+      // over .card-dark p's white (which .name/.company were silently
+      // inheriting, since only .title's separate `i, em` rule happened
+      // to override it back to black).
+      color: $black-00;
     }
     &.third, &.single {
       max-width: 400px;
