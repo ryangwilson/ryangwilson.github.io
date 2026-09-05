@@ -1,15 +1,38 @@
-<div class="list">
-    <div class="column">
-        {% for article in site.data.articles %}
-        {% if article.show == "yes" %}
-        <a class="article" href="{{ article.url }}" target="_blank" rel="noopener">
-            <h3>{{ article.name }}</h3>
-            <p>{{ article.description }}</p>
-        </a>
-        {% endif %}
-        {% if forloop.index == 4 %}
-    </div><div class="column">
-        {% endif %}
-        {% endfor %}
+{% assign shown = site.data.articles | where: "show", "yes" %}
+{% assign col_size = shown.size | plus: 2 | divided_by: 3 %}
+{% assign col2_offset = col_size %}
+{% assign col3_offset = col_size | times: 2 %}
+{% assign heading = page.main-title-03 | replace_first: ", ", ",<br>" | replace_first: "& ", "&<br>" %}
+<div class="reading-list">
+  <div class="reading-column">
+    <h2 class="reading-list-title">{{ heading }}</h2>
+    {% for article in shown limit: col_size %}
+    <div class="reading-item-wrap">
+      <a class="article reading-item" href="{{ article.url }}" target="_blank" rel="noopener">
+        <h3>{{ article.name }}</h3>
+        <p>{{ article.description }}</p>
+      </a>
     </div>
+    {% endfor %}
+  </div>
+  <div class="reading-column">
+    {% for article in shown offset: col2_offset limit: col_size %}
+    <div class="reading-item-wrap">
+      <a class="article reading-item" href="{{ article.url }}" target="_blank" rel="noopener">
+        <h3>{{ article.name }}</h3>
+        <p>{{ article.description }}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="reading-column">
+    {% for article in shown offset: col3_offset %}
+    <div class="reading-item-wrap">
+      <a class="article reading-item" href="{{ article.url }}" target="_blank" rel="noopener">
+        <h3>{{ article.name }}</h3>
+        <p>{{ article.description }}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 </div>

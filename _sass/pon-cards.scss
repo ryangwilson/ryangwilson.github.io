@@ -228,61 +228,66 @@
   }
 }
 
-.blog-container {
+// Articles, Papers, & Other Musings: real flex columns, not CSS multicol -
+// multicol makes each column a fragmentainer that clips anything
+// overflowing its own box, which clipped the hover-glow effect
+// (override-hover-style.scss expands -15px on hover) at column edges.
+// A plain flex row of normal block containers has ordinary visible
+// overflow, so nothing needs padding hacks to give the hover glow room.
+.reading-list {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  gap: $scale-8;
   margin: $scale-20 $scale-10;
   @media (max-width: 899px) {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-wrap: wrap;
   }
-  h2 {
-    @media (max-width: 899px) {
-      margin-bottom: $scale-6;
-    }
+  @media (max-width: 599px) {
+    flex-direction: column;
   }
+}
+.reading-column {
+  flex: 1;
+  min-width: 0;
+  @media (max-width: 899px) {
+    flex-basis: calc(50% - #{$scale-8});
+  }
+  @media (max-width: 599px) {
+    flex-basis: auto;
+  }
+}
+// Matches the real site's plain <h2> (42px) used for other page-level
+// section headers (e.g. "UX Case Studies") - line-height:1 keeps the
+// wrapped lines packed tight instead of the default heading leading.
+.reading-list-title {
+  font-size: $h2-font-size;
+  line-height: 1;
+  margin: 0 0 $scale-10 0;
+}
+// The divider line lives on the wrapper, not on .reading-item itself -
+// .reading-item is the element the site's global hover glow attaches to
+// (override-hover-style.scss sizes :after to 100% of its own box), so
+// keeping the border here would pull the divider inside the hover
+// highlight. Wrapper owns the line and the spacing; .reading-item hugs
+// just its title + description.
+.reading-item-wrap {
+  margin-bottom: $scale-6;
+  padding-bottom: $scale-4;
+  border-bottom: 1px solid $lt-gray-00;
+}
+.reading-item {
+  display: block;
   h3 {
     box-shadow: none;
     font-size: $body-font-size;
     font-weight: $type-body-bold;
     letter-spacing: 0;
+    width: auto;
     margin: 0 0 $scale-1 0;
   }
   p {
-    font-size: $body-font-size - 2;
-  }
-  .content {
-    display: flex;
-    flex: 1;
-  }
-  .list {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 3;
-    flex-direction: row;
-    @media (max-width: 899px) {
-      flex-direction: column;
-    }
-    .column {
-      flex: 1;
-      margin-left: $scale-10;
-      @media (max-width: 899px) {
-        margin-left: $scale-2;
-        margin-top: $scale-5;
-      }
-    }
-    .article {
-        display: flex;
-        flex-direction: column;
-        margin: $scale-5 0;
-        &:first-of-type {
-            margin-top: 0;
-        }
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
+    font-size: $small-font-size + 2;
+    color: $dk-gray-00;
+    margin: 0;
   }
 }
 .process-container {

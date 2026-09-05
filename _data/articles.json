@@ -1,74 +1,92 @@
 [
     {
         "show": "yes",
+        "name": "Q&A with Ryan Wilson, Callibrity’s Product Practice Lead",
+        "description": "A look at how I built and run Callibrity's Product Practice, from discovery through delivery.",
+        "url": "https://medium.com/callibrity/q-a-with-ryan-wilson-callibritys-product-practice-lead-bb3bb0b3b4ee"
+    },
+    {
+        "show": "yes",
         "name": "Being Comfortable with Ambiguity",
-        "description": "Being an effective UX practitioner requires you to be comfortable with your work being dominated by unknowns",
+        "description": "Being an effective UX practitioner requires you to be comfortable with your work being dominated by unknowns.",
         "url": "https://medium.com/@ryangwilson/being-comfortable-with-ambiguity-8a98744fdb2f"
     },
     {
         "show": "yes",
-        "name": "The UX Process is the UX Process is the UX Process…",
-        "description": "The UX Process remains the same between industries",
-        "url": "https://medium.com/@ryangwilson/the-ux-process-is-the-ux-process-is-the-ux-process-c6e11e253043"
+        "name": "How to Manage Strong & Low Performing Team Members",
+        "description": "Honest, empathetic frameworks for coaching underperformers, and the hardest conversations of being a manager.",
+        "url": "https://medium.com/@ryangwilson/how-to-manage-strong-low-performing-team-members-4d3ffbac5fc6"
     },
     {
         "show": "yes",
-        "name": "Finding Work/Life Balance in a Work from Home Role",
-        "description": "It can sometimes be challenging to separate working from non-working hours when you live at your office",
-        "url": "https://medium.com/@ryangwilson/finding-work-life-balance-in-a-work-from-home-role-e58d82292610"
+        "name": "How I Track and Address Team Member Communication",
+        "description": "Weekly pulse surveys, tiered 1:1 cadences, and the small systems I use to lead a department with humor and humility.",
+        "url": "https://medium.com/@ryangwilson/how-i-track-and-address-team-member-communication-907cb3f13a00"
     },
     {
         "show": "yes",
-        "name": "UX is not (just) UI",
-        "description": "‘UX’ and ‘UI’ are commonly misunderstood and conflated to mean the same practice...",
-        "url": "https://medium.com/@ryangwilson/ux-is-not-just-ui-d229d8ef0180"
+        "name": "Enhancing Productivity & Communication with Team Members",
+        "description": "How a shared \"Ways of Working\" document keeps a team's questions and context from getting lost.",
+        "url": "https://medium.com/@ryangwilson/enhancing-productivity-communication-with-team-members-41341c1000d0"
     },
     {
         "show": "yes",
-        "name": "I’m Going to be WFH Today",
-        "description": "Tips & Tricks for being a successful remote employee",
-        "url": "https://medium.com/@ryangwilson/im-going-to-be-wfh-today-9f73e6501882"
-    },
-    {
-        "show": "no",
-        "name": "Creating an SVG Icon Typeface",
-        "description": "Icons are used in applications, websites, marketing materials, you name it.",
-        "url": "https://medium.com/@ryangwilson/creating-an-svg-icon-typeface-211c72e8943d"
-    },
-    {
-        "show": "no",
-        "name": "Best Practices for Working with SVGs",
-        "description": "For the past several years I’ve been working with SVGs — a lot.",
-        "url": "https://medium.com/@ryangwilson/best-practices-for-working-with-svgs-5acfdd020091"
+        "name": "The Art of Selling Software Development Through the Path of UX",
+        "description": "Why leading with UX and discovery, not just development, is how you win and grow client engagements.",
+        "url": "https://medium.com/@ryangwilson/maximizing-profits-the-art-of-selling-software-development-through-the-path-of-ux-8f6fd9f07b9c"
     },
     {
         "show": "yes",
-        "name": "Finding Ideas Through Sketching",
-        "description": "Finding the correct, best, or most successful ideas out of all possible...",
-        "url": "https://medium.com/@ryangwilson/finding-ideas-through-sketching-27681756fef3"
+        "name": "How UX Design Transforms Project Outcomes",
+        "description": "The measurable business impact of putting UX at the center of a project's process.",
+        "url": "https://medium.com/@ryangwilson/how-ux-design-transforms-project-outcomes-9b35379f8adf"
     },
     {
         "show": "yes",
-        "name": "What is UX Design?",
-        "description": "Creating an app that just makes sense, the one that feels like it was built just for you.",
-        "url": "https://medium.com/@ryangwilson/what-is-ux-design-d64a9abee033"
+        "name": "The ROI of Doing Nothing",
+        "description": "Why upfront discovery and planning, not skipping straight to development, is what actually drives a project's ROI.",
+        "url": "https://medium.com/@ryangwilson/the-roi-of-doing-nothing-c6ca60720b3c"
     },
     {
         "show": "yes",
-        "name": "User Testing from a Tradeshow Booth",
-        "description": "There is nothing more rewarding than watching people use your app.",
-        "url": "https://medium.com/@ryangwilson/user-testing-from-a-tradeshow-booth-52e5ba93d1a"
+        "name": "“UX Theater” Diminishes the Practice",
+        "description": "Cutting the performative fluff, bloated workshops, box-checking personas, to keep UX lean and credible.",
+        "url": "https://medium.com/@ryangwilson/ux-theater-diminishes-the-practice-78d66092791a"
     },
     {
-        "show": "no",
-        "name": "Understanding the user in online education",
-        "description": "Ph.D. dissertation",
-        "url": "https://lib.dr.iastate.edu/etd/14693/"
+        "show": "yes",
+        "name": "The Dream of the 90s Is Alive in Product",
+        "description": "Reviving Don Norman's holistic vision of Product against the fragmentation caused by Agile.",
+        "url": "https://medium.com/@ryangwilson/the-dream-of-the-90s-is-alive-in-product-63a8e9c9c74f"
     },
     {
-        "show": "no",
-        "name": "Preparing Visual Communication students for the industry",
-        "description": "MFA thesis",
-        "url": "https://lib.dr.iastate.edu/etd/13677/"
+        "show": "yes",
+        "name": "Industry Agnostic Product Discovery",
+        "description": "Callibrity's discovery approach works the same whether the client is Automotive, FinTech, or eCommerce.",
+        "url": "https://medium.com/@ryangwilson/industry-agnostic-product-discovery-52b91fa2eb93"
+    },
+    {
+        "show": "yes",
+        "name": "Two Ways We Use AI to Support Product Discovery",
+        "description": "How AI tooling accelerates research synthesis and discovery work, without replacing human judgment.",
+        "url": "https://medium.com/@ryangwilson/two-ways-we-use-ai-to-support-product-discovery-d08fd052ac5a"
+    },
+    {
+        "show": "yes",
+        "name": "UX Discovery on a Budget",
+        "description": "Running a meaningful discovery phase even when time and budget are tight.",
+        "url": "https://medium.com/@ryangwilson/ux-discovery-on-a-budget-52c5ab7d3f3a"
+    },
+    {
+        "show": "yes",
+        "name": "Shift Further Left",
+        "description": "The \"Shift Left\" conversation in software needs to shift further left, to include UX from the very start.",
+        "url": "https://medium.com/callibrity/shift-further-left-a0f880e14bdc"
+    },
+    {
+        "show": "yes",
+        "name": "The 2024 AHFE International Conference",
+        "description": "Notes from speaking at the AHFE International Conference on accessibility.",
+        "url": "https://medium.com/@ryangwilson/the-2024-ahfe-international-conference-dc48ff858cf0"
     }
 ]
