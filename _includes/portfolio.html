@@ -11,7 +11,7 @@
                 <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
             </picture>
             <figcaption>
-                <h3>{{ example.project }}</h3>
+                <h3 class="uppercase">{{ example.project }}</h3>
                 <p>{{ example.role }}</p>
             </figcaption>
         </figure>
@@ -30,7 +30,7 @@
                 <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
             </picture>
             <figcaption>
-                <h3>{{ example.project }}</h3>
+                <h3 class="uppercase">{{ example.project }}</h3>
                 <p>{{ example.role }}</p>
             </figcaption>
         </figure>
@@ -38,9 +38,6 @@
     {% endfor %}
 </div>
 {% else %}
-<p>{{ page.content-01a }}</p>
-<p>{{ page.content-01b }}</p>
-
 <h2 id="casestudies">UX Case Studies</h2>
 <p>{{ page.casestudies }}</p>
 <div class="card-portfolio">
@@ -50,11 +47,12 @@
             <figure>
                 <picture>
                     <source srcset="../assets/images/portfolio-images/{{ example.webpcollection-image}}" type="image/webp">
-                    <source srcset="../assets/images/portfolio-images/{{ example.collection-image}}" type="image/jpeg"> 
+                    <source srcset="../assets/images/portfolio-images/{{ example.collection-image}}" type="image/jpeg">
                     <img src="../assets/images/portfolio-images/{{ example.collection-image}}" alt="Image representation of {{ example.project }} project">
                 </picture>
                 <figcaption>
-                    <h3>{{ example.project }}</h3>
+                    <h3 class="uppercase">{{ example.project }}</h3>
+                    <p>{{ example.role }}</p>
                 </figcaption>
             </figure>
         </a>
@@ -75,7 +73,7 @@
             <figure>
                 <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>
@@ -88,7 +86,7 @@
                     <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 </picture>
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>
@@ -104,7 +102,7 @@
             <figure>
                 <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>
@@ -117,7 +115,7 @@
                     <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 </picture>
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>
@@ -133,7 +131,7 @@
             <figure>
                 <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>
@@ -146,7 +144,7 @@
                     <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 </picture>
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>
@@ -162,7 +160,7 @@
             <figure>
                 <img src="{{ visuals.thumb }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>
@@ -175,7 +173,7 @@
                     <img src="{{ visuals.image }}" alt="Image of {{ visuals.type }} for {{ visuals.project }}">
                 </picture>
                 <figcaption>
-                    <h3>{{ visuals.deliverable }}</h3>
+                    <h3 class="uppercase">{{ visuals.deliverable }}</h3>
                 </figcaption>
             </figure>
         </a>

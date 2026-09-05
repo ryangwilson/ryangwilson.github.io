@@ -7,15 +7,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicons/favicon-16x16.png">
   <link rel="manifest" href="../../assets/images/favicons/site.webmanifest">
-  {% if page.url == '/' %}
-  <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
-  <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script> -->
-  {% endif %}
   {% if page.url contains '/work/' %}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <!-- Swiper powers the embedded "Approach" image slider (#mainCarousel,
+       case-study-template.html) - not the lightbox above, which stays
+       Fancybox. Swapped in to fix an unresolved upstream Fancybox
+       Carousel bug (fancyapps/ui#529) that blocked page scroll while
+       hovering the slider. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.2.0/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12.2.0/swiper-bundle.min.js"></script>
   <script>
     Fancybox.bind('[data-fancybox]', {
         Toolbar: false,
@@ -31,6 +32,30 @@
         Carousel: {
           fill: false,
           center: true
+        },
+      },
+      on: {
+        // Keeps #mainCarousel's own Swiper position in sync with
+        // whatever slide is currently showing in the lightbox, so
+        // closing it doesn't leave the page showing a different image
+        // than the one just viewed. Scoped to the carousel-gallery
+        // group specifically (slide.$trigger.dataset.fancybox) since
+        // this same global Fancybox.bind also covers unrelated
+        // galleries (process images, portfolio thumbnails, etc.) on
+        // other pages/sections - verified live against a real Fancybox
+        // instance: getSlide() returns {$trigger, index, ...}, where
+        // $trigger is the real DOM element (not a jQuery object,
+        // despite the name) and index is 0-based, matching Swiper's
+        // slide order exactly since both read the same DOM.
+        'Carousel.change': (fancyboxRef) => {
+          const slide = fancyboxRef.getSlide();
+          const trigger = slide.$trigger;
+          if (trigger && trigger.dataset.fancybox === 'carousel-gallery') {
+            const carouselEl = trigger.closest('#mainCarousel');
+            if (carouselEl && carouselEl.swiper) {
+              carouselEl.swiper.slideTo(slide.index);
+            }
+          }
         },
       },
     });
