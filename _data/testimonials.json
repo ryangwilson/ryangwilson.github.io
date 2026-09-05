@@ -6,8 +6,10 @@
     "name": "Austin Kurpuis",
     "firstname": "Austin",
     "lastname": "Kurpuis",
-    "title": "Senior Developer",
+    "title": "Associate Director of Systems Engineering",
     "company": "Bitovi",
+    "topic": "dev",
+    "linkedin": "https://www.linkedin.com/in/austinkurpuis",
     "quote": "Ryan's combination of knowledge, experience, education, and personality make him the ideal UX professional to interface with Engineers."
   },
   {
@@ -17,8 +19,10 @@
     "name": "Chris Ochs",
     "firstname": "Chris",
     "lastname": "Ochs",
-    "title": "Product Manager",
-    "company": "Kroger",
+    "title": "Director of Product Management",
+    "company": "SAFR from RealNetworks",
+    "topic": "kroger",
+    "linkedin": "https://www.linkedin.com/in/chrisochs253",
     "quote": "Ryan has the uncommon ability to absorb new concepts at a ferocious rate. He effortlessly adapts to new and changing information to incorporate it into his working models."
   },
   {
@@ -30,6 +34,8 @@
     "lastname": "Meyer",
     "title": "CEO",
     "company": "Bitovi",
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/justinbmeyer",
     "quote": "There's no one more knowledgeable or a better advocate for UX processes than Ryan Wilson. He's also a strong advocate for his team and leader."
   },
   {
@@ -39,9 +45,11 @@
     "name": "Erica Price",
     "firstname": "Erica",
     "lastname": "Price",
-    "title": "Senior User Experience Designer",
-    "company": "Yum! Brands",
-    "quote": "As a manager, Ryan is personable, entertaining, genuine and passionate. I respect his transparency and I know he has my best interest at heart."
+    "title": "Principal Product Consultant",
+    "company": "Callibrity",
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/eekprice",
+    "quote": "Ryan is one of the best managers I’ve ever had. He is personable, entertaining, genuine, and passionate. I respect his transparency, he respects my opinions, and empowers me to be the best UX Designer I can be. "
   },
   {
     "id": 5,
@@ -50,9 +58,11 @@
     "name": "Mark Brehaut",
     "firstname": "Mark",
     "lastname": "Brehaut",
-    "title": "Product Design Lead",
-    "company": "Wayfair",
-    "quote": "Ryan's values guide how he works, builds a team, mentors employees, and excels at his craft. He is a deliberate and thoughtful designer who constantly seeks feedback from users to stress-test assumptions and ensure the right product gets put to market."
+    "title": "Head of Design",
+    "company": "Clair",
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/markbrehaut",
+    "quote": "Ryan's values guide how he works, builds a team, mentors employees, and excels at his craft. He is a deliberate and thoughtful designer who constantly seeks feedback from users to ensure the right product gets put to market."
   },
   {
     "id": 6,
@@ -61,8 +71,10 @@
     "name": "Matthew McDole",
     "firstname": "Matthew",
     "lastname": "McDole",
-    "title": "Director, eCommerce Technology",
-    "company": "Yum! Brands",
+    "title": "Chief Technology Officer",
+    "company": "State Farm",
+    "topic": "tax",
+    "linkedin": "https://www.linkedin.com/in/matthewmcdole",
     "quote": "Ryan is an amazing designer. He designed our tax engine which not only looked awesome but also really simplified what is an inherently complex process."
   },
   {
@@ -74,6 +86,8 @@
     "lastname": "Satterfield",
     "title": "Founder",
     "company": "Design Innovation Research Group",
+    "topic": "",
+    "linkedin": "https://www.linkedin.com/in/debra-satterfield-6257078",
     "quote": "Ryan has an excellent understanding of UX and visual communication. His work is always of the highest quality and he works well both independently or as part of a design team."
   },
   {
@@ -84,8 +98,10 @@
     "firstname": "Eileen",
     "lastname": "Cannon",
     "title": "Senior Director, Content & Curriculum Strategy",
-    "company": "PBS Education",
-    "quote": "Ryan takes the time to understand the challenge, is always open to feedback, and his designs exceed expectations. Using simple, replicable techniques, Ryan's independent project sustained the design needs of our initiative for many months to come."
+    "company": "Seesaw Learning",
+    "topic": "",
+    "linkedin": "https://www.linkedin.com/in/emcannon",
+    "quote": "Ryan takes the time to understand the challenge, is always open to feedback, and his designs exceed expectations. His project sustained the design needs of our initiative for many months to come."
   },
   {
     "id": 9,
@@ -96,6 +112,8 @@
     "lastname": "Dominiak",
     "title": "President",
     "company": "Legal Visual Services",
+    "topic": "",
+    "linkedin": "https://www.linkedin.com/in/kdominiak",
     "quote": "Ryan was one of the most creative and quick minded employees that we have ever had. I know that he would be an exceptional asset to any company."
   },
   {
@@ -105,8 +123,10 @@
     "name": "Jeremy Lueck",
     "firstname": "Jeremy",
     "lastname": "Lueck",
-    "title": "Staff Software Engineer",
-    "company": "Tock",
+    "title": "Software Engineer",
+    "company": "Former Google, Tock",
+    "topic": "lowes",
+    "linkedin": "https://www.linkedin.com/in/jeremy-lueck-1187993",
     "quote": "Ryan is one of the most talented and hardworking designers that I have ever met. He is a stickler to his own prepared schedules that guarantee timely deliverables."
   },
   {
@@ -116,9 +136,11 @@
     "name": "Ryan Williams",
     "firstname": "Ryan",
     "lastname": "Williams",
-    "title": "Senior Designer",
-    "company": "Microsoft",
-    "quote": "Ryan ensures that his digital experiences are useful and engaging to users. [He] engages users in the process through early contextual inquiry and user studies. Ryan is able to incorporate user feedback into his designs appropriately to produce products that are functional and useful."
+    "title": "Product Designer",
+    "company": "Meta",
+    "topic": "jnj",
+    "linkedin": "https://www.linkedin.com/in/rygwilliams",
+    "quote": "Ryan ensures that his digital experiences are useful and engaging to users. He engages users through contextual inquiry and incorporates feedback into his designs to produce functional and useful products."
   },
   {
     "id": 12,
@@ -127,19 +149,154 @@
     "name": "Austin Smith",
     "firstname": "Austin",
     "lastname": "Smith",
-    "title": "Product Designer",
+    "title": "Staff Product Designer",
     "company": "ActiveCampaign",
-    "quote": "Ryan was an excellent educator, mentor, and personal acquaintance. He taught a class as if he were an Art Director, helping us find the best design solution through collaboration and experimentation. Ryan is the right person to lead a team of designers."
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/austin-smith-71755352",
+    "quote": "Ryan was an excellent educator and mentor. He taught class as if he were an Art Director, helping us find the best design solution through collaboration and experimentation. Ryan is the right person to lead a team of designers."
   },
-    {
+  {
     "id": 13,
     "webpimage": "1516306851503.webp",
     "image": "1516306851503.jpg",
     "name": "Jennifer Lizak",
     "firstname": "Jennifer",
     "lastname": "Lizak",
-    "title": "Coordinator of Special Projects, Cultural and Civic Engagement",
+    "title": "Coordinator of Special Projects, Cultural, Civic and Literary Engagement",
     "company": "Chicago Public Library",
+    "topic": "",
+    "linkedin": "https://www.linkedin.com/in/jenniferlizak",
     "quote": "Ryan is creative, organized, responsible and hardworking. His talent is undisputed, and he is always willing to go the extra mile to get the job done and help the team."
+  },
+  {
+    "id": 14,
+    "webpimage": "1573080072123.webp",
+    "image": "1573080072123.jpg",
+    "name": "Karen Wang",
+    "firstname": "Karen",
+    "lastname": "Wang",
+    "title": "Design System Professional",
+    "company": "Abbott",
+    "topic": "pos",
+    "linkedin": "https://www.linkedin.com/in/karenwangdesign",
+    "quote": "Ryan's witty personality and years of experiences made him a great mentor. I can consult him whenever I was uncertain on how to approach research or design projects and he’d help me work through and find the solutions."
+  },
+  {
+    "id": 15,
+    "webpimage": "1643372699651.webp",
+    "image": "1643372699651.jpg",
+    "name": "Hannah Miller",
+    "firstname": "Hannah",
+    "lastname": "Miller",
+    "title": "Director of Enrollment Management Marketing",
+    "company": "Marshall University",
+    "topic": "",
+    "display": false,
+    "linkedin": "https://www.linkedin.com/in/hannahtitus",
+    "quote": "Dr. Wilson is a wonderful professor with a unique teaching style that works well no matter what learning style. His instruction is relaxed, creating an atmosphere that encourages questions and really engage with the teaching."
+  },
+  {
+    "id": 16,
+    "webpimage": "1586313574566.webp",
+    "image": "1586313574566.jpg",
+    "name": "Tom Greever",
+    "firstname": "Tom",
+    "lastname": "Greever",
+    "title": "Product Strategy & UX Design",
+    "company": "Author, Articulating Design Decisions",
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/tomgreever",
+    "quote": "Ryan's an excellent problem solver, UX thinker, and researcher. He led several design projects for us at a senior and lead level in a client-facing role, including some of our largest Fortune 500 clients. Not many people have the breadth of skills Ryan has."
+  },
+  {
+    "id": 17,
+    "webpimage": "1592952223004.webp",
+    "image": "1592952223004.jpg",
+    "name": "Rahul Kumar Ratan Parkhe",
+    "firstname": "Rahul",
+    "lastname": "Kumar Ratan Parkhe",
+    "title": "Senior Manager, Application Development",
+    "company": "VIZIO",
+    "topic": "kroger",
+    "linkedin": "https://www.linkedin.com/in/rahulkumarrp",
+    "quote": " Ryan's thought process in laying down the entire user flow and his ability to picture it clearly was truly amazing and inspirational!"
+  },
+  {
+    "id": 18,
+    "webpimage": "1648081397531.webp",
+    "image": "1648081397531.jpg",
+    "name": "Shiv Adhiappan",
+    "firstname": "Shiv",
+    "lastname": "Adhiappan",
+    "title": "Chief Technology & Information Officer",
+    "company": "Pizza Hut",
+    "topic": "mmt leadership",
+    "linkedin": "https://www.linkedin.com/in/shivadhiappan/",
+    "quote": "Ryan laid the groundwork and helped drive the project's success. I was impressed by how easily he ran workshops with heads of Yum! and the brands to collect requirements and get buy-in on the product's direction."
+  },
+  {
+    "id": 19,
+    "webpimage": "1523279264785.webp",
+    "image": "1523279264785.jpg",
+    "name": "Andy Kim",
+    "firstname": "Andy",
+    "lastname": "Kim",
+    "title": "CEO",
+    "company": "HaulHound",
+    "topic": "haulhound",
+    "linkedin": "https://www.linkedin.com/in/the-andrew-kim",
+    "quote": "I’ve never had such a positive experience, not just the results, but the process as well. People are shocked to know that this is our minimal first version."
+  },
+  {
+    "id": 20,
+    "webpimage": "kurt-haas.jpg",
+    "image": "kurt-haas.jpg",
+    "name": "Kurt Haas",
+    "firstname": "Kurt",
+    "lastname": "Haas",
+    "title": "Product Leader, Retail and Strategy Director",
+    "company": "QuikTrip",
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/kurthaas/",
+    "quote": "He knows how all the roles of a high-performing product team should come together to arrive at measurable outcomes, iteratively."
+  },
+  {
+    "id": 21,
+    "webpimage": "craig-porter.jpg",
+    "image": "craig-porter.jpg",
+    "name": "Craig Porter",
+    "firstname": "Craig",
+    "lastname": "Porter",
+    "title": "User Centered Design Leader + Design Thinking Practitioner",
+    "company": "LPL Financial",
+    "topic": "",
+    "linkedin": "https://www.linkedin.com/in/caporter/",
+    "quote": "As his manager, I found Ryan to be an outstanding UX professional well equipped to drive UX design processes end-to-end."
+  },
+  {
+    "id": 22,
+    "webpimage": "dana-storsberg.jpg",
+    "image": "dana-storsberg.jpg",
+    "name": "Dana Storsberg",
+    "firstname": "Dana",
+    "lastname": "Storsberg",
+    "title": "VP Product Mgmt - Financial Services",
+    "company": "LPL Financial",
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/dana-storsberg-05717257/",
+    "quote": "Ryan is a compelling UX leader! His ability to ramp up on organizational objectives, evaluate capabilities, imagine new and better solutions, then gain buy-in is remarkable."
+  },
+  {
+    "id": 23,
+    "webpimage": "holly-delaney.jpg",
+    "image": "holly-delaney.jpg",
+    "name": "Holly Delaney",
+    "firstname": "Holly",
+    "lastname": "Delaney",
+    "title": "CTO",
+    "company": "FEG",
+    "topic": "leadership",
+    "linkedin": "https://www.linkedin.com/in/hollylaiveling/",
+    "quote": "He’s a rare combination: strong product mindset, sharp UX instincts, and a genuine talent for process improvement."
   }
 ]

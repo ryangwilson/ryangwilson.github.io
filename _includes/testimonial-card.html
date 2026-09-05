@@ -1,5 +1,4 @@
-<!-- Reusable testimonial card, populated client-side by assets/js/testimonials.js
-     via the `testimonial` attribute. Was previously duplicated verbatim in 5
+<!-- Reusable testimonial card. Was previously duplicated verbatim in 5
      places (_includes/card-dark.html, _layouts/about-template.html x3,
      _layouts/case-study-template.html) - the same accessibility/JS bugs had
      to be fixed in all 5 spots independently. One copy now.
@@ -10,15 +9,52 @@
                               attribute. Leave blank/omit for a random pick.
        include.path-prefix - relative path back to the site root, e.g. ".."
                               from a page one level deep, "../.." from two
-                              levels deep (case studies). -->
-<a href="" target="_blank" rel="noopener" aria-label="Loading testimonial" class="reference-card {{ include.variant }}"{% if include.topic %} testimonial="topic:{{ include.topic }}"{% else %} testimonial{% endif %}>
-  <q class="quote"></q>
+                              levels deep (case studies).
+
+     Renders one real testimonial from _data/testimonials.json server-side as
+     a working fallback for visitors without JS - previously this card shipped
+     completely empty (no quote, a broken image, a self-link via href="", and
+     a permanently-stuck aria-label="Loading testimonial", since nothing ever
+     populated it without JS). assets/js/testimonials.js still unconditionally
+     overwrites this fallback with its own randomized pick on load, so nothing
+     changes for the JS-enabled visitors this is populated for today - this
+     only fixes what non-JS visitors see.
+
+     A testimonial entry can be hidden site-wide (without deleting its data)
+     by setting "display": false in _data/testimonials.json - both this
+     fallback and the JS random pool (assets/js/testimonials.js) respect it.
+
+     `used_names` is a Liquid variable this include intentionally leaves
+     un-scoped (Liquid's `assign` is page-global, not include-local) so it
+     accumulates across every testimonial-card.html call on the same page
+     render - each call picks the first eligible match that isn't already
+     used earlier on that page, so e.g. the About page's hero card and its
+     3 lower cards never show the same person twice without JS. -->
+{% assign candidates = site.data.testimonials | where_exp: "t", "t.display != false" %}
+{% if include.topic %}
+  {% assign topic_query = include.topic | downcase %}
+  {% assign candidates = candidates | where_exp: "t", "t.topic contains topic_query" %}
+{% endif %}
+{% assign used_names = used_names | default: "" %}
+{% assign fallback = nil %}
+{% for candidate in candidates %}
+  {% unless used_names contains candidate.name %}
+    {% assign fallback = candidate %}
+    {% break %}
+  {% endunless %}
+{% endfor %}
+{% unless fallback %}
+  {% assign fallback = candidates | first %}
+{% endunless %}
+{% assign used_names = used_names | append: "|" | append: fallback.name %}
+<a href="{{ fallback.linkedin }}" target="_blank" rel="noopener" class="reference-card {{ include.variant }}"{% if include.topic %} testimonial="topic:{{ include.topic }}"{% else %} testimonial{% endif %}>
+  <q class="quote">{{ fallback.quote }}</q>
   <div class="image-title">
     <picture>
-      <source class="webpimage" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ testimonials.webpimage }}" type="image/webp">
-      <source class="image" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ testimonials.image }}" type="image/jpeg">
-      <img src="{{ include.path-prefix }}/assets/images/testimonial-images/{{ testimonials.image }}" alt="Image of {{ testimonials.name }}">
+      <source class="webpimage" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.webpimage }}" type="image/webp">
+      <source class="image" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.image }}" type="image/jpeg">
+      <img src="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.image }}" alt="Image of {{ fallback.name }}">
     </picture>
-    <p class="byline"><b class="name"></b> <i class="title"></i> <span class="company"></span></p>
+    <p class="byline"><b class="name">{{ fallback.name }}</b> <i class="title">{{ fallback.title }}</i> <span class="company">{{ fallback.company }}</span></p>
   </div>
 </a>
