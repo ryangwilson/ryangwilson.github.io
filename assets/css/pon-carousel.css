@@ -1,5 +1,5 @@
-// carousel.scss
-// Styles for the carousel component
+/* carousel.scss */
+/* Styles for the carousel component */
 
 .carousel-cell {
   display: flex;
@@ -12,23 +12,23 @@
     display: flex;
     flex: 4;
     flex-direction: column;
-    margin: auto $scale-10 auto 0;
+    margin: auto var(--scale-10) auto 0;
     @media (max-width: 799px) {
       margin-right: 0;
     }
     h2 {
-      font-family: $type-display-secondary;
-      font-weight: $type-display-light;
-      font-size: $h3-font-size;
+      font-family: var(--type-display-secondary);
+      font-weight: var(--type-display-light);
+      font-size: var(--h3-font-size);
       @media (max-width: 499px) {
-        font-size: $h5-font-size;
-        font-family: $type-display-main;
-        font-weight: $type-main-bold;
+        font-size: var(--h5-font-size);
+        font-family: var(--type-display-main);
+        font-weight: var(--type-main-bold);
       }
     }
     .cta-container {
       margin-top: auto;
-      margin-left: $scale-1;
+      margin-left: var(--scale-1);
       @media (max-width: 799px) {
         margin-right: auto;
         margin-left: auto;
@@ -46,7 +46,7 @@
       max-width: 100%;
       width: 100%;
       max-height: 250px;
-      padding-bottom: $scale-5;
+      padding-bottom: var(--scale-5);
     }
   }
   img {
@@ -68,7 +68,7 @@
   }
 }
 
-//FANCYBOX OVERRIDE
+/*FANCYBOX OVERRIDE */
 .fancybox__caption {
   max-width: 960px;
 }

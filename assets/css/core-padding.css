@@ -1,0 +1,18 @@
+/* text-definitions.scss */
+/* Styles for Text Definitions */
+/* @import "../variables.scss"; */
+
+/* definition list */
+dl {
+    dd {
+        padding-left: var(--scale-3);
+    }
+}
+/* ordered list - padding */
+ol {
+    padding-left: var(--scale-5);
+}
+/* unordered list - padding */
+ul {
+    padding-left: var(--scale-5);
+}

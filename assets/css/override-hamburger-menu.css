@@ -1,5 +1,5 @@
-// hamburger-menu.scss
-// Hamburger Menu
+/* hamburger-menu.scss */
+/* Hamburger Menu */
 
 /* Screen reader only */
 .sr-only {
@@ -26,7 +26,7 @@
   transform: translateX(-100%);
   z-index: 999;
   overflow: hidden;
-  background-color: $black-00;
+  background-color: var(--black-00);
   transition: transform .2s ease-in, background-color .2s ease-in;
 }
 
@@ -39,7 +39,7 @@
   transition: transform .5s ease-out, background-color .5s ease-out;
   a {
     margin: 0;
-    font-size: $h5-font-size;
+    font-size: var(--h5-font-size);
   }
 }
 
@@ -70,7 +70,7 @@
    don't match, so the button's native default focus outline still
    shows - a functional fallback rather than no indicator at all. */
 .menu-toggle:focus-visible {
-  outline: 2px solid $primary-00;
+  outline: 2px solid var(--primary-00);
   outline-offset: 2px;
 }
 .menu-toggle span {
@@ -78,7 +78,7 @@
   position: absolute;
   height: 3px;
   width: 100%;
-  background: $white-00;
+  background: var(--white-00);
   border-radius: 2px;
   opacity: 1;
   left: 0;
