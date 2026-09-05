@@ -73,17 +73,37 @@ nav {
 }
 // header styles
 header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   background-color: $black-00;
-  padding: $scale-2 $scale-5 $scale-1;
+  padding: $scale-2 0 $scale-1;
   border-bottom: $scale-1 solid $white-00;
   box-shadow: $elevation-high;
   z-index: 99;
   position: sticky;
   top: 0;
+  // Aligns the nav's content edges with main's (max-width:1280px, see
+  // below) - previously the header bar's own fixed horizontal padding
+  // drifted out of alignment with the page content on wide viewports.
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    // .mobile-menu (override-hamburger-menu.scss) makes <header> itself a
+    // flex container below 699px - without an explicit width this becomes
+    // a flex item sized to its own content instead of stretching to fill,
+    // and its margin:auto then centers that shrunk box instead of the
+    // toggle button being pinned to the real right edge.
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $scale-10;
+    @media (max-width: 659px) {
+      padding: 0 $scale-5;
+    }
+    @media (max-width: 419px) {
+      padding: 0 $scale-5;
+    }
+  }
   .branding {
     margin-right: $scale-5;
     position: relative; // positioning context for .avatar-reveal
@@ -146,9 +166,6 @@ section {
   @media (max-width: 419px) {
     margin: $scale-20 $scale-5;
   }
-  .details {
-    margin-top: $scale-10;
-  }
   .flex-two-col {
     display: flex;
     @media (max-width: 859px) {
@@ -179,20 +196,14 @@ section {
   // that got increasingly lopsided as the Experience list grew.
   .stacked-section {
     margin-bottom: $scale-12;
-    .section-title {
-      margin-bottom: $scale-3;
-    }
   }
   .stacked-section-head {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: $scale-3;
     margin-bottom: $scale-3;
-    .section-title {
-      margin-bottom: 0;
-    }
   }
   // Grid (not flex) so all three columns share the same tracks down the
   // whole list - flexbox sizes each row independently, letting the
@@ -225,8 +236,23 @@ section {
       }
     }
   }
-  .timeline-title {
-    font-weight: $type-main-black;
+  // Shared with .education-list below - both are a row's primary bold
+  // label (job title / degree name), same visual treatment either way.
+  .row-title {
+    // Needed now that this is a real <h3> (was a <span>) - without it,
+    // the browser's default UA h3 sizing (1.17em) applies since there's
+    // no longer a bare h3 rule to inherit from.
+    font-size: $body-font-size;
+    font-family: $type-display-main;
+    font-optical-sizing: auto;
+    // font-weight is kept alongside font-variation-settings even though
+    // the latter wins whenever both are present on a variable font (in
+    // every modern browser, font-weight here is inert) - it's a real
+    // fallback if "Roboto Flex" ever fails to load and the stack drops
+    // to the plain "sans-serif" fallback, which has no wght axis to
+    // read font-variation-settings from, so font-weight is all it has.
+    font-weight: 600;
+    font-variation-settings: "wght" 600, "GRAD" 0;
     color: $black-00;
   }
   .timeline-company {
@@ -234,7 +260,9 @@ section {
     text-align: left;
   }
   .timeline-dates {
-    color: $md-gray-00;
+    // Same contrast fix as .education-paper below - $md-gray-00 on
+    // white at this size fails WCAG AA (~2.6:1, needs 4.5:1).
+    color: $dk-gray-00;
     font-size: $small-font-size;
     white-space: nowrap;
     text-align: right;
@@ -302,15 +330,15 @@ section {
     flex-direction: column;
     gap: $scale-1;
   }
-  .education-degree {
-    font-weight: $type-main-black;
-    color: $black-00;
-  }
   .education-location {
     color: $dk-gray-00;
   }
   .education-paper {
-    color: $md-gray-00;
+    // $md-gray-00 on white at this size computed to ~2.6:1 contrast -
+    // well under WCAG AA's 4.5:1 minimum for normal text. $dk-gray-00
+    // (already used for .education-location right above) passes
+    // comfortably at ~8.2:1.
+    color: $dk-gray-00;
     font-size: $small-font-size;
     text-align: right;
     white-space: normal;

@@ -75,16 +75,6 @@ button, input[type=submit], input[type=button], input[type=reset] {
             box-shadow: 0 $scale-2 0 (-$scale-1) $secondary-00;
         }
     }
-    &.icon {
-        padding: $scale-1 $scale-2;
-        border-radius: 0;
-        margin: 0;
-        box-shadow: 0 0 0 0 $black-00;
-        &:hover {
-            color: $secondary-00;
-            box-shadow: 0 0 0 0 $black-00;
-        }
-    }
     &:disabled {
         box-shadow: $fake-medium $lt-gray-00;
         color: $lt-gray-00;
@@ -105,9 +95,6 @@ button, input[type=submit], input[type=button], input[type=reset] {
             margin-left: $scale-2;
             margin-right: -($scale-2);
         }
-    }
-    &.pull-right {
-        margin-left: auto;
     }
     svg {
         pointer-events: none;

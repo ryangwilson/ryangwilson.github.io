@@ -31,21 +31,6 @@ progress[value]::-moz-progress-bar {
     background-color: $info-00;
     border-radius: $radius-medium;
 }
-/* Fallback technique styles */
-.progress-bar {
-    background-color: whiteSmoke;
-    border-radius: $radius-medium;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
-    /* Dimensions should be similar to the parent progress element. */
-    width: 100%;
-    height: $scale-3;
-    span {
-        background-color: $info-00;
-        border-radius: $radius-medium;
-        display: block;
-        text-indent: -9999px;
-    }
-}
 p[data-value] {
     position: relative;
     &:after {

@@ -3,9 +3,29 @@
   {% include head.html %}
   <body class="nested-page">
     {% include navigation.html %}
+    <script>
+      // Measures the sticky header's real height so the breadcrumb below
+      // can stick right underneath it (var(--header-height) in
+      // case-brand.scss) instead of a hardcoded value that would drift
+      // out of sync whenever the header's own height changes (e.g. the
+      // mobile hamburger layout, or a nav that wraps to two lines).
+      (function () {
+        var header = document.querySelector('#masterhead');
+        var root = document.documentElement;
+        function setHeaderHeight() {
+          root.style.setProperty('--header-height', header.offsetHeight + 'px');
+        }
+        setHeaderHeight();
+        if (window.ResizeObserver) {
+          new ResizeObserver(setHeaderHeight).observe(header);
+        } else {
+          window.addEventListener('resize', setHeaderHeight);
+        }
+      })();
+    </script>
     <main class="cs-container {{ page.brandclass }}">
       <div class="card-dark case-study">
-        <h1 class="page-title">{{ page.project }}</h1>
+        <h1>{{ page.project }}</h1>
         <p class="byline">{{ page.client }}</p>
         <p>{{ page.subtitle }}</p>
         <picture>
@@ -15,119 +35,127 @@
         </picture>
       </div>
       <div class="breadcrumb">
-        <div class="bc-right">
-          <a class="btn text" href="../" title="Work Overview"> Work </a> / {{ page.project }} 
-        </div>
-        <div class="bc-left">
+        <nav class="bc-right" aria-label="Breadcrumb">
+          <ol>
+            <li><a class="btn text" href="../" title="Work Overview">Work</a></li>
+            <li aria-current="page">{{ page.project }}</li>
+          </ol>
+        </nav>
+        <nav class="bc-left" aria-label="Case study pagination">
           <a class="btn text svg-before" href="../{{ page.previous-cs-link }}" title="{{ page.previous-cs-title }}"> <i data-feather="arrow-left"></i> Prev </a>
           <a class="btn text svg-after" href="../{{ page.next-cs-link }}" title="{{ page.next-cs-title }}"> Next <i data-feather="arrow-right"></i> </a>
-        </div>
+        </nav>
       </div>
       <section>
-        <h2 class="section-title">Overview</h2>
+        <h2>Overview</h2>
         <div class="flex-two-col">
           <div class="col-left flex-third">
             <p>{{ page.overview }}</p>
           </div>
           <div class="col-right">
-            <h3 class="subsection-title">Role</h3>
+            <h3 class="subsection-title uppercase">Role</h3>
             <p>{{ page.role }}</p>
-            <h3 class="subsection-title">Scope</h3>
+            <h3 class="subsection-title uppercase">Scope</h3>
             <p>{{ page.scope }}</p>
-            <h3 class="subsection-title">Tools</h3>
+            <h3 class="subsection-title uppercase">Tools</h3>
             <p>{{ page.tools }}</p>
           </div>
         </div>
       </section>
       <section>
-        <h2 class="section-title">Approach</h2>
+        <h2>Approach</h2>
         <div class="flex-two-col">
           <div class="col-left">
-            <h3 class="subsection-title">Problem Statement</h3>
+            <h3 class="subsection-title uppercase">Problem Statement</h3>
             <p>{{ page.problemstatement }}</p>
           </div>
           <div class="col-right">
-            <div id="mainCarousel" class="carousel">
-              {% if page.approach-image01 %}
-              <div
-                class="carousel__slide"
-                data-src="../../assets/images/portfolio-images/{{ page.approach-image01 }}"
-                data-fancybox="carousel-gallery"
-                data-caption="{{ page.project }}: {{ page.approach-caption01 }}"
-              >
-                <picture>
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage01 }}" type="image/webp">
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image01 }}" type="image/jpeg"> 
-                  <img src="../../assets/images/portfolio-images/{{ page.approach-image01 }}" alt="{{ page.approach-caption01 }} example image for {{ page.project }}">
-                </picture>
+            <div id="mainCarousel" class="swiper">
+              <div class="swiper-wrapper">
+                {% if page.approach-image01 %}
+                <div
+                  class="swiper-slide"
+                  data-src="../../assets/images/portfolio-images/{{ page.approach-image01 }}"
+                  data-fancybox="carousel-gallery"
+                  data-caption="{{ page.project }}: {{ page.approach-caption01 }}"
+                >
+                  <picture>
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage01 }}" type="image/webp">
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image01 }}" type="image/jpeg">
+                    <img src="../../assets/images/portfolio-images/{{ page.approach-image01 }}" alt="{{ page.approach-caption01 }} example image for {{ page.project }}">
+                  </picture>
+                </div>
+                {% endif %}
+                {% if page.approach-image02 %}
+                <div
+                  class="swiper-slide"
+                  data-src="../../assets/images/portfolio-images/{{ page.approach-image02 }}"
+                  data-fancybox="carousel-gallery"
+                  data-caption="{{ page.project }}: {{ page.approach-caption02 }}"
+                >
+                  <picture>
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage02 }}" type="image/webp">
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image02 }}" type="image/jpeg">
+                    <img src="../../assets/images/portfolio-images/{{ page.approach-image02 }}" alt="{{ page.approach-caption02 }} example image for {{ page.project }}">
+                  </picture>
+                </div>
+                {% endif %}
+                {% if page.approach-image03 %}
+                <div
+                  class="swiper-slide"
+                  data-src="../../assets/images/portfolio-images/{{ page.approach-image03 }}"
+                  data-fancybox="carousel-gallery"
+                  data-caption="{{ page.project }}: {{ page.approach-caption03 }}"
+                >
+                  <picture>
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage03 }}" type="image/webp">
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image03 }}" type="image/jpeg">
+                    <img src="../../assets/images/portfolio-images/{{ page.approach-image03 }}" alt="{{ page.approach-caption03 }} example image for {{ page.project }}">
+                  </picture>
+                </div>
+                {% endif %}
+                {% if page.approach-image04 %}
+                <div
+                  class="swiper-slide"
+                  data-src="../../assets/images/portfolio-images/{{ page.approach-image04 }}"
+                  data-fancybox="carousel-gallery"
+                  data-caption="{{ page.project }}: {{ page.approach-caption04 }}"
+                >
+                  <picture>
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage04 }}" type="image/webp">
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image04 }}" type="image/jpeg">
+                    <img src="../../assets/images/portfolio-images/{{ page.approach-image04 }}" alt="{{ page.approach-caption04 }} example image for {{ page.project }}">
+                  </picture>
+                </div>
+                {% endif %}
+                {% if page.approach-image05 %}
+                <div
+                  class="swiper-slide"
+                  data-src="../../assets/images/portfolio-images/{{ page.approach-image05 }}"
+                  data-fancybox="carousel-gallery"
+                  data-caption="{{ page.project }}: {{ page.approach-caption05 }}"
+                >
+                  <picture>
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage05 }}" type="image/webp">
+                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image05 }}" type="image/jpeg">
+                    <img src="../../assets/images/portfolio-images/{{ page.approach-image05 }}" alt="{{ page.approach-caption05 }} example image for {{ page.project }}">
+                  </picture>
+                </div>
+                {% endif %}
               </div>
-              {% endif %}
-              {% if page.approach-image02 %}
-              <div
-                class="carousel__slide"
-                data-src="../../assets/images/portfolio-images/{{ page.approach-image02 }}"
-                data-fancybox="carousel-gallery"
-                data-caption="{{ page.project }}: {{ page.approach-caption02 }}"
-              >
-                <picture>
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage02 }}" type="image/webp">
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image02 }}" type="image/jpeg"> 
-                  <img src="../../assets/images/portfolio-images/{{ page.approach-image02 }}" alt="{{ page.approach-caption02 }} example image for {{ page.project }}">
-                </picture>
-              </div>
-              {% endif %}
-              {% if page.approach-image03 %}
-              <div
-                class="carousel__slide"
-                data-src="../../assets/images/portfolio-images/{{ page.approach-image03 }}"
-                data-fancybox="carousel-gallery"
-                data-caption="{{ page.project }}: {{ page.approach-caption03 }}"
-              >
-                <picture>
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage03 }}" type="image/webp">
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image03 }}" type="image/jpeg"> 
-                  <img src="../../assets/images/portfolio-images/{{ page.approach-image03 }}" alt="{{ page.approach-caption03 }} example image for {{ page.project }}">
-                </picture>
-              </div>
-              {% endif %}
-              {% if page.approach-image04 %}
-              <div
-                class="carousel__slide"
-                data-src="../../assets/images/portfolio-images/{{ page.approach-image04 }}"
-                data-fancybox="carousel-gallery"
-                data-caption="{{ page.project }}: {{ page.approach-caption04 }}"
-              >
-                <picture>
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage04 }}" type="image/webp">
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image04 }}" type="image/jpeg"> 
-                  <img src="../../assets/images/portfolio-images/{{ page.approach-image04 }}" alt="{{ page.approach-caption04 }} example image for {{ page.project }}">
-                </picture>
-              </div>
-              {% endif %}
-              {% if page.approach-image05 %}
-              <div
-                class="carousel__slide"
-                data-src="../../assets/images/portfolio-images/{{ page.approach-image05 }}"
-                data-fancybox="carousel-gallery"
-                data-caption="{{ page.project }}: {{ page.approach-caption05 }}"
-              >
-                <picture>
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage05 }}" type="image/webp">
-                  <source srcset="../../assets/images/portfolio-images/{{ page.approach-image05 }}" type="image/jpeg"> 
-                  <img src="../../assets/images/portfolio-images/{{ page.approach-image05 }}" alt="{{ page.approach-caption05 }} example image for {{ page.project }}">
-                </picture>
-              </div>
-              {% endif %}
+              <div class="swiper-pagination"></div>
+              <button type="button" class="swiper-button-prev" aria-label="Previous image"></button>
+              <button type="button" class="swiper-button-next" aria-label="Next image"></button>
             </div>
             
 
           </div>
         </div>
-        <h3 class="subsection-title">Goals</h3>
+        <h3 class="subsection-title uppercase">Goals</h3>
         {{ page.goals }}
       </section>
       <section>
-        <h2 class="section-title">Process</h2>
+        <h2>Process</h2>
         <div class="flex-two-col">
           <div class="col-left flex-third">
             <p>{{ page.process }}</p>
@@ -138,7 +166,7 @@
         </div>
         {% if page.findings %}
         <div class="single-col">
-          <h3 class="subsection-title">Findings</h3>
+          <h3 class="subsection-title uppercase">Findings</h3>
           <p>{{ page.findings }}</p>
         </div>
         {% endif %}
@@ -152,7 +180,7 @@
                 <img src="../../assets/images/portfolio-images/{{ page.process-image01 }}" alt="{{ page.process-caption01 }} example image for {{ page.project }}">
               </picture>
               <figcaption>
-                <h3>{{ page.process-caption01 }}</h3>
+                <h3 class="uppercase">{{ page.process-caption01 }}</h3>
               </figcaption>
             </figure>
           </a>
@@ -166,7 +194,7 @@
                 <img src="../../assets/images/portfolio-images/{{ page.process-image02 }}" alt="{{ page.process-caption02 }} example image for {{ page.project }}">
               </picture>
               <figcaption>
-                <h3>{{ page.process-caption02 }}</h3>
+                <h3 class="uppercase">{{ page.process-caption02 }}</h3>
               </figcaption>
             </figure>
           </a>
@@ -180,7 +208,7 @@
                 <img src="../../assets/images/portfolio-images/{{ page.process-image03 }}" alt="{{ page.process-caption03 }} example image for {{ page.project }}">
               </picture>
               <figcaption>
-                <h3>{{ page.process-caption03 }}</h3>
+                <h3 class="uppercase">{{ page.process-caption03 }}</h3>
               </figcaption>
             </figure>
           </a>
@@ -194,7 +222,7 @@
                 <img src="../../assets/images/portfolio-images/{{ page.process-image04 }}" alt="{{ page.process-caption04 }} example image for {{ page.project }}">
               </picture>
               <figcaption>
-                <h3>{{ page.process-caption04 }}</h3>
+                <h3 class="uppercase">{{ page.process-caption04 }}</h3>
               </figcaption>
             </figure>
           </a>
@@ -208,7 +236,7 @@
                 <img src="../../assets/images/portfolio-images/{{ page.process-image05 }}" alt="{{ page.process-caption05 }} example image for {{ page.project }}">
               </picture>
               <figcaption>
-                <h3>{{ page.process-caption05 }}</h3>
+                <h3 class="uppercase">{{ page.process-caption05 }}</h3>
               </figcaption>
             </figure>
           </a>
@@ -216,7 +244,7 @@
         </div>
       </section>
       <section class="solution-section">
-        <h2 class="section-title">Solution</h2>
+        <h2>Solution</h2>
           {% if page.prototype-orientation == 'vertical' %}
             <div class="flex-two-col">
               <div class="col-left flex-third">
@@ -240,32 +268,32 @@
           {% endif %}
       </section>
       <section>
-        <h2 class="section-title">Impact</h2>
+        <h2>Impact</h2>
         <div class="flex-two-col">
           <div class="col-left">
-            <h3 class="subsection-title">Results</h3>
+            <h3 class="subsection-title uppercase">Results</h3>
             <p>{{ page.outcomes }}</p>
           </div>
           <div class="col-right">
-            <h3 class="subsection-title">Achievements</h3>
+            <h3 class="subsection-title uppercase">Achievements</h3>
             {{ page.achievements }}
           </div>
         </div>
       </section>
       <section>
-        <h2 class="section-title">Takeaways</h2>
+        <h2>Takeaways</h2>
         <div class="flex-two-col">
           <div class="col-left flex-third">
-            <h3 class="subsection-title">What would I do differently?</h3>
+            <h3 class="subsection-title uppercase">What would I do differently?</h3>
             <p>{{ page.takeaways }}</p>
             {% if page.testimonial-topic == '' %}
           </div>
           <div class="col-right">
-            <h3 class="subsection-title">How did I grow?</h3>
+            <h3 class="subsection-title uppercase">How did I grow?</h3>
             <p>{{ page.learnings }}</p>
           </div>
           {% else %}
-          <h3 class="subsection-title">How did I grow?</h3>
+          <h3 class="subsection-title uppercase">How did I grow?</h3>
             <p>{{ page.learnings }}</p>
           </div>
           <div class="col-right card-container">
@@ -275,31 +303,56 @@
           {% endif %}
         </div>
       </section>
-      <div class="breadcrumb">
-        <div class="bc-right">
-          <a class="btn text" href="../" title="Work Overview"> Work </a> / {{ page.project }} 
-        </div>
-        <div class="bc-left">
-          <a class="btn text svg-before" href="../{{ page.previous-cs-link }}" title="{{ page.previous-cs-title }}"> <i data-feather="arrow-left"></i> Prev </a>
-          <a class="btn text svg-after" href="../{{ page.next-cs-link }}" title="{{ page.next-cs-title }}"> Next <i data-feather="arrow-right"></i> </a>
-        </div>
-      </div>
     </main>
     <script>
-      $('[data-fancybox]').fancybox({
-        protect: true,
-        loop: true,
-        clickContent: false,
-        buttons: [
-          "close"
-        ]
+      // Initialise the Approach image slider. Fancybox.bind (head.html)
+      // already covers every [data-fancybox] element on the page,
+      // including these slides, for click-to-enlarge - Swiper only
+      // handles moving between slides. mousewheel.forceToAxis keeps a
+      // vertical scroll gesture on the page's own axis instead of the
+      // slider hijacking it (the bug that motivated this swap, and an
+      // unresolved issue in Fancybox's own Carousel: fancyapps/ui#529).
+      const mainCarousel = new Swiper('#mainCarousel', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        keyboard: {
+          enabled: true,
+        },
+        a11y: {
+          enabled: true,
+        },
+        mousewheel: {
+          forceToAxis: true,
+        },
       });
-    </script>
-    <script>
-      // Initialise Carousel
-    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-      Dots: true,
-    });
+      // Swiper adds a native `disabled` attribute to the prev/next
+      // button at each end of the slider - browsers remove a disabled
+      // button from hit-testing entirely, so a click at that same screen
+      // position falls through to the slide underneath, which has its
+      // own [data-fancybox] click handler and opens the lightbox. The
+      // CSS .swiper-button-disabled style above already makes it read
+      // as clearly inactive, so stripping the native attribute (while
+      // Swiper's own internal beginning/end check still blocks actual
+      // navigation) keeps it a real hit target that just does nothing.
+      function clearNativeDisabled() {
+        mainCarousel.el.querySelectorAll('.swiper-button-disabled').forEach(function (btn) {
+          btn.removeAttribute('disabled');
+        });
+      }
+      clearNativeDisabled();
+      // Only slideChange re-runs this today because no breakpoints/
+      // slidesPerView-responsiveness is configured above, so isBeginning/
+      // isEnd (and therefore Swiper's disabled state) can't change on
+      // resize alone. If breakpoints are ever added here, also bind
+      // 'resize' and 'breakpoint' or this click-passthrough bug can
+      // silently come back.
+      mainCarousel.on('slideChange', clearNativeDisabled);
     </script>
     {% include footer.html %}
   </body>

@@ -15,22 +15,9 @@
   </span></p>
 </footer>
 <script>
-  feather.replace()
+  // Every data-feather icon sitewide sits right next to its own visible
+  // text label (Prev/Next, subnav titles, etc.) - purely decorative,
+  // so hide the generated SVGs from assistive tech instead of exposing
+  // unlabeled graphics.
+  feather.replace({ 'aria-hidden': 'true' })
 </script>
-<!-- {% if page.url == '/' %}
-<script>
-  var elem = document.querySelector('.main-carousel');
-  var flkty = new Flickity( elem, {
-    // options
-      fade: true,
-    wrapAround: true,
-    autoPlay: 5000
-  });
-
-  // element argument can be a selector string
-  //   for an individual element
-  var flkty = new Flickity( '.main-carousel', {
-    // options
-  });
-</script>
-{% endif %} -->

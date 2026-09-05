@@ -8,13 +8,13 @@
       <section>
         <div class="stacked-section">
           <div class="stacked-section-head">
-            <h2 class="section-title">{{ page.sidebar-title03 }}</h2>
+            <h2>{{ page.sidebar-title03 }}</h2>
             <a class="btn primary svg-after" href="../{{ page.button01-link }}" target="_blank" rel="noopener">{{ page.button01-title }} <i data-feather="{{ page.button01-icon }}"></i></a>
           </div>
           <ul class="timeline">
             {% for experience in site.data.experience %}
             <li>
-              <span class="timeline-title">{{ experience.title }}</span>
+              <h3 class="row-title">{{ experience.title }}</h3>
               <span class="timeline-company">{{ experience.company }}</span>
               <span class="timeline-dates">{{ experience.dates }}</span>
             </li>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="stacked-section">
-          <h2 class="section-title">{{ page.sidebar-title04 }}</h2>
+          <h2>{{ page.sidebar-title04 }}</h2>
           <div class="expertise-grid">
             {% for expertise in site.data.expertise %}
             <div class="expertise-card">
@@ -35,12 +35,12 @@
         </div>
 
         <div class="stacked-section">
-          <h2 class="section-title">{{ page.sidebar-title01 }}</h2>
+          <h2>{{ page.sidebar-title01 }}</h2>
           <ul class="education-list">
             {% for education in site.data.education %}
             <li>
               <div class="education-primary">
-                <span class="education-degree">{{ education.degree }}</span>
+                <h3 class="row-title">{{ education.degree }}</h3>
                 <span class="education-location">{{ education.location }} {{ education.date }}</span>
               </div>
               <span class="education-paper">{{ education.paper }}</span>
