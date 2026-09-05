@@ -6,38 +6,50 @@
     <main>
       {% include card-dark.html %}
       <section>
-        <div class="flex-three-col">
-          <div class="col-left">
+        <div class="stacked-section">
+          <div class="stacked-section-head">
             <h2 class="section-title">{{ page.sidebar-title03 }}</h2>
-            <div class="details">
-              <a class="btn primary svg-after" href="../{{ page.button01-link }}" target="_blank" rel="noopener">{{ page.button01-title }} <i data-feather="{{ page.button01-icon }}"></i></a>
-            </div>
+            <a class="btn primary svg-after" href="../{{ page.button01-link }}" target="_blank" rel="noopener">{{ page.button01-title }} <i data-feather="{{ page.button01-icon }}"></i></a>
+          </div>
+          <ul class="timeline">
             {% for experience in site.data.experience %}
-              <p><b>{{ experience.title }}</b><br>
-              {{ experience.company }}<br>
-              {{ experience.dates }}</p>
+            <li>
+              <span class="timeline-title">{{ experience.title }}</span>
+              <span class="timeline-company">{{ experience.company }}</span>
+              <span class="timeline-dates">{{ experience.dates }}</span>
+            </li>
             {% endfor %}
-          </div>
-          <div class="col-center">
-            <h2 class="section-title">{{ page.sidebar-title04 }}</h2>
-            {% for expertise in site.data.expertise %}
-              <p><b>{{ expertise.title }}</b><br>
-              {{ expertise.details }}</p>
-            {% endfor %}
-          </div>
-          <div class="col-right">
-            <h2 class="section-title">{{ page.sidebar-title01 }}</h2>
-            {% for education in site.data.education %}
-            <p><b>{{ education.degree }}</b><br>
-            {{ education.location }} {{ education.date }}
-            {% if education.paper %}
-            <br>{{ education.paper }}
-            {% endif %}
-            </p>
-            {% endfor %}
-          </div>
-          <p><i>{{ page.overview }}</i></p>
+          </ul>
         </div>
+
+        <div class="stacked-section">
+          <h2 class="section-title">{{ page.sidebar-title04 }}</h2>
+          <div class="expertise-grid">
+            {% for expertise in site.data.expertise %}
+            <div class="expertise-card">
+              <h3 class="subsection-title">{{ expertise.title }}</h3>
+              <p>{{ expertise.details }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="stacked-section">
+          <h2 class="section-title">{{ page.sidebar-title01 }}</h2>
+          <ul class="education-list">
+            {% for education in site.data.education %}
+            <li>
+              <div class="education-primary">
+                <span class="education-degree">{{ education.degree }}</span>
+                <span class="education-location">{{ education.location }} {{ education.date }}</span>
+              </div>
+              <span class="education-paper">{{ education.paper }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <p><i>{{ page.overview }}</i></p>
       </section>
     </main>
     {% include footer.html %}

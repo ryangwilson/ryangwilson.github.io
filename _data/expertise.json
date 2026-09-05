@@ -8,12 +8,24 @@
         "details": "Excellent Verbal & Written Communication, Contributes across teams, Highly technical communication, Organized/detail-oriented, Enjoys presenting & sharing knowledge"
     },
     {
+        "title": "Design Systems & Component Libraries",
+        "details": "Figma (components, design tokens, interactive prototypes), am-ui (self-directed component library)"
+    },
+    {
+        "title": "AI-Augmented Workflows",
+        "details": "Built and deployed custom Claude-based AI skills for team-wide use, trained teams on AI-accelerated workflows with human judgment as the non-negotiable decision authority, AI-assisted design-to-code methodology"
+    },
+    {
+        "title": "Accessibility",
+        "details": "WCAG 2.1 AA hands-on validation, accessible pattern design, independent conference speaker on accessibility (AHFE Nice 2024, Orlando 2025)"
+    },
+    {
         "title": "User-Centered Design",
-        "details": "User research, User observation, User testing, Personas"
+        "details": "User research, User observation, Usability testing, Personas"
     },
     {
         "title": "Documentation",
-        "details": "User flows, Information architecture, Product requirements, Stakeholder presentation"
+        "details": "Product flows, Information architecture, Product requirements, Stakeholder presentation"
     },
     {
         "title": "Product Conceptualization",
@@ -21,6 +33,10 @@
     },
     {
         "title": "Implementation",
-        "details": "Fluent with HTML & CSS, basic vanilla JavaScript, Shipped numerous products"
+        "details": "Fluent with HTML, CSS, and JavaScript; shipped responsive production front ends (desktop, tablet, mobile)"
+    },
+    {
+        "title": "Analytics & Measurement",
+        "details": "Quantitative and qualitative usability testing data used to drive key product decisions, working familiarity with Google Analytics and Hotjar"
     }
 ]

@@ -174,29 +174,148 @@ section {
       }
     }
   }
-  .flex-three-col {
+  // Experience page: single-column, sectioned layout (Experience,
+  // Expertise, Education) - replaces an earlier three-column layout
+  // that got increasingly lopsided as the Experience list grew.
+  .stacked-section {
+    margin-bottom: $scale-12;
+    .section-title {
+      margin-bottom: $scale-3;
+    }
+  }
+  .stacked-section-head {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    .col-left {
-      flex: 1;
-      margin-right: $scale-5;
-      margin-bottom: $scale-10;
-      padding: 0 $scale-5 0 0;
+    gap: $scale-3;
+    margin-bottom: $scale-3;
+    .section-title {
+      margin-bottom: 0;
     }
-    .col-center {
-      flex: 1;
-      margin-right: $scale-5;
-      margin-bottom: $scale-10;
-      padding: 0 $scale-5;
-    }
-    .col-right {
-      flex: 1;
-      padding: 0 0 0 $scale-5;
-    }
+  }
+  // Grid (not flex) so all three columns share the same tracks down the
+  // whole list - flexbox sizes each row independently, letting the
+  // middle column drift left/right depending on that row's first-column
+  // length. Each <li> uses subgrid to lock its own columns to the
+  // parent's tracks while still being a real row box, which is what
+  // lets it carry ONE continuous border-bottom spanning full width,
+  // instead of several separate (visibly gapped) borders per column.
+  .timeline {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.3fr) minmax(160px, 1fr) auto;
+    column-gap: $scale-3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $lt-gray-00;
     @media (max-width: 699px) {
-      .col-left, .col-center, .col-right {
-        padding: 0;
+      grid-template-columns: 1fr;
+    }
+    li {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+      align-items: baseline;
+      padding: $scale-3 0;
+      border-bottom: 1px solid $lt-gray-00;
+      @media (max-width: 699px) {
+        grid-template-columns: 1fr;
+        row-gap: $scale-1;
       }
+    }
+  }
+  .timeline-title {
+    font-weight: $type-main-black;
+    color: $black-00;
+  }
+  .timeline-company {
+    color: $dk-gray-00;
+    text-align: left;
+  }
+  .timeline-dates {
+    color: $md-gray-00;
+    font-size: $small-font-size;
+    white-space: nowrap;
+    text-align: right;
+    @media (max-width: 699px) {
+      text-align: left;
+    }
+  }
+  // CSS multi-column masonry: cards flow down each column and pack to
+  // their actual height instead of every row snapping to its tallest
+  // card, which is what a plain grid would do with cards of uneven
+  // length like these. break-inside:avoid keeps a card from splitting
+  // across the column break.
+  .expertise-grid {
+    columns: 2;
+    column-gap: $scale-5;
+    @media (max-width: 599px) {
+      columns: 1;
+    }
+  }
+  .expertise-card {
+    background: #F7F7F7;
+    border-radius: $radius-medium;
+    padding: $scale-4;
+    margin-bottom: $scale-5;
+    break-inside: avoid;
+    h3 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  // Two columns, not three: degree + school/date stay stacked together
+  // as one left-hand block, and the paper citation gets its own column
+  // on the right - wide enough, and allowed to wrap, so a long
+  // dissertation title doesn't get squeezed onto a single forced line.
+  // Subgrid keeps that right column aligned down the whole list, same
+  // technique as .timeline above.
+  .education-list {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(220px, 1fr);
+    column-gap: $scale-3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $lt-gray-00;
+    @media (max-width: 699px) {
+      grid-template-columns: 1fr;
+    }
+    li {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+      align-items: baseline;
+      padding: $scale-3 0;
+      border-bottom: 1px solid $lt-gray-00;
+      @media (max-width: 699px) {
+        grid-template-columns: 1fr;
+        row-gap: $scale-1;
+      }
+    }
+  }
+  .education-primary {
+    display: flex;
+    flex-direction: column;
+    gap: $scale-1;
+  }
+  .education-degree {
+    font-weight: $type-main-black;
+    color: $black-00;
+  }
+  .education-location {
+    color: $dk-gray-00;
+  }
+  .education-paper {
+    color: $md-gray-00;
+    font-size: $small-font-size;
+    text-align: right;
+    white-space: normal;
+    @media (max-width: 699px) {
+      text-align: left;
     }
   }
 }
