@@ -50,11 +50,15 @@
 <a href="{{ fallback.linkedin }}" target="_blank" rel="noopener" class="reference-card {{ include.variant }}"{% if include.topic %} testimonial="topic:{{ include.topic }}"{% else %} testimonial{% endif %}>
   <q class="quote">{{ fallback.quote }}</q>
   <div class="image-title">
-    <picture>
-      <source class="webpimage" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.webpimage }}" type="image/webp">
-      <source class="image" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.image }}" type="image/jpeg">
-      <img src="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.image }}" alt="Image of {{ fallback.name }}">
-    </picture>
+    <div class="avatar-wrap">
+      <picture>
+        <source class="webpimage" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.webpimage }}" type="image/webp">
+        <source class="image" srcset="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.image }}" type="image/jpeg">
+        <img src="{{ include.path-prefix }}/assets/images/testimonial-images/{{ fallback.image }}" alt="Image of {{ fallback.name }}">
+      </picture>
+      {% include icon-linkedin.html %}
+    </div>
     <p class="byline"><b class="name">{{ fallback.name }}</b> <i class="title">{{ fallback.title }}</i> <span class="company">{{ fallback.company }}</span></p>
   </div>
+  <span class="sr-only">(opens on LinkedIn)</span>
 </a>
