@@ -20,13 +20,17 @@
      changes for the JS-enabled visitors this is populated for today - this
      only fixes what non-JS visitors see.
 
+     A testimonial entry can be hidden site-wide (without deleting its data)
+     by setting "display": false in _data/testimonials.json - both this
+     fallback and the JS random pool (assets/js/testimonials.js) respect it.
+
      `used_names` is a Liquid variable this include intentionally leaves
      un-scoped (Liquid's `assign` is page-global, not include-local) so it
      accumulates across every testimonial-card.html call on the same page
      render - each call picks the first eligible match that isn't already
      used earlier on that page, so e.g. the About page's hero card and its
      3 lower cards never show the same person twice without JS. -->
-{% assign candidates = site.data.testimonials %}
+{% assign candidates = site.data.testimonials | where_exp: "t", "t.display != false" %}
 {% if include.topic %}
   {% assign topic_query = include.topic | downcase %}
   {% assign candidates = candidates | where_exp: "t", "t.topic contains topic_query" %}

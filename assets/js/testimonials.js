@@ -18,7 +18,8 @@ function shuffleArray(array) {
 }
 
 window.onload = function () {
-  const testimonialsCopy = shuffleArray(testimonials);
+  const visibleTestimonials = testimonials.filter((item) => item.display !== false);
+  const testimonialsCopy = shuffleArray(visibleTestimonials);
   const testimonialElements = document.querySelectorAll('[testimonial]');
   testimonialElements.forEach((element) => {
     try {
