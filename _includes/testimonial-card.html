@@ -18,16 +18,31 @@
      populated it without JS). assets/js/testimonials.js still unconditionally
      overwrites this fallback with its own randomized pick on load, so nothing
      changes for the JS-enabled visitors this is populated for today - this
-     only fixes what non-JS visitors see. -->
-{% assign fallback = nil %}
+     only fixes what non-JS visitors see.
+
+     `used_names` is a Liquid variable this include intentionally leaves
+     un-scoped (Liquid's `assign` is page-global, not include-local) so it
+     accumulates across every testimonial-card.html call on the same page
+     render - each call picks the first eligible match that isn't already
+     used earlier on that page, so e.g. the About page's hero card and its
+     3 lower cards never show the same person twice without JS. -->
+{% assign candidates = site.data.testimonials %}
 {% if include.topic %}
   {% assign topic_query = include.topic | downcase %}
-  {% assign matches = site.data.testimonials | where_exp: "t", "t.topic contains topic_query" %}
-  {% assign fallback = matches | first %}
+  {% assign candidates = candidates | where_exp: "t", "t.topic contains topic_query" %}
 {% endif %}
+{% assign used_names = used_names | default: "" %}
+{% assign fallback = nil %}
+{% for candidate in candidates %}
+  {% unless used_names contains candidate.name %}
+    {% assign fallback = candidate %}
+    {% break %}
+  {% endunless %}
+{% endfor %}
 {% unless fallback %}
-  {% assign fallback = site.data.testimonials | first %}
+  {% assign fallback = candidates | first %}
 {% endunless %}
+{% assign used_names = used_names | append: "|" | append: fallback.name %}
 <a href="{{ fallback.linkedin }}" target="_blank" rel="noopener" class="reference-card {{ include.variant }}"{% if include.topic %} testimonial="topic:{{ include.topic }}"{% else %} testimonial{% endif %}>
   <q class="quote">{{ fallback.quote }}</q>
   <div class="image-title">
