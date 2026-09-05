@@ -25,3 +25,50 @@
   z-index: 1;
   transition: .4s ease-in-out;
 }
+// Small corner mark showing which site a link leaves for (Medium for
+// articles, LinkedIn for testimonials) - each link also carries a
+// .sr-only "(opens on X)" string for screen readers, this is the
+// sighted-user equivalent. z-index keeps it visible over the hover
+// glow above, which is otherwise unfilled (just an inset box-shadow).
+.link-badge {
+  position: absolute;
+  top: 0;
+  right: $scale-2;
+  width: 16px;
+  height: 16px;
+  color: $md-gray-00;
+  opacity: 0.6;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity .2s ease, color .2s ease;
+}
+a:hover .link-badge {
+  opacity: 1;
+  color: $secondary-00;
+}
+// Testimonial cards: the badge sits on the avatar itself (bottom-right,
+// like a verified mark) rather than floating at the card's top-right
+// corner - shrink-wrapping .avatar-wrap to the photo's own box is what
+// lets the badge anchor to the photo's edge instead of the wider,
+// centered .image-title column around it.
+.avatar-wrap {
+  position: relative;
+  display: inline-flex;
+  .link-badge {
+    top: auto;
+    right: -4px;
+    bottom: -2px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    border: 2px solid $white-00;
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+}
+// .third's avatar sits closer to the card's own edge than .single's, so
+// it needs its own offset rather than sharing .avatar-wrap's default.
+.reference-card.third .avatar-wrap .link-badge {
+  right: 0;
+  bottom: $scale-2;
+}
