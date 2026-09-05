@@ -1,0 +1,355 @@
+/* header-footer.scss */
+/* Styles for the structure components */
+
+/* sets up sticky footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  &.nested-page .nested, &.ty-page .contact {
+    color: var(--secondary-00);
+    cursor: default;
+    &:hover {
+      box-shadow: 0 0 0 0 var(--white-00), 0 0 0 0 var(--white-00);
+    }
+  }
+}
+/* styles the navigation - this is before header and footer to accommodate for overrides */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    position: relative;
+    margin-right: var(--scale-10);
+    @media (max-width: 1050px) { margin-right: var(--scale-5); }
+    color: var(--white-00);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-variation-settings: "wght" 300, "GRAD" 0;
+    font-size: var(--body-font-size);
+    padding: var(--scale-2) 0;
+    box-shadow: 0 0 0 0 var(--white-00), 0 0 0 0 var(--white-00);
+    transition: all 0.3s ease;
+    &:last-of-type {
+      /* margin-right: 0; */
+    }
+    &:hover {
+      color: var(--white-00);
+      font-variation-settings: "wght" 300, "GRAD" 150;
+      box-shadow: 0 var(--scale-1) 0 0 var(--secondary-00), 0 calc(var(--scale-1) * -1) 0 0 var(--secondary-00);
+    }
+    &.active {
+      color: var(--secondary-00);
+      cursor: default;
+      &:hover {
+        box-shadow: 0 0 0 0 var(--white-00), 0 0 0 0 var(--white-00);
+      }
+    }
+  }
+  .badge-animation {
+    &:after{
+      position: absolute;
+      z-index: 111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: '8';
+      top: 0;
+      right: -20px;
+      width: var(--scale-5);
+      height: var(--scale-5);
+      background: var(--error-00);
+      border-radius: var(--radius-soft);
+      font-size: calc(var(--body-font-size) - 2px);
+      line-height: 0;
+      color: var(--white-00);
+      transform: scale(0);
+      animation: notification-bounce 1s cubic-bezier(0.34, 2, 0.64, 1) forwards;
+    }
+  }
+}
+/* header styles */
+header {
+  background-color: var(--black-00);
+  padding: var(--scale-2) 0 var(--scale-1);
+  border-bottom: var(--scale-1) solid var(--white-00);
+  box-shadow: var(--elevation-high);
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  /* Aligns the nav's content edges with main's (max-width:1280px, see */
+  /* below) - previously the header bar's own fixed horizontal padding */
+  /* drifted out of alignment with the page content on wide viewports. */
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* .mobile-menu (override-hamburger-menu.scss) makes <header> itself a */
+    /* flex container below 699px - without an explicit width this becomes */
+    /* a flex item sized to its own content instead of stretching to fill, */
+    /* and its margin:auto then centers that shrunk box instead of the */
+    /* toggle button being pinned to the real right edge. */
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--scale-10);
+    @media (max-width: 659px) {
+      padding: 0 var(--scale-5);
+    }
+    @media (max-width: 419px) {
+      padding: 0 var(--scale-5);
+    }
+  }
+  .branding {
+    margin-right: var(--scale-5);
+    position: relative; /* positioning context for .avatar-reveal */
+  }
+}
+
+@keyframes notification-bounce {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+/* main exists to push footer to the bottom on short desktop pages */
+main {
+  flex: 1;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+/* footer styles */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black-00);
+  padding: var(--scale-3) var(--scale-5);
+  margin-top: var(--scale-10);
+  border-top: var(--scale-1) solid var(--white-00);
+  line-height: 2;
+  p {
+    font-size: var(--small-font-size);
+    color: var(--md-gray-00);
+  }
+  nav {
+    a {
+      font-size: var(--small-font-size);
+    }
+    .footer-nav {
+      margin-right: var(--scale-5);
+    }
+    .subnav {
+      margin-right: var(--scale-5);
+        a {
+          text-transform: unset;
+          font-weight: var(--type-main-regular);
+          color: var(--primary-00);
+        }
+    }
+  }
+}
+section {
+  margin: var(--scale-20) var(--scale-10);
+  @media (max-width: 659px) {
+    margin: var(--scale-20) var(--scale-5);
+  }
+  @media (max-width: 419px) {
+    margin: var(--scale-20) var(--scale-5);
+  }
+  .flex-two-col {
+    display: flex;
+    @media (max-width: 859px) {
+      flex-direction: column;
+    }
+    justify-content: space-between;
+    .col-left {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin-right: var(--scale-10);
+      @media (max-width: 699px) {
+        margin-right: 0;
+      }
+    }
+    .col-right {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      min-width: 350px;
+      @media (max-width: 699px) {
+        min-width: unset;
+      }
+    }
+  }
+  /* Experience page: single-column, sectioned layout (Experience, */
+  /* Expertise, Education) - replaces an earlier three-column layout */
+  /* that got increasingly lopsided as the Experience list grew. */
+  .stacked-section {
+    margin-bottom: var(--scale-12);
+  }
+  .stacked-section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--scale-3);
+    margin-bottom: var(--scale-3);
+  }
+  /* Grid (not flex) so all three columns share the same tracks down the */
+  /* whole list - flexbox sizes each row independently, letting the */
+  /* middle column drift left/right depending on that row's first-column */
+  /* length. Each <li> uses subgrid to lock its own columns to the */
+  /* parent's tracks while still being a real row box, which is what */
+  /* lets it carry ONE continuous border-bottom spanning full width, */
+  /* instead of several separate (visibly gapped) borders per column. */
+  .timeline {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.3fr) minmax(160px, 1fr) auto;
+    column-gap: var(--scale-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--lt-gray-00);
+    @media (max-width: 699px) {
+      grid-template-columns: 1fr;
+    }
+    li {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+      align-items: baseline;
+      padding: var(--scale-3) 0;
+      border-bottom: 1px solid var(--lt-gray-00);
+      @media (max-width: 699px) {
+        grid-template-columns: 1fr;
+        row-gap: var(--scale-1);
+      }
+    }
+  }
+  /* Shared with .education-list below - both are a row's primary bold */
+  /* label (job title / degree name), same visual treatment either way. */
+  .row-title {
+    /* Needed now that this is a real <h3> (was a <span>) - without it, */
+    /* the browser's default UA h3 sizing (1.17em) applies since there's */
+    /* no longer a bare h3 rule to inherit from. */
+    font-size: var(--body-font-size);
+    font-family: var(--type-display-main);
+    font-optical-sizing: auto;
+    /* Two declarations doing "the same thing" because they're read by
+       two different situations, never both at once:
+       - Roboto Flex loads fine (the normal case): font-variation-settings
+         wins outright, font-weight is completely ignored/inert.
+       - Roboto Flex fails to load (CDN down, blocked, etc.): the font
+         stack falls back to plain "sans-serif", a non-variable font with
+         no "wght" axis at all - font-variation-settings has nothing to
+         attach to and does nothing, so font-weight is the ONLY one of
+         the two that still has any effect.
+       Keeping both means this text is bold either way. Dropping
+       font-weight would make it silently fall back to regular weight
+       in that failure case, with nothing visibly telling you why. */
+    font-weight: 700;
+    font-variation-settings: "wght" 700, "GRAD" 0;
+    color: var(--black-00);
+  }
+  .timeline-company {
+    color: var(--dk-gray-00);
+    text-align: left;
+  }
+  .timeline-dates {
+    /* Same contrast fix as .education-paper below - var(--md-gray-00) on */
+    /* white at this size fails WCAG AA (~2.6:1, needs 4.5:1). */
+    color: var(--dk-gray-00);
+    font-size: var(--small-font-size);
+    white-space: nowrap;
+    text-align: right;
+    @media (max-width: 699px) {
+      text-align: left;
+    }
+  }
+  /* CSS multi-column masonry: cards flow down each column and pack to */
+  /* their actual height instead of every row snapping to its tallest */
+  /* card, which is what a plain grid would do with cards of uneven */
+  /* length like these. break-inside:avoid keeps a card from splitting */
+  /* across the column break. */
+  .expertise-grid {
+    columns: 2;
+    column-gap: var(--scale-5);
+    @media (max-width: 599px) {
+      columns: 1;
+    }
+  }
+  .expertise-card {
+    background: #F7F7F7;
+    border-radius: var(--radius-medium);
+    padding: var(--scale-4);
+    margin-bottom: var(--scale-5);
+    break-inside: avoid;
+    h3 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  /* Two columns, not three: degree + school/date stay stacked together */
+  /* as one left-hand block, and the paper citation gets its own column */
+  /* on the right - wide enough, and allowed to wrap, so a long */
+  /* dissertation title doesn't get squeezed onto a single forced line. */
+  /* Subgrid keeps that right column aligned down the whole list, same */
+  /* technique as .timeline above. */
+  .education-list {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(220px, 1fr);
+    column-gap: var(--scale-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--lt-gray-00);
+    @media (max-width: 699px) {
+      grid-template-columns: 1fr;
+    }
+    li {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+      align-items: baseline;
+      padding: var(--scale-3) 0;
+      border-bottom: 1px solid var(--lt-gray-00);
+      @media (max-width: 699px) {
+        grid-template-columns: 1fr;
+        row-gap: var(--scale-1);
+      }
+    }
+  }
+  .education-primary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--scale-1);
+  }
+  .education-location {
+    color: var(--dk-gray-00);
+  }
+  .education-paper {
+    /* var(--md-gray-00) on white at this size computed to ~2.6:1 contrast - */
+    /* well under WCAG AA's 4.5:1 minimum for normal text. var(--dk-gray-00) */
+    /* (already used for .education-location right above) passes */
+    /* comfortably at ~8.2:1. */
+    color: var(--dk-gray-00);
+    font-size: var(--small-font-size);
+    text-align: right;
+    white-space: normal;
+    @media (max-width: 699px) {
+      text-align: left;
+    }
+  }
+}

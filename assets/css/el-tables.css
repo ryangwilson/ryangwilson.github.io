@@ -1,14 +1,14 @@
-// tables.scss
-// Styles for Tables
+/* tables.scss */
+/* Styles for Tables */
 table {
-    margin-top: $scale-5;
+    margin-top: var(--scale-5);
     td {
-        padding: $scale-2 $scale-4;
+        padding: var(--scale-2) var(--scale-4);
     }
 
     th {
-        padding: $scale-2 $scale-4;
-        background-color: $lt-gray-00;
+        padding: var(--scale-2) var(--scale-4);
+        background-color: var(--lt-gray-00);
         text-align: left;
     }
 
@@ -57,7 +57,7 @@ table {
 
     td:before {
         /* Top/left values mimic padding */
-        margin-right: $scale-2;
+        margin-right: var(--scale-2);
     }
 
     /* Label the data */

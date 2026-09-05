@@ -1,40 +1,40 @@
-// form-elements.scss
-// Styles for Form Elements
+/* form-elements.scss */
+/* Styles for Form Elements */
 button,label,input,select,progress,textarea {
   display: block;
   font-family: inherit;
-  font-size: $body-font-size;
+  font-size: var(--body-font-size);
 }
 
 input:not([type]),input[type="text"],input[type="password"],input[type="email"],input[type="tel"],input[type="number"],input[type="url"],input[type="search"],textarea,input[type="date"],input[type="month"],input[type="week"],input[type="datetime"],input[type="datetime-local"],select {
-  padding: $scale-1;
+  padding: var(--scale-1);
   border: none;
-  box-shadow: $fake-thin $lt-gray-00;
+  box-shadow: var(--fake-thin) var(--lt-gray-00);
   width: 100%;
   &:focus {
-    box-shadow: $fake-medium $primary-00;
+    box-shadow: var(--fake-medium) var(--primary-00);
     outline: 0;
   }
 }
 
 label {
-  margin-bottom: $scale-1;
+  margin-bottom: var(--scale-1);
   width: fit-content;
 }
 
-///// CHECKBOX, RADIO, TOGGLE STYLES - https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+/* CHECKBOX, RADIO, TOGGLE STYLES - https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/ */
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
 
   input[type='checkbox'],
   input[type='radio'] {
-    --active: #{$secondary-00};
-    --active-inner: #{$white-00};
-    --focus: 2px #{$primary-00};
-    --border: #{$dk-gray-00};
-    --border-hover: #{$secondary-00};
-    --background: #{$white-00};
-    --disabled: #{$lt-gray-00};
-    --disabled-inner: #{$lt-gray-00};
+    --active: var(--secondary-00);
+    --active-inner: var(--white-00);
+    --focus: 2px var(--primary-00);
+    --border: var(--dk-gray-00);
+    --border-hover: var(--secondary-00);
+    --background: var(--white-00);
+    --disabled: var(--lt-gray-00);
+    --disabled-inner: var(--lt-gray-00);
     -webkit-appearance: none;
     -moz-appearance: none;
     height: 21px;
@@ -82,7 +82,7 @@ label {
       }
     }
     &:focus {
-      box-shadow: 0 0 0 3px $primary-00;
+      box-shadow: 0 0 0 3px var(--primary-00);
     }
     &:not(.switch) {
       width: 21px;
@@ -160,11 +160,11 @@ label {
   }
 }
 
-///// RANGE SLIDER STYLES - https://www.cssportal.com/style-input-range/
+/* RANGE SLIDER STYLES - https://www.cssportal.com/style-input-range/ */
 input[type=range] {
-  height: $scale-5;
+  height: var(--scale-5);
   -webkit-appearance: none;
-  margin: $scale-2 0;
+  margin: var(--scale-2) 0;
   width: 100%;
 }
 input[type=range]:focus {
@@ -172,50 +172,50 @@ input[type=range]:focus {
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: $scale-1;
+  height: var(--scale-1);
   cursor: pointer;
   transition: 0.2s;
-  box-shadow: 0 0 0 0 $black-00;
-  background: $secondary-50;
+  box-shadow: 0 0 0 0 var(--black-00);
+  background: var(--secondary-50);
   border-radius: 1px;
-  border: 0 solid $black-00;
+  border: 0 solid var(--black-00);
 }
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: $elevation-near;
-  border: 1px solid $secondary-00;
-  height: $scale-4;
-  width: $scale-4;
-  border-radius: $scale-5;
-  background: $secondary-00;
+  box-shadow: var(--elevation-near);
+  border: 1px solid var(--secondary-00);
+  height: var(--scale-4);
+  width: var(--scale-4);
+  border-radius: var(--scale-5);
+  background: var(--secondary-00);
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -($scale-1 + 2);
+  margin-top: calc((var(--scale-1) + 2px) * -1);
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  box-shadow: 0 0 0 3px $primary-00;
+  box-shadow: 0 0 0 3px var(--primary-00);
 }
 input[type=range]::-moz-range-track {
   width: 100%;
-  height: $scale-1;
+  height: var(--scale-1);
   cursor: pointer;
   transition: 0.2s;
-  box-shadow: 0 0 0 3px $black-00;
-  background: $secondary-00;
+  box-shadow: 0 0 0 3px var(--black-00);
+  background: var(--secondary-00);
   border-radius: 1px;
-  border: 0 solid $black-00;
+  border: 0 solid var(--black-00);
 }
 input[type=range]::-moz-range-thumb {
-  box-shadow: $elevation-near;
-  border: 1px solid $secondary-00;
-  height: $scale-4;
-  width: $scale-4;
-  border-radius: $scale-5;
-  background: $secondary-50;
+  box-shadow: var(--elevation-near);
+  border: 1px solid var(--secondary-00);
+  height: var(--scale-4);
+  width: var(--scale-4);
+  border-radius: var(--scale-5);
+  background: var(--secondary-50);
   cursor: pointer;
 }
 input[type=range]::-ms-track {
   width: 100%;
-  height: $scale-1;
+  height: var(--scale-1);
   cursor: pointer;
   transition: 0.2s;
   background: transparent;
@@ -223,30 +223,30 @@ input[type=range]::-ms-track {
   color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-  background: $secondary-00;
-  border: 0 solid $black-00;
+  background: var(--secondary-00);
+  border: 0 solid var(--black-00);
   border-radius: 2px;
-  box-shadow: 0 0 0 0 $black-00;
+  box-shadow: 0 0 0 0 var(--black-00);
 }
 input[type=range]::-ms-fill-upper {
-  background: $secondary-00;
-  border: 0 solid $black-00;
+  background: var(--secondary-00);
+  border: 0 solid var(--black-00);
   border-radius: 2px;
-  box-shadow: 0 0 0 0 $black-00;
+  box-shadow: 0 0 0 0 var(--black-00);
 }
 input[type=range]::-ms-thumb {
   margin-top: 1px;
-  box-shadow: $elevation-near;
-  border: 1px solid $secondary-00;
-  height: $scale-4;
-  width: $scale-4;
-  border-radius: $scale-5;
-  background: $secondary-50;
+  box-shadow: var(--elevation-near);
+  border: 1px solid var(--secondary-00);
+  height: var(--scale-4);
+  width: var(--scale-4);
+  border-radius: var(--scale-5);
+  background: var(--secondary-50);
   cursor: pointer;
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: $primary-00;
+  background: var(--primary-00);
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: $primary-00;
+  background: var(--primary-00);
 }

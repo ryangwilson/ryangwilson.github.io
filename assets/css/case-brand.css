@@ -1,0 +1,465 @@
+/* case-brand.scss */
+/* Styles for branding case studies */
+.cs-container {
+  /* Overrides the sitewide `section { margin: var(--scale-20) ... }` (100px) - */
+  /* margin-top/bottom only (not the shorthand) so the mobile media */
+  /* queries on the bare `section` selector, which only adjust the */
+  /* horizontal margin, still apply here too. */
+  section {
+    margin-top: var(--scale-15);
+    margin-bottom: var(--scale-15);
+  }
+  .flex-third {
+    flex: 3 !important;
+  }
+  /* The Takeaways testimonial sits alone in .col-right.card-container, */
+  /* which .flex-two-col (row, align-items:stretch by default) stretches */
+  /* to match .col-left's height. .reference-card.single's own */
+  /* `flex: 1 calc(33.333% - ...)` (pon-cards.scss) was written for the */
+  /* About page's 3-up row layout, where flex-grow:1 fills width evenly - */
+  /* here .col-right is a flex COLUMN, so that same flex-grow instead */
+  /* expands the single card to fill the whole stretched height, */
+  /* ballooning the empty space inside it. Killing flex-grow lets the */
+  /* card sit at its natural height at the top of the column instead. */
+  .col-right.card-container .reference-card.single {
+    flex-grow: 0;
+  }
+  p + h4, ul + h4, div + h4, p + iframe{
+    margin-top: var(--scale-6);
+  }
+  iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+  @media (max-width: 859px) {
+    .col-right h4, iframe, #mainCarousel {
+      margin-top: var(--scale-6);
+    }
+  }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--lt-gray-00);
+    padding: var(--scale-1) var(--scale-2);
+    /* 14px minimum - was 12px, below the site's readability floor. */
+    font-size: 14px;
+    /* Sticks directly under the sticky header (header's own z-index is */
+    /* 99 - pon-structure.scss) - --header-height is set by the inline */
+    /* script in case-study-template.html, with a 0px fallback for the */
+    /* instant before that script runs on first paint. */
+    position: sticky;
+    top: var(--header-height, 0px);
+    z-index: 90;
+    box-shadow: -50vw 0 0 0 var(--lt-gray-00), 50vw 0 0 0 var(--lt-gray-00), -25vw 0 0 0 var(--lt-gray-00), 25vw 0 0 0 var(--lt-gray-00);
+    a {
+      font-size: 14px;
+    }
+    .bc-right {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      ol {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        li {
+          display: flex;
+          align-items: center;
+          /* The "/" is a purely visual separator between crumbs, not */
+          /* real content - a CSS pseudo-element keeps it out of the */
+          /* accessibility tree instead of a literal "/" character a */
+          /* screen reader would read aloud between every crumb. */
+          & + li::before {
+            content: "/";
+            margin: 0 var(--scale-1);
+          }
+        }
+      }
+    }
+    .bc-left {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    a[class*="svg-"] {
+      margin-left: var(--scale-2);
+    }
+  }
+  .solution-section {
+    img {
+      margin-top: var(--scale-6);
+      max-width: 100%;
+    }
+    .vertical img {
+      margin-top: 0;
+      max-width: 290px;
+    }
+  }
+}
+.case-study {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* h1 (max-width: 420px) and .byline (width: fit-content) both have their */
+  /* own explicit width, so as flex items they fall back to flex-start */
+  /* instead of stretching full-width - text-align:center alone can't */
+  /* reposition them, only center inline content inside a box that's */
+  /* already full-width (like the subtitle <p> below, which has no */
+  /* explicit width of its own). */
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  height: 500px;
+  h1 {
+    margin-top: var(--scale-5);
+  }
+  h3 {
+    color: var(--white-00);
+    width: unset;
+  }
+  p {
+    color: var(--white-00);
+    font-size: var(--h6-font-size);
+    font-style: italic;
+    line-height: 1.2;
+  }
+  img {
+    position: relative;
+    bottom: -5%;
+    min-width: 460px;
+    max-width: 760px;
+    width: 100%;
+    align-self: center;
+  }
+}
+
+.single-col {
+  h4 {
+    margin-top: var(--scale-6);
+  }
+}
+
+/* .col-right (this carousel's direct parent) is a flex item of
+   .flex-two-col, which stretches both columns to match height by
+   default - when the adjacent .col-left text is shorter than the
+   carousel's true height (image + gap + pagination row), .col-right
+   gets squeezed down to that shorter height, and this element's own
+   overflow:hidden then clips the pagination row off the bottom.
+   Verified live: .col-right's rendered height was ~20px short of what
+   the carousel needed. Scoped to just this carousel's own parent
+   (not .flex-two-col/.col-right generally, which are used all over
+   the site without this problem) so it doesn't affect other layouts. */
+.col-right:has(> #mainCarousel) {
+  align-self: flex-start;
+}
+#mainCarousel {
+  /* Lets a real touchscreen swipe that's mostly vertical pass straight */
+  /* through to native page scroll (paired with mousewheel.forceToAxis */
+  /* in case-study-template.html for the same fix on trackpad/wheel) - */
+  /* horizontal swipes are still captured to move between slides. */
+  touch-action: pan-y;
+  min-width: 290px;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto 1rem auto;
+  /* Swiper's own theming hooks (swiper-bundle.min.css) - equivalent to */
+  /* the old --carousel-button-* custom properties this replaces. */
+  --swiper-theme-color: #170724;
+  --swiper-navigation-size: 20px;
+  /* var(--secondary-00) - the same teal used for the nav's active-page text */
+  /* and hover underline (pon-structure.scss), not an invented color. */
+  --swiper-pagination-color: var(--secondary-00);
+  /* The image's own fixed-ratio box, separate from #mainCarousel itself - */
+  /* lets the pagination dots sit in normal flow below the image instead */
+  /* of Swiper's default position, which is absolutely placed over the */
+  /* bottom of the image. */
+  .swiper-wrapper {
+    /* Explicit width, not just aspect-ratio - .swiper-wrapper is a flex */
+    /* container holding 5 non-shrinking slides (flex-shrink:0, each */
+    /* pinned to a fixed pixel width by Swiper's own inline styles). */
+    /* With width left as auto, the box was expanding to fit that */
+    /* overflowing content instead of respecting the aspect-ratio-derived */
+    /* width, which let slides render visibly past where #mainCarousel's */
+    /* overflow:hidden should have clipped them. */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 250px;
+  }
+  .swiper-pagination {
+    position: static;
+    margin-top: var(--scale-2);
+  }
+  .swiper-slide {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* <picture> has no box of its own by default (no CSS applied to it */
+    /* anywhere sitewide) - without this, the <img>'s own width/height: */
+    /* 100% below resolves against <picture>'s auto/content-based size */
+    /* instead of the slide's actual full box, undercutting the crop. */
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-button-prev, .swiper-button-next {
+    background-color: #fff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    /* rgba(), not the space/slash rgb() syntax - this project's Sass */
+    /* (libsass via the sassc gem) evaluates rgb() as its own function */
+    /* and doesn't support that modern single-argument alpha syntax, */
+    /* unlike the identical-looking value that already worked fine as a */
+    /* custom property above (Sass passes --custom-property values */
+    /* through untouched instead of evaluating functions inside them). */
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    /* Swiper's own base CSS has a bare `svg { width:100%; height:100% }` */
+    /* rule that overrides the icon's real 11x20 size to fill the whole */
+    /* 32px button - blowing the chevron up to nearly the full height of */
+    /* the circle with no breathing room. Explicit size restores it to a */
+    /* proportionate icon centered inside the button. */
+    svg {
+      width: 10px;
+      height: 16px;
+    }
+    /* :focus-visible (not :focus) matches the site's real convention */
+    /* (el-buttons.scss, .menu-toggle) - shows a ring for keyboard/ */
+    /* programmatic focus only, not on every mouse click, which is what */
+    /* made the old #A78BFA ring (an orphaned color, not part of this */
+    /* site's actual palette) show up looking like a permanent default. */
+    &:focus-visible {
+      outline: 2px solid var(--primary-00);
+      outline-offset: 2px;
+    }
+    /* Swiper's own default (opacity:.35) reads as barely-there against a */
+    /* busy image background - a much lower opacity plus dropping the */
+    /* shadow (which reads as "elevated/clickable") makes the disabled */
+    /* state unambiguous. Paired with a JS fix (case-study-template.html) */
+    /* that keeps the button a real hit target while disabled, since the */
+    /* native `disabled` attribute Swiper adds would otherwise remove it */
+    /* from hit-testing entirely and let the click fall through to the */
+    /* slide underneath - opening its lightbox by accident. */
+    &.swiper-button-disabled {
+      opacity: 0.2;
+      box-shadow: none;
+    }
+  }
+  /* Was -1.5rem (floating outside the image, in the surrounding page */
+  /* whitespace) - positive insets sit the buttons over the image edges, */
+  /* the standard overlaid-arrow carousel pattern. */
+  .swiper-button-prev {
+    left: 0.5rem;
+  }
+  .swiper-button-next {
+    right: 0.5rem;
+  }
+  /* Was a fixed 600px width, left over from Fancybox Carousel (which */
+  /* did its own internal per-slide cropping to keep images inside the */
+  /* 250px-tall box) - Swiper doesn't do that, so the actual image just */
+  /* rendered at its own natural height at 600px wide, which routinely */
+  /* exceeded 250px and spilled down past the wrapper into the */
+  /* pagination row below it. width/height 100% + object-fit:cover */
+  /* fills and crops the image to the slide's own box instead. */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.kroger {
+  .case-study {
+    background-color: #21409A;
+    box-shadow: -50vw 0 0 0 #21409A, 50vw 0 0 0 #21409A, -25vw 0 0 0 #21409A, 25vw 0 0 0 #21409A;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f0f6fc;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f0f6fc, 50vw 0 0 0px #f0f6fc, -25vw 0 0 0px #f0f6fc, 25vw 0 0 0px #f0f6fc;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #21409A;
+    border-bottom: var(--scale-1) solid #21409A;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.yum {
+  .case-study {
+    /* Darkened from #ED1C24 (white-text contrast 4.38:1, failed the 4.5:1 */
+    /* AA minimum for the regular-weight subtitle text) - same hue/saturation, */
+    /* reduced lightness only. New contrast: 4.81:1 (verified, WCAG */
+    /* relative-luminance formula). */
+    background-color: #E3121A;
+    box-shadow: -50vw 0 0 0 #E3121A, 50vw 0 0 0 #E3121A, -25vw 0 0 0 #E3121A, 25vw 0 0 0 #E3121A;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #fef3f4;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #fef3f4, 50vw 0 0 0px #fef3f4, -25vw 0 0 0px #fef3f4, 25vw 0 0 0px #fef3f4;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #E3121A;
+    border-bottom: var(--scale-1) solid #E3121A;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.taco {
+  .case-study {
+    background-color: #702082;
+    box-shadow: -50vw 0 0 0 #702082, 50vw 0 0 0 #702082, -25vw 0 0 0 #702082, 25vw 0 0 0 #702082;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f6f1f9;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f6f1f9, 50vw 0 0 0px #f6f1f9, -25vw 0 0 0px #f6f1f9, 25vw 0 0 0px #f6f1f9;
+  }
+  section:nth-of-type(5) {
+    /* Plain white (was #A77BCA, then #f6f1f9) - definition now comes */
+    /* from the hero-purple borders instead of a background color. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #702082;
+    border-bottom: var(--scale-1) solid #702082;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.haulhound {
+  .case-study {
+    background-color: #F58320;
+    box-shadow: -50vw 0 0 0 #F58320, 50vw 0 0 0 #F58320, -25vw 0 0 0 #F58320, 25vw 0 0 0 #F58320;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #fef2e8;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #fef2e8, 50vw 0 0 0px #fef2e8, -25vw 0 0 0px #fef2e8, 25vw 0 0 0px #fef2e8;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #F58320;
+    border-bottom: var(--scale-1) solid #F58320;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.lowes {
+  .case-study {
+    background-color: #3B1E59;
+    box-shadow: -50vw 0 0 0 #3B1E59, 50vw 0 0 0 #3B1E59, -25vw 0 0 0 #3B1E59, 25vw 0 0 0 #3B1E59;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #ebe1f5;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #ebe1f5, 50vw 0 0 0px #ebe1f5, -25vw 0 0 0px #ebe1f5, 25vw 0 0 0px #ebe1f5;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #3B1E59;
+    border-bottom: var(--scale-1) solid #3B1E59;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.jnj {
+  .case-study {
+    background-color: #d71500;
+    box-shadow: -50vw 0 0 0 #d71500, 50vw 0 0 0 #d71500, -25vw 0 0 0 #d71500, 25vw 0 0 0 #d71500;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #fef3f4;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #fef3f4, 50vw 0 0 0px #fef3f4, -25vw 0 0 0px #fef3f4, 25vw 0 0 0px #fef3f4;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #d71500;
+    border-bottom: var(--scale-1) solid #d71500;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.nre {
+  .case-study {
+    background-color: #2B7579;
+    box-shadow: -50vw 0 0 0 #2B7579, 50vw 0 0 0 #2B7579, -25vw 0 0 0 #2B7579, 25vw 0 0 0 #2B7579;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f6fbfc;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f6fbfc, 50vw 0 0 0px #f6fbfc, -25vw 0 0 0px #f6fbfc, 25vw 0 0 0px #f6fbfc;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #2B7579;
+    border-bottom: var(--scale-1) solid #2B7579;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.atomagic {
+  .case-study {
+    /* Darkened from #2592D0 (white-text contrast 3.44:1, failed the 4.5:1 */
+    /* AA minimum) - same hue/saturation, reduced lightness only. New */
+    /* contrast: 4.53:1 (verified, WCAG relative-luminance formula). */
+    background-color: #207DB2;
+    box-shadow: -50vw 0 0 0 #207DB2, 50vw 0 0 0 #207DB2, -25vw 0 0 0 #207DB2, 25vw 0 0 0 #207DB2;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f3f9fc;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f3f9fc, 50vw 0 0 0px #f3f9fc, -25vw 0 0 0px #f3f9fc, 25vw 0 0 0px #f3f9fc;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #207DB2;
+    border-bottom: var(--scale-1) solid #207DB2;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
