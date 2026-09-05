@@ -245,14 +245,20 @@ section {
     font-size: var(--body-font-size);
     font-family: var(--type-display-main);
     font-optical-sizing: auto;
-    /* font-weight is kept alongside font-variation-settings even though */
-    /* the latter wins whenever both are present on a variable font (in */
-    /* every modern browser, font-weight here is inert) - it's a real */
-    /* fallback if "Roboto Flex" ever fails to load and the stack drops */
-    /* to the plain "sans-serif" fallback, which has no wght axis to */
-    /* read font-variation-settings from, so font-weight is all it has. */
-    font-weight: 600;
-    font-variation-settings: "wght" 600, "GRAD" 0;
+    /* Two declarations doing "the same thing" because they're read by
+       two different situations, never both at once:
+       - Roboto Flex loads fine (the normal case): font-variation-settings
+         wins outright, font-weight is completely ignored/inert.
+       - Roboto Flex fails to load (CDN down, blocked, etc.): the font
+         stack falls back to plain "sans-serif", a non-variable font with
+         no "wght" axis at all - font-variation-settings has nothing to
+         attach to and does nothing, so font-weight is the ONLY one of
+         the two that still has any effect.
+       Keeping both means this text is bold either way. Dropping
+       font-weight would make it silently fall back to regular weight
+       in that failure case, with nothing visibly telling you why. */
+    font-weight: 700;
+    font-variation-settings: "wght" 700, "GRAD" 0;
     color: var(--black-00);
   }
   .timeline-company {

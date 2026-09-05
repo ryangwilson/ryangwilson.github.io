@@ -140,6 +140,19 @@
   }
 }
 
+/* .col-right (this carousel's direct parent) is a flex item of
+   .flex-two-col, which stretches both columns to match height by
+   default - when the adjacent .col-left text is shorter than the
+   carousel's true height (image + gap + pagination row), .col-right
+   gets squeezed down to that shorter height, and this element's own
+   overflow:hidden then clips the pagination row off the bottom.
+   Verified live: .col-right's rendered height was ~20px short of what
+   the carousel needed. Scoped to just this carousel's own parent
+   (not .flex-two-col/.col-right generally, which are used all over
+   the site without this problem) so it doesn't affect other layouts. */
+.col-right:has(> #mainCarousel) {
+  align-self: flex-start;
+}
 #mainCarousel {
   /* Lets a real touchscreen swipe that's mostly vertical pass straight */
   /* through to native page scroll (paired with mousewheel.forceToAxis */
