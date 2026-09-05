@@ -4,6 +4,15 @@
    properties every later file reads via var(). media-video.css and
    media-audio.css were dropped from this chain - both were empty
    (comment-only) placeholder files with no actual rules. */
+/* Google Fonts - these were previously inside global-variables.scss
+   itself; missed during the initial conversion (a real bug caught
+   live: dropping these makes every custom typeface silently fall
+   back to system fonts, since @import for a remote stylesheet failing
+   to load doesn't throw, it just never applies). */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD@8..144,25..151,100..1000,-200..150&display=swap');
 @import url("global-reset.css");
 @import url("global-variables.css");
 @import url("core-padding.css");

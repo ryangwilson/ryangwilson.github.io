@@ -39,7 +39,7 @@ nav {
     &:hover {
       color: var(--white-00);
       font-variation-settings: "wght" 300, "GRAD" 150;
-      box-shadow: 0 var(--scale-1) 0 0 var(--secondary-00), 0 (-var(--scale-1)) 0 0 var(--secondary-00);
+      box-shadow: 0 var(--scale-1) 0 0 var(--secondary-00), 0 calc(var(--scale-1) * -1) 0 0 var(--secondary-00);
     }
     &.active {
       color: var(--secondary-00);
@@ -63,7 +63,7 @@ nav {
       height: var(--scale-5);
       background: var(--error-00);
       border-radius: var(--radius-soft);
-      font-size: var(--body-font-size) - 2;
+      font-size: calc(var(--body-font-size) - 2px);
       line-height: 0;
       color: var(--white-00);
       transform: scale(0);

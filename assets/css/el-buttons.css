@@ -11,7 +11,7 @@ button, input[type=submit], input[type=button], input[type=reset] {
     -moz-appearance: none;
     &:focus-visible {
         outline: var(--border-width-wide) solid var(--primary-00);
-        outline-offset: -(var(--scale-1));
+        outline-offset: calc(var(--scale-1) * -1);
     }
 }
 
@@ -72,7 +72,7 @@ button, input[type=submit], input[type=button], input[type=reset] {
         margin: 0;
         box-shadow: 0 1px 0 0 var(--secondary-00);
         &:hover {
-            box-shadow: 0 var(--scale-2) 0 (-var(--scale-1)) var(--secondary-00);
+            box-shadow: 0 var(--scale-2) 0 calc(var(--scale-1) * -1) var(--secondary-00);
         }
     }
     &:disabled {
@@ -86,14 +86,14 @@ button, input[type=submit], input[type=button], input[type=reset] {
     }
     &.svg-before {
         svg {
-            margin-left: -(var(--scale-2));
+            margin-left: calc(var(--scale-2) * -1);
             margin-right: var(--scale-2);
         }
     }
     &.svg-after {
         svg {
             margin-left: var(--scale-2);
-            margin-right: -(var(--scale-2));
+            margin-right: calc(var(--scale-2) * -1);
         }
     }
     svg {

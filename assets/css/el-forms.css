@@ -189,7 +189,7 @@ input[type=range]::-webkit-slider-thumb {
   background: var(--secondary-00);
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -(var(--scale-1) + 2);
+  margin-top: calc((var(--scale-1) + 2px) * -1);
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   box-shadow: 0 0 0 3px var(--primary-00);

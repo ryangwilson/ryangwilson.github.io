@@ -36,7 +36,7 @@ p[data-value] {
     &:after {
         content: attr(data-value) "%";
         position: absolute;
-        right: -(var(--scale-3));
+        right: calc(var(--scale-3) * -1);
     }
 }
 
