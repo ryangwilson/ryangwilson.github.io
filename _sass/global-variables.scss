@@ -357,6 +357,10 @@ body, p {
     @include type-mixin($type-body, $body-font-size, $type-body-regular);
     line-height: $line-height-body;
     color: $black-00;
+    // Browsers that support it (Chrome/Edge 117+) balance line breaks to
+    // avoid a lone word wrapping onto its own last line - no fallback
+    // needed, unsupported browsers just ignore the property.
+    text-wrap: pretty;
 }
 p:last-of-type {
     margin-bottom: 0;
