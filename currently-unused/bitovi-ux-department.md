@@ -18,8 +18,8 @@ hero-image-png: ux-hiring-flow.jpg
 hero-caption: UX hiring flow used to rebuild the team
 previous-cs-title: am-ui
 previous-cs-link: am-ui
-next-cs-title: Build v. Buy Discovery
-next-cs-link: kroger
+next-cs-title: A Client Portal in 13 Weeks
+next-cs-link: anonymous-client-portal
 summary: I joined an existing five-person team in 2016 and was asked to take it over in 2019 after it shrank to two. I rebuilt it deliberately, headcount and infrastructure at the same time, growing it to ten people and from $1M to $2.5M in UX sales in two years, while keeping utilization above 90% the whole way.
 timeline:
   - date: May 2016
@@ -42,24 +42,39 @@ known-clients:
   - Taco Bell
   - KFC
   - Lowe's
+  - Johnson & Johnson
   - The Winklevoss Twins
 related-case-studies:
   - title: Callibrity Product Team
     link: callibrity-product-team
     blurb: The same playbook, proven again in a different company.
+  - title: HaulHound
+    link: haulhound
+    blurb: One of the client engagements this team took on during the buildout.
+  - title: Yum! Brands MMT
+    link: yum
+    blurb: Another Bitovi-era client engagement.
+  - title: Taco Bell POS
+    link: yum-pos
+    blurb: Hiring and onboarding built here later helped this client build their own UX team.
 ---
 
 ## Taking Over a Team of Two
 
-I joined Bitovi in May 2016 into an existing five-person Design Team already doing solid UX work. In June 2019, when the team's manager left and it had shrunk to two people, I was asked to take it over, on the condition that we rebrand from "Design Team" to "UX Team." There was no formal hiring, onboarding, or training process to rebuild it with; the team had scaled informally up to that point, so rebuilding headcount and building that infrastructure had to happen at the same time.
+I joined Bitovi in May 2016 into an existing five-person Design Team already doing solid UX work, and helped with recruiting for the team even as an individual contributor. In June 2019, when the team's manager left and it had shrunk to two people, I was asked to take it over, on the condition that we rebrand from "Design Team" to "UX Team." Becoming director meant changing the direction of my interviews toward what the team actually needed to rebuild and scale, even though the underlying process was similar to what I'd already been running as an IC.
 
 ## Rebuilding, Deliberately
 
+<div class="cs-stat-row" markdown="1">
+<div class="cs-stat-text" markdown="1">
+
 I recruited senior-level UX talent back up to six within the first year and to ten by the time I left in August 2021.
 
+</div>
 <div class="stat-callout"><span class="stat-number">10</span><span class="stat-label">UX designers, up from 2</span></div>
+</div>
 
-Alongside that hiring, I built the infrastructure the team hadn't had before: a repeatable hiring process, onboarding with individual skill assessments to flag each new hire's training gaps, and shared documentation for UX process and user-testing methods.
+Alongside that hiring, I built the infrastructure the team hadn't had before: onboarding with individual skill assessments to flag each new hire's training gaps, and shared documentation for UX process and user-testing methods.
 
 <figure class="cs-figure-full">
   <picture>
@@ -120,7 +135,7 @@ That revenue growth held quarter over quarter, not just year over year. The hiri
 
 ## What I'd Do Differently
 
-If I could go back and do one thing differently, it would be naming the team the Product Team rather than the UX Team. Donald Norman coined the term "User Experience," but I don't believe he ever intended it to be its own separate practice; I think he meant it to be part of how a product person thinks about the user from the beginning of problem solving. Calling it the UX Team reinforced UX as its own silo rather than something integrated into product thinking. I carried that lesson forward when I started my team at [Callibrity](../callibrity-product-team), naming it the Product Team from the start.
+If I could go back and do one thing differently, it would be naming the team the "Product Team" rather than the "UX Team." [Donald Norman coined the term "User Experience,"](https://medium.com/@ryangwilson/the-dream-of-the-90s-is-alive-in-product-63a8e9c9c74f) but I don't believe he ever intended it to be its own separate practice; I think he meant it to be part of how a product person thinks about the user from the beginning of problem solving. Calling it the "UX Team" reinforced UX as its own silo rather than something integrated into product thinking. I carried that lesson forward when I started my team at [Callibrity](../callibrity-product-team), naming it the "Product Team" from the start.
 
 ## Where the Habits Came From
 

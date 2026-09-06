@@ -526,7 +526,7 @@
   margin: var(--scale-2) 0 0;
   font-family: inherit;
   text-align: center;
-  font-size: var(--type-caption);
+  font-size: 16px;
   color: var(--md-gray-00);
 }
 .stat-callout {
@@ -545,7 +545,7 @@
   margin-top: var(--scale-2);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: var(--type-caption);
+  font-size: 16px;
 }
 .pull-quote {
   margin: var(--scale-6) auto;
@@ -559,7 +559,7 @@
 .pull-quote cite {
   display: block;
   margin-top: var(--scale-3);
-  font-size: var(--type-caption);
+  font-size: 16px;
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -569,29 +569,22 @@
   max-width: 960px;
   padding: 0 var(--scale-6);
 }
-.tl-line {
-  /* Each .tl-point sits at `left: {{ percent }}%` (real date-proportional
-     position along the timeline, not evenly spaced regardless of actual
-     date gaps). Content authors keep at least ~12 percentage points
-     between adjacent entries (see the `percent` values in each case
-     study's front matter) - at this component's typical rendered width,
-     12% is roughly enough room for one .tl-point's fixed-width label to
-     clear its neighbor without overlapping, while still visually
-     clustering events that happened close together in real time. */
+.tl-grid {
+  /* grid-template-columns is set inline per page from each timeline
+     entry's `weight` (relative time since the previous entry, e.g.
+     months) - a CSS Grid column can compress arbitrarily narrow on a
+     small screen and wrap its own text into more lines, but it can
+     NEVER overlap a neighboring column the way two independently
+     absolute-positioned labels could. That's the actual fix for dates
+     colliding on narrow viewports: the browser's layout engine
+     guarantees non-overlap, instead of us hand-tuning a minimum
+     percentage gap and hoping it holds at every width. */
+  display: grid;
   position: relative;
   margin-top: var(--scale-8);
-  /* Every .tl-point child is position:absolute, so it contributes
-     nothing to this element's height - without an explicit min-height
-     this container collapses to 0 and whatever renders next (the first
-     h2 in .cs-body) overlaps the date/label text sitting below the
-     line. Sized for marker + date line + up to two wrapped label
-     lines; increase if a label ever needs a third line. The visible
-     line itself is a ::before pseudo-element, not this container's own
-     background - min-height and a background on the same box would
-     fill the whole box gray instead of drawing a thin line. */
-  min-height: 130px;
+  padding-top: 12px;
 }
-.tl-line::before {
+.tl-grid::before {
   content: "";
   position: absolute;
   top: 0;
@@ -601,53 +594,49 @@
   background: var(--lt-gray-00);
 }
 .tl-point {
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-  text-align: center;
-  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: var(--scale-4);
 }
 .tl-marker {
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: var(--white-00);
   border: 2px solid;
+  margin-top: -18px;
 }
 .tl-date {
   display: block;
   margin-top: var(--scale-4);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: var(--type-caption);
+  font-size: 16px;
 }
 .tl-label {
   display: block;
   margin-top: var(--scale-1);
-  font-size: var(--type-caption);
+  font-size: 16px;
+  line-height: 1.2;
 }
 @media (max-width: 699px) {
-  .tl-line {
-    height: auto;
-    background: none;
+  .tl-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--scale-4);
+  }
+  .tl-grid::before {
+    display: none;
   }
   .tl-point {
-    position: static;
-    transform: none;
-    width: auto;
-    text-align: left;
-    margin-bottom: var(--scale-4);
     padding-left: var(--scale-4);
+    padding-right: 0;
     border-left: 2px solid var(--lt-gray-00);
   }
   .tl-marker {
-    top: 3px;
-    left: -7px;
-    transform: none;
+    margin-top: 0;
+    margin-left: -19px;
   }
 }
 .client-roster {

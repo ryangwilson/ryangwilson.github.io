@@ -16,10 +16,10 @@ collection-image: callibrity-logo.jpg
 hero-image-webp: callibrity-logo.webp
 hero-image-png: callibrity-logo.jpg
 hero-caption: Callibrity
-previous-cs-title:
-previous-cs-link:
-next-cs-title: am-ui
-next-cs-link: am-ui
+previous-cs-title: 
+previous-cs-link: 
+next-cs-title: Bitovi UX Department
+next-cs-link: bitovi-ux-department
 summary: I have a repeatable process for taking a Product or UX team from zero to one. I proved it once at Bitovi. At Callibrity I proved it again, in a harder, less consulting-native culture, while also building the practice's AI-acceleration layer from scratch.
 timeline:
   - date: Nov 2023
@@ -107,7 +107,19 @@ I authored the practice's AI-enablement standard from that experience and led it
 
 ## Staying Current
 
-I helped start and ran Callibrity's internal podcast, The Forward Slash, as Director and Producer. It had existed for about six months before I got involved; starting in May 2025 our topics turned almost entirely to AI, because that's what the rest of the industry wanted to talk about. Producing and recording those episodes with our CTO and the guests we brought on was as much an education for me as it was content for anyone else, a second, ongoing channel for staying current that ran alongside the client work itself.
+<div class="cs-stat-row" markdown="1">
+<div class="cs-stat-text" markdown="1">
+
+I helped start and ran Callibrity's internal podcast, [*The Forward Slash*](https://open.spotify.com/show/1BKuz3d9AxYiA8I7hP3kuy), as Director and Producer. It had existed for about six months before I got involved; starting in May 2025 our topics turned almost entirely to AI, because that's what the rest of the industry wanted to talk about. Producing and recording those episodes with our CTO and the guests we brought on was as much an education for me as it was content for anyone else, a second, ongoing channel for staying current that ran alongside the client work itself.
+
+</div>
+<div class="cs-stat-image">
+  <picture>
+    <source srcset="../../assets/images/portfolio-images/forward-slash-art.webp" type="image/webp">
+    <img src="../../assets/images/portfolio-images/forward-slash-art.jpg" alt="The Forward Slash podcast cover art">
+  </picture>
+</div>
+</div>
 
 ## Where the Practice Stands Now
 

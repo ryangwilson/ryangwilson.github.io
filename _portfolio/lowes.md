@@ -1,6 +1,6 @@
 ---
 layout: case-study-template
-order: 7
+order: 13
 meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
 type: product
 title: Lowe's Iris Web App
@@ -17,17 +17,17 @@ previous-cs-link: haulhound
 next-cs-title: J&J Support App
 next-cs-link: johnsonandjohnson
 phases: Discovery
-overview: Open-sourced home automation service through Lowe's. My team was building the web app version of the existing iOS and Android applications. My role on the project was primarily to take UI concepts and write the HTML and CSS for implementation. A team member and I noticed that there was no direct way for users to purchase products through the web application. Instead, users would have to navigate away from the Iris app to lowes.com to find and buy additional home automation products, resulting in lost sales and a user flow that lost customers
+overview: Open-sourced home automation service through Lowe's. Our five-person team was building the web app version of the existing iOS and Android applications. My role on the project was primarily to take UI concepts and write the HTML and CSS for implementation. I noticed, with the Tech Lead, that there was no direct way for users to purchase products through the web application, and drove this initiative from there, working adjacent to the core team's build. Instead, users would have to navigate away from the Iris app to lowes.com to find and buy additional home automation products, resulting in lost sales and a product flow that lost customers
 problemstatement: As a home automation tool, Lowe's Iris was outstanding. As a user, if you did not have a connected product, you would be notified that that section of the application was unavailable to you. For example, if you went to set up a timer for your sprinklers, but you didn't own a connected smart timer, you would see a "You do not have the proper device for this action" and would be prompted to visit lowes.com to purchase additional products.
 goals: Create a proposal and deliver to stakeholders for approval to&colon; <ul><li>Increase visibility of products within the web app</li><li>Increase sales of Iris home automation products</li><li>Provide a better experience for users who are interested in growing their home automation functionality</li></ul>
 role: HTML/CSS, UX Designer
-scope: Four Weeks
+scope: Four Months (part of a five-person Iris web app team; I drove this initiative working adjacent to the core team, with the Tech Lead's input)
 tools: Research, Presentation
 methods: <ul><li></li><li></li><li></li><li></li></ul>
-process: During our engagement, a team member and I noticed that there was no direct way for users to purchase products through the web application. To purchase products, a user must navigate away from the Iris app to lowes.com to find and purchase additional home automation products. This had the potential to result in lost sales.
+process: During our engagement, the Tech Lead and I noticed that there was no direct way for users to purchase products through the web application. To purchase products, a user must navigate away from the Iris app to lowes.com to find and purchase additional home automation products. This had the potential to result in lost sales.
 findings: 
-processlist: <ul><li>User Flows</li><li>Sketches</li><li>Wireframes</li><li>Design System</li><li>Mockups</li><li>Prototypes</li><li>User Testing</li><li>Iteration & Refinement</li></ul>
-solutions: Working alongside a developer, we created two optional flow solutions that we took to the client for approval. I created two presentations that visualized the proposed user's journey through an updated version of their product.<br> <br>Thinking through how the user interacted with this product and visually representing back to the stakeholder ways to improve the user experience and increase revenue allowed for an easy acceptance of our idea.
+processlist: <ul><li>Product Flows</li><li>Sketches</li><li>Wireframes</li><li>Design System</li><li>Mockups</li><li>Prototypes</li><li>Usability Testing</li><li>Iteration & Refinement</li></ul>
+solutions: I created two optional flow solutions and took them to the client for approval, with the Tech Lead consulted on technical feasibility. I created two presentations that visualized the proposed user's journey through an updated version of their product.<br> <br>Thinking through how the user interacted with this product and visually representing back to the stakeholder ways to improve the user experience and increase revenue allowed for an easy acceptance of my proposal.
 outcomes: After a successful presentation, the client chose the in-app purchasing path, and we began planning for implementation. 
 achievements: <ul><li>Improved retention of users to the automation site</li> <li>Increase sales of products by allowing purchase in-app</li> </ul>
 takeaways: If I were to work on this project again, I would have created a quick interactive prototype rather than still mockups for the presentation. Visualizing the solution through a live, interactive demonstration could show our intent more clearly.

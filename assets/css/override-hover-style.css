@@ -1,10 +1,10 @@
 /* hover-style.scss */
 /* Hover Style */
 
-.article, .reference-card.single, .reference-card.third, .card-portfolio a {
+.article, .reference-card.single, .reference-card.third, .card-portfolio a, .related-card {
   position: relative;
 }
-.article:after, .reference-card.single:after, .reference-card.third:after, .card-portfolio a:after {
+.article:after, .reference-card.single:after, .reference-card.third:after, .card-portfolio a:after, .related-card:after {
   content: '';
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@
   border-radius: var(--scale-2);
   transition: .15s ease-in;
 }
-.article:hover:after, .reference-card.single:hover:after, .reference-card.third:hover:after, .card-portfolio a:hover:after {
+.article:hover:after, .reference-card.single:hover:after, .reference-card.third:hover:after, .card-portfolio a:hover:after, .related-card:hover:after {
   cursor: pointer;
   top: -15px;
   left: -15px;

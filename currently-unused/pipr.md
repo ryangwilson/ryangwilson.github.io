@@ -18,7 +18,7 @@ constraints: The product needed to be easy to use, to be used in the field, have
 process: We began this project by meeting with stakeholders in the compressed air market to identify pain points in their estimation process. For the most part, the current process of estimating is done using a yellow legal pad and a pen. Users in the field measure the room, write down numbers, and do loose sketches of the area. Several problems with this method are that items are missed and not realized until the paper gets back to the office for another person to put the quote together, individual’s handwriting can be difficult to read, and measurements can be noted incorrectly or missed altogether.
 processdoc:
 processdocprompt:
-outcome: In understanding the needs of the users, rendering piping and fixtures in 3D spaces would be the best and most accurate solution for this product. I created and refined several user flows, vetted them with the stakeholders, and created a concept design to submit to the stakeholders and investors.
+outcome: In understanding the needs of the users, rendering piping and fixtures in 3D spaces would be the best and most accurate solution for this product. I created and refined several product flows, vetted them with the stakeholders, and created a concept design to submit to the stakeholders and investors.
 externalurl:
 externalprompt: Pipr Concept Video
 collection-image: pipr-1.jpg
