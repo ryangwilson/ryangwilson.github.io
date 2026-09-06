@@ -20,7 +20,7 @@ previous-cs-title:
 previous-cs-link: 
 next-cs-title: am-ui
 next-cs-link: am-ui
-summary: I have a repeatable process for taking a Product or UX team from zero to one. I proved it once at Bitovi. At Callibrity I proved it again, in a harder, less consulting-native culture, while also building the practice's AI-acceleration layer from scratch.
+summary: I have a repeatable process for taking a Product or UX team from zero to one. At Bitovi, I rebuilt a team that already existed. At Callibrity, no practice existed before I started, so I built one from scratch, including the AI-acceleration layer.
 timeline:
   - date: Nov 2023
     label: Joined as sole practitioner
@@ -82,9 +82,9 @@ None of this existed before I got there. I built the practice's discovery proces
 
 I'm also rebuilding the hiring interview itself, moving it off gut-feel and onto that same career-ladder-aligned system. In testing so far, synthetic candidates reviewed blind against the real ladder, it consistently catches what gut-feel leveling misses: a candidate's strongest skill masking a weaker one, and the gap between how someone rates themselves and what the interview evidence actually shows. Running it on a real interview is next.
 
-## Proving the Playbook in a Harder Culture
+## Bringing the Playbook to Callibrity
 
-Small entry offers, like stakeholder workshops, are how I demonstrate expertise fast enough to earn a client's trust before they commit to a full engagement, the same technique that worked at Bitovi. Proving that a workshop reliably converts into a real engagement matters more at a company that isn't natively consulting-minded the way Bitovi was: Callibrity's client relationships came out of a discovery process and a workshop-to-engagement pattern that had to earn its keep here on its own merits, not because the culture already expected it. It held, and the clearest evidence is in what it produced: a legacy insurance platform's modernization roadmap and a vehicle test facility's UX discovery, both built on the process I built here.
+Small entry offers, like stakeholder workshops, are how I demonstrate expertise fast enough to earn a client's trust before they commit to a full engagement, the same technique I used at [Bitovi](../bitovi-ux-department). At Callibrity, this discovery-and-workshop pattern didn't exist before I introduced it. Two engagements built on it: a legacy insurance platform's modernization roadmap, and a vehicle test facility's product and problem discovery.
 
 ## Leading AI Enablement, For Real
 
