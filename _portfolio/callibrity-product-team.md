@@ -43,6 +43,7 @@ known-clients:
   - GE Aerospace
   - CHIRP Radio
   - Town of Cary
+  - FEG
 related-case-studies:
   - title: A Modernization Roadmap for a Legacy Insurance Platform
     link: insurance-platform-roadmap
