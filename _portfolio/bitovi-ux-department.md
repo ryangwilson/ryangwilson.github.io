@@ -8,11 +8,9 @@ project: Bitovi UX Department
 client: Bitovi
 brandclass: bitovi
 testimonial-topic: bitovi
-year: 2019
 subtitle: The first proof that a Product or UX practice can be built from zero, deliberately
 role: Director of User Experience
 scope: June 2019 - August 2021
-tools: Recruiting, Onboarding, Documentation, Mentorship, Presentation
 webpcollection-image: bitovi-logo.webp
 collection-image: bitovi-logo.jpg
 hero-image-webp: ux-hiring-flow.webp
@@ -23,7 +21,28 @@ previous-cs-link: am-ui
 next-cs-title: Build v. Buy Discovery
 next-cs-link: kroger
 summary: I joined an existing five-person team in 2016 and was asked to take it over in 2019 after it shrank to two. I rebuilt it deliberately, headcount and infrastructure at the same time, growing it to ten people and from $1M to $2.5M in UX sales in two years, while keeping utilization above 90% the whole way.
+timeline:
+  - date: May 2016
+    label: Hired as IC Senior Usability Consultant
+    percent: 0
+  - date: Jun 2019
+    label: Offered the Directorship
+    percent: 56
+  - date: Dec 2019
+    label: First hires (2)
+    percent: 68
+  - date: Aug 2021
+    label: Left the role
+    percent: 97
 known-clients:
+  - HaulHound
+  - Apple
+  - Yum! Digital
+  - Pizza Hut
+  - Taco Bell
+  - KFC
+  - Lowe's
+  - The Winklevoss Twins
 related-case-studies:
   - title: Callibrity Product Team
     link: callibrity-product-team
@@ -90,7 +109,14 @@ Part of rebuilding the team was also changing how the practice was engaged and p
 
 ## What It Grew Into
 
-By August 2021, the department had grown from two people to ten, with UX engaged at discovery on client work rather than brought in after the fact. Utilization stayed above 90% across the team throughout that growth, and UX sales grew from $1M in the department's first year to $2.5M in its second, with quarter-over-quarter growth. The hiring and onboarding processes built here were later reused to help client teams, including Yum! Brands, build their own UX teams.
+By August 2021, the department had grown from two people to ten, with UX engaged at discovery on client work rather than brought in after the fact.
+
+<div class="cs-stat-group">
+<div class="stat-callout"><span class="stat-number">90%+</span><span class="stat-label">Utilization maintained through the growth</span></div>
+<div class="stat-callout"><span class="stat-number">$1M &rarr; $2.5M</span><span class="stat-label">UX sales, year one to year two</span></div>
+</div>
+
+That revenue growth held quarter over quarter, not just year over year. The hiring and onboarding processes built here were later reused to help client teams, including Yum! Brands, build their own UX teams.
 
 ## What I'd Do Differently
 
@@ -99,3 +125,11 @@ If I could go back and do one thing differently, it would be naming the team the
 ## Where the Habits Came From
 
 I had been managing teams for about fifteen years before I took this one over, and I got better at it here. I managed my own recruiting throughout, which I think is a key reason the team was as successful as it was. I also honed methodologies I still use today: First Look Reviews, staying ugly as long as I can through the design process, a formalized six-week discovery engagement, and getting good at being the closer on sales calls and writing Statements of Work that won the work. I also formalized a table-of-contents and process-documentation methodology I'd started back in grad school, for keeping project documentation and the iterations of artifacts organized as a project moves.
+
+<!--
+  UPDATE 2026-09-06: known-clients list (HaulHound, Apple, Yum! Digital,
+  Pizza Hut, Taco Bell, KFC, Lowe's, The Winklevoss Twins) supplied
+  directly by Ryan, who flagged he isn't fully confident it's complete
+  ("i feel like i'm missing some"). Treat as a working list - add more
+  if he recalls additional clients, don't invent any to fill it out.
+-->

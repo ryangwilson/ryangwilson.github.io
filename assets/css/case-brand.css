@@ -446,23 +446,86 @@
   max-width: 760px;
   margin: 0 auto;
 }
+.cs-body h2 {
+  /* The base h2 rule (global-variables.css) only sets margin-bottom -
+     fine when every h2 lives alone in its own <section> (the old
+     template's shape), but this layout stacks many headings inside one
+     flowing body, so without a top margin each heading sits flush
+     against the paragraph above it. */
+  margin-top: var(--scale-9);
+}
+.cs-body h2:first-child {
+  margin-top: 0;
+}
+.cs-stat-row {
+  display: flex;
+  gap: var(--scale-6);
+  align-items: center;
+  margin: var(--scale-6) 0;
+  @media (max-width: 699px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.cs-stat-row .cs-stat-text {
+  flex: 2;
+}
+.cs-stat-row .stat-callout {
+  flex: 1;
+  margin: 0;
+}
+.cs-stat-group {
+  display: flex;
+  gap: var(--scale-6);
+  justify-content: center;
+  margin: var(--scale-6) 0;
+  @media (max-width: 699px) {
+    flex-direction: column;
+  }
+}
+.cs-stat-group .stat-callout {
+  flex: 1;
+  margin: 0;
+}
 .cs-body figure.cs-figure-full {
-  width: 100vw;
+  /* Originally a 100vw full-bleed breakout - both real uses of this
+     class turned out too large/distracting (blurry when a small source
+     image gets stretched edge-to-edge, or just overwhelming next to
+     body text), so this is now "larger than the text column, still
+     contained" rather than truly full-bleed. Kept the class name since
+     it's already used in two case studies' content. */
+  width: 100%;
+  max-width: 900px;
   position: relative;
   left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  transform: translateX(-50%);
   margin-top: var(--scale-6);
   margin-bottom: var(--scale-6);
+  box-shadow: none;
 }
 .cs-body figure.cs-figure-full img {
   width: 100%;
   display: block;
+  z-index: auto;
 }
 .cs-body figure.cs-figure-full figcaption {
+  /* media-images.css defines a global figcaption as an absolutely
+     positioned overlay box (for the site's other image galleries) -
+     reset every property it sets so this caption renders as a plain
+     centered line below the image instead of an overlay. */
+  position: static;
+  z-index: auto;
+  bottom: auto;
+  left: auto;
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  border-left: none;
+  max-width: none;
+  padding: 0;
+  margin: var(--scale-2) 0 0;
+  font-family: inherit;
   text-align: center;
-  margin-top: var(--scale-2);
   font-size: var(--type-caption);
   color: var(--md-gray-00);
 }
@@ -502,32 +565,90 @@
   letter-spacing: 0.05em;
 }
 .cs-timeline {
-  margin: var(--scale-6) auto;
+  margin: var(--scale-8) auto var(--scale-6);
   max-width: 960px;
-  padding: 0 var(--scale-4);
+  padding: 0 var(--scale-6);
 }
-.cs-timeline ol {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--scale-5);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-top: 2px solid var(--lt-gray-00);
+.tl-line {
+  /* Each .tl-point sits at `left: {{ percent }}%` (real date-proportional
+     position along the timeline, not evenly spaced regardless of actual
+     date gaps). Content authors keep at least ~12 percentage points
+     between adjacent entries (see the `percent` values in each case
+     study's front matter) - at this component's typical rendered width,
+     12% is roughly enough room for one .tl-point's fixed-width label to
+     clear its neighbor without overlapping, while still visually
+     clustering events that happened close together in real time. */
+  position: relative;
+  margin-top: var(--scale-8);
+  /* Every .tl-point child is position:absolute, so it contributes
+     nothing to this element's height - without an explicit min-height
+     this container collapses to 0 and whatever renders next (the first
+     h2 in .cs-body) overlaps the date/label text sitting below the
+     line. Sized for marker + date line + up to two wrapped label
+     lines; increase if a label ever needs a third line. The visible
+     line itself is a ::before pseudo-element, not this container's own
+     background - min-height and a background on the same box would
+     fill the whole box gray instead of drawing a thin line. */
+  min-height: 130px;
 }
-.cs-timeline li {
-  flex: 1 1 140px;
-  padding-top: var(--scale-3);
+.tl-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--lt-gray-00);
 }
-.cs-timeline .tl-date {
+.tl-point {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 110px;
+}
+.tl-marker {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--white-00);
+  border: 2px solid;
+}
+.tl-date {
   display: block;
+  margin-top: var(--scale-4);
   font-weight: 700;
   text-transform: uppercase;
   font-size: var(--type-caption);
 }
-.cs-timeline .tl-label {
+.tl-label {
   display: block;
   margin-top: var(--scale-1);
+  font-size: var(--type-caption);
+}
+@media (max-width: 699px) {
+  .tl-line {
+    height: auto;
+    background: none;
+  }
+  .tl-point {
+    position: static;
+    transform: none;
+    width: auto;
+    text-align: left;
+    margin-bottom: var(--scale-4);
+    padding-left: var(--scale-4);
+    border-left: 2px solid var(--lt-gray-00);
+  }
+  .tl-marker {
+    top: 3px;
+    left: -7px;
+    transform: none;
+  }
 }
 .client-roster {
   display: flex;
@@ -574,6 +695,9 @@
   .stat-callout .stat-number {
     color: #CA3137;
   }
+  .tl-marker {
+    border-color: #CA3137;
+  }
   .client-roster li {
     border-color: #CA3137;
   }
@@ -604,6 +728,9 @@
   }
   .stat-callout .stat-number {
     color: #360D2D;
+  }
+  .tl-marker {
+    border-color: #360D2D;
   }
   .client-roster li {
     border-color: #360D2D;

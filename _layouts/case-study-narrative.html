@@ -54,19 +54,21 @@
           </div>
           <div class="col-right cs-stats">
             {% if page.role %}<div class="stat"><h3 class="subsection-title uppercase">Role</h3><p>{{ page.role }}</p></div>{% endif %}
-            {% if page.scope %}<div class="stat"><h3 class="subsection-title uppercase">Scope</h3><p>{{ page.scope }}</p></div>{% endif %}
-            {% if page.year %}<div class="stat"><h3 class="subsection-title uppercase">Year</h3><p>{{ page.year }}</p></div>{% endif %}
-            {% if page.tools %}<div class="stat"><h3 class="subsection-title uppercase">Tools</h3><p>{{ page.tools }}</p></div>{% endif %}
+            {% if page.scope %}<div class="stat"><h3 class="subsection-title uppercase">Timeframe</h3><p>{{ page.scope }}</p></div>{% endif %}
           </div>
         </div>
       </section>
       {% if page.timeline %}
       <div class="cs-timeline">
-        <ol>
+        <div class="tl-line">
           {% for milestone in page.timeline %}
-          <li><span class="tl-date">{{ milestone.date }}</span><span class="tl-label">{{ milestone.label }}</span></li>
+          <div class="tl-point" style="left: {{ milestone.percent }}%;">
+            <span class="tl-marker"></span>
+            <span class="tl-date">{{ milestone.date }}</span>
+            <span class="tl-label">{{ milestone.label }}</span>
+          </div>
           {% endfor %}
-        </ol>
+        </div>
       </div>
       {% endif %}
       <section class="cs-body">
@@ -82,23 +84,29 @@
         </ul>
       </section>
       {% endif %}
-      {% if page.related-case-studies %}
+      {% if page.related-case-studies or page.testimonial-topic %}
       <section class="cs-related">
-        <h2>See It In Practice</h2>
-        <div class="related-list">
-          {% for related in page.related-case-studies %}
-          <a class="related-card" href="../{{ related.link }}">
-            <h3 class="uppercase">{{ related.title }}</h3>
-            <p>{{ related.blurb }}</p>
-          </a>
-          {% endfor %}
+        <div class="flex-two-col">
+          <div class="col-left">
+            {% if page.related-case-studies %}
+            <h2>See It In Practice</h2>
+            <div class="related-list">
+              {% for related in page.related-case-studies %}
+              <a class="related-card" href="../{{ related.link }}">
+                <h3 class="uppercase">{{ related.title }}</h3>
+                <p>{{ related.blurb }}</p>
+              </a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          <div class="col-right card-container">
+            {% if page.testimonial-topic %}
+            {% assign cs_testimonial_topic = page["testimonial-topic"] %}
+            {% include testimonial-card.html variant="single" topic=cs_testimonial_topic path-prefix="../.." %}
+            {% endif %}
+          </div>
         </div>
-      </section>
-      {% endif %}
-      {% if page.testimonial-topic %}
-      <section class="cs-testimonial card-container">
-        {% assign cs_testimonial_topic = page["testimonial-topic"] %}
-        {% include testimonial-card.html variant="single" topic=cs_testimonial_topic path-prefix="../.." %}
       </section>
       {% endif %}
     </main>
