@@ -18,8 +18,8 @@ hero-image-png: callibrity-logo.jpg
 hero-caption: Callibrity
 previous-cs-title: 
 previous-cs-link: 
-next-cs-title: Bitovi UX Department
-next-cs-link: bitovi-ux-department
+next-cs-title: am-ui
+next-cs-link: am-ui
 summary: I have a repeatable process for taking a Product or UX team from zero to one. I proved it once at Bitovi. At Callibrity I proved it again, in a harder, less consulting-native culture, while also building the practice's AI-acceleration layer from scratch.
 timeline:
   - date: Nov 2023
