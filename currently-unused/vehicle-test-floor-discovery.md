@@ -3,16 +3,16 @@ layout: case-study-template
 order: 7
 meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
 type: product
-title: UX Discovery on a Vehicle Test Floor
-project: UX Discovery on a Vehicle Test Floor
-client: Confidential Automotive Client
+title: Product & Problem Discovery
+project: Product & Problem Discovery
+client: Honda HALO
 brandclass: facility
 under:
 underurl:
 testimonial-topic:
 year: 2024
 subtitle: Eleven severity-rated findings, and software recommended for only three of them
-previous-cs-title: A Modernization Roadmap for a Legacy Insurance Platform
+previous-cs-title: Legacy System Modernization
 previous-cs-link: insurance-platform-roadmap
 next-cs-title: Kroger Build v Buy
 next-cs-link: kroger

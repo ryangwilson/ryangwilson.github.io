@@ -14,7 +14,7 @@ year: 2026
 subtitle: Modernizing 16 years of a listener-run station's website and mobile apps, with nobody left to maintain it after launch
 previous-cs-title: A Client Portal in 13 Weeks
 previous-cs-link: anonymous-client-portal
-next-cs-title: A Modernization Roadmap for a Legacy Insurance Platform
+next-cs-title: Legacy System Modernization
 next-cs-link: insurance-platform-roadmap
 phases: Discovery, Product & Technical Leadership, Migration
 overview: CHIRP Radio is 107.1 FM in Chicago, an independent, listener-supported station run almost entirely by volunteers. Its website and mobile apps hadn't been meaningfully rebuilt in more than a decade, and I led the full modernization&colon; a new website, a new CMS, and new iOS and Android apps, all replacing a legacy ExpressionEngine site that had outgrown what it was ever built to do.

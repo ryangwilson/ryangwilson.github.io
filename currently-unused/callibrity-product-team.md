@@ -45,10 +45,10 @@ known-clients:
   - Town of Cary
   - FEG
 related-case-studies:
-  - title: A Modernization Roadmap for a Legacy Insurance Platform
+  - title: Legacy System Modernization
     link: insurance-platform-roadmap
     blurb: The discovery-and-workshop playbook, proven in a different company culture.
-  - title: UX Discovery on a Vehicle Test Floor
+  - title: Product & Problem Discovery
     link: vehicle-test-floor-discovery
     blurb: The same playbook, applied where nobody expected UX methodology to go.
   - title: CHIRP Radio

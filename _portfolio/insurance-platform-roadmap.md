@@ -3,8 +3,8 @@ layout: case-study-template
 order: 6
 meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
 type: product
-title: A Modernization Roadmap for a Legacy Insurance Platform
-project: A Modernization Roadmap for a Legacy Insurance Platform
+title: Legacy System Modernization
+project: Legacy System Modernization
 client: Confidential Insurance Company
 brandclass: ledger
 under:
@@ -14,7 +14,7 @@ year: 2025
 subtitle: An eight-week discovery engagement that turned an aggressive one-year deadline into a phased, six-release roadmap
 previous-cs-title: CHIRP Radio
 previous-cs-link: chirp-radio
-next-cs-title: UX Discovery on a Vehicle Test Floor
+next-cs-title: Product & Problem Discovery
 next-cs-link: vehicle-test-floor-discovery
 phases: Discovery, Architecture Strategy, Roadmapping
 overview: The client is a large, established insurance company running a legacy underwriting and new-business platform that had grown well past what its original design could support. The business had already committed to an aggressive goal, functional parity with the legacy system within one year, before the discovery engagement even started. I worked as a product consultant on the discovery team that assessed the current system, defined a future-state product vision, and produced a phased roadmap and team structure built specifically to de-risk that deadline.

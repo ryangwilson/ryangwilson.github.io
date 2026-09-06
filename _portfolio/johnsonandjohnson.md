@@ -14,8 +14,8 @@ year: 2017
 subtitle: Improving support ticket submission rates.
 previous-cs-title: Lowe's Iris
 previous-cs-link: lowes
-next-cs-title: AtoMagic Plug-in
-next-cs-link: atomagic
+next-cs-title: 
+next-cs-link: 
 phases: Discovery
 tools: Research, Observation, Survey, Documentation, Presentation
 overview: I was contracted to run a discovery to identify the requirements for refining the Johnson & Johnson internal ticketing tool 'Iris'. The client had an internal ticketing tool to request IT support like getting a new office phone set up, ordering a new computer, requesting software, etc. Yet, their employees were calling customer support for help with issues that the automated ticketing tool could support at a high rate. The client wanted to decrease the number of calls into the support line and increase the use of the automated ticketing app.

@@ -12,7 +12,7 @@ underurl:
 testimonial-topic: Kroger
 year: 2021
 subtitle: Replacing software that intakes 28B worth of product, yearly
-previous-cs-title: UX Discovery on a Vehicle Test Floor
+previous-cs-title: Product & Problem Discovery
 previous-cs-link: vehicle-test-floor-discovery
 next-cs-title: Yum! Brands MMT
 next-cs-link: yum

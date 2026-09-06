@@ -115,10 +115,7 @@ Part of rebuilding the team was also changing how the practice was engaged and p
 </figure>
 
 <figure class="cs-figure-full">
-  <picture>
-    <source srcset="../../assets/images/portfolio-images/style-guide-driven-dev.webp" type="image/webp">
-    <img src="../../assets/images/portfolio-images/style-guide-driven-dev.jpg" alt="Style guide-driven development training">
-  </picture>
+  <iframe src="https://www.youtube.com/embed/HOwa65K0qkg?start=1" title="What is Style Guide Driven Development?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   <figcaption>Style guide-driven development training, an early version of the same discipline am-ui and the Product AI Enablement standard carry forward today.</figcaption>
 </figure>
 
@@ -139,7 +136,7 @@ If I could go back and do one thing differently, it would be naming the team the
 
 ## Where the Habits Came From
 
-I had been managing teams for about fifteen years before I took this one over, and I got better at it here. I managed my own recruiting throughout, which I think is a key reason the team was as successful as it was. I also honed methodologies I still use today: First Look Reviews, staying ugly as long as I can through the design process, a formalized six-week discovery engagement, and getting good at being the closer on sales calls and writing Statements of Work that won the work. I also formalized a table-of-contents and process-documentation methodology I'd started back in grad school, for keeping project documentation and the iterations of artifacts organized as a project moves.
+I had been managing teams for about fifteen years before I took this one over, and I got better at it here. I managed my own recruiting throughout, which I think is a key reason the team was as successful as it was. I also honed methodologies I still use today: First Look Reviews, staying ugly as long as you can through the design process, a formalized six-week discovery engagement, and getting good at being the closer on sales calls and writing Statements of Work that won the work. I also formalized a table-of-contents and process-documentation methodology I'd started back in grad school, for keeping project documentation and the iterations of artifacts organized as a project moves.
 
 <!--
   UPDATE 2026-09-06: known-clients list (HaulHound, Apple, Yum! Digital,
