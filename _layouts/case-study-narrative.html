@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body class="nested-page">
+    {% include navigation.html %}
+    <script>
+      // Measures the sticky header's real height so the breadcrumb below
+      // can stick right underneath it (var(--header-height) in
+      // case-brand.scss) instead of a hardcoded value that would drift
+      // out of sync whenever the header's own height changes (e.g. the
+      // mobile hamburger layout, or a nav that wraps to two lines).
+      (function () {
+        var header = document.querySelector('#masterhead');
+        var root = document.documentElement;
+        function setHeaderHeight() {
+          root.style.setProperty('--header-height', header.offsetHeight + 'px');
+        }
+        setHeaderHeight();
+        if (window.ResizeObserver) {
+          new ResizeObserver(setHeaderHeight).observe(header);
+        } else {
+          window.addEventListener('resize', setHeaderHeight);
+        }
+      })();
+    </script>
+    <main class="cs-container cs-narrative {{ page.brandclass }}">
+      <div class="card-dark case-study">
+        <h1>{{ page.project }}</h1>
+        <p class="byline">{{ page.client }}</p>
+        <p>{{ page.subtitle }}</p>
+        <picture>
+          <source srcset="../../assets/images/portfolio-images/{{ page.hero-image-webp }}" type="image/webp">
+          <source srcset="../../assets/images/portfolio-images/{{ page.hero-image-png }}" type="image/png">
+          <img src="../../assets/images/portfolio-images/{{ page.hero-image-png }}" alt="{{ page.hero-caption }} hero image for {{ page.project }}">
+        </picture>
+      </div>
+      <div class="breadcrumb">
+        <nav class="bc-right" aria-label="Breadcrumb">
+          <ol>
+            <li><a class="btn text" href="../" title="Work Overview">Work</a></li>
+            <li aria-current="page">{{ page.project }}</li>
+          </ol>
+        </nav>
+        <nav class="bc-left" aria-label="Case study pagination">
+          <a class="btn text svg-before" href="../{{ page.previous-cs-link }}" title="{{ page.previous-cs-title }}"> <i data-feather="arrow-left"></i> Prev </a>
+          <a class="btn text svg-after" href="../{{ page.next-cs-link }}" title="{{ page.next-cs-title }}"> Next <i data-feather="arrow-right"></i> </a>
+        </nav>
+      </div>
+      <section class="cs-summary">
+        <div class="flex-two-col">
+          <div class="col-left flex-third">
+            <h2>Overview</h2>
+            <p class="lede">{{ page.summary }}</p>
+          </div>
+          <div class="col-right cs-stats">
+            {% if page.role %}<div class="stat"><h3 class="subsection-title uppercase">Role</h3><p>{{ page.role }}</p></div>{% endif %}
+            {% if page.scope %}<div class="stat"><h3 class="subsection-title uppercase">Scope</h3><p>{{ page.scope }}</p></div>{% endif %}
+            {% if page.year %}<div class="stat"><h3 class="subsection-title uppercase">Year</h3><p>{{ page.year }}</p></div>{% endif %}
+            {% if page.tools %}<div class="stat"><h3 class="subsection-title uppercase">Tools</h3><p>{{ page.tools }}</p></div>{% endif %}
+          </div>
+        </div>
+      </section>
+      {% if page.timeline %}
+      <div class="cs-timeline">
+        <ol>
+          {% for milestone in page.timeline %}
+          <li><span class="tl-date">{{ milestone.date }}</span><span class="tl-label">{{ milestone.label }}</span></li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endif %}
+      <section class="cs-body">
+        {{ content }}
+      </section>
+      {% if page.known-clients %}
+      <section class="cs-clients">
+        <h2>Clients I've Worked With</h2>
+        <ul class="client-roster">
+          {% for known_client in page.known-clients %}
+          <li>{{ known_client }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+      {% if page.related-case-studies %}
+      <section class="cs-related">
+        <h2>See It In Practice</h2>
+        <div class="related-list">
+          {% for related in page.related-case-studies %}
+          <a class="related-card" href="../{{ related.link }}">
+            <h3 class="uppercase">{{ related.title }}</h3>
+            <p>{{ related.blurb }}</p>
+          </a>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+      {% if page.testimonial-topic %}
+      <section class="cs-testimonial card-container">
+        {% assign cs_testimonial_topic = page["testimonial-topic"] %}
+        {% include testimonial-card.html variant="single" topic=cs_testimonial_topic path-prefix="../.." %}
+      </section>
+      {% endif %}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
