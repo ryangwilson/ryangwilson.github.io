@@ -11,8 +11,10 @@ dl {
 /* ordered list - padding */
 ol {
     padding-left: var(--scale-5);
+    margin-bottom: var(--scale-5);
 }
 /* unordered list - padding */
 ul {
     padding-left: var(--scale-5);
+    margin-bottom: var(--scale-5);
 }

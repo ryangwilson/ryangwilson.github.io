@@ -18,8 +18,19 @@ function shuffleArray(array) {
 }
 
 window.onload = function () {
+  // random_pool: false opts a testimonial out of every untopic'd/random
+  // draw (the About page's 3 unfiltered cards, or a topic query that finds
+  // no match and falls back to random) without affecting whether a
+  // topic-scoped card can still find it - that's what testimonialsCopy is
+  // for below. Keeping two separate shuffled arrays (rather than one
+  // shared, spliced array) means a page that mixes a topic-scoped call
+  // with an untopic'd one could in theory show the same person twice;
+  // no current page does both, and that's a minor cosmetic risk, not a
+  // broken card, so not worth the complexity of unifying them.
   const visibleTestimonials = testimonials.filter((item) => item.display !== false);
+  const randomPoolTestimonials = visibleTestimonials.filter((item) => item.random_pool !== false);
   const testimonialsCopy = shuffleArray(visibleTestimonials);
+  const randomPoolCopy = shuffleArray(randomPoolTestimonials);
   const testimonialElements = document.querySelectorAll('[testimonial]');
   testimonialElements.forEach((element) => {
     try {
@@ -36,7 +47,7 @@ window.onload = function () {
           }
           console.warn(value + " was not found in " + key + ". Falling back to random!");
       }
-      initiateCard(getRandomItem(testimonialsCopy), element);
+      initiateCard(getRandomItem(randomPoolCopy), element);
     } catch (error) {
       // A malformed card shouldn't stop the rest of the cards on the page
       // from being populated (forEach doesn't stop on a thrown error from

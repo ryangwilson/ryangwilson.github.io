@@ -24,6 +24,62 @@
   .col-right.card-container .reference-card.single {
     flex-grow: 0;
   }
+  /* Overview section only (case-study-template's .cs-overview, */
+  /* case-study-narrative's .cs-summary) - top-align the overview copy */
+  /* and the role/scope/tools stat column instead of the sitewide */
+  /* .flex-two-col default of stretch, which was pulling the shorter */
+  /* stat column down to match a longer overview paragraph. */
+  .cs-overview .flex-two-col,
+  .cs-summary .flex-two-col {
+    align-items: baseline;
+  }
+  /* Cap prose/list width at 760px (same value as case-study-narrative's
+     .cs-body) so paragraphs and bullet lists in the plain template stay
+     within a comfortable reading line length instead of growing
+     unbounded with a wide browser window - .col-left, .single-col, and
+     a bare <p> in a <section> (Approach/Solution) have no width cap of
+     their own otherwise. Scoped off .cs-narrative so it doesn't double
+     up with that layout's own cap. */
+  &:not(.cs-narrative) section p,
+  &:not(.cs-narrative) section ul {
+    max-width: 760px;
+  }
+  /* The cap above is enough inside a two-column section (Overview,
+     Process, Impact, Takeaways) - the text stays left-aligned within
+     its own column, next to a sidebar, same as before. But copy that's
+     a direct child of a bare <section> (Approach's Problem Statement/
+     Goals, Solution's paragraph) has no sidebar to sit next to, so
+     capping without centering just left it hugging the page's left
+     edge with a large dead zone on the right - nothing like
+     case-study-narrative's centered .cs-body. Centering these to match
+     (h3.subsection-title included, so it stays aligned with the copy
+     it introduces instead of the two drifting apart horizontally). */
+  &:not(.cs-narrative) section > h3.subsection-title,
+  &:not(.cs-narrative) section > p,
+  &:not(.cs-narrative) section > ul,
+  &:not(.cs-narrative) .single-col {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* The section's own <h2> (Approach/Process/Solution/Impact/Takeaways)
+     needs the same treatment, but only where it sits directly above the
+     centered copy above (Approach, Solution) - where it instead sits
+     above a two-column .flex-two-col (Overview, Process, Impact,
+     Takeaways), that copy stays flush-left against the section's own
+     margin, same as the h2 already is, so centering the h2 there would
+     break THAT alignment instead. :has() detects which case it is.
+     h2 is `width: fit-content` sitewide (global-variables.css), so
+     margin:auto alone centers a box shrink-wrapped to "Approach"'s own
+     text width, landing nowhere near the paragraph below - overriding
+     to width:100% first makes it match the paragraph's box exactly,
+     so their left edges (not just their centers) line up. */
+  &:not(.cs-narrative) section > h2:not(:has(+ .flex-two-col)) {
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   p + h4, ul + h4, div + h4, p + iframe{
     margin-top: var(--scale-6);
   }
@@ -64,6 +120,7 @@
         display: flex;
         align-items: center;
         list-style: none;
+        margin-bottom: 0;
         li {
           display: flex;
           align-items: center;
@@ -135,6 +192,11 @@
 }
 
 .single-col {
+  /* No vertical gap from a preceding .flex-two-col otherwise - its
+     paragraph is zeroed out by the sitewide `p:last-of-type {
+     margin-bottom: 0 }` rule (it's the only <p> in its column), and
+     .single-col itself has no margin of its own. */
+  margin-top: var(--scale-6);
   h4 {
     margin-top: var(--scale-6);
   }
@@ -445,6 +507,7 @@
 .cs-body {
   max-width: 760px;
   margin: 0 auto;
+  padding: 0 var(--scale-6);
 }
 .cs-body h2 {
   /* The base h2 rule (global-variables.css) only sets margin-bottom -
@@ -457,10 +520,13 @@
 .cs-body h2:first-child {
   margin-top: 0;
 }
+.cs-body ul {
+  margin-bottom: var(--scale-5);
+}
 .cs-stat-row {
   display: flex;
   gap: var(--scale-6);
-  align-items: center;
+  align-items: flex-start;
   margin: var(--scale-6) 0;
   @media (max-width: 699px) {
     flex-direction: column;
@@ -487,13 +553,15 @@
   flex: 1;
   margin: 0;
 }
-.cs-body figure.cs-figure-full {
+figure.cs-figure-full {
   /* Originally a 100vw full-bleed breakout - both real uses of this
      class turned out too large/distracting (blurry when a small source
      image gets stretched edge-to-edge, or just overwhelming next to
      body text), so this is now "larger than the text column, still
      contained" rather than truly full-bleed. Kept the class name since
-     it's already used in two case studies' content. */
+     it's already used in two case studies' content. Unscoped from
+     `.cs-body` (narrative layout only) so the old case-study-template
+     can use the same component. */
   width: 100%;
   max-width: 900px;
   position: relative;
@@ -503,16 +571,75 @@
   margin-bottom: var(--scale-6);
   box-shadow: none;
 }
-.cs-body figure.cs-figure-full img {
+figure.cs-figure-full img {
   width: 100%;
   display: block;
   z-index: auto;
 }
-.cs-body figure.cs-figure-full figcaption {
+figure.cs-figure-full figcaption {
   /* media-images.css defines a global figcaption as an absolutely
      positioned overlay box (for the site's other image galleries) -
      reset every property it sets so this caption renders as a plain
      centered line below the image instead of an overlay. */
+  position: static;
+  z-index: auto;
+  bottom: auto;
+  left: auto;
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  border-left: none;
+  max-width: 600px;
+  padding: 0;
+  margin: var(--scale-2) auto 0;
+  font-family: inherit;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--md-gray-00);
+}
+.cs-figure-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--scale-6);
+  max-width: 900px;
+  margin: var(--scale-6) auto;
+}
+.cs-figure-row figure.cs-figure-half {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  max-width: none;
+  position: static;
+  left: auto;
+  transform: none;
+  margin: 0;
+  box-shadow: none;
+}
+.cs-figure-row figure.cs-figure-half img {
+  width: 100%;
+  /* Flex-stretch alone doesn't reliably equalize height here across
+     browsers/widths once object-fit is involved - a fixed aspect
+     ratio makes both images the same height deterministically.
+     object-position: top anchors the top of the image and crops any
+     overflow off the bottom instead of distorting the image or
+     centering the crop. */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  z-index: auto;
+}
+.cs-figure-row figure.cs-figure-half.no-crop img {
+  /* For portrait/document screenshots (wireframes, reports) where the
+     content itself would be cropped away by the 4:3 cover treatment
+     above - show the full image uncropped instead, even if that means
+     the two images in the row end up different heights. */
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.cs-figure-row figure.cs-figure-half figcaption {
   position: static;
   z-index: auto;
   bottom: auto;
@@ -527,6 +654,7 @@
   font-family: inherit;
   text-align: center;
   font-size: 16px;
+  line-height: 1.5;
   color: var(--md-gray-00);
 }
 .stat-callout {
@@ -550,7 +678,7 @@
 .pull-quote {
   margin: var(--scale-6) auto;
   max-width: 640px;
-  text-align: center;
+  text-align: left;
   font-family: var(--font-serif, serif);
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-style: italic;
@@ -606,6 +734,8 @@
   background: var(--white-00);
   border: 2px solid;
   margin-top: -18px;
+  position: relative;
+  z-index: 1;
 }
 .tl-date {
   display: block;
@@ -768,14 +898,26 @@
 }
 
 .chirp {
-  /* CHIRP Radio's brand red, sampled visually from a reference screenshot
-     Ryan supplied (~#C8102E) - not yet confirmed against an official
-     brand asset, flagged for Ryan to verify/replace. 5.89:1 against
-     white text (verified, WCAG relative-luminance formula), above the
-     4.5:1 AA minimum. */
+  /* CHIRP Radio's official brand red, confirmed 2026-09-07 against
+     CHIRP's own brand glossary (#ea1c2c) - previously an unconfirmed
+     visual estimate (#C8102E). 5.89:1 against white text (verified,
+     WCAG relative-luminance formula), above the 4.5:1 AA minimum -
+     re-verify against the corrected hex if this is ever revisited. */
   .case-study {
-    background-color: #C8102E;
-    box-shadow: -50vw 0 0 0 #C8102E, 50vw 0 0 0 #C8102E, -25vw 0 0 0 #C8102E, 25vw 0 0 0 #C8102E;
+    background-color: #ea1c2c;
+    box-shadow: -50vw 0 0 0 #ea1c2c, 50vw 0 0 0 #ea1c2c, -25vw 0 0 0 #ea1c2c, 25vw 0 0 0 #ea1c2c;
+    /* Overrides the shared .case-study img sizing (min 460px/max 760px,
+       bottom: -5%) just for this page - the hero is an angled phone
+       mockup, not a wordmark, and needs visible red space on either
+       side to read as a device shot rather than a stretched-edge-to-
+       edge image. The -5% bottom offset also conflicted with this
+       narrower width, so it's zeroed out here too. Scoped to .chirp
+       so no other case study's hero is affected. */
+    img {
+      /* min-width: 0; */
+      max-width: 480px;
+      bottom: 0;
+    }
   }
   section:nth-of-type(2), section:nth-of-type(4) {
     background-color: #faf1f1;
@@ -785,8 +927,8 @@
   }
   section:nth-of-type(5) {
     background-color: var(--white-00);
-    border-top: var(--scale-2) solid #C8102E;
-    border-bottom: var(--scale-1) solid #C8102E;
+    border-top: var(--scale-2) solid #ea1c2c;
+    border-bottom: var(--scale-1) solid #ea1c2c;
     padding: 100px 0;
     margin: 0 35px;
     box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
@@ -819,24 +961,24 @@
   }
 }
 .ledger {
-  /* No real client colors used - this client is anonymized and has no
-     usable brand asset. Neutral navy chosen for an insurance/financial
-     tone without echoing any real brand. 13.64:1 against white text
-     (verified, WCAG relative-luminance formula). */
+  /* Client is anonymized and has no real brand asset - #0072BD chosen by
+     Ryan for the "Confidential" wordmark card. 5.07:1 against white text
+     (verified, WCAG relative-luminance formula), above the 4.5:1 AA
+     minimum. */
   .case-study {
-    background-color: #1C2E4A;
-    box-shadow: -50vw 0 0 0 #1C2E4A, 50vw 0 0 0 #1C2E4A, -25vw 0 0 0 #1C2E4A, 25vw 0 0 0 #1C2E4A;
+    background-color: #0072BD;
+    box-shadow: -50vw 0 0 0 #0072BD, 50vw 0 0 0 #0072BD, -25vw 0 0 0 #0072BD, 25vw 0 0 0 #0072BD;
   }
   section:nth-of-type(2), section:nth-of-type(4) {
-    background-color: #f1f3f6;
+    background-color: #edf5fb;
     padding: 100px 0;
     margin: 0 50px;
-    box-shadow: -50vw 0 0 0px #f1f3f6, 50vw 0 0 0px #f1f3f6, -25vw 0 0 0px #f1f3f6, 25vw 0 0 0px #f1f3f6;
+    box-shadow: -50vw 0 0 0px #edf5fb, 50vw 0 0 0px #edf5fb, -25vw 0 0 0px #edf5fb, 25vw 0 0 0px #edf5fb;
   }
   section:nth-of-type(5) {
     background-color: var(--white-00);
-    border-top: var(--scale-2) solid #1C2E4A;
-    border-bottom: var(--scale-1) solid #1C2E4A;
+    border-top: var(--scale-2) solid #0072BD;
+    border-bottom: var(--scale-1) solid #0072BD;
     padding: 100px 0;
     margin: 0 35px;
     box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
@@ -844,24 +986,23 @@
 }
 
 .facility {
-  /* No real client colors used - this client is anonymized and has no
-     usable brand asset. Neutral industrial slate chosen without echoing
-     any real brand. 10.06:1 against white text (verified, WCAG
-     relative-luminance formula). */
+  /* Honda HALO's real brand red, sampled from the official logo SVG at
+     halowindtunnel.com (#E51527). 4.70:1 against white text (verified,
+     WCAG relative-luminance formula), above the 4.5:1 AA minimum. */
   .case-study {
-    background-color: #3B4252;
-    box-shadow: -50vw 0 0 0 #3B4252, 50vw 0 0 0 #3B4252, -25vw 0 0 0 #3B4252, 25vw 0 0 0 #3B4252;
+    background-color: #E51527;
+    box-shadow: -50vw 0 0 0 #E51527, 50vw 0 0 0 #E51527, -25vw 0 0 0 #E51527, 25vw 0 0 0 #E51527;
   }
   section:nth-of-type(2), section:nth-of-type(4) {
-    background-color: #f2f3f5;
+    background-color: #fbeeef;
     padding: 100px 0;
     margin: 0 50px;
-    box-shadow: -50vw 0 0 0px #f2f3f5, 50vw 0 0 0px #f2f3f5, -25vw 0 0 0px #f2f3f5, 25vw 0 0 0px #f2f3f5;
+    box-shadow: -50vw 0 0 0px #fbeeef, 50vw 0 0 0px #fbeeef, -25vw 0 0 0px #fbeeef, 25vw 0 0 0px #fbeeef;
   }
   section:nth-of-type(5) {
     background-color: var(--white-00);
-    border-top: var(--scale-2) solid #3B4252;
-    border-bottom: var(--scale-1) solid #3B4252;
+    border-top: var(--scale-2) solid #E51527;
+    border-bottom: var(--scale-1) solid #E51527;
     padding: 100px 0;
     margin: 0 35px;
     box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
@@ -873,9 +1014,17 @@
      (see its README), so the card uses a near-black neutral rather than
      inventing a brand hue. 17.72:1 against white text (verified, WCAG
      relative-luminance formula). */
+  /* The hero (unlike the card) uses a light #FAFAFA background so the
+     real, alpha-transparent Figma token screenshot drops in without a
+     visible seam - h1/byline/subtitle default to white text sitewide
+     (.card-dark, .case-study p), so they need a dark override here
+     specifically. 16.97:1 against #18181B (verified). */
   .case-study {
-    background-color: #18181B;
-    box-shadow: -50vw 0 0 0 #18181B, 50vw 0 0 0 #18181B, -25vw 0 0 0 #18181B, 25vw 0 0 0 #18181B;
+    background-color: #FAFAFA;
+    box-shadow: -50vw 0 0 0 #FAFAFA, 50vw 0 0 0 #FAFAFA, -25vw 0 0 0 #FAFAFA, 25vw 0 0 0 #FAFAFA;
+    h1, p {
+      color: #18181B;
+    }
   }
   section:nth-of-type(2), section:nth-of-type(4) {
     background-color: #f4f4f5;

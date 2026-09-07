@@ -1,7 +1,8 @@
 ---
 layout: case-study-template
 order: 2
-meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
+homepage-group: case-study
+meta: A zero-dependency, AI-ready component library with 44 production components, a live Figma-to-code token bridge, and CI-enforced drift detection.
 type: product
 title: am-ui
 project: am-ui Component Library
@@ -9,69 +10,80 @@ client: am-ui
 brandclass: am-ui
 under:
 underurl:
-testimonial-topic:
+testimonial-topic: am-ui
 year: 2026
-subtitle: A zero-dependency, AI-ready component seed with 44 production components, built solo in about a week
-previous-cs-title: Callibrity Product Team
+subtitle: A zero-dependency component library with 44 production components and a live Figma-to-code token bridge
+previous-cs-title: Callibrity Product Practice
 previous-cs-link: callibrity-product-team
 next-cs-title: Bitovi UX Department
 next-cs-link: bitovi-ux-department
 phases: Discovery, Build
-overview: In the late 1990s I started designing websites, and I've wanted to solve the same problem ever since&colon; get a style guide out of the design tool and keep it from drifting away from the code the moment a project gets busy. I tried to solve this a few years ago with AtoMagic, a Figma plug-in I built with a developer friend that automated a living HTML/CSS style guide. AtoMagic proved the idea worked in testing, but it never shipped past that proof of concept.<br><br>am-ui is the version of that same idea that actually exists. It's a zero-dependency, framework-free component library, with vanilla HTML and CSS as the source of truth, a 1:1 Figma library, and a token bridge that keeps the two in sync. This time I designed and built every layer of it myself, alone, in about a week.
-goals: <ul><li>Give any new project a real, working set of components on day one instead of a week of rebuilding buttons and inputs</li><li>Keep Figma and code from drifting apart by making design tokens the single source of truth for both</li><li>Make every component convertible into React, Vue, or Angular without an army of manual re-implementation, by giving each one a machine-readable spec an AI can convert from reliably</li><li>Build it accessibly and responsively by default, and be honest in the documentation about what's actually been verified versus what hasn't</li></ul>
+overview: I've been chasing this since I started designing websites in the 1990s&colon; how to get a style guide out of the design tool without it drifting from the code. Twenty-five years of trying different tools and approaches taught me the idea was right long before I had what I needed to actually build it. AtoMagic, a Figma plug-in I built with a developer friend in 2021, got the closest of any of those attempts, proving the idea worked in usability testing, but it never shipped past that proof of concept. am-ui is the version that actually exists, a zero-dependency component library with vanilla HTML and CSS as the source of truth, a 1:1 Figma library, and a token bridge keeping the two in sync.
+goals: <ul><li>Give any new project a real, working set of design tool and coded components on day one</li><li>Keep Figma and code from drifting apart by making design tokens the single source of truth for both</li><li>Make every component convertible into React, Vue, or Angular without an army of manual re-implementation, by giving each one a machine-readable spec an AI can convert from reliably</li><li>Meet accessibility and responsive-design basics from the start, then document honestly what's actually been verified versus what hasn't</li></ul>
 role: Product Owner, Product Designer, Front-End Developer
-scope: One week to build (solo), ongoing maintenance
+scope: One week to build (independent), ongoing maintenance
 tools: Figma, Storybook, Playwright, Node.js, HTML, CSS, JavaScript, Claude
-problemstatement: Every new product starts by rebuilding the same twenty components, and the design system that describes them almost always drifts out of sync with the code within a few sprints because nothing enforces the connection. Most component libraries solve this by becoming a shared dependency everyone has to update in lockstep, which trades one problem (drift) for another (lock-in). And most aren't built with a clear path to a specific framework, so adopting one still means a slow, error-prone manual translation.
-methods: <ul><li>Defined the token architecture (color in OKLCH, spacing, radius, type scale, elevation) as the single source of truth for both Figma and code</li><li>Built 23 base components (atoms), 13 compositions (molecules), and 8 larger patterns (organisms), plus page-level templates</li><li>Wrote a fixed-schema spec file for every component (variants, sizes, states, props, tokens consumed) as an AI-facing contract, not just documentation</li><li>Built a bidirectional Figma-to-code token bridge (push/pull/watch/check) so a change on either side can be synced instead of manually re-entered</li><li>Documented every component in Storybook with full prop tables</li><li>Wrote and validated a component-by-component conversion workflow into React, including a worked example</li><li>Ran automated first-pass accessibility and responsive audits (Playwright, at 390/768/1280px)</li><li>Set up CI to fail a pull request automatically if Figma and code tokens drift out of sync</li></ul>
-process: I designed am-ui as a seed, not a shared library, so a project takes its own copy and makes it theirs, rather than pulling from a central dependency that updates out from under it. That one decision shaped everything else&colon; because nobody has to ask permission to change their copy, the library could ship deliberately unstyled, in a flat gray "wireframe" theme, on purpose. Staying ugly keeps early attention on structure and flow instead of color and polish; the moment a project has a real brand or design system, retheming is a one-place change to the token values, not a rebuild.<br><br>I built the token layer first&colon; color as OKLCH with light/dark modes, spacing, radius, a type scale, elevation, and a border-width scale derived from spacing. Every component was built against those tokens, never a hardcoded value, so the same component looks right in either theme without being touched. From there I worked up through the three tiers (atoms, then molecules composed from atoms, then organisms composed from molecules), keeping each component's anatomy consistent so the pattern stays predictable as the library grows.<br><br>Because I wanted am-ui to be usable in any framework, not just vanilla HTML, I split each component into layers that convert differently&colon; the CSS is framework-agnostic and drops in verbatim, the markup is a mechanical translation, and interactive behavior (modals, dropdowns, tabs, a data table) has to be judgment-reimplemented in the target framework's idioms. I wrote that conversion model down as CONVERSION.md and validated it against a real React conversion, catching the traps a naive AI-driven conversion gets wrong along the way.<br><br>The other half of the AtoMagic problem, Figma and code drifting apart, I solved with a token bridge that treats a JSON file as canonical and generates the CSS from it, with push/pull/watch commands to sync either direction and a CI check that fails a build if the two disagree.
-findings: I ran an automated first-pass accessibility and responsive audit (Playwright, three breakpoints) rather than claiming a compliance standard I hadn't actually verified. The audit passed, but I was explicit in the documentation that "built for accessibility, pending AT validation" is the accurate claim today. Real screen-reader and keyboard-only testing is still outstanding, and I'd rather say that than overstate WCAG AA compliance before it's been checked by a human.
+approach-pull-quote: The lesson from AtoMagic holds&colon; don't give up on a problem just because the tools aren't ready yet.
+problemstatement: Most teams end up choosing a design system or a component library, not both kept in sync. Starting from a design system means either building custom components from scratch in whatever front-end stack the project uses, or finding a component library and fighting its existing CSS to make it align. A handful of tools claim parity between the two at the start, but none I've found keep that connection consistent as a project evolves; the two drift apart within a few sprints because nothing enforces the link. Component libraries that avoid drift usually do it by becoming a shared dependency everyone has to update in lockstep, trading drift for lock-in instead. And most aren't built with a clear path to a specific framework, so adopting one still means a slow, error-prone manual translation.
+methods: <ul><li>Defined the token architecture (color in OKLCH, spacing, radius, type scale, elevation) as the single source of truth for both the Figma design system and the coded component library</li><li>Built 23 base components (atoms), 13 compositions (molecules), and 8 larger patterns (organisms), plus page-level templates, so a new page assembles from existing pieces instead of custom one-offs</li><li>Wrote a fixed-schema spec file for every component (variants, sizes, states, props, tokens consumed) as an AI-facing contract, not just documentation</li><li>Built a bidirectional Figma-to-code token bridge (push/pull/watch/check) so a change on either side can be synced instead of manually re-entered</li><li>Documented every component in Storybook with full prop tables, so integrating one doesn't require reading source to find its API</li><li>Wrote and validated a component-by-component conversion workflow into React, including a worked example, so converting to a new framework follows a proven path instead of starting from scratch</li><li>Ran automated first-pass accessibility and responsive audits (Playwright, at 390/768/1280px)</li><li>Set up CI to fail a pull request automatically if Figma and code tokens drift out of sync</li></ul>
+process: am-ui ships as a starter copy, deliberately unstyled in a flat gray "wireframe" theme, the same "stay ugly as long as possible" approach I use elsewhere&colon; keep early attention on structure and flow, not color and polish. Because every component is unstyled from day one, a team can build real, coded pages against the library immediately, before any design work is finished, pages that look like wireframes because the components genuinely are wireframes. As the real design comes together, the two sides stay in parity through the token bridge&colon; a developer changes a token in code and Figma picks it up on the next pull, or a product or design person hones a component in Figma and pushes it through, and the coded front end updates to match. Either way, the working front end is already there, filling in visually as the tokens firm up instead of getting rebuilt once the design is finalized. Retheming a project's real brand onto it later is the same one-place change to the token values, not a rebuild.
+process-inline-webpimage: am-ui-wireframe-example.webp
+process-inline-image: am-ui-wireframe-example.jpg
+process-inline-caption: A real, working content page built entirely from am-ui components in the shipped wireframe theme, before any visual design was applied
+process-continued: I built the token layer first&colon; color as OKLCH with light/dark modes, spacing, radius, a type scale, elevation, and a border-width scale derived from spacing. Every component was built against those tokens, never a hardcoded value, so the same component looks right in either theme without being touched. From there I worked up through Brad Frost's Atomic Design tiers (atoms, then molecules composed from atoms, then organisms composed from molecules), keeping each component's anatomy consistent so the pattern stays predictable as the library grows.
+process-pair-04-05: true
+process-webpimage04: am-ui-ds-containers.webp
+process-image04: am-ui-ds-containers.jpg
+process-caption04: The Alert molecule (with Card, EmptyState, and StatTile) in the Figma design system
+process-webpimage05: am-ui-cl-alert.webp
+process-image05: am-ui-cl-alert.jpg
+process-caption05: The coded Alert component's Storybook docs, matching the Figma side variant-for-variant
+process-continued-2: am-ui had to work in any framework, not just vanilla HTML&colon; fighting another framework's own CSS on top of yours is its own kind of pain, so each component splits into layers that convert differently. The CSS itself is framework-agnostic and drops in verbatim, the markup is a mechanical translation, and interactive behavior (modals, dropdowns, tabs, a data table) takes judgment to reimplement in the target framework's idioms. That conversion model is documented as CONVERSION.md and validated against a real React conversion, so the traps a naive AI-driven conversion gets wrong are already known going in, not rediscovered per project.
+process-stat-text: The other half of the AtoMagic problem, Figma and code drifting apart, is handled by a token bridge that treats a JSON file as canonical and generates the CSS from it, with push/pull/watch commands to sync either direction and a CI check that fails a build if the two ever disagree.
+process-stat-number: 44
+process-stat-label: Production components
+findings: I ran an automated first-pass accessibility and responsive audit (Playwright, three breakpoints) rather than claiming a compliance standard I hadn't actually verified. The audit passed, but real screen-reader and keyboard-only testing is still outstanding, so I'd rather call it built with accessibility in mind than claim WCAG AA compliance before a human has checked it. That's true of am-ui generally&colon; being built accessible doesn't remove the need for whoever adopts it to do their own accessibility and responsive review before going live, on any project.
 processlist: <ul><li>Design Tokens</li><li>Component Architecture</li><li>Figma Library</li><li>Design-to-Code Bridge</li><li>Storybook Documentation</li><li>Accessibility & Responsive Audit</li><li>AI-Assisted Conversion Workflow</li></ul>
-solutions: am-ui shipped as 44 components (23 atoms, 13 molecules, 8 organisms) plus app-shell and page-layout templates, all driven by one token file and mirrored 1:1 in a Figma library with matching variants, sizes, states, and property names. A CI check fails automatically if the two ever drift apart. The library targets evergreen browsers (~Baseline 2023) deliberately, since the color system is authored entirely in OKLCH with color-mix, a real constraint I documented rather than hid.
-outcomes: <ul><li>44 production-ready components (23 atoms, 13 molecules, 8 organisms) plus templates, built and documented solo in about a week</li><li>A complete design-token system with light/dark theming, mirrored 1:1 between Figma and code</li><li>A CI-enforced check that catches design/code token drift automatically instead of relying on someone noticing</li><li>A validated, documented conversion path from vanilla HTML/CSS into React (and by the same method, Vue or Angular), proven against a real conversion</li><li>Full Storybook documentation with props, variants, and states for every component</li></ul>
-achievements: <ul><li>Solved, on my own, the design-to-code automation problem I first went after with AtoMagic, this time without needing a developer partner to build it</li><li>Built a Figma-to-code bridge that's enforced in CI, not just a one-time export</li><li>Gave every component a machine-readable spec so it can be reliably converted to React, Vue, or Angular with AI assistance instead of manual re-implementation</li><li>Documented accessibility honestly as "pending AT validation" rather than claiming a compliance standard I hadn't verified</li></ul>
-takeaways: If I did this again, I'd build the real screen-reader and keyboard-only testing pass in from day one instead of treating it as the next phase. An automated audit is a reasonable first pass, but the accurate claim right now is "built for accessibility, pending AT validation," not WCAG AA compliance, and I'd rather close that gap before calling the library done than after.
-learnings: This is the same problem I first tried to solve with AtoMagic, and the same one I'd been circling since I started writing HTML and CSS in the late 1990s. What changed wasn't the idea. It was that the tooling finally caught up to it. Mature CSS (OKLCH, color-mix, :has()) and AI-assisted conversion made it possible for me to design and build every layer of this myself, solo, in about a week, something that would have taken a team and years even five years ago. The lesson from AtoMagic holds&colon; don't give up on a problem just because the tools aren't ready yet.
+solutions: Every visual value in am-ui traces back to one token file, mirrored 1:1 into the Figma library, so a designer and a CI pipeline are checking the same source of truth instead of two that quietly drift apart. The library deliberately targets evergreen browsers (~Baseline 2023), since its color system is authored entirely in OKLCH with color-mix, a real constraint I documented instead of hiding it.
+outcomes: <ul><li>Teams start writing real, coded pages on day one instead of waiting on final visual design before any markup exists</li><li>Design and code stay in parity for the life of a project, not just at kickoff, so there's no reconciliation pass to do before shipping</li><li>Product and engineering work from the same token source instead of a handoff that loses fidelity in translation, with drift caught automatically instead of relying on someone noticing</li><li>Moving to React, Vue, or Angular is a known, validated process, not a guessing game re-solved on every project</li><li>Accessibility and responsive basics are true from day one instead of a bolt-on audit pass at the end</li></ul>
+achievements: <ul><li>Solved the design-to-code automation problem AtoMagic got closest to, this time building every layer directly</li><li>Documented accessibility honestly as "pending validation" rather than claiming a compliance standard I hadn't verified</li></ul>
+takeaways: am-ui is v1.0, not a finished product. It's usable and shareable now, but there's more to learn as I actually build with it, not less. Real screen-reader and keyboard-only testing is the next thing on my list to pressure-test, and I'd rather close that gap for real than claim a compliance standard before a human has checked it.
+learnings: What changed wasn't the idea. It was that the tooling finally caught up. Mature CSS (OKLCH, color-mix, :has()) and AI-assisted conversion made it possible for me to design and build every layer of this myself. The lesson from AtoMagic holds&colon; don't give up on a problem just because the tools aren't ready yet.
 webpcollection-image: am-ui-hero.webp
 collection-image: am-ui-hero.jpg
-hero-image-webp: am-ui-hero.webp
-hero-image-png: am-ui-hero.jpg
-hero-caption: am-ui
-approach-webpimage01: am-ui-figma-tokens.webp
-approach-image01: am-ui-figma-tokens.jpg
-approach-caption01: The Foundations page in the real am-ui Figma library&colon; color, type, spacing, radius, elevation, and border tokens, mirrored 1-to-1 into tokens.css
-approach-webpimage02: am-ui-dashboard-template.webp
-approach-image02: am-ui-dashboard-template.jpg
-approach-caption02: The dashboard-page example, assembled entirely from am-ui organisms and molecules in the shipped wireframe theme
-approach-webpimage03: am-ui-kitchen-sink.webp
-approach-image03: am-ui-kitchen-sink.jpg
-approach-caption03: A kitchen-sink page showing badges, avatars, progress, notifications, and other atoms and molecules side by side
-approach-webpimage04:
-approach-image04:
-approach-caption04:
-approach-webpimage05:
-approach-image05:
-approach-caption05:
-process-webpimage01: am-ui-list-page-template.webp
-process-image01: am-ui-list-page-template.jpg
-process-caption01: The list-page example, a searchable, paginated project list composed from the library's table and pagination patterns
-process-webpimage02: am-ui-form-page-template.webp
-process-image02: am-ui-form-page-template.jpg
-process-caption02: The form-page example, a settings form built from am-ui's form-field, input, and toggle components
-process-webpimage03: am-ui-content-sidebar-template.webp
-process-image03: am-ui-content-sidebar-template.jpg
-process-caption03: A two-column content page with a rich sidebar, showing the library's typography and card patterns together
-process-webpimage04:
-process-image04:
-process-caption04:
-process-webpimage05:
-process-image05:
-process-caption05:
+hero-image-webp: am-ui-hero-natural.webp
+hero-image-png: am-ui-hero-natural.jpg
+hero-caption: The Colors foundation page from am-ui's real Figma library and design-token system
+approach-webpimage01: am-ui-ds-colors.webp
+approach-image01: am-ui-ds-colors.jpg
+approach-caption01: The Colors foundation page in am-ui's Figma design system
+approach-webpimage02: am-ui-cl-colors.webp
+approach-image02: am-ui-cl-colors.jpg
+approach-caption02: The same Colors tokens documented on the coded component-library side, kept in parity by the token bridge
+approach-webpimage03:
+approach-image03:
+approach-caption03:
+approach-pair-04-05: true
+approach-webpimage04: am-ui-ds-typography.webp
+approach-image04: am-ui-ds-typography.jpg
+approach-caption04: The Typography scale in am-ui's Figma design system
+approach-webpimage05: am-ui-cl-typography.webp
+approach-image05: am-ui-cl-typography.jpg
+approach-caption05: The same type scale documented in the coded component library, generated from the same tokens
+process-webpimage01:
+process-image01:
+process-caption01:
+process-webpimage02:
+process-image02:
+process-caption02:
+process-webpimage03:
+process-image03:
+process-caption03:
 prototype-orientation: horizontal
-prototype-type:
-prototype-webp:
-prototype:
-prototype-alt:
+prototype-type: image
+prototype-webp: am-ui-solution-dashboard-tight.webp
+prototype: am-ui-solution-dashboard-tight.jpg
+prototype-alt: A dashboard page assembled from am-ui components&colon; stat tiles, tabs, and a status-badge table
 ---
 
 <!--
@@ -92,19 +104,97 @@ prototype-alt:
     limit on this file link, not a claim that those pages don't exist.
     Only the Foundations/Colors frame was used since it was the
     cleanest, most self-contained screenshot available.
-  - The hero/card image (am-ui-hero) is NOT a UI screenshot - initial
-    attempts to crop a Storybook screenshot into the fixed 1500x800 card
-    size clipped the page chrome badly. Rebuilt as a wordmark card
-    instead, following the same convention as every other case study's
-    card (solid brand-color background + centered wordmark), using
-    near-black (#18181B) rather than inventing a brand hue, since
-    am-ui's own README describes its identity as a deliberately
-    grayscale/neutral "wireframe theme" - the near-black card is
-    consistent with that, not an arbitrary color choice.
+  - The collection-image/card (am-ui-hero.jpg/webp, used only for the
+    /work/ grid card now - see 2026-09-07 note below for the hero) is
+    NOT a UI screenshot - initial attempts to crop a Storybook
+    screenshot into the fixed 1500x800 card size clipped the page
+    chrome badly. Built as a wordmark card instead, following the same
+    convention as every other case study's card (solid brand-color
+    background + centered wordmark), using near-black (#18181B) rather
+    than inventing a brand hue, since am-ui's own README describes its
+    identity as a deliberately grayscale/neutral "wireframe theme" -
+    the near-black card is consistent with that, not an arbitrary
+    color choice.
   - Left 2 approach and 2 process slots blank rather than force
     duplicate or low-value images into every slot.
-  - No prose fields were changed - README.md, USAGE.md, and
-    CONVERSION.md were all read and confirmed consistent with what was
-    already written; nothing needed correcting or adding.
+
+  UPDATE 2026-09-07, full prose + hero review pass with Ryan (this
+  superseded the "no prose fields were changed" note originally here -
+  nearly every field changed):
+  - Corrected the AtoMagic backstory throughout (overview, achievements,
+    learnings): it was NOT Ryan's first attempt at this problem - he'd
+    been circling it since the 1990s, with real tries in 1997, 2002,
+    and 2007 per AtoMagic's own retired case study in
+    currently-unused/atomagic.md; AtoMagic itself was built with a
+    developer friend in 2021 and was the attempt that got closest, not
+    "the first try."
+  - Rewrote problemstatement twice per Ryan's corrections: first, the
+    real problem is teams choosing a design system OR a component
+    library and none staying in sync, not "component libraries solving
+    drift via shared-dependency lock-in" (a separate, real but distinct
+    problem, no longer conflated with drift); second, added a concrete
+    line on what "starting from a design system" actually costs
+    (building custom components from scratch, or fighting an existing
+    library's CSS to align it) - Ryan's own words, not invented.
+  - Cut "solo, in about a week" down from five restatements
+    (subtitle, meta, overview, outcomes, learnings) to two structural
+    ones (subtitle, scope) - Ryan: "it comes off as 'I did this myself
+    na-na-na.'" Also cut a comparative/boastful clause in learnings
+    ("something that would have taken a team and years even five years
+    ago") per the standing no-boastful-framing rule. Overview gained a
+    line crediting the real arc instead - 25 years of trying different
+    tools and approaches, not solo genius - per Ryan: "thought,
+    experience, trial and error, support from others... that all led
+    to this once the tooling was available."
+  - Rewrote methods/process/findings/solutions/outcomes/achievements/
+    takeaways/learnings across several passes to cut restated facts
+    (44/23/13/8 components, the CI drift check, and the
+    React/Vue/Angular conversion path were each stated 3-4 times
+    across solutions/outcomes/achievements before trimming) and to
+    replace pure action-log sentences ("I did X") with what each
+    decision actually buys the reader or a project that adopts am-ui.
+  - process's opening paragraph was rewritten twice: the first version
+    still framed "ships as a starter copy, not a shared dependency" as
+    if it were a notable decision - Ryan: "that is how all component
+    libraries and design systems work, this is not revolutionary."
+    Cut that framing and replaced it with the actual distinctive
+    content, which had been missing entirely: shipping unstyled from
+    day one means a team can build real coded pages against the
+    library before any design work is finished, and as the real design
+    comes together, changes can happen from either side (a dev edits a
+    token in code and Figma picks it up on next pull, or a
+    product/design person hones a component in Figma and pushes it)
+    and the coded front end updates to match either way - all from
+    Ryan directly, not inferred.
+  - findings reframed per Ryan: dropped a quoted internal-doc phrase
+    ("why are we even saying this?") and repositioned the accessibility
+    caveat as a general truth about adopting am-ui (any project still
+    needs its own accessibility/responsive review), not just a
+    statement about am-ui's current unvalidated state.
+  - takeaways dropped a "if I did this again, I'd build screen-reader
+    testing in from day one" hindsight claim Ryan said wasn't honestly
+    true (am-ui is v1.0, ongoing, not a closed retrospective) and
+    replaced it with present-tense framing instead.
+  - Fixed a grammar slip in solutions ("documented rather than hid" ->
+    "documented instead of hiding it").
+  - Hero image replaced: was the same wordmark card as collection-image;
+    is now the real am-ui Figma "Colors" token screenshot (source:
+    Ryan's own ~/Desktop/Foundation/amui-colors.png, RGBA with a
+    transparent background), shown at its natural crop (NOT padded
+    onto a wide manufactured canvas - an earlier attempt at that was
+    corrected per Ryan: "why is the hero image so wide?"). The
+    .am-ui .case-study hero section background was changed to #FAFAFA
+    (was #18181B) in case-brand.css so the image's real alpha channel
+    drops onto it with no visible seam - h1/byline/subtitle text color
+    overridden to #18181B there too, since they default to white
+    sitewide and would otherwise be invisible on the light background.
+    Collection-image (work-page card) intentionally left unchanged,
+    still the near-black wordmark card described above.
+
+  Deferred, not an open bug: hero-image and approach-image01 are
+  currently the same underlying Figma "Colors" screenshot (different
+  crop/treatment). Ryan: "we are not at the image placement or
+  addition in this process yet... we will get there soon after the
+  copy is solid" - revisit once the prose pass is done, not before.
 -->
 

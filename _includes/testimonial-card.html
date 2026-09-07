@@ -24,6 +24,14 @@
      by setting "display": false in _data/testimonials.json - both this
      fallback and the JS random pool (assets/js/testimonials.js) respect it.
 
+     A testimonial entry can instead be restricted to ONLY the page(s) that
+     specifically request its topic - never surfaced by an untopic'd/random
+     call anywhere else (e.g. the About page's 3 unfiltered cards) - by
+     setting "random_pool": false. Unlike "display": false, this still lets
+     a topic-scoped include.topic find it; it only opts it out of the
+     no-topic random draw. Both this fallback and assets/js/testimonials.js
+     respect it.
+
      `used_names` is a Liquid variable this include intentionally leaves
      un-scoped (Liquid's `assign` is page-global, not include-local) so it
      accumulates across every testimonial-card.html call on the same page
@@ -34,6 +42,8 @@
 {% if include.topic %}
   {% assign topic_query = include.topic | downcase %}
   {% assign candidates = candidates | where_exp: "t", "t.topic contains topic_query" %}
+{% else %}
+  {% assign candidates = candidates | where_exp: "t", "t.random_pool != false" %}
 {% endif %}
 {% assign used_names = used_names | default: "" %}
 {% assign fallback = nil %}
