@@ -12,7 +12,7 @@ underurl:
 testimonial-topic:
 year: 2026
 subtitle: A zero-dependency, AI-ready component seed with 44 production components, built solo in about a week
-previous-cs-title: Callibrity Product Team
+previous-cs-title: Callibrity Product Practice
 previous-cs-link: callibrity-product-team
 next-cs-title: Bitovi UX Department
 next-cs-link: bitovi-ux-department

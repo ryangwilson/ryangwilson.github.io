@@ -128,7 +128,7 @@ prototype-alt:
   source's "What we would do differently" section); no images exist for
   this case study.
 
-  RELATED: the Callibrity Product Team case study's "learnings" field
+  RELATED: the Callibrity Product Practice case study's "learnings" field
   already describes an AI/component-library story (Figma + Storybook +
   Claude Code, 12-hour front-end build, converting skeptical
   developers) that Ryan confirmed happened on this same (FEG) engagement.

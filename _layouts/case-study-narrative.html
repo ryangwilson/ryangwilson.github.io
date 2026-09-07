@@ -50,7 +50,7 @@
         <div class="flex-two-col">
           <div class="col-left flex-third">
             <h2>Overview</h2>
-            <p class="lede">{{ page.summary }}</p>
+            <p class="lede">{{ page.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           </div>
           <div class="col-right cs-stats">
             {% if page.role %}<div class="stat"><h3 class="subsection-title uppercase">Role</h3><p>{{ page.role }}</p></div>{% endif %}
@@ -60,7 +60,7 @@
       </section>
       {% if page.timeline %}
       <div class="cs-timeline">
-        <div class="tl-grid" style="grid-template-columns: {% for milestone in page.timeline %}{{ milestone.weight | default: 1 }}fr {% endfor %};">
+        <div class="tl-grid" style="grid-template-columns: {% for milestone in page.timeline %}{% assign tl_idx = forloop.index0 | plus: 1 %}{% if forloop.last %}{% assign tl_next = 100 %}{% else %}{% assign tl_next = page.timeline[tl_idx].percent %}{% endif %}{% assign tl_weight = tl_next | minus: milestone.percent %}{% if tl_weight < 1 %}{% assign tl_weight = 1 %}{% endif %}{{ tl_weight }}fr {% endfor %};">
           {% for milestone in page.timeline %}
           <div class="tl-point">
             <span class="tl-marker"></span>
