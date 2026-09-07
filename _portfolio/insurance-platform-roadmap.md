@@ -1,7 +1,7 @@
 ---
 layout: case-study-template
 order: 6
-meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
+meta: An eight-week discovery engagement that turned a legacy insurance platform's aggressive one-year deadline into a phased, de-risked, six-release roadmap.
 type: product
 title: Legacy System Modernization
 project: Legacy System Modernization
@@ -32,11 +32,11 @@ outcomes: <ul><li>A six-phase roadmap sequencing delivery from an underwriting o
 achievements: <ul><li>Turned an already-committed, aggressive one-year deadline into a phased, de-risked roadmap instead of a single high-risk cutover</li><li>Documented every architectural decision with its risks and rejected alternatives, so engineering could move without relitigating choices already made</li><li>Recommended a delivery model, including a dedicated team built to unblock dependencies, designed specifically around the timeline risk the client was already carrying</li><li>Anchored every future-state recommendation in direct observation of underwriters and new business associates doing the actual work, not assumptions about it</li></ul>
 takeaways: The mitigation we leaned on hardest was keeping product a sprint ahead of engineering, so nothing gets built before it has been validated with the people who will use it. On a program with this many parallel teams and this tight a deadline, the real risk wasn't getting the direction wrong, the findings were consistent enough across every user group for that. It was letting engineering outrun validation once several teams were moving at once.
 learnings: This engagement reinforced something I build into every discovery effort now&colon; a roadmap is only as trustworthy as the risks and unknowns documented next to it. Naming what we didn't know yet, the rules inventory, the legacy integration behavior, the authentication decisions still to be made, was as valuable to the client as the recommendations themselves, because it gave them a real list to close instead of a false sense that discovery had answered everything.
-webpcollection-image:
-collection-image:
-hero-image-webp:
-hero-image-png:
-hero-caption:
+webpcollection-image: confidential-logo.webp
+collection-image: confidential-logo.jpg
+hero-image-webp: confidential-logo.webp
+hero-image-png: confidential-logo.jpg
+hero-caption: Confidential
 prototype-orientation: horizontal
 prototype-type:
 prototype-webp:

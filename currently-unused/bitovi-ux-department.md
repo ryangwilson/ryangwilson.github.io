@@ -1,7 +1,7 @@
 ---
 layout: case-study-narrative
 order: 3
-meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
+meta: Rebuilding Bitovi's UX team from two people to ten, taking UX sales from $1M to $2.5M in two years while holding utilization above 90 percent.
 type: product
 title: Building the Bitovi UX Department
 project: Bitovi UX Department
@@ -54,9 +54,6 @@ related-case-studies:
   - title: Yum! Brands MMT
     link: yum
     blurb: Another Bitovi-era client engagement.
-  - title: Taco Bell POS
-    link: yum-pos
-    blurb: Hiring and onboarding built here later helped this client build their own UX Department.
 ---
 
 ## Taking Over a Team of Two

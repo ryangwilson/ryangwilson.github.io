@@ -8,7 +8,7 @@
     "lastname": "Kurpuis",
     "title": "Associate Director of Systems Engineering",
     "company": "Bitovi",
-    "topic": "dev",
+    "topic": "dev am-ui",
     "linkedin": "https://www.linkedin.com/in/austinkurpuis",
     "quote": "Ryan's combination of knowledge, experience, education, and personality make him the ideal UX professional to interface with Engineers."
   },
@@ -298,5 +298,19 @@
     "topic": "leadership",
     "linkedin": "https://www.linkedin.com/in/hollylaiveling/",
     "quote": "He’s a rare combination: strong product mindset, sharp UX instincts, and a genuine talent for process improvement."
+  },
+  {
+    "id": 24,
+    "webpimage": "1517721121464.webp",
+    "image": "1517721121464.jpg",
+    "name": "Shawn Campbell",
+    "firstname": "Shawn",
+    "lastname": "Campbell",
+    "title": "Founder & General Manager",
+    "company": "CHIRP Radio",
+    "topic": "chirp",
+    "random_pool": false,
+    "linkedin": "https://www.linkedin.com/in/shawncampbellchicago/",
+    "quote": "The compliments keep rolling in! Everyone is super impressed and pleased! Thanks to Ryan and Callibrity for building such cool tools for us!"
   }
 ]

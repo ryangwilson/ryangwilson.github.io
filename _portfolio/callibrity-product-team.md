@@ -1,7 +1,7 @@
 ---
 layout: case-study-narrative
 order: 1
-meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
+meta: Building Callibrity's Product Practice from a single hire into a team of nine, with a career-ladder hiring system and a company-wide AI-enablement standard.
 type: product
 title: Callibrity Product Practice
 project: Callibrity Product Practice

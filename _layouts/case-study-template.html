@@ -46,11 +46,14 @@
           <a class="btn text svg-after" href="../{{ page.next-cs-link }}" title="{{ page.next-cs-title }}"> Next <i data-feather="arrow-right"></i> </a>
         </nav>
       </div>
-      <section>
+      <section class="cs-overview">
         <h2>Overview</h2>
         <div class="flex-two-col">
           <div class="col-left flex-third">
             <p>{{ page.overview }}</p>
+            {% if page.stat-number %}
+            <div class="stat-callout"><span class="stat-number">{{ page.stat-number }}</span><span class="stat-label">{{ page.stat-label }}</span></div>
+            {% endif %}
           </div>
           <div class="col-right">
             <h3 class="subsection-title uppercase">Role</h3>
@@ -64,93 +67,94 @@
       </section>
       <section>
         <h2>Approach</h2>
-        <div class="flex-two-col">
-          <div class="col-left">
-            <h3 class="subsection-title uppercase">Problem Statement</h3>
-            <p>{{ page.problemstatement }}</p>
-          </div>
-          <div class="col-right">
-            <div id="mainCarousel" class="swiper">
-              <div class="swiper-wrapper">
-                {% if page.approach-image01 %}
-                <div
-                  class="swiper-slide"
-                  data-src="../../assets/images/portfolio-images/{{ page.approach-image01 }}"
-                  data-fancybox="carousel-gallery"
-                  data-caption="{{ page.project }}: {{ page.approach-caption01 }}"
-                >
-                  <picture>
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage01 }}" type="image/webp">
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image01 }}" type="image/jpeg">
-                    <img src="../../assets/images/portfolio-images/{{ page.approach-image01 }}" alt="{{ page.approach-caption01 }} example image for {{ page.project }}">
-                  </picture>
-                </div>
-                {% endif %}
-                {% if page.approach-image02 %}
-                <div
-                  class="swiper-slide"
-                  data-src="../../assets/images/portfolio-images/{{ page.approach-image02 }}"
-                  data-fancybox="carousel-gallery"
-                  data-caption="{{ page.project }}: {{ page.approach-caption02 }}"
-                >
-                  <picture>
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage02 }}" type="image/webp">
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image02 }}" type="image/jpeg">
-                    <img src="../../assets/images/portfolio-images/{{ page.approach-image02 }}" alt="{{ page.approach-caption02 }} example image for {{ page.project }}">
-                  </picture>
-                </div>
-                {% endif %}
-                {% if page.approach-image03 %}
-                <div
-                  class="swiper-slide"
-                  data-src="../../assets/images/portfolio-images/{{ page.approach-image03 }}"
-                  data-fancybox="carousel-gallery"
-                  data-caption="{{ page.project }}: {{ page.approach-caption03 }}"
-                >
-                  <picture>
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage03 }}" type="image/webp">
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image03 }}" type="image/jpeg">
-                    <img src="../../assets/images/portfolio-images/{{ page.approach-image03 }}" alt="{{ page.approach-caption03 }} example image for {{ page.project }}">
-                  </picture>
-                </div>
-                {% endif %}
-                {% if page.approach-image04 %}
-                <div
-                  class="swiper-slide"
-                  data-src="../../assets/images/portfolio-images/{{ page.approach-image04 }}"
-                  data-fancybox="carousel-gallery"
-                  data-caption="{{ page.project }}: {{ page.approach-caption04 }}"
-                >
-                  <picture>
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage04 }}" type="image/webp">
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image04 }}" type="image/jpeg">
-                    <img src="../../assets/images/portfolio-images/{{ page.approach-image04 }}" alt="{{ page.approach-caption04 }} example image for {{ page.project }}">
-                  </picture>
-                </div>
-                {% endif %}
-                {% if page.approach-image05 %}
-                <div
-                  class="swiper-slide"
-                  data-src="../../assets/images/portfolio-images/{{ page.approach-image05 }}"
-                  data-fancybox="carousel-gallery"
-                  data-caption="{{ page.project }}: {{ page.approach-caption05 }}"
-                >
-                  <picture>
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage05 }}" type="image/webp">
-                    <source srcset="../../assets/images/portfolio-images/{{ page.approach-image05 }}" type="image/jpeg">
-                    <img src="../../assets/images/portfolio-images/{{ page.approach-image05 }}" alt="{{ page.approach-caption05 }} example image for {{ page.project }}">
-                  </picture>
-                </div>
-                {% endif %}
-              </div>
-              <div class="swiper-pagination"></div>
-              <button type="button" class="swiper-button-prev" aria-label="Previous image"></button>
-              <button type="button" class="swiper-button-next" aria-label="Next image"></button>
-            </div>
-            
-
-          </div>
+        <h3 class="subsection-title uppercase">Problem Statement</h3>
+        <p>{{ page.problemstatement }}</p>
+        {% if page.approach-image01 and page.approach-image02 %}
+        <div class="cs-figure-row">
+          <figure class="cs-figure-half">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage01 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.approach-image01 }}" alt="{{ page.approach-caption01 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.approach-caption01 }}</figcaption>
+          </figure>
+          <figure class="cs-figure-half">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage02 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.approach-image02 }}" alt="{{ page.approach-caption02 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.approach-caption02 }}</figcaption>
+          </figure>
         </div>
+        {% else %}
+        {% if page.approach-image01 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage01 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.approach-image01 }}" alt="{{ page.approach-caption01 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.approach-caption01 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.approach-image02 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage02 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.approach-image02 }}" alt="{{ page.approach-caption02 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.approach-caption02 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% endif %}
+        {% if page.approach-image03 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage03 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.approach-image03 }}" alt="{{ page.approach-caption03 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.approach-caption03 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.approach-image04 and page.approach-image05 and page.approach-pair-04-05 %}
+        <div class="cs-figure-row">
+          <figure class="cs-figure-half">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage04 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.approach-image04 }}" alt="{{ page.approach-caption04 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.approach-caption04 }}</figcaption>
+          </figure>
+          <figure class="cs-figure-half">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage05 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.approach-image05 }}" alt="{{ page.approach-caption05 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.approach-caption05 }}</figcaption>
+          </figure>
+        </div>
+        {% else %}
+        {% if page.approach-image04 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage04 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.approach-image04 }}" alt="{{ page.approach-caption04 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.approach-caption04 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.approach-image05 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.approach-webpimage05 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.approach-image05 }}" alt="{{ page.approach-caption05 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.approach-caption05 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% endif %}
+        {% if page.approach-pull-quote %}
+        <blockquote class="pull-quote">&ldquo;{{ page.approach-pull-quote }}&rdquo;<cite>{{ page.approach-pull-quote-attribution | default: "Ryan Wilson" }}</cite></blockquote>
+        {% endif %}
         <h3 class="subsection-title uppercase">Goals</h3>
         {{ page.goals }}
       </section>
@@ -164,84 +168,137 @@
             {{ page.processlist }}
           </div>
         </div>
+        {% if page.process-inline-image %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.process-inline-webpimage }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.process-inline-image }}" alt="{{ page.process-inline-caption }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.process-inline-caption }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.process-continued %}
+        <div class="single-col">
+          <p>{{ page.process-continued }}</p>
+        </div>
+        {% endif %}
+        {% if page.process-image04 and page.process-image05 and page.process-pair-04-05 %}
+        <div class="cs-figure-row">
+          <figure class="cs-figure-half">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage04 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.process-image04 }}" alt="{{ page.process-caption04 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.process-caption04 }}</figcaption>
+          </figure>
+          <figure class="cs-figure-half">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage05 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.process-image05 }}" alt="{{ page.process-caption05 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.process-caption05 }}</figcaption>
+          </figure>
+        </div>
+        {% endif %}
+        {% if page.process-continued-2 %}
+        <div class="single-col">
+          <p>{{ page.process-continued-2 }}</p>
+        </div>
+        {% endif %}
+        {% if page.process-stat-text and page.process-stat-number %}
+        <div class="single-col">
+          <div class="cs-stat-row">
+            <div class="cs-stat-text"><p>{{ page.process-stat-text }}</p></div>
+            <div class="stat-callout"><span class="stat-number">{{ page.process-stat-number }}</span><span class="stat-label">{{ page.process-stat-label }}</span></div>
+          </div>
+        </div>
+        {% endif %}
         {% if page.findings %}
         <div class="single-col">
           <h3 class="subsection-title uppercase">Findings</h3>
           <p>{{ page.findings }}</p>
         </div>
         {% endif %}
-        <div class="card-portfolio fifth-card">
-          {% if page.process-image01 %}
-          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption01 }}" href="../../assets/images/portfolio-images/{{ page.process-image01 }}" data-fancybox="images">
-            <figure>
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage01 }}" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-image01 }}" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/{{ page.process-image01 }}" alt="{{ page.process-caption01 }} example image for {{ page.project }}">
-              </picture>
-              <figcaption>
-                <h3 class="uppercase">{{ page.process-caption01 }}</h3>
-              </figcaption>
-            </figure>
-          </a>
-          {% endif %}
-          {% if page.process-image02 %}
-          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption02 }}" href="../../assets/images/portfolio-images/{{ page.process-image02 }}" data-fancybox="images">
-            <figure>
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage02 }}" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-image02 }}" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/{{ page.process-image02 }}" alt="{{ page.process-caption02 }} example image for {{ page.project }}">
-              </picture>
-              <figcaption>
-                <h3 class="uppercase">{{ page.process-caption02 }}</h3>
-              </figcaption>
-            </figure>
-          </a>
-          {% endif %}
-          {% if page.process-image03 %}
-          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption03 }}" href="../../assets/images/portfolio-images/{{ page.process-image03 }}" data-fancybox="images">
-            <figure>
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage03 }}" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-image03 }}" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/{{ page.process-image03 }}" alt="{{ page.process-caption03 }} example image for {{ page.project }}">
-              </picture>
-              <figcaption>
-                <h3 class="uppercase">{{ page.process-caption03 }}</h3>
-              </figcaption>
-            </figure>
-          </a>
-          {% endif %}
-          {% if page.process-image04 %}
-          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption04 }}" href="../../assets/images/portfolio-images/{{ page.process-image04 }}" data-fancybox="images">
-            <figure>
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage04 }}" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-image04 }}" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/{{ page.process-image04 }}" alt="{{ page.process-caption04 }} example image for {{ page.project }}">
-              </picture>
-              <figcaption>
-                <h3 class="uppercase">{{ page.process-caption04 }}</h3>
-              </figcaption>
-            </figure>
-          </a>
-          {% endif %}
-          {% if page.process-image05 %}
-          <a data-fancybox="gallery-process" data-caption="{{ page.project }}: {{ page.process-caption05 }}" href="../../assets/images/portfolio-images/{{ page.process-image05 }}" data-fancybox="images">
-            <figure>
-              <picture>
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage05 }}" type="image/webp">
-                <source srcset="../../assets/images/portfolio-images/{{ page.process-image05 }}" type="image/jpeg"> 
-                <img src="../../assets/images/portfolio-images/{{ page.process-image05 }}" alt="{{ page.process-caption05 }} example image for {{ page.project }}">
-              </picture>
-              <figcaption>
-                <h3 class="uppercase">{{ page.process-caption05 }}</h3>
-              </figcaption>
-            </figure>
-          </a>
-          {% endif %}
+        {% if page.findings-inline-image %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.findings-inline-webpimage }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.findings-inline-image }}" alt="{{ page.findings-inline-caption }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.findings-inline-caption }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.findings-continued %}
+        <div class="single-col">
+          <p>{{ page.findings-continued }}</p>
         </div>
+        {% endif %}
+        {% if page.process-image01 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage01 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.process-image01 }}" alt="{{ page.process-caption01 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.process-caption01 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.process-image02 and page.process-image03 and page.process-pair-02-03 %}
+        <div class="cs-figure-row">
+          <figure class="cs-figure-half no-crop">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage02 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.process-image02 }}" alt="{{ page.process-caption02 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.process-caption02 }}</figcaption>
+          </figure>
+          <figure class="cs-figure-half no-crop">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage03 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.process-image03 }}" alt="{{ page.process-caption03 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.process-caption03 }}</figcaption>
+          </figure>
+        </div>
+        {% else %}
+        {% if page.process-image02 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage02 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.process-image02 }}" alt="{{ page.process-caption02 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.process-caption02 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.process-image03 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage03 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.process-image03 }}" alt="{{ page.process-caption03 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.process-caption03 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% endif %}
+        {% unless page.process-pair-04-05 %}
+        {% if page.process-image04 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage04 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.process-image04 }}" alt="{{ page.process-caption04 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.process-caption04 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% if page.process-image05 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage05 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.process-image05 }}" alt="{{ page.process-caption05 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.process-caption05 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% endunless %}
       </section>
       <section class="solution-section">
         <h2>Solution</h2>
@@ -250,6 +307,9 @@
               <div class="col-left flex-third">
           {% endif %}
             <p>{{ page.solutions }}</p>
+          {% if page.pull-quote %}
+            <blockquote class="pull-quote">&ldquo;{{ page.pull-quote }}&rdquo;<cite>{{ page.pull-quote-attribution | default: "Ryan Wilson" }}</cite></blockquote>
+          {% endif %}
           {% if page.prototype-orientation == 'vertical' %}
             </div>
             <div class="col-right vertical">
@@ -304,56 +364,6 @@
         </div>
       </section>
     </main>
-    <script>
-      // Initialise the Approach image slider. Fancybox.bind (head.html)
-      // already covers every [data-fancybox] element on the page,
-      // including these slides, for click-to-enlarge - Swiper only
-      // handles moving between slides. mousewheel.forceToAxis keeps a
-      // vertical scroll gesture on the page's own axis instead of the
-      // slider hijacking it (the bug that motivated this swap, and an
-      // unresolved issue in Fancybox's own Carousel: fancyapps/ui#529).
-      const mainCarousel = new Swiper('#mainCarousel', {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        keyboard: {
-          enabled: true,
-        },
-        a11y: {
-          enabled: true,
-        },
-        mousewheel: {
-          forceToAxis: true,
-        },
-      });
-      // Swiper adds a native `disabled` attribute to the prev/next
-      // button at each end of the slider - browsers remove a disabled
-      // button from hit-testing entirely, so a click at that same screen
-      // position falls through to the slide underneath, which has its
-      // own [data-fancybox] click handler and opens the lightbox. The
-      // CSS .swiper-button-disabled style above already makes it read
-      // as clearly inactive, so stripping the native attribute (while
-      // Swiper's own internal beginning/end check still blocks actual
-      // navigation) keeps it a real hit target that just does nothing.
-      function clearNativeDisabled() {
-        mainCarousel.el.querySelectorAll('.swiper-button-disabled').forEach(function (btn) {
-          btn.removeAttribute('disabled');
-        });
-      }
-      clearNativeDisabled();
-      // Only slideChange re-runs this today because no breakpoints/
-      // slidesPerView-responsiveness is configured above, so isBeginning/
-      // isEnd (and therefore Swiper's disabled state) can't change on
-      // resize alone. If breakpoints are ever added here, also bind
-      // 'resize' and 'breakpoint' or this click-passthrough bug can
-      // silently come back.
-      mainCarousel.on('slideChange', clearNativeDisabled);
-    </script>
     {% include footer.html %}
   </body>
 </html>

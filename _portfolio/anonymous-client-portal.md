@@ -1,7 +1,7 @@
 ---
 layout: case-study-template
 order: 4
-meta: Ryan Wilson has worked on many client projects. This case study is an example of some of the excellent product design work he could do on your project.
+meta: How a three-person team used an AI-accelerated delivery pipeline to design, build, and usability-test a client portal for a confidential OCIO firm in 13 weeks.
 type: product
 title: A Client Portal in 13 Weeks
 project: A Client Portal in 13 Weeks
