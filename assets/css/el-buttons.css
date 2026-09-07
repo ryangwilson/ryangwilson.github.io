@@ -59,9 +59,9 @@ button, input[type=submit], input[type=button], input[type=reset] {
         }
     }
     &.tertiary {
-        background-color: var(--lt-gray-00);
-        color: var(--dk-gray-00);
-        box-shadow: var(--fake-medium) var(--lt-gray-00);
+        background-color: transparent;
+        color: var(--black-00);
+        box-shadow: var(--fake-medium) var(--black-00);
         &:hover {
             box-shadow: var(--fake-wide) var(--secondary-00);
         }

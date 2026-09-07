@@ -438,6 +438,361 @@
   }
 }
 
+/* Shared components for the new case-study-narrative.html layout (Bitovi
+   and Callibrity only). Not scoped per-brand - colors that need to vary
+   per client are set inside the .bitovi/.callibrity blocks below via
+   the same class names. */
+.cs-body {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.cs-body h2 {
+  /* The base h2 rule (global-variables.css) only sets margin-bottom -
+     fine when every h2 lives alone in its own <section> (the old
+     template's shape), but this layout stacks many headings inside one
+     flowing body, so without a top margin each heading sits flush
+     against the paragraph above it. */
+  margin-top: var(--scale-9);
+}
+.cs-body h2:first-child {
+  margin-top: 0;
+}
+.cs-stat-row {
+  display: flex;
+  gap: var(--scale-6);
+  align-items: center;
+  margin: var(--scale-6) 0;
+  @media (max-width: 699px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.cs-stat-row .cs-stat-text {
+  flex: 2;
+}
+.cs-stat-row .stat-callout {
+  flex: 1;
+  margin: 0;
+}
+.cs-stat-group {
+  display: flex;
+  gap: var(--scale-6);
+  justify-content: center;
+  margin: var(--scale-6) 0;
+  @media (max-width: 699px) {
+    flex-direction: column;
+  }
+}
+.cs-stat-group .stat-callout {
+  flex: 1;
+  margin: 0;
+}
+.cs-body figure.cs-figure-full {
+  /* Originally a 100vw full-bleed breakout - both real uses of this
+     class turned out too large/distracting (blurry when a small source
+     image gets stretched edge-to-edge, or just overwhelming next to
+     body text), so this is now "larger than the text column, still
+     contained" rather than truly full-bleed. Kept the class name since
+     it's already used in two case studies' content. */
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: var(--scale-6);
+  margin-bottom: var(--scale-6);
+  box-shadow: none;
+}
+.cs-body figure.cs-figure-full img {
+  width: 100%;
+  display: block;
+  z-index: auto;
+}
+.cs-body figure.cs-figure-full figcaption {
+  /* media-images.css defines a global figcaption as an absolutely
+     positioned overlay box (for the site's other image galleries) -
+     reset every property it sets so this caption renders as a plain
+     centered line below the image instead of an overlay. */
+  position: static;
+  z-index: auto;
+  bottom: auto;
+  left: auto;
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  border-left: none;
+  max-width: none;
+  padding: 0;
+  margin: var(--scale-2) 0 0;
+  font-family: inherit;
+  text-align: center;
+  font-size: 16px;
+  color: var(--md-gray-00);
+}
+.stat-callout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--scale-6) auto;
+  text-align: center;
+}
+.stat-callout .stat-number {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+}
+.stat-callout .stat-label {
+  margin-top: var(--scale-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+.pull-quote {
+  margin: var(--scale-6) auto;
+  max-width: 640px;
+  text-align: center;
+  font-family: var(--font-serif, serif);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-style: italic;
+  line-height: 1.3;
+}
+.pull-quote cite {
+  display: block;
+  margin-top: var(--scale-3);
+  font-size: 16px;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cs-timeline {
+  margin: var(--scale-8) auto var(--scale-6);
+  max-width: 960px;
+  padding: 0 var(--scale-6);
+}
+.tl-grid {
+  /* grid-template-columns is set inline per page from each timeline
+     entry's `weight` (relative time since the previous entry, e.g.
+     months) - a CSS Grid column can compress arbitrarily narrow on a
+     small screen and wrap its own text into more lines, but it can
+     NEVER overlap a neighboring column the way two independently
+     absolute-positioned labels could. That's the actual fix for dates
+     colliding on narrow viewports: the browser's layout engine
+     guarantees non-overlap, instead of us hand-tuning a minimum
+     percentage gap and hoping it holds at every width. */
+  display: grid;
+  position: relative;
+  margin-top: var(--scale-8);
+  padding-top: 12px;
+}
+.tl-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--lt-gray-00);
+}
+.tl-point {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: var(--scale-4);
+}
+.tl-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--white-00);
+  border: 2px solid;
+  margin-top: -18px;
+}
+.tl-date {
+  display: block;
+  margin-top: var(--scale-4);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.tl-label {
+  display: block;
+  margin-top: var(--scale-1);
+  font-size: 16px;
+  line-height: 1.2;
+}
+@media (max-width: 699px) {
+  .tl-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--scale-4);
+  }
+  .tl-grid::before {
+    display: none;
+  }
+  .tl-point {
+    padding-left: var(--scale-4);
+    padding-right: 0;
+    border-left: 2px solid var(--lt-gray-00);
+  }
+  .tl-marker {
+    margin-top: 0;
+    margin-left: -19px;
+  }
+}
+.client-roster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--scale-3);
+  list-style: none;
+  margin: var(--scale-5) 0 0;
+  padding: 0;
+}
+.client-roster li {
+  padding: var(--scale-2) var(--scale-4);
+  border: 1px solid;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.related-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-5);
+}
+.related-card {
+  display: block;
+  padding-bottom: var(--scale-4);
+  border-bottom: 1px solid var(--lt-gray-00);
+}
+.related-card h3 {
+  box-shadow: none;
+  margin-bottom: var(--scale-2);
+}
+
+.bitovi {
+  /* Bitovi's old brand red, sampled from their logo (#CA3137) - already
+     clears 4.5:1 against white text (5.24:1, verified, WCAG
+     relative-luminance formula), so used as-is with no darkening.
+     Rewritten 2026-09-06 for case-study-narrative.html: this class is
+     used exclusively on this one page, so its old section:nth-of-type
+     selectors (tied to case-study-template.html's fixed 6-section
+     shape) were dropped entirely in favor of the new layout's real
+     class names. */
+  .case-study {
+    background-color: #CA3137;
+    box-shadow: -50vw 0 0 0 #CA3137, 50vw 0 0 0 #CA3137, -25vw 0 0 0 #CA3137, 25vw 0 0 0 #CA3137;
+  }
+  .stat-callout .stat-number {
+    color: #CA3137;
+  }
+  .tl-marker {
+    border-color: #CA3137;
+  }
+  .client-roster li {
+    border-color: #CA3137;
+  }
+  .cs-clients {
+    background-color: #fef3f4;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #fef3f4, 50vw 0 0 0px #fef3f4, -25vw 0 0 0px #fef3f4, 25vw 0 0 0px #fef3f4;
+  }
+  .cs-related {
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #CA3137;
+    border-bottom: var(--scale-1) solid #CA3137;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00);
+  }
+}
+
+.callibrity {
+  /* Callibrity's brand plum/purple, sampled from their logo (#360D2D) -
+     16.77:1 against white text (verified, WCAG relative-luminance
+     formula), far above the 4.5:1 AA minimum, so used as-is. Rewritten
+     2026-09-06, same reasoning as .bitovi above. */
+  .case-study {
+    background-color: #360D2D;
+    box-shadow: -50vw 0 0 0 #360D2D, 50vw 0 0 0 #360D2D, -25vw 0 0 0 #360D2D, 25vw 0 0 0 #360D2D;
+  }
+  .stat-callout .stat-number {
+    color: #360D2D;
+  }
+  .tl-marker {
+    border-color: #360D2D;
+  }
+  .client-roster li {
+    border-color: #360D2D;
+  }
+  .cs-clients {
+    background-color: #f7f0f5;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f7f0f5, 50vw 0 0 0px #f7f0f5, -25vw 0 0 0px #f7f0f5, 25vw 0 0 0px #f7f0f5;
+  }
+  .cs-related {
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #360D2D;
+    border-bottom: var(--scale-1) solid #360D2D;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00);
+  }
+}
+
+.feg {
+  /* Anonymized client's own brand green, sampled visually from a
+     reference screenshot Ryan supplied (~#16281F) - 15.47:1 against
+     white text (verified, WCAG relative-luminance formula), far above
+     the 4.5:1 AA minimum, so used as-is. */
+  .case-study {
+    background-color: #16281F;
+    box-shadow: -50vw 0 0 0 #16281F, 50vw 0 0 0 #16281F, -25vw 0 0 0 #16281F, 25vw 0 0 0 #16281F;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f2f5f3;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f2f5f3, 50vw 0 0 0px #f2f5f3, -25vw 0 0 0px #f2f5f3, 25vw 0 0 0px #f2f5f3;
+  }
+  section:nth-of-type(5) {
+    /* Plain white, matching the .taco treatment - definition comes from */
+    /* the hero-color borders instead of a distinct accent background. */
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #16281F;
+    border-bottom: var(--scale-1) solid #16281F;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.chirp {
+  /* CHIRP Radio's brand red, sampled visually from a reference screenshot
+     Ryan supplied (~#C8102E) - not yet confirmed against an official
+     brand asset, flagged for Ryan to verify/replace. 5.89:1 against
+     white text (verified, WCAG relative-luminance formula), above the
+     4.5:1 AA minimum. */
+  .case-study {
+    background-color: #C8102E;
+    box-shadow: -50vw 0 0 0 #C8102E, 50vw 0 0 0 #C8102E, -25vw 0 0 0 #C8102E, 25vw 0 0 0 #C8102E;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #faf1f1;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #faf1f1, 50vw 0 0 0px #faf1f1, -25vw 0 0 0px #faf1f1, 25vw 0 0 0px #faf1f1;
+  }
+  section:nth-of-type(5) {
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #C8102E;
+    border-bottom: var(--scale-1) solid #C8102E;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
 .atomagic {
   .case-study {
     /* Darkened from #2592D0 (white-text contrast 3.44:1, failed the 4.5:1 */
@@ -458,6 +813,80 @@
     background-color: var(--white-00);
     border-top: var(--scale-2) solid #207DB2;
     border-bottom: var(--scale-1) solid #207DB2;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+.ledger {
+  /* No real client colors used - this client is anonymized and has no
+     usable brand asset. Neutral navy chosen for an insurance/financial
+     tone without echoing any real brand. 13.64:1 against white text
+     (verified, WCAG relative-luminance formula). */
+  .case-study {
+    background-color: #1C2E4A;
+    box-shadow: -50vw 0 0 0 #1C2E4A, 50vw 0 0 0 #1C2E4A, -25vw 0 0 0 #1C2E4A, 25vw 0 0 0 #1C2E4A;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f1f3f6;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f1f3f6, 50vw 0 0 0px #f1f3f6, -25vw 0 0 0px #f1f3f6, 25vw 0 0 0px #f1f3f6;
+  }
+  section:nth-of-type(5) {
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #1C2E4A;
+    border-bottom: var(--scale-1) solid #1C2E4A;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.facility {
+  /* No real client colors used - this client is anonymized and has no
+     usable brand asset. Neutral industrial slate chosen without echoing
+     any real brand. 10.06:1 against white text (verified, WCAG
+     relative-luminance formula). */
+  .case-study {
+    background-color: #3B4252;
+    box-shadow: -50vw 0 0 0 #3B4252, 50vw 0 0 0 #3B4252, -25vw 0 0 0 #3B4252, 25vw 0 0 0 #3B4252;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f2f3f5;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f2f3f5, 50vw 0 0 0px #f2f3f5, -25vw 0 0 0px #f2f3f5, 25vw 0 0 0px #f2f3f5;
+  }
+  section:nth-of-type(5) {
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #3B4252;
+    border-bottom: var(--scale-1) solid #3B4252;
+    padding: 100px 0;
+    margin: 0 35px;
+    box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
+  }
+}
+
+.am-ui {
+  /* am-ui's own "wireframe" identity is deliberately grayscale/neutral
+     (see its README), so the card uses a near-black neutral rather than
+     inventing a brand hue. 17.72:1 against white text (verified, WCAG
+     relative-luminance formula). */
+  .case-study {
+    background-color: #18181B;
+    box-shadow: -50vw 0 0 0 #18181B, 50vw 0 0 0 #18181B, -25vw 0 0 0 #18181B, 25vw 0 0 0 #18181B;
+  }
+  section:nth-of-type(2), section:nth-of-type(4) {
+    background-color: #f4f4f5;
+    padding: 100px 0;
+    margin: 0 50px;
+    box-shadow: -50vw 0 0 0px #f4f4f5, 50vw 0 0 0px #f4f4f5, -25vw 0 0 0px #f4f4f5, 25vw 0 0 0px #f4f4f5;
+  }
+  section:nth-of-type(5) {
+    background-color: var(--white-00);
+    border-top: var(--scale-2) solid #18181B;
+    border-bottom: var(--scale-1) solid #18181B;
     padding: 100px 0;
     margin: 0 35px;
     box-shadow: -50vw 0 0 0px var(--white-00), 50vw 0 0 0px var(--white-00), -25vw 0 0 0px var(--white-00), 25vw 0 0 0px var(--white-00)
