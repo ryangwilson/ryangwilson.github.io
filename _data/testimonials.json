@@ -244,6 +244,7 @@
     "title": "CEO",
     "company": "HaulHound",
     "topic": "haulhound",
+    "display": false,
     "linkedin": "https://www.linkedin.com/in/the-andrew-kim",
     "quote": "I’ve never had such a positive experience, not just the results, but the process as well. People are shocked to know that this is our minimal first version."
   },

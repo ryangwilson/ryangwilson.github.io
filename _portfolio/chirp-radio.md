@@ -14,8 +14,8 @@ year: 2026
 subtitle: Rebuilding 16 years of a volunteer-run station's website, CMS, and mobile apps from the ground up
 previous-cs-title: A Client Portal in 13 Weeks
 previous-cs-link: anonymous-client-portal
-next-cs-title: Legacy System Modernization
-next-cs-link: insurance-platform-roadmap
+next-cs-title: Honda HALO
+next-cs-link: vehicle-test-floor-discovery
 phases: Early Research, Product & Technical Leadership, Migration
 overview: I'd been a CHIRP listener for 16 years before I ever got the chance to work directly with them on a project. <a href="https://chirpradio.org" target="_blank" rel="noopener">CHIRP Radio</a> is 107.1 FM in Chicago, an independent, listener-supported station run almost entirely by volunteers. Its website and mobile apps hadn't been meaningfully rebuilt in more than a decade, and I owned the full modernization end to end, as product lead, UX lead, and front-end developer&colon; a new website, a new CMS, and new iOS and Android apps, all replacing a legacy ExpressionEngine site that had outgrown what it was ever built to do.
 goals: <ul><li>Give CHIRP's volunteer team a modern CMS with the conveniences the old one lacked</li><li>Unify a website and two mobile apps that had never shared a design or a database</li><li>Carry 16 years of CHIRP's content forward without losing any of it</li><li>Give listeners the features they'd been asking for&colon;<ul><li>Synced saved songs and dark mode</li><li>DJ favoriting with notifications</li><li>Song requests for logged-in listeners</li><li>An easier way to browse the DJ schedule</li></ul></li></ul>

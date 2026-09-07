@@ -1,6 +1,7 @@
 ---
 layout: case-study-narrative
 order: 1
+homepage-group: leadership
 meta: Building Callibrity's Product Practice from a single hire into a team of nine, with a career-ladder hiring system and a company-wide AI-enablement standard.
 type: product
 title: Callibrity Product Practice
@@ -16,8 +17,8 @@ collection-image: callibrity-logo.jpg
 hero-image-webp: callibrity-hero.webp
 hero-image-png: callibrity-hero.jpg
 hero-caption: The Product Practice wiki
-previous-cs-title: 
-previous-cs-link: 
+previous-cs-title: Yum! Brands MMT
+previous-cs-link: yum
 next-cs-title: am-ui
 next-cs-link: am-ui
 summary: I have a repeatable process for taking a Product or UX team from zero to one. At [Bitovi](../bitovi-ux-department), I rebuilt a team that already existed. At Callibrity, no practice existed before I started, so I built one from scratch, including the AI-acceleration layer.
@@ -45,9 +46,6 @@ known-clients:
   - FEG
   - Town of Cary
 related-case-studies:
-  - title: Legacy System Modernization
-    link: insurance-platform-roadmap
-    blurb: The discovery-and-workshop playbook, proven in a different company culture.
   - title: Product & Problem Discovery
     link: vehicle-test-floor-discovery
     blurb: The same playbook, applied where nobody expected UX methodology to go.

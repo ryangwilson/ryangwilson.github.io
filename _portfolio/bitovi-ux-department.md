@@ -1,6 +1,7 @@
 ---
 layout: case-study-narrative
 order: 3
+homepage-group: leadership
 meta: Rebuilding Bitovi's UX team from two people to ten, taking UX sales from $1M to $2.5M in two years while holding utilization above 90 percent.
 type: product
 title: Building the Bitovi UX Department
@@ -48,9 +49,6 @@ related-case-studies:
   - title: Callibrity Product Practice
     link: callibrity-product-team
     blurb: The same playbook, proven again in a different company.
-  - title: HaulHound
-    link: haulhound
-    blurb: One of the client engagements this team took on during the buildout.
   - title: Yum! Brands MMT
     link: yum
     blurb: Another Bitovi-era client engagement.

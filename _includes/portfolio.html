@@ -2,6 +2,9 @@
 {% if page.url == '/' %}
 <div class="card-portfolio">
     {% assign landing_page = example | where: "type", "product" %}
+    {% if include.group %}
+    {% assign landing_page = landing_page | where: "homepage-group", include.group %}
+    {% endif %}
     {% for example in landing_page | limit:4 %}
     <a href="{{ example.url }}" class="{{ example.type }}">
         <figure>

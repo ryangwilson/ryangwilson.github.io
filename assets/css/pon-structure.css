@@ -166,6 +166,15 @@ section {
   @media (max-width: 419px) {
     margin: var(--scale-20) var(--scale-5);
   }
+  /* Stacks two sections closer together, e.g. the homepage's Leadership */
+  /* and Featured Case Studies grids - the preceding section's own card */
+  /* spacing already provides enough separation. */
+  &.section-tight-top {
+    margin-top: 0;
+  }
+  &.section-tight-bottom {
+    margin-bottom: 0;
+  }
   .flex-two-col {
     display: flex;
     @media (max-width: 859px) {

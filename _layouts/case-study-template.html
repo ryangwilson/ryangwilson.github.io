@@ -168,6 +168,9 @@
             {{ page.processlist }}
           </div>
         </div>
+        {% if page.process-pull-quote %}
+        <blockquote class="pull-quote">&ldquo;{{ page.process-pull-quote }}&rdquo;<cite>{{ page.process-pull-quote-attribution | default: "Ryan Wilson" }}</cite></blockquote>
+        {% endif %}
         {% if page.process-inline-image %}
         <figure class="cs-figure-full">
           <picture>
@@ -233,6 +236,16 @@
           <p>{{ page.findings-continued }}</p>
         </div>
         {% endif %}
+        {% if page.process-multistat-01 %}
+        <div class="single-col">
+          <div class="cs-stat-group">
+            {% for stat in page.process-multistat-01 %}
+            <div class="stat-callout"><span class="stat-number">{{ stat.number }}</span><span class="stat-label">{{ stat.label }}</span></div>
+            {% endfor %}
+          </div>
+          {% if page.process-multistat-01-caption %}<p>{{ page.process-multistat-01-caption }}</p>{% endif %}
+        </div>
+        {% endif %}
         {% if page.process-image01 %}
         <figure class="cs-figure-full">
           <picture>
@@ -278,6 +291,16 @@
           <figcaption>{{ page.process-caption03 }}</figcaption>
         </figure>
         {% endif %}
+        {% endif %}
+        {% if page.process-multistat-02 %}
+        <div class="single-col">
+          <div class="cs-stat-group">
+            {% for stat in page.process-multistat-02 %}
+            <div class="stat-callout"><span class="stat-number">{{ stat.number }}</span><span class="stat-label">{{ stat.label }}</span></div>
+            {% endfor %}
+          </div>
+          {% if page.process-multistat-02-caption %}<p>{{ page.process-multistat-02-caption }}</p>{% endif %}
+        </div>
         {% endif %}
         {% unless page.process-pair-04-05 %}
         {% if page.process-image04 %}

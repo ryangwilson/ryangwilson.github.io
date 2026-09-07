@@ -1,6 +1,7 @@
 ---
 layout: case-study-template
 order: 2
+homepage-group: case-study
 meta: A zero-dependency, AI-ready component library with 44 production components, a live Figma-to-code token bridge, and CI-enforced drift detection.
 type: product
 title: am-ui

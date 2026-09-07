@@ -12,8 +12,8 @@ underurl:
 testimonial-topic:
 year: 2024
 subtitle: Eleven severity-rated findings, and software recommended for only three of them
-previous-cs-title: Legacy System Modernization
-previous-cs-link: insurance-platform-roadmap
+previous-cs-title: CHIRP Radio
+previous-cs-link: chirp-radio
 next-cs-title: Kroger Build v Buy
 next-cs-link: kroger
 phases: Discovery

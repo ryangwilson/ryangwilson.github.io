@@ -8,9 +8,13 @@
         {% include carousel.html %}
       </section> -->
       {% include card-dark.html %}
-      <section>
+      <section class="section-tight-bottom">
         <h2>{{ page.main-title-01 }}</h2>
-        {% include portfolio.html %}
+        {% include portfolio.html group="leadership" %}
+      </section>
+      <section class="section-tight-top">
+        <h2>{{ page.main-title-01b }}</h2>
+        {% include portfolio.html group="case-study" %}
         <p>{{ page.work-link }}</p>
       </section>
       <hr>
