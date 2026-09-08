@@ -56,7 +56,7 @@ related-case-studies:
 
 ## Taking Over a Team of Two
 
-I joined Bitovi in May 2016 into an existing five-person design team as an individual contributor, asked to support the team's training and recruiting. In June 2019, the team's director left and the team had shrunk to two people, including me. I was asked to lead the team, and I accepted on the condition that we rebrand from "Design Team" to "UX Department". Becoming director meant scaling the recruiting approach that had already been working, not changing direction.
+I joined Bitovi in May 2016 as an individual contributor on an existing five-person design team and was asked to support the team's training and recruiting. In June 2019, the team's director left and the team had shrunk to two people, including me. I was asked to lead the team, and I accepted on the condition that we rebrand from "Design Team" to "UX Department". Becoming director meant scaling the recruiting approach that had already been working, not changing direction.
 
 ## Rebuilding, Deliberately
 
@@ -77,7 +77,7 @@ I recruited senior-level UX talent and grew the team up to six within the first 
   <figcaption>The hiring-process flow I built to recruit the team back from two people to ten.</figcaption>
 </figure>
 
-Alongside that hiring, I created a team charter and built our onboarding process: when someone started, they took an assessment to gauge where they'd need training and support for their growth, and I supported training for the gaps that surfaced, in usability testing and other UX processes.
+Alongside that hiring, I created a team charter and built our onboarding process: when someone started, they took an assessment to gauge where they'd need training and support for their growth, and I supported training to address the gaps that surfaced, including usability testing and other UX processes.
 
 <figure class="cs-figure-full">
   <picture>
@@ -119,7 +119,7 @@ That revenue growth held quarter over quarter, not just year over year. The hiri
 
 ## What I'd Do Differently
 
-If I could go back and do one thing differently, it would be naming the team the "Product Department" rather than the "UX Department." [Donald Norman coined the term "User Experience,"](https://medium.com/@ryangwilson/the-dream-of-the-90s-is-alive-in-product-63a8e9c9c74f) but I don't believe he ever intended it to be its own separate practice; I think he meant it to be part of how a product person thinks about the user from the beginning of problem solving. Calling it the "UX Department" reinforced UX as its own silo rather than something integrated into product thinking. I carried that lesson forward when I started my team at [Callibrity](../callibrity-product-team), naming it the "Product Practice" from the start.
+If I could go back and do one thing differently, it would be naming the team the "Product Department" rather than the "UX Department." [Donald Norman coined the term "User Experience,"](https://medium.com/@ryangwilson/the-dream-of-the-90s-is-alive-in-product-63a8e9c9c74f) but I don't believe he ever intended it to be a separate practice; I think he meant it to be part of how a product person thinks about the user from the beginning of problem-solving. Calling it the "UX Department" reinforced UX as its own silo rather than something integrated into product thinking. I carried that lesson forward when I started my team at [Callibrity](../callibrity-product-team), naming it the "Product Practice" from the start.
 
 ## Where the Habits Came From
 
