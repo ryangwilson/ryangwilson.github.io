@@ -21,7 +21,7 @@ previous-cs-title: Yum! Brands MMT
 previous-cs-link: yum
 next-cs-title: am-ui
 next-cs-link: am-ui
-summary: I have a repeatable process for taking a Product or UX team from zero to one. At [Bitovi](../bitovi-ux-department), I rebuilt a team that already existed. At Callibrity, no practice existed before I started, so I built one from scratch, including the AI-acceleration layer.
+summary: I have a repeatable process for taking a Product or UX team from zero to one. At [Bitovi](../bitovi-ux-department), I rebuilt an existing team. At Callibrity, there was no practice in place before I started, so I built one from scratch, including the AI-acceleration layer.
 timeline:
   - date: Nov 2023
     label: Joined as sole practitioner
@@ -59,9 +59,9 @@ related-case-studies:
 
 ## From UX Department to Product Practice
 
-Callibrity hired me in November 2023 to build out a UX Practice, UX capabilities they were missing in their offering. I proposed something different instead: a Product Practice where a product-minded consultant and a technical lead work together from day one, merging what stakeholders want and what users need with what's technically feasible, instead of thinking about the user once there is a build to present to them. I named the team the "Product Practice," a naming call I wanted to get right here after learning a lesson at [Bitovi](../bitovi-ux-department). People outside UX, including plenty of clients, [already conflate the practice with visual-interface design](https://medium.com/@ryangwilson/stop-saying-ui-ux-51f300374f8f). Calling the team a Product Practice gets in front of that conversation before it can happen.
+Callibrity hired me in November 2023 to build out a UX Practice, UX capabilities they were missing in their offering. I proposed something different instead: a Product Practice where a product-minded consultant and a technical lead work together from day one, merging what stakeholders want and what users need with what's technically feasible, instead of only thinking about the user once there is a build to present to them. I named the team the "Product Practice," a naming call I wanted to get right here after learning a lesson at [Bitovi](../bitovi-ux-department). People outside UX, including many clients, [already conflate the practice with visual interface design](https://medium.com/@ryangwilson/stop-saying-ui-ux-51f300374f8f). Calling the team a Product Practice puts that conversation in front of it before it can happen.
 
-None of that meant giving up UX methodology, the research, the requirements work, understanding what a user actually needs. It meant practicing it as an owner of the outcome instead of a service consulted on request, using it to solve problems for the client's business goals and the user's actual needs at the same time.
+None of that meant giving up UX methodology, the research, the requirements work, understanding what a user actually needs. It meant practicing it as an owner of the outcome rather than a service consulted on request, using it to solve problems aligned with the client's business goals and the user's actual needs at the same time.
 
 ## Building the Team
 
@@ -82,7 +82,7 @@ On several early engagements, I ran discovery myself while we were still hiring 
 
 None of the practice's infrastructure existed before I got there. I built it around an approach I'd been refining since grad school and years of client work before Callibrity: weighing stakeholder wants, user needs, and technical feasibility together instead of treating any one of them as the whole answer. I adapted Callibrity's existing developer career ladder into a Product-specific version, and rebuilt the quarterly review process to align with it. The old system was a flat five-point scale, essentially bad to good, and self-rated. My version ties expected performance to a defined tier instead: associate, mid, senior, staff, senior staff, principal, so it can actually show whether someone is performing at, above, or below their level, which is what a real case for a title change depends on.
 
-I've also rebuilt my interview approach: I built baseline scenarios for each level on the ladder, and I adjust or add follow-up questions based on how a candidate answers, to level them more accurately as the interview goes instead of relying on gut-feel. In testing so far, it consistently catches what gut-feel, or just taking a candidate's word for their own level, misses: a candidate's strongest skill masking a weaker one, and the gap between how someone rates themselves and what the interview evidence actually shows. Time in a title isn't the same as expertise; I've seen plenty of people coast through a career and get leveled up for attendance, not performance.
+I've also rebuilt my interview approach: I built baseline scenarios for each level on the ladder, and I adjust or add follow-up questions based on how a candidate answers, to level them more accurately as the interview goes instead of relying on gut feeling. In testing so far, it consistently catches what gut-feel, or just taking a candidate's word for their own level, misses: a candidate's strongest skill masking a weaker one, and the gap between how someone rates themselves and what the interview evidence actually shows. Time in a title isn't the same as expertise; I've seen plenty of people coast through a career and get leveled up for attendance, not performance.
 
 ## Bringing my Playbook to Callibrity
 
@@ -95,13 +95,13 @@ At Callibrity, I introduced a tiered set of entry offers I'd already built, lett
 <li>A full six-week Discovery engagement</li>
 </ul>
 
-Discovery should produce 75-85% confidence in the recommendation, that we're solving the right thing, not certainty. Getting there takes the full six weeks, not less; there's no shortcut to that confidence level, and chasing full certainty beyond it is a waste of time and money. The point is knowing you're building the right thing before you spend the effort to build it right. From there, the engagement moves into a development phase, where a Product Consultant stays involved throughout the engagement.
+Discovery should produce 75-85% confidence in the recommendation that we're solving the right thing, not certainty. Getting there takes the full six weeks, not less; there's no shortcut to that level of confidence, and chasing full certainty beyond it is a waste of time and money. The point is knowing you're building the right thing before you spend the effort to build it right. From there, the engagement moves into a development phase, where a Product Consultant stays involved throughout the engagement.
 
-My first IC project at Callibrity, the [Honda HALO](../vehicle-test-floor-discovery) engagement, proved the model: identifying the client's real need quickly, producing reporting materials that helped them decide to move forward, and turning a short discovery engagement into a longer build, a genuine land-and-expand.
+My first Independent Contributor project at Callibrity, the [Honda HALO](../vehicle-test-floor-discovery) engagement, proved the model: identifying the client's real need quickly, producing reporting materials that helped them decide to move forward, and turning a short discovery engagement into a longer build, a genuine land-and-expand.
 
 ## Leading AI Enablement, For Real
 
-<blockquote class="pull-quote">&ldquo;AI accelerates the work. It doesn't get to make the decisions that are the human's to make.&rdquo;<cite>Ryan Wilson</cite></blockquote>
+<blockquote class="pull-quote">&ldquo;AI accelerates the work. It doesn't get to make the decisions that are the humans' to make.&rdquo;<cite>Ryan Wilson</cite></blockquote>
 
 <figure class="cs-figure-full">
   <picture>
@@ -141,7 +141,7 @@ Every decision and open question behind that work gets logged the same way, in r
   <figcaption>A ROOT brain, who you are and how you work, and a CLIENT brain, every decision and open question for that engagement, shared so a teammate's update from an hour ago is already there.</figcaption>
 </figure>
 
-I built that standard into two trainings for the team. "Land and Expand" sets the expectation for every consultant that the trust you build and the expertise you show is what lands new opportunities at an existing client, more phases, more resources, work the client hadn't planned on until they saw what we could do. "Discovery for Devs" teaches developers what a real discovery actually covers, beyond reviewing a client's tech stack and database architecture, and what's expected of the tech lead during one: write, take notes, and attend every meeting together with your paired product consultant, bringing them into technical meetings and getting brought into things like user observations, so everyone brings their own expertise and can ask questions from their own experience.
+I built that standard into two trainings for the team. "Land and Expand" sets the expectation for every consultant that the trust you build and the expertise you show is what lands new opportunities at an existing client: more phases, more resources, work the client hadn't planned on until they saw what we could do. "Discovery for Devs" teaches developers what a real discovery actually covers, beyond reviewing a client's tech stack and database architecture, and what's expected of the tech lead during one: write, take notes, and attend every meeting together with your paired product consultant, bringing them into technical meetings and getting brought into things like user observations, so everyone brings their own expertise and can ask questions from their own experience.
 
 <figure class="cs-figure-full">
   <picture>
