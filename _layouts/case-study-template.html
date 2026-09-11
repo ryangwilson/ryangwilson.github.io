@@ -51,6 +51,12 @@
         <div class="flex-two-col">
           <div class="col-left flex-third">
             <p>{{ page.overview }}</p>
+            {% if page.overview-pull-quote %}
+            <blockquote class="pull-quote">&ldquo;{{ page.overview-pull-quote }}&rdquo;<cite>{{ page.overview-pull-quote-attribution | default: "Ryan Wilson" }}</cite></blockquote>
+            {% endif %}
+            {% if page.overview-para2 %}
+            <p>{{ page.overview-para2 }}</p>
+            {% endif %}
             {% if page.stat-number %}
             <div class="stat-callout"><span class="stat-number">{{ page.stat-number }}</span><span class="stat-label">{{ page.stat-label }}</span></div>
             {% endif %}
@@ -65,6 +71,19 @@
           </div>
         </div>
       </section>
+      {% if page.timeline %}
+      <div class="cs-timeline">
+        <div class="tl-grid" style="grid-template-columns: {% for milestone in page.timeline %}{% assign tl_idx = forloop.index0 | plus: 1 %}{% if forloop.last %}{% assign tl_next = 100 %}{% else %}{% assign tl_next = page.timeline[tl_idx].percent %}{% endif %}{% assign tl_weight = tl_next | minus: milestone.percent %}{% if tl_weight < 1 %}{% assign tl_weight = 1 %}{% endif %}{{ tl_weight }}fr {% endfor %};">
+          {% for milestone in page.timeline %}
+          <div class="tl-point">
+            <span class="tl-marker"></span>
+            <span class="tl-date">{{ milestone.date }}</span>
+            <span class="tl-label">{{ milestone.label }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
       <section>
         <h2>Approach</h2>
         <h3 class="subsection-title uppercase">Problem Statement</h3>
@@ -246,6 +265,33 @@
           {% if page.process-multistat-01-caption %}<p>{{ page.process-multistat-01-caption }}</p>{% endif %}
         </div>
         {% endif %}
+        {% if page.process-image01 and page.process-image02 and page.process-pair-01-02 %}
+        <div class="cs-figure-row">
+          <figure class="cs-figure-half no-crop">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage01 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.process-image01 }}" alt="{{ page.process-caption01 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.process-caption01 }}</figcaption>
+          </figure>
+          <figure class="cs-figure-half no-crop">
+            <picture>
+              <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage02 }}" type="image/webp">
+              <img src="../../assets/images/portfolio-images/{{ page.process-image02 }}" alt="{{ page.process-caption02 }} example image for {{ page.project }}">
+            </picture>
+            <figcaption>{{ page.process-caption02 }}</figcaption>
+          </figure>
+        </div>
+        {% if page.process-image03 %}
+        <figure class="cs-figure-full">
+          <picture>
+            <source srcset="../../assets/images/portfolio-images/{{ page.process-webpimage03 }}" type="image/webp">
+            <img src="../../assets/images/portfolio-images/{{ page.process-image03 }}" alt="{{ page.process-caption03 }} example image for {{ page.project }}">
+          </picture>
+          <figcaption>{{ page.process-caption03 }}</figcaption>
+        </figure>
+        {% endif %}
+        {% else %}
         {% if page.process-image01 %}
         <figure class="cs-figure-full">
           <picture>
@@ -292,6 +338,7 @@
         </figure>
         {% endif %}
         {% endif %}
+        {% endif %}
         {% if page.process-multistat-02 %}
         <div class="single-col">
           <div class="cs-stat-group">
@@ -321,6 +368,12 @@
           <figcaption>{{ page.process-caption05 }}</figcaption>
         </figure>
         {% endif %}
+        {% if page.process-video %}
+        <figure class="cs-figure-full">
+          <iframe src="https://www.youtube.com/embed/{{ page.process-video }}" title="{{ page.process-video-caption }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <figcaption>{{ page.process-video-caption }}</figcaption>
+        </figure>
+        {% endif %}
         {% endunless %}
       </section>
       <section class="solution-section">
@@ -332,6 +385,30 @@
             <p>{{ page.solutions }}</p>
           {% if page.pull-quote %}
             <blockquote class="pull-quote">&ldquo;{{ page.pull-quote }}&rdquo;<cite>{{ page.pull-quote-attribution | default: "Ryan Wilson" }}</cite></blockquote>
+          {% endif %}
+          {% if page.solutions-para2 %}
+            <p>{{ page.solutions-para2 }}</p>
+          {% endif %}
+          {% if page.solutions-continued %}
+            <p>{{ page.solutions-continued }}</p>
+          {% endif %}
+          {% if page.solution-image01 and page.solution-image02 %}
+            <div class="cs-figure-row">
+              <figure class="cs-figure-half">
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/{{ page.solution-webpimage01 }}" type="image/webp">
+                  <img src="../../assets/images/portfolio-images/{{ page.solution-image01 }}" alt="{{ page.solution-caption01 }} example image for {{ page.project }}">
+                </picture>
+                <figcaption>{{ page.solution-caption01 }}</figcaption>
+              </figure>
+              <figure class="cs-figure-half">
+                <picture>
+                  <source srcset="../../assets/images/portfolio-images/{{ page.solution-webpimage02 }}" type="image/webp">
+                  <img src="../../assets/images/portfolio-images/{{ page.solution-image02 }}" alt="{{ page.solution-caption02 }} example image for {{ page.project }}">
+                </picture>
+                <figcaption>{{ page.solution-caption02 }}</figcaption>
+              </figure>
+            </div>
           {% endif %}
           {% if page.prototype-orientation == 'vertical' %}
             </div>
