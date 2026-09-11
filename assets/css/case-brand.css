@@ -340,6 +340,9 @@
     background-color: #21409A;
     box-shadow: -50vw 0 0 0 #21409A, 50vw 0 0 0 #21409A, -25vw 0 0 0 #21409A, 25vw 0 0 0 #21409A;
   }
+  .tl-marker {
+    border-color: #21409A;
+  }
   section:nth-of-type(2), section:nth-of-type(4) {
     background-color: #f0f6fc;
     padding: 100px 0;
