@@ -31,6 +31,8 @@ github_username:  ryangwilson
 
 # Build settings
 # theme: minima
+# GitHub Pages' hosted build only activates plugins listed here (not just added
+# to the Gemfile's jekyll_plugins group) - add any new plugin to both places.
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
